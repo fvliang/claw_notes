@@ -1,0 +1,17 @@
+# D-LLM Survey Knowledge Base
+
+## 目录结构
+knowledge_base/
+├── README.md
+├── dllmsurvey2025.pptx
+└── figs/
+    ├── inference.pdf
+    ├── inference_attn_mask.pdf
+    ├── kvcache.pdf
+    ├── train.pdf
+    └── train_attn_mask.pdf
+
+## 内容说明
+- **README.md**: 知识库概述文档
+- **PPT文件**: 完整的D-LLM调查演示文稿
+- **技术图表**: 包含训练/推理流程、注意力机制等核心图示
