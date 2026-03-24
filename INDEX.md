@@ -1,6 +1,6 @@
 # LLM Serving 论文索引 (2026-03-24 更新)
 
-## 总计新增: 12 篇
+## 总计新增: 21 篇 (新增9篇)
 
 ---
 
@@ -38,6 +38,30 @@
    - 作者: Zhenwei Tang 等
    - 关键词: Batch Processing
 
+### 2026年新增论文
+9. **KV Cache Optimization Strategies** (2026-03)
+   - 作者: Yichun Xu 等
+   - 关键词: KV Cache, Memory Optimization
+
+10. **AE-LLM: Adaptive Efficiency Optimization** (2026-03)
+    - 作者: Kaito Tanaka 等
+    - 关键词: Adaptive Efficiency, System Optimization
+
+11. **Energy-per-Token in LLM Inference** (2026-03)
+    - 作者: Patrick Wilhelm 等
+    - 关键词: Energy Efficiency, Green Computing
+
+12. **Cross-Family Speculative Prefill** (2026-03)
+    - 作者: Shubhangi Upasani 等
+    - 关键词: Long Context, Training-Free
+
+13. **EAGLE-Pangu: Tree Speculative on NPU** (2026-03)
+    - 作者: Chang Han 等
+    - 关键词: NPU Accelerator, Tree Decoding
+
+14. **Efficient LLM Serving for Agentic Workflows** (2026-03)
+    - 关键词: Agentic AI, Data Systems
+
 ### 2025 年
 9. **Nightjar: Dynamic Adaptive Speculative Decoding** (2025-12)
    - 作者: Rui Li 等
@@ -62,7 +86,12 @@
 
 | 项目 | 描述 | Stars |
 |------|------|-------|
-| [vllm-project/vllm](https://github.com/vllm-project/vllm) | 高吞吐量LLM推理服务引擎 | - |
+| [ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp) | 纯C/C++实现的LLM推理框架 | 99.1k |
+| [vllm-project/vllm](https://github.com/vllm-project/vllm) | 高吞吐量LLM推理服务引擎 | 74.1k |
+| [microsoft/BitNet](https://github.com/microsoft/BitNet) | 1-bit LLM推理框架 | 36.4k |
+| [mlc-ai/web-llm](https://github.com/mlc-ai/web-llm) | 浏览器内LLM推理引擎 | 17.6k |
+| [ModelTC/LightLLM](https://github.com/ModelTC/LightLLM) | Python LLM推理框架 | 4k |
+| [skyzh/tiny-llm](https://github.com/skyzh/tiny-llm) | Apple Silicon LLM学习项目 | 4k |
 | [huggingface/text-generation-inference](https://github.com/huggingface/text-generation-inference) | TGI - Large Language Model Text Generation Inference | - |
 | [sgl-project/SpecForge](https://github.com/sgl-project/SpecForge) | Speculative Decoding训练框架 | 741 |
 | [smart-lty/nano-PEARL](https://github.com/smart-lty/nano-PEARL) | Draft-Target Disaggregation | 180 |
@@ -81,6 +110,8 @@
 ---
 
 ## 🔄 更新日志
+
+- **2026-03-24**: 新增9篇论文（KV Cache优化、自适应效率、能源优化、Speculative Prefill等），添加5个热门GitHub项目（llama.cpp, BitNet, web-llm等）
 
 - **2026-03-24**: 初始化论文库，新增12篇论文
 
