@@ -1,5 +1,17 @@
 # LLM Serving 论文索引 (2026-03-25 更新)
 
+## 🆕 2026年3月新增论文
+
+| 论文 | 作者 | 领域 | 备注 |
+|------|------|------|------|
+| DFlash: Block Diffusion for Flash Speculative Decoding | Jian Chen 等 | cs.CL | 扩散模型+投机解码 |
+| P-EAGLE: Parallel-Drafting EAGLE | Mude Hui 等 | cs.LG | 并行drafting |
+| MoE-Spec: Expert Budgeting for Efficient Speculative Decoding | Bradley McDanel 等 | cs.LG | MoE模型优化 |
+| FLYING SERVING: On-the-Fly Parallelism Switching | Shouwei Gao 等 | cs.DC | **ICS 2026** |
+| DualPath: Breaking Storage Bandwidth Bottleneck | Yongtong Wu 等 | cs.DC | Agentic LLM推理 |
+
+---
+
 ## 📚 顶级会议论文 (2025年及以后)
 
 ### 2025 年
