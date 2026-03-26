@@ -1,6 +1,32 @@
-# LLM Serving 论文索引 (2026-03-25 更新)
+# LLM Serving 论文索引 (2026-03-26 更新)
 
-## 🆕 2026年3月新增论文
+## 🆕 2026年3月26日新增论文
+
+### ASPLOS 2026 (新增10篇)
+| 论文 | 作者 | 领域 |
+|------|------|------|
+| Towards High-Goodput LLM Serving with Prefill-decode Multiplexing | Weihao Cui 等 | LLM Serving: 吞吐量优化 |
+| Bullet: Boosting GPU Utilization for LLM Serving | Zejia Lin 等 | GPU利用率优化 |
+| QoServe: Breaking the Silos of LLM Inference Serving | Kanishk Goel 等 (Microsoft) | 统一服务框架 |
+| Shift Parallelism: Low-Latency, High-Throughput LLM Inference | Mert Hidayetoglu 等 (Snowflake) | 动态工作负载 |
+| XY-Serve: End-to-End Versatile Production Serving | Mingcong Song 等 (Huawei) | 生产级服务 |
+| PAT: Prefix-Aware Attention | Jinjun Yi 等 | 注意力优化 |
+| ZipServ: Hardware-Aware Lossless Compression | Ruibo Fan 等 | 内存优化 |
+| BlendServe: Resource-Aware Batching | Yilong Zhao 等 (UC Berkeley) | 离线推理 |
+| MoE-APEX: Adaptive Precision Expert Offloading | Peng Tang 等 | MoE推理优化 |
+
+### GitHub 新项目 (新增5个)
+| 项目 | 描述 |
+|------|------|
+| inferinse | 高吞吐量speculative decoding网关 |
+| llm-serving-at-scale | 100K+并行查询支持 |
+| long-context-serving-lab | PagedAttention + 分层KV卸载演示 |
+| llm-inference-optimization-lab | 基准对比平台(vLLM/TGI/TensorRT-LLM) |
+| mlc-llm-rest-api | OpenAI兼容REST API + speculative decoding |
+
+---
+
+## 🆕 2026年3月25日新增论文
 
 | 论文 | 作者 | 领域 | 备注 |
 |------|------|------|------|
