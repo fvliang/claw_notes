@@ -22,23 +22,26 @@
 │   └── 2026/
 │       └── minedraft.md
 ├── github/                   # GitHub项目
-│   └── 2024/
-│       ├── vllm.md
-│       ├── flashinfer.md
-│       ├── lmdeploy.md
-│       ├── powerinfer.md
-│       ├── lightllm.md
-│       ├── serverlessllm.md
-│       ├── routellm.md
-│       ├── tiny_llm.md
-│       ├── llm_engineer_handbook.md
-│       └── llm_applications.md
+│   ├── 2024/
+│   │   ├── vllm.md
+│   │   ├── flashinfer.md
+│   │   ├── lmdeploy.md
+│   │   ├── powerinfer.md
+│   │   ├── lightllm.md
+│   │   ├── serverlessllm.md
+│   │   ├── routellm.md
+│   │   ├── tiny_llm.md
+│   │   ├── llm_engineer_handbook.md
+│   │   └── llm_applications.md
+│   └── 2026/
+│       └── sglang.md
 └── (其他会议目录待添加)
 ```
 
 ## 收集的内容
 
-### GitHub项目 (10个)
+### GitHub项目 (11个)
+- SGLang: 高性能LLM服务框架 (14.3k stars)
 - vLLM: 高吞吐量LLM推理引擎 (74.4k stars)
 - FlashInfer: LLM Serving内核库 (5.2k stars)
 - LMDeploy: 推理部署工具包 (7.7k stars)
