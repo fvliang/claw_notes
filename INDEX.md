@@ -1,4 +1,22 @@
-# LLM Serving 论文索引 (2026-03-26 更新)
+# LLM Serving 论文索引 (2026-03-28 更新)
+
+## 🆕 2026年3月28日新增论文
+
+### arXiv 新论文 (新增4篇)
+| 论文 | 作者 | 领域 | 备注 |
+|------|------|------|------|
+| Nightjar: Dynamic Adaptive Speculative Decoding | Rui Li 等 | cs.DC | 自适应投机框架，动态调整投机长度 |
+| CXL-SpecKV: Disaggregated FPGA Speculative KV-Cache | Dong Liu 等 (FPGA'26 Oral) | cs.AI | CXL内存解耦，FPGA加速 |
+| ReSpec: Optimizing Speculative Decoding in RL Systems | Qiaoling Chen 等 | cs.LG | RL训练中的投机解码优化 |
+
+### GitHub 新项目 (新增3个)
+| 项目 | 描述 | Stars |
+|------|------|-------|
+| [vllm-project/speculators](https://github.com/vllm-project/speculators) | vLLM统一投机解码库 | 305 |
+| [NVIDIA/Model-Optimizer](https://github.com/NVIDIA/Model-Optimizer) | SOTA模型优化技术集(量化/剪枝/蒸馏/投机解码) | 2.3k |
+| [xlite-dev/Awesome-LLM-Inference](https://github.com/xlite-dev/Awesome-LLM-Inference) | 精选LLM推理论文列表 | 5.1k |
+
+---
 
 ## 🆕 2026年3月26日新增论文
 
