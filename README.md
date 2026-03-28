@@ -1,86 +1,94 @@
-# LLM Serving 论文收集索引
+# LLM Serving 论文搜集索引
 
-本目录收集了LLM serving、speculative decoding、LLM inference相关的论文和项目资源。
+本目录收集了LLM Serving、Speculative Decoding和LLM Inference相关的学术论文和开源项目。
 
 ## 目录结构
 
 ```
 ~/claw_notes/
-├── arxiv/                    # arXiv论文
-│   ├── 2023/
-│   │   └── vllm_pagedattention.md
-│   ├── 2024/
-│   │   └── powerinfer2.md
-│   └── 2025/
-│       ├── specforge.md
-│       ├── minedraft.md
-│       ├── pcr_rag_cache.md
-│       ├── mmspec.md
-│       ├── specsteer.md
-│       ├── parallelvlm.md
-│       └── heisd.md
-│   └── 2026/
-│       └── minedraft.md
-├── github/                   # GitHub项目
-│   ├── 2024/
-│   │   ├── vllm.md
-│   │   ├── flashinfer.md
-│   │   ├── lmdeploy.md
-│   │   ├── powerinfer.md
-│   │   ├── lightllm.md
-│   │   ├── serverlessllm.md
-│   │   ├── routellm.md
-│   │   ├── tiny_llm.md
-│   │   ├── llm_engineer_handbook.md
-│   │   └── llm_applications.md
-│   └── 2026/
-│       └── sglang.md
-└── (其他会议目录待添加)
+├── arxiv/
+│   ├── 2026/          # 2026年论文
+│   ├── 2025/          # 2025年论文
+│   ├── 2024/          # 2024年论文
+│   └── 2023/          # 2023年论文
+├── github/            # GitHub开源项目
+├── osdi/              # OSDI会议论文
+└── sosp/              # SOSP会议论文
 ```
 
-## 收集的内容
+## 2026年新增论文
 
-### GitHub项目 (11个)
-- SGLang: 高性能LLM服务框架 (14.3k stars)
-- vLLM: 高吞吐量LLM推理引擎 (74.4k stars)
-- FlashInfer: LLM Serving内核库 (5.2k stars)
-- LMDeploy: 推理部署工具包 (7.7k stars)
-- PowerInfer: 本地部署推理引擎 (9.1k stars)
-- LightLLM: 轻量级推理框架 (4k stars)
-- ServerlessLLM: 无服务器LLM服务 (664 stars)
-- RouteLLM: LLM路由框架 (4.7k stars)
-- Tiny LLM: Apple Silicon学习项目 (4k stars)
-- LLM Engineer Handbook: 资源列表 (4.8k stars)
-- LLM Applications: RAG应用指南 (1.9k stars)
+### Speculative Decoding
+1. S2D2: Fast Decoding for Diffusion LLMs via Training-Free Self-Speculation
+2. ParallelVLM: Lossless Video-LLM Acceleration with Visual Alignment Aware Parallel Speculative Decoding
+3. Speculating Experts Accelerates Inference for Mixture-of-Experts
+4. A Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference
+5. SpecForge: A Flexible and Efficient Open-Source Training Framework for Speculative Decoding
+6. MMSpec: Benchmarking Speculative Decoding for Vision-Language Models
+7. Self-Speculative Decoding for LLM-based ASR with CTC Encoder Drafts
+8. Speculative Decoding Scaling Laws (SDSL): Throughput Optimization Made Simple
+9. ConFu: Contemplate the Future for Better Speculative Sampling
+10. EAGLE-Pangu: Accelerator-Safe Tree Speculative Decoding on Ascend NPUs
+11. Learning to Draft: Adaptive Speculative Decoding with Reinforcement Learning
+12. Quasar: Quantized Self-Speculative Acceleration for Rapid Inference
+13. LK Losses: Direct Acceptance Rate Optimization for Speculative Decoding
+14. Make Every Draft Count: Hidden State based Speculative Decoding
+15. KnapSpec: Self-Speculative Decoding via Adaptive Layer Selection
 
-### arXiv论文 (11篇)
-- vLLM (SOSP 2023)
-- PowerInfer-2 (2024)
-- SpecForge (2025)
-- MineDraft (2026)
-- PCR (2025)
-- MMSpec (2025)
-- SpecSteer (2025)
-- ParallelVLM (2025)
-- HeiSD (2025)
-- Pipelined Collaborative SD (2025)
-- 以及更多...
+### LLM Serving / KV Cache
+1. Zipage: Maintain High Request Concurrency for LLM Reasoning through Compressed PagedAttention
+2. CXL-SpecKV: A Disaggregated FPGA Speculative KV-Cache for Datacenter LLM Serving
+3. xLLM Technical Report
+4. Reasoning Language Model Inference Serving Unveiled: An Empirical Study
+5. Efficiently Align Draft Models via Parameter- and Data-Efficient Adaptation
+6. WANSpec: Leveraging Global Compute Capacity for LLM Inference
+
+## 2025年论文
+
+### Speculative Decoding
+1. DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving
+2. ReSpec: Towards Optimizing Speculative Decoding in Reinforcement Learning Systems
+3. Nightjar: Dynamic Adaptive Speculative Decoding for Large Language Models Serving
+4. TIDE: Temporal Incremental Draft Engine for Self-Improving LLM Inference
+5. StarSD: One-for-Many Speculative Decoding
+
+### LLM Serving / KV Cache
+1. KV-Compress: Paged KV-Cache Compression with Variable Compression Rates per Attention Head
+2. vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention
+3. PagedEviction: Structured Block-wise KV Cache Pruning for Efficient LLM Inference
+4. Paged Attention Meets FlexAttention: Unlocking Long-Context Efficiency
+5. Rethinking Key-Value Cache Compression Techniques
+6. Direct Multi-Token Decoding
+7. NEZHA: A Zero-sacrifice and Hyperspeed Decoding Architecture for Generative Recommendations
+
+## 2023年及之前的重要论文
+
+### SOSP 2023
+1. **vLLM: Efficient Memory Management for Large Language Model Serving with PagedAttention** - Woosuk Kwon et al.
+   - arXiv: 2309.06180
+   - GitHub: vllm-project/vllm
+
+## GitHub 开源项目
+
+### 框架/系统
+1. **SpecForge** (749 stars) - Training speculative decoding models
+2. **nano-PEARL** (182 stars) - Draft-Target Disaggregation
+3. **mini-infer** (124 stars) - LLM inference engine from scratch
+4. **vLLM** - 生产级LLM服务系统
+
+### 工具/实验
+5. inferinse - Speculative decoding gateway
+6. DSDE - Distributed Speculative Decoding
+7. long-context-serving-lab - 长上下文服务实验
+8. llm-inference-optimization-lab - 推理优化基准测试
 
 ## 关键词
-- llm serving
-- speculative decoding  
-- llm inference
-- paged attention
-- kv cache
 
-## 来源
-- arXiv
-- GitHub
-- 系统会议论文 (待收集)
-
-## 更新日期
-2026-03-27
-
----
-
-*收集目标：OSDI, SOSP, NSDI, SIGCOMM, SIGMOD, ATC, EuroSys, DAC, ASPLOS, SC, NeurIPS, ICLR, ICML, ACL, EMNLP*
+- LLM Serving
+- Speculative Decoding
+- PagedAttention
+- KV Cache
+- LLM Inference
+- Edge-Cloud Collaboration
+- Batching
+- Memory Optimization
