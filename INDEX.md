@@ -1,4 +1,21 @@
-# LLM Serving 论文索引 (2026-03-28 更新)
+# LLM Serving 论文索引 (2026-03-29 更新)
+
+## 🆕 2026年3月29日新增论文
+
+### arXiv 新论文 (新增4篇)
+| 论文 | 作者 | 领域 | 备注 |
+|------|------|------|------|
+| FlexServe: A Fast and Secure LLM Serving System for Mobile Devices | Yinpeng Wu 等 | cs.CR/OS | 移动设备安全LLM服务，TrustZone隔离 |
+| SpecEyes: Accelerating Agentic Multimodal LLMs | Haoyu Huang 等 | cs.CV/CL | 代理多模态LLM投机感知与规划 |
+| RelayCaching: Accelerating LLM Collaboration via Decoding KV Cache Reuse | Yingsheng Geng 等 | cs.LG | 多代理LLM协作，KV缓存复用 |
+| CacheSolidarity: Preventing Prefix Caching Side Channels | Panagiotis Pennas 等 | cs.CR/DC | 多租户LLM服务安全 |
+
+### GitHub 新项目 (新增1个)
+| 项目 | 描述 | Stars |
+|------|------|-------|
+| [sgl-project/SpecForge](https://github.com/sgl-project/SpecForge) | 投机解码训练框架，可平滑移植到SGLang | - |
+
+---
 
 ## 🆕 2026年3月28日新增论文
 
