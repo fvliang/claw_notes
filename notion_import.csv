@@ -1,0 +1,7 @@
+Title,Authors,Conference,Year,Topic,arXiv,GitHub
+"ZipServ: Fast and Memory-Efficient LLM Inference","Ruibo Fan, Xiangrui Yu et al. (HKUST)",,2026,LLM Serving,2603.17435,
+"JigsawServe: Serving Compound Inference Systems","Sriram Devata et al.",ASPLOS,2026,LLM Serving,2603.08797,
+"Ouroboros: Wafer-Scale SRAM CIM","Yiqi Liu et al.",ASPLOS,2026,Hardware,2603.02737,
+"SpeContext: Long-context Reasoning","Jiaming Xu et al.",ASPLOS,2026,Speculative Decoding,2512.00722,
+"PicoSpec: Edge-Cloud Speculative Decoding","Yida Zhang et al.",ASPLOS,2026,Speculative Decoding,2603.19133,
+"KV Cache Optimization Strategies","Yichun Xu et al.",arXiv,2026,KV Cache,2603.20397,

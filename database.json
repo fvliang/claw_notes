@@ -1,0 +1,109 @@
+{
+  "papers": [
+    {
+      "id": 1,
+      "title": "ZipServ: Fast and Memory-Efficient LLM Inference",
+      "authors": "Ruibo Fan, Xiangrui Yu et al. (HKUST)",
+      "arxiv_id": "2603.17435",
+      "github_repo": "",
+      "conference": "",
+      "year": 2026,
+      "topic": "LLM Serving",
+      "abstract_en": "",
+      "abstract_cn": ""
+    },
+    {
+      "id": 2,
+      "title": "JigsawServe: Serving Compound Inference Systems",
+      "authors": "Sriram Devata et al.",
+      "arxiv_id": "2603.08797",
+      "conference": "ASPLOS",
+      "year": 2026,
+      "topic": "LLM Serving"
+    },
+    {
+      "id": 3,
+      "title": "Ouroboros: Wafer-Scale SRAM CIM",
+      "authors": "Yiqi Liu et al.",
+      "arxiv_id": "2603.02737",
+      "conference": "ASPLOS",
+      "year": 2026,
+      "topic": "Hardware"
+    },
+    {
+      "id": 4,
+      "title": "SpeContext: Long-context Reasoning",
+      "authors": "Jiaming Xu et al.",
+      "arxiv_id": "2512.00722",
+      "conference": "ASPLOS",
+      "year": 2026,
+      "topic": "Speculative Decoding"
+    },
+    {
+      "id": 5,
+      "title": "PicoSpec: Edge-Cloud Speculative Decoding",
+      "authors": "Yida Zhang et al.",
+      "arxiv_id": "2603.19133",
+      "conference": "ASPLOS",
+      "year": 2026,
+      "topic": "Speculative Decoding"
+    },
+    {
+      "id": 6,
+      "title": "KV Cache Optimization Strategies",
+      "authors": "Yichun Xu et al.",
+      "arxiv_id": "2603.20397",
+      "conference": "arXiv",
+      "year": 2026,
+      "topic": "KV Cache"
+    }
+  ],
+  "topics": [
+    "LLM Serving",
+    "Speculative Decoding",
+    "KV Cache",
+    "Memory Optimization",
+    "MoE",
+    "Edge-Cloud Inference",
+    "Attention Optimization"
+  ],
+  "conferences": [
+    {
+      "name": "ASPLOS",
+      "year": 2026
+    },
+    {
+      "name": "OSDI",
+      "year": 2025
+    },
+    {
+      "name": "SOSP",
+      "year": 2025
+    },
+    {
+      "name": "NSDI",
+      "year": 2025
+    },
+    {
+      "name": "EuroSys",
+      "year": 2025
+    },
+    {
+      "name": "ACL",
+      "year": 2024
+    },
+    {
+      "name": "ICLR",
+      "year": 2025
+    },
+    {
+      "name": "ICML",
+      "year": 2025
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-03-29",
+    "last_updated": "2026-03-29"
+  }
+}
