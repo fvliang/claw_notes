@@ -188,26 +188,97 @@
     
     let currentFilter = "";
     let currentSearch = "";
+    let filterMode = "topic"; // "topic" 或 "confYear"
     
     function initNav() {
         const navBar = document.getElementById('navBar');
         
+        // 添加模式切换按钮
+        const modeChip = document.createElement('div');
+        modeChip.className = 'nav-chip mode-toggle';
+        modeChip.dataset.mode = 'topic';
+        modeChip.textContent = '🏷️ 主题';
+        modeChip.onclick = () => setFilterMode('topic');
+        navBar.appendChild(modeChip);
+        
+        const confChip = document.createElement('div');
+        confChip.className = 'nav-chip mode-toggle';
+        confChip.dataset.mode = 'confYear';
+        confChip.textContent = '📅 会议';
+        confChip.onclick = () => setFilterMode('confYear');
+        navBar.appendChild(confChip);
+        
+        // 分隔符
+        const divider = document.createElement('div');
+        divider.style.width = '1px';
+        divider.style.height = '24px';
+        divider.style.background = '#ddd';
+        divider.style.margin = '0 5px';
+        navBar.appendChild(divider);
+        
         // 添加主题筛选
         topics.forEach(t => {
             const chip = document.createElement('div');
-            chip.className = 'nav-chip';
+            chip.className = 'nav-chip filter-chip topic-filter';
             chip.dataset.filter = t;
+            chip.dataset.mode = 'topic';
             chip.textContent = t;
             chip.onclick = () => setFilter(t);
+            chip.style.display = 'none';
             navBar.appendChild(chip);
         });
+        
+        // 添加会议-年份筛选
+        confYears.forEach(cy => {
+            const chip = document.createElement('div');
+            chip.className = 'nav-chip filter-chip confyear-filter';
+            chip.dataset.filter = cy;
+            chip.dataset.mode = 'confYear';
+            chip.textContent = cy.replace('|', ' / ');
+            chip.onclick = () => setFilter(cy);
+            chip.style.display = 'none';
+            navBar.appendChild(chip);
+        });
+        
+        // 默认显示主题筛选
+        setFilterMode('topic');
     }
     
-    function setFilter(topic) {
-        currentFilter = topic;
-        document.querySelectorAll('.nav-chip').forEach(c => {
-            c.classList.toggle('active', c.dataset.filter === topic);
+    function setFilterMode(mode) {
+        filterMode = mode;
+        
+        // 更新模式切换按钮样式
+        document.querySelectorAll('.mode-toggle').forEach(c => {
+            c.classList.toggle('active', c.dataset.mode === mode);
         });
+        
+        // 显示/隐藏对应的筛选按钮
+        document.querySelectorAll('.topic-filter').forEach(c => {
+            c.style.display = mode === 'topic' ? '' : 'none';
+        });
+        document.querySelectorAll('.confyear-filter').forEach(c => {
+            c.style.display = mode === 'confYear' ? '' : 'none';
+        });
+        
+        // 清空当前筛选
+        currentFilter = "";
+        document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+        
+        render();
+    }
+    
+    function setFilter(filter) {
+        // 如果点击的是当前激活的筛选，则清除
+        if (currentFilter === filter) {
+            currentFilter = "";
+        } else {
+            currentFilter = filter;
+        }
+        
+        document.querySelectorAll('.filter-chip').forEach(c => {
+            c.classList.toggle('active', c.dataset.filter === currentFilter);
+        });
+        
         render();
     }
     
@@ -216,7 +287,17 @@
         currentSearch = search;
         
         let filtered = papers.filter(p => {
-            const matchFilter = !currentFilter || p.topic === currentFilter;
+            let matchFilter = true;
+            if (currentFilter) {
+                if (filterMode === 'topic') {
+                    matchFilter = p.topic === currentFilter;
+                } else if (filterMode === 'confYear') {
+                    const conf = p.conference || 'arXiv';
+                    const year = p.year || 2024;
+                    const key = conf + '|' + year;
+                    matchFilter = key === currentFilter;
+                }
+            }
             const matchSearch = !search || 
                 (p.title && p.title.toLowerCase().includes(search)) || 
                 (p.authors && p.authors.toLowerCase().includes(search));
