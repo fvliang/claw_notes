@@ -197,6 +197,7 @@
         if (!confYearMap[conf]) confYearMap[conf] = [];
         confYearMap[conf].push(year);
     });
+    const conferences = Object.keys(confYearMap).sort();
     
     function initNav() {
         const navBar = document.getElementById('navBar');
@@ -384,7 +385,7 @@
         list.innerHTML = html;
         
         document.getElementById('paperCount').textContent = papers.length;
-        document.getElementById('confCount').textContent = conferences.length;
+        document.getElementById('confCount').textContent = Object.keys(confYearMap).length;
         document.getElementById('topicCount').textContent = topics.length;
         document.getElementById('totalCount').textContent = papers.length;
     }
