@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>📚 LLM Serving 论文库</title>
+    <style>
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif; 
+            background: #f5f5f5; 
+            margin: 0; 
+            padding: 0;
+            padding-bottom: 100px;
+        }
+        .header {
+            background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,122,255,0.3);
+        }
+        .header h1 { margin: 0; font-size: 24px; font-weight: 600; }
+        .header .subtitle { opacity: 0.9; font-size: 14px; margin-top: 8px; }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .stat { text-align: center; }
+        .stat .num { font-size: 28px; font-weight: 700; }
+        .stat .label { font-size: 12px; opacity: 0.8; }
+        
+        .filter-bar {
+            background: white;
+            padding: 15px 20px;
+            position: sticky;
+            top: 90px;
+            z-index: 99;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .filter-row { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px; }
+        .filter-row::-webkit-scrollbar { display: none; }
+        .filter-chip {
+            padding: 8px 16px;
+            background: #f0f0f0;
+            border-radius: 20px;
+            font-size: 14px;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .filter-chip.active {
+            background: #007AFF;
+            color: white;
+        }
+        .search-box {
+            margin-top: 12px;
+            position: relative;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 12px 16px 12px 44px;
+            border: none;
+            border-radius: 12px;
+            background: #f5f5f5;
+            font-size: 16px;
+        }
+        .search-box::before {
+            content: "🔍";
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+        }
+        
+        .paper-list { padding: 20px; }
+        .paper-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .paper-card:active {
+            transform: scale(0.98);
+        }
+        .paper-card .title {
+            font-size: 17px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .paper-card .authors {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        .paper-card .meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        .tag {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .tag.conf { background: #e8f4ff; color: #007AFF; }
+        .tag.topic { background: #f0f0f0; color: #666; }
+        .tag.year { background: #fff3e0; color: #FF9500; }
+        
+        .paper-card .links {
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #f0f0f0;
+        }
+        .paper-card .links a {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            color: #007AFF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+        .empty-state .icon { font-size: 48px; margin-bottom: 16px; }
+        
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #999;
+            font-size: 13px;
+        }
+        
+        @media (min-width: 768px) {
+            .container { max-width: 800px; margin: 0 auto; }
+            .paper-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 LLM Serving 论文库</h1>
+            <div class="subtitle">Speculative Decoding · KV Cache · MoE · System Optimization</div>
+            <div class="stats">
+                <div class="stat"><div class="num" id="paperCount">-</div><div class="label">论文</div></div>
+                <div class="stat"><div class="num" id="confCount">-</div><div class="label">会议</div></div>
+                <div class="stat"><div class="num" id="topicCount">-</div><div class="label">主题</div></div>
+            </div>
+        </div>
+        
+        <div class="filter-bar">
+            <div class="filter-row" id="topicFilters">
+                <div class="filter-chip active" data-topic="">全部</div>
+            </div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="搜索论文标题、作者...">
+            </div>
+        </div>
+        
+        <div class="paper-list" id="paperList"></div>
+        
+        <div class="footer">
+            🔄 自动更新于 <span id="lastUpdate"></span>
+        </div>
+    </div>
+
+    <script>
+        // 论文数据 (从 database.json 加载)
+        const papers = [
+            {"id":1,"title":"ZipServ: Fast and Memory-Efficient LLM Inference","authors":"Ruibo Fan, Xiangrui Yu et al. (HKUST)","arxiv_id":"2603.17435","github_repo":"","conference":"ASPLOS","year":2026,"topic":"LLM Serving"},
+            {"id":2,"title":"JigsawServe: Serving Compound Inference Systems","authors":"Sriram Devata et al. (Microsoft)","arxiv_id":"2603.08797","github_repo":"","conference":"ASPLOS","year":2026,"topic":"LLM Serving"},
+            {"id":3,"title":"Ouroboros: Wafer-Scale SRAM CIM for LLM Inference","authors":"Yiqi Liu et al.","arxiv_id":"2603.02737","github_repo":"","conference":"ASPLOS","year":2026,"topic":"Hardware"},
+            {"id":4,"title":"SpeContext: Enabling Efficient Long-context Reasoning","authors":"Jiaming Xu et al.","arxiv_id":"2512.00722","github_repo":"","conference":"ASPLOS","year":2026,"topic":"Speculative Decoding"},
+            {"id":5,"title":"PicoSpec: Edge-Cloud Speculative Decoding","authors":"Yida Zhang et al.","arxiv_id":"2603.19133","github_repo":"","conference":"ASPLOS","year":2026,"topic":"Speculative Decoding"},
+            {"id":6,"title":"KV Cache Optimization Strategies","authors":"Yichun Xu, Navjot K. Khaira, Tejinder Singh","arxiv_id":"2603.20397","github_repo":"","conference":"arXiv","year":2026,"topic":"KV Cache"},
+            {"id":7,"title":"Towards High-Goodput LLM Serving with PD Multiplexing","authors":"Yukang Chen et al. (Shanghai Jiao Tong)","arxiv_id":"2504.14489","github_repo":"","conference":"ASPLOS","year":2026,"topic":"LLM Serving"},
+            {"id":8,"title":"Bullet: Boosting GPU Utilization for LLM Serving","authors":"Zejia Lin et al. (Sun Yat-sen University)","arxiv_id":"2504.19516","github_repo":"zejia-lin/Bullet","conference":"ASPLOS","year":2026,"topic":"LLM Serving"},
+        ];
+        
+        const topics = ["LLM Serving", "Speculative Decoding", "KV Cache", "Hardware", "MoE", "Edge-Cloud"];
+        const conferences = ["ASPLOS", "OSDI", "SOSP", "NSDI", "EuroSys", "ACL", "ICLR", "ICML", "arXiv"];
+        
+        // 渲染
+        function render() {
+            const topicFilter = document.querySelector('.filter-chip.active').dataset.topic;
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            
+            const filtered = papers.filter(p => {
+                const matchTopic = !topicFilter || p.topic === topicFilter;
+                const matchSearch = !search || 
+                    p.title.toLowerCase().includes(search) || 
+                    p.authors.toLowerCase().includes(search);
+                return matchTopic && matchSearch;
+            });
+            
+            const list = document.getElementById('paperList');
+            
+            if (filtered.length === 0) {
+                list.innerHTML = '<div class="empty-state"><div class="icon">📭</div><div>没有找到匹配的论文</div></div>';
+                return;
+            }
+            
+            list.innerHTML = filtered.map(p => `
+                <div class="paper-card">
+                    <div class="title">${p.title}</div>
+                    <div class="authors">${p.authors}</div>
+                    <div class="meta">
+                        <span class="tag conf">${p.conference}</span>
+                        <span class="tag year">${p.year}</span>
+                        <span class="tag topic">${p.topic}</span>
+                    </div>
+                    <div class="links">
+                        ${p.arxiv_id ? `<a href="https://arxiv.org/abs/${p.arxiv_id}" target="_blank">📄 arXiv</a>` : ''}
+                        ${p.github_repo ? `<a href="https://github.com/${p.github_repo}" target="_blank">🐙 GitHub</a>` : ''}
+                    </div>
+                </div>
+            `).join('');
+            
+            document.getElementById('paperCount').textContent = papers.length;
+            document.getElementById('confCount').textContent = conferences.length;
+            document.getElementById('topicCount').textContent = topics.length;
+            document.getElementById('lastUpdate').textContent = new Date().toLocaleDateString('zh-CN');
+        }
+        
+        // 初始化主题筛选
+        const topicFilters = document.getElementById('topicFilters');
+        topics.forEach(t => {
+            const chip = document.createElement('div');
+            chip.className = 'filter-chip';
+            chip.dataset.topic = t;
+            chip.textContent = t;
+            chip.onclick = () => {
+                document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+                render();
+            };
+            topicFilters.appendChild(chip);
+        });
+        
+        document.getElementById('searchInput').addEventListener('input', render);
+        
+        render();
+    </script>
+</body>
+</html>
