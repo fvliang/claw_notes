@@ -47,9 +47,59 @@
             white-space: nowrap;
             cursor: pointer;
             flex-shrink: 0;
+            transition: all 0.2s ease;
         }
+        .nav-chip:hover { background: #e0e0e0; }
         .nav-chip.active { background: #007AFF; color: white; }
         .nav-chip.back { background: #e8f4ff; color: #007AFF; }
+        
+        /* 模式切换按钮 */
+        .mode-toggle { font-weight: 600; background: #e8f4ff; color: #007AFF; }
+        .mode-toggle.active { background: #007AFF; color: white; }
+        
+        /* 筛选按钮组 */
+        .filter-group { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 8px; 
+            padding: 10px 15px;
+            background: white;
+            border-bottom: 1px solid #eee;
+        }
+        
+        /* 会议层级样式 */
+        .conf-filter { 
+            background: #fff3e0; 
+            color: #FF9500;
+            font-weight: 600;
+            border: 1px solid #ffe0b2;
+            position: relative;
+        }
+        .conf-filter::after {
+            content: '▶';
+            font-size: 10px;
+            margin-left: 6px;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        .conf-filter.expanded::after { transform: rotate(90deg); }
+        .conf-filter.active { background: #FF9500; color: white; }
+        
+        .year-filter { 
+            background: #f5f5f5; 
+            color: #666;
+            font-size: 12px;
+            padding: 6px 12px;
+            margin-left: 20px;
+            border-left: 2px solid #007AFF;
+        }
+        .year-filter:hover { background: #e8f4ff; }
+        .year-filter.active { background: #007AFF; color: white; border-left-color: white; }
+        
+        /* 主题筛选样式 */
+        .topic-filter { background: #e8f4ff; color: #007AFF; }
+        .topic-filter:hover { background: #d0e8ff; }
+        .topic-filter.active { background: #007AFF; color: white; }
         
         /* 搜索 */
         .search-box { padding: 15px; background: white; }
@@ -146,9 +196,8 @@
     
     <!-- 列表页 -->
     <div id="listPage">
-        <div class="nav-bar" id="navBar">
-            <div class="nav-chip active" data-filter="">全部</div>
-        </div>
+        <div class="nav-bar" id="navBar"></div>
+        <div class="filter-group" id="filterGroup"></div>
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="搜索论文标题、作者...">
         </div>
@@ -201,8 +250,9 @@
     
     function initNav() {
         const navBar = document.getElementById('navBar');
+        const filterGroup = document.getElementById('filterGroup');
         
-        // 添加模式切换按钮
+        // 模式切换按钮放在 navBar
         const modeChip = document.createElement('div');
         modeChip.className = 'nav-chip mode-toggle';
         modeChip.dataset.mode = 'topic';
@@ -217,13 +267,17 @@
         confChip.onclick = () => setFilterMode('confYear');
         navBar.appendChild(confChip);
         
-        // 分隔符
-        const divider = document.createElement('div');
-        divider.style.width = '1px';
-        divider.style.height = '24px';
-        divider.style.background = '#ddd';
-        divider.style.margin = '0 5px';
-        navBar.appendChild(divider);
+        // "全部"按钮
+        const allChip = document.createElement('div');
+        allChip.className = 'nav-chip';
+        allChip.dataset.filter = '';
+        allChip.textContent = '全部';
+        allChip.onclick = () => {
+            currentFilter = "";
+            document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+            render();
+        };
+        filterGroup.appendChild(allChip);
         
         // 添加主题筛选
         topics.forEach(t => {
@@ -234,7 +288,7 @@
             chip.textContent = t;
             chip.onclick = () => setFilter(t);
             chip.style.display = 'none';
-            navBar.appendChild(chip);
+            filterGroup.appendChild(chip);
         });
         
         // 添加会议层级筛选（树形结构）
@@ -246,9 +300,8 @@
             confChip.dataset.mode = 'confYear';
             confChip.textContent = conf;
             confChip.style.display = 'none';
-            confChip.style.fontWeight = '600';
             confChip.onclick = () => toggleConf(conf);
-            navBar.appendChild(confChip);
+            filterGroup.appendChild(confChip);
             
             // 年份子选项（初始隐藏）
             const years = confYearMap[conf].sort((a,b) => b - a);
@@ -258,13 +311,13 @@
                 yearChip.dataset.filter = conf + '|' + year;
                 yearChip.dataset.mode = 'confYear';
                 yearChip.dataset.conf = conf;
-                yearChip.textContent = '  └ ' + year;
+                yearChip.textContent = year;
                 yearChip.style.display = 'none';
                 yearChip.onclick = (e) => {
                     e.stopPropagation();
                     setFilter(conf + '|' + year);
                 };
-                navBar.appendChild(yearChip);
+                filterGroup.appendChild(yearChip);
             });
         });
         
@@ -285,6 +338,7 @@
         // 更新会议按钮样式
         document.querySelectorAll('.conf-filter').forEach(c => {
             c.classList.toggle('active', c.dataset.conf === expandedConf);
+            c.classList.toggle('expanded', c.dataset.conf === expandedConf);
         });
         
         // 显示/隐藏年份选项
