@@ -67,9 +67,59 @@ html = '''<!DOCTYPE html>
             white-space: nowrap;
             cursor: pointer;
             flex-shrink: 0;
+            transition: all 0.2s ease;
         }
+        .nav-chip:hover { background: #e0e0e0; }
         .nav-chip.active { background: #007AFF; color: white; }
         .nav-chip.back { background: #e8f4ff; color: #007AFF; }
+        
+        /* 模式切换按钮 */
+        .mode-toggle { font-weight: 600; background: #e8f4ff; color: #007AFF; }
+        .mode-toggle.active { background: #007AFF; color: white; }
+        
+        /* 筛选按钮组 */
+        .filter-group { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 8px; 
+            padding: 10px 15px;
+            background: white;
+            border-bottom: 1px solid #eee;
+        }
+        
+        /* 会议层级样式 */
+        .conf-filter { 
+            background: #fff3e0; 
+            color: #FF9500;
+            font-weight: 600;
+            border: 1px solid #ffe0b2;
+            position: relative;
+        }
+        .conf-filter::after {
+            content: '▶';
+            font-size: 10px;
+            margin-left: 6px;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        .conf-filter.expanded::after { transform: rotate(90deg); }
+        .conf-filter.active { background: #FF9500; color: white; }
+        
+        .year-filter { 
+            background: #f5f5f5; 
+            color: #666;
+            font-size: 12px;
+            padding: 6px 12px;
+            margin-left: 20px;
+            border-left: 2px solid #007AFF;
+        }
+        .year-filter:hover { background: #e8f4ff; }
+        .year-filter.active { background: #007AFF; color: white; border-left-color: white; }
+        
+        /* 主题筛选样式 */
+        .topic-filter { background: #e8f4ff; color: #007AFF; }
+        .topic-filter:hover { background: #d0e8ff; }
+        .topic-filter.active { background: #007AFF; color: white; }
         
         /* 搜索 */
         .search-box { padding: 15px; background: white; }
@@ -166,9 +216,8 @@ html = '''<!DOCTYPE html>
     
     <!-- 列表页 -->
     <div id="listPage">
-        <div class="nav-bar" id="navBar">
-            <div class="nav-chip active" data-filter="">全部</div>
-        </div>
+        <div class="nav-bar" id="navBar"></div>
+        <div class="filter-group" id="filterGroup"></div>
         <div class="search-box">
             <input type="text" id="searchInput" placeholder="搜索论文标题、作者...">
         </div>
@@ -204,30 +253,159 @@ html = '''<!DOCTYPE html>
     });
     
     const confYears = Object.keys(confYearPapers).sort();
-    const conferences = [...new Set(papers.map(p => p.conference).filter(c => c))];
     
     let currentFilter = "";
     let currentSearch = "";
+    let filterMode = "topic"; // "topic" 或 "confYear"
+    let expandedConf = null; // 当前展开的会议
+    
+    // 按会议组织年份
+    const confYearMap = {};
+    confYears.forEach(cy => {
+        const [conf, year] = cy.split('|');
+        if (!confYearMap[conf]) confYearMap[conf] = [];
+        confYearMap[conf].push(year);
+    });
+    const conferences = Object.keys(confYearMap).sort();
     
     function initNav() {
         const navBar = document.getElementById('navBar');
+        const filterGroup = document.getElementById('filterGroup');
+        
+        // 模式切换按钮放在 navBar
+        const modeChip = document.createElement('div');
+        modeChip.className = 'nav-chip mode-toggle';
+        modeChip.dataset.mode = 'topic';
+        modeChip.textContent = '🏷️ 主题';
+        modeChip.onclick = () => setFilterMode('topic');
+        navBar.appendChild(modeChip);
+        
+        const confChip = document.createElement('div');
+        confChip.className = 'nav-chip mode-toggle';
+        confChip.dataset.mode = 'confYear';
+        confChip.textContent = '📅 会议';
+        confChip.onclick = () => setFilterMode('confYear');
+        navBar.appendChild(confChip);
+        
+        // "全部"按钮
+        const allChip = document.createElement('div');
+        allChip.className = 'nav-chip';
+        allChip.dataset.filter = '';
+        allChip.textContent = '全部';
+        allChip.onclick = () => {
+            currentFilter = "";
+            document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+            render();
+        };
+        filterGroup.appendChild(allChip);
         
         // 添加主题筛选
         topics.forEach(t => {
             const chip = document.createElement('div');
-            chip.className = 'nav-chip';
+            chip.className = 'nav-chip filter-chip topic-filter';
             chip.dataset.filter = t;
+            chip.dataset.mode = 'topic';
             chip.textContent = t;
             chip.onclick = () => setFilter(t);
-            navBar.appendChild(chip);
+            chip.style.display = 'none';
+            filterGroup.appendChild(chip);
+        });
+        
+        // 添加会议层级筛选（树形结构）
+        conferences.forEach(conf => {
+            // 会议名称按钮
+            const confChip = document.createElement('div');
+            confChip.className = 'nav-chip filter-chip conf-filter';
+            confChip.dataset.conf = conf;
+            confChip.dataset.mode = 'confYear';
+            confChip.textContent = conf;
+            confChip.style.display = 'none';
+            confChip.onclick = () => toggleConf(conf);
+            filterGroup.appendChild(confChip);
+            
+            // 年份子选项（初始隐藏）
+            const years = confYearMap[conf].sort((a,b) => b - a);
+            years.forEach(year => {
+                const yearChip = document.createElement('div');
+                yearChip.className = 'nav-chip filter-chip year-filter';
+                yearChip.dataset.filter = conf + '|' + year;
+                yearChip.dataset.mode = 'confYear';
+                yearChip.dataset.conf = conf;
+                yearChip.textContent = year;
+                yearChip.style.display = 'none';
+                yearChip.onclick = (e) => {
+                    e.stopPropagation();
+                    setFilter(conf + '|' + year);
+                };
+                filterGroup.appendChild(yearChip);
+            });
+        });
+        
+        // 默认显示主题筛选
+        setFilterMode('topic');
+    }
+    
+    function toggleConf(conf) {
+        if (expandedConf === conf) {
+            expandedConf = null;
+        } else {
+            expandedConf = conf;
+        }
+        updateConfDisplay();
+    }
+    
+    function updateConfDisplay() {
+        // 更新会议按钮样式
+        document.querySelectorAll('.conf-filter').forEach(c => {
+            c.classList.toggle('active', c.dataset.conf === expandedConf);
+            c.classList.toggle('expanded', c.dataset.conf === expandedConf);
+        });
+        
+        // 显示/隐藏年份选项
+        document.querySelectorAll('.year-filter').forEach(c => {
+            c.style.display = (c.dataset.conf === expandedConf && filterMode === 'confYear') ? '' : 'none';
         });
     }
     
-    function setFilter(topic) {
-        currentFilter = topic;
-        document.querySelectorAll('.nav-chip').forEach(c => {
-            c.classList.toggle('active', c.dataset.filter === topic);
+    function setFilterMode(mode) {
+        filterMode = mode;
+        expandedConf = null;
+        
+        // 更新模式切换按钮样式
+        document.querySelectorAll('.mode-toggle').forEach(c => {
+            c.classList.toggle('active', c.dataset.mode === mode);
         });
+        
+        // 显示/隐藏对应的筛选按钮
+        document.querySelectorAll('.topic-filter').forEach(c => {
+            c.style.display = mode === 'topic' ? '' : 'none';
+        });
+        document.querySelectorAll('.conf-filter').forEach(c => {
+            c.style.display = mode === 'confYear' ? '' : 'none';
+        });
+        document.querySelectorAll('.year-filter').forEach(c => {
+            c.style.display = 'none';
+        });
+        
+        // 清空当前筛选
+        currentFilter = "";
+        document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+        
+        render();
+    }
+    
+    function setFilter(filter) {
+        // 如果点击的是当前激活的筛选，则清除
+        if (currentFilter === filter) {
+            currentFilter = "";
+        } else {
+            currentFilter = filter;
+        }
+        
+        document.querySelectorAll('.filter-chip').forEach(c => {
+            c.classList.toggle('active', c.dataset.filter === currentFilter);
+        });
+        
         render();
     }
     
@@ -236,7 +414,17 @@ html = '''<!DOCTYPE html>
         currentSearch = search;
         
         let filtered = papers.filter(p => {
-            const matchFilter = !currentFilter || p.topic === currentFilter;
+            let matchFilter = true;
+            if (currentFilter) {
+                if (filterMode === 'topic') {
+                    matchFilter = p.topic === currentFilter;
+                } else if (filterMode === 'confYear') {
+                    const conf = p.conference || 'arXiv';
+                    const year = p.year || 2024;
+                    const key = conf + '|' + year;
+                    matchFilter = key === currentFilter;
+                }
+            }
             const matchSearch = !search || 
                 (p.title && p.title.toLowerCase().includes(search)) || 
                 (p.authors && p.authors.toLowerCase().includes(search));
@@ -271,7 +459,7 @@ html = '''<!DOCTYPE html>
         list.innerHTML = html;
         
         document.getElementById('paperCount').textContent = papers.length;
-        document.getElementById('confCount').textContent = conferences.length;
+        document.getElementById('confCount').textContent = Object.keys(confYearMap).length;
         document.getElementById('topicCount').textContent = topics.length;
         document.getElementById('totalCount').textContent = papers.length;
     }
