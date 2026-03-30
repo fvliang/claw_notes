@@ -21,14 +21,15 @@
     <div class="filter">
         <select id="topicFilter" onchange="filterPapers()">
             <option value="">All Topics</option>
-            <option value="Speculative Decoding">Speculative Decoding</option>
-            <option value="KV Cache">KV Cache</option>
-            <option value="Attention">Attention</option>
-            <option value="Hardware">Hardware</option>
+            <option value="Compression">Compression</option>
             <option value="LLM Serving">LLM Serving</option>
+            <option value="KV Cache">KV Cache</option>
+            <option value="Speculative Decoding">Speculative Decoding</option>
+            <option value="Hardware">Hardware</option>
+            <option value="Attention">Attention</option>
             <option value="MoE">MoE</option>
-            <option value="Edge-Cloud">Edge-Cloud</option>
             <option value="Scheduling">Scheduling</option>
+            <option value="Edge-Cloud">Edge-Cloud</option>
         </select>
         <input type="text" id="search" placeholder="Search..." oninput="filterPapers()">
     </div>
@@ -99,6 +100,24 @@
             <div class="tags"><span>Scheduling</span></div>
             <div></div>
         </div>
+        <div class="paper" data-topic="Speculative Decoding">
+            <h3>REST: Retrieval-Based Speculative Decoding</h3>
+            <div class="meta">FasterDecoding | NAACL 2024</div>
+            <div class="tags"><span>Speculative Decoding</span></div>
+            <div></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>TokenSwift: Ultra Long Sequence Generation</h3>
+            <div class="meta">bigai-nlco | ICML 2025</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div></div>
+        </div>
+        <div class="paper" data-topic="Speculative Decoding">
+            <h3>LayerSkip: Early Exit and Self-Speculative Decoding</h3>
+            <div class="meta">Facebook Research | ACL 2024</div>
+            <div class="tags"><span>Speculative Decoding</span></div>
+            <div></div>
+        </div>
         <div class="paper" data-topic="Attention">
             <h3>vLLM: Efficient Memory Management for Large Language Model Serving with PagedAttention</h3>
             <div class="meta"> | arXiv 2023</div>
@@ -139,6 +158,12 @@
             <h3>Sequoia: Tree-Based Speculative Decoding</h3>
             <div class="meta">Infini-AI-Lab | arXiv 2024</div>
             <div class="tags"><span>Speculative Decoding</span></div>
+            <div></div>
+        </div>
+        <div class="paper" data-topic="KV Cache">
+            <h3>Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving</h3>
+            <div class="meta">Moonshot AI | arXiv 2024</div>
+            <div class="tags"><span>KV Cache</span></div>
             <div></div>
         </div>
         <div class="paper" data-topic="Attention">
@@ -209,7 +234,7 @@
         </div>
         <div class="paper" data-topic="Speculative Decoding">
             <h3>Nightjar: Dynamic Adaptive Speculative Decoding for Large Language Models Serving</h3>
-            <div class="meta">Rui Li, Zhaoning Zhang, Libo Zhang, et al. | arXiv 2024</div>
+            <div class="meta">Rui Li, Zhaoning Zhang, Libo Zhang, et al. | arXiv 2090</div>
             <div class="tags"><span>Speculative Decoding</span></div>
             <div></div>
         </div>
@@ -248,6 +273,12 @@
             <div class="meta">Tongxuan Liu, Tao Peng, Peijun Yang, et al. | arXiv 2025</div>
             <div class="tags"><span>LLM Serving</span></div>
             <div></div>
+        </div>
+        <div class="paper" data-topic="Speculative Decoding">
+            <h3>SpecForge: A Flexible and Efficient Open-Source Training Framework for Speculative Decoding</h3>
+            <div class="meta">Shenggui Li, Chao Wang, Yikai Zhu, Yubo Wang, Fan Yin, Shuai Shi, Yefei Chen, Xiaomin Dong, Qiaoling Chen, Jin Pan, Ji Li, Laixin Xie, Yineng Zhang, Lei Yu, Yonggang Wen, Ivor Tsang, Tianwei Zhang | arXiv 2025</div>
+            <div class="tags"><span>Speculative Decoding</span></div>
+            <div><a href="https://github.com/SpecForge">GitHub</a></div>
         </div>
         <div class="paper" data-topic="LLM Serving">
             <h3>PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving</h3>
@@ -430,33 +461,9 @@
             <div></div>
         </div>
         <div class="paper" data-topic="LLM Serving">
-            <h3>Fast State Restoration in LLM Serving with HCache</h3>
-            <div class="meta">Shiwei Gao 等 | EuroSys 2025</div>
-            <div class="tags"><span>LLM Serving</span></div>
-            <div></div>
-        </div>
-        <div class="paper" data-topic="LLM Serving">
             <h3>NanoFlow: Towards Optimal Large Language Model Serving Throughput</h3>
             <div class="meta">Kan Zhu, Yufei Gao, Yilong Zhao, Liangyu Zhao, Gefei Zuo, Yile Gu, Dedong Xie, Tian Tang, Qinyu Xu, Zihao Ye, Keisuke Kamahori, Chien-Yu Lin, Ziren Wang, Stephanie Wang, Arvind Krishnamurthy, Baris Kasikci | OSDI 2025</div>
             <div class="tags"><span>LLM Serving</span></div>
-            <div></div>
-        </div>
-        <div class="paper" data-topic="LLM Serving">
-            <h3>Pie: A Programmable Serving System for Emerging LLM Applications</h3>
-            <div class="meta">In Gim 等 | SOSP 2025</div>
-            <div class="tags"><span>LLM Serving</span></div>
-            <div></div>
-        </div>
-        <div class="paper" data-topic="Speculative Decoding">
-            <h3>LayerSkip: Early Exit and Self-Speculative Decoding</h3>
-            <div class="meta">Facebook Research | ACL 2024</div>
-            <div class="tags"><span>Speculative Decoding</span></div>
-            <div></div>
-        </div>
-        <div class="paper" data-topic="Speculative Decoding">
-            <h3>REST: Retrieval-Based Speculative Decoding</h3>
-            <div class="meta">FasterDecoding | NAACL 2024</div>
-            <div class="tags"><span>Speculative Decoding</span></div>
             <div></div>
         </div>
         <div class="paper" data-topic="Speculative Decoding">
@@ -466,262 +473,280 @@
             <div></div>
         </div>
         <div class="paper" data-topic="LLM Serving">
-            <h3>TokenSwift: Ultra Long Sequence Generation</h3>
-            <div class="meta">bigai-nlco | ICML 2025</div>
+            <h3>Pie: A Programmable Serving System for Emerging LLM Applications</h3>
+            <div class="meta">In Gim 等 | SOSP 2025</div>
             <div class="tags"><span>LLM Serving</span></div>
             <div></div>
         </div>
         <div class="paper" data-topic="LLM Serving">
-            <h3>Cauchy: A Cost-Efficient LLM Serving System through Adaptive Computation and Memory Optimization</h3>
-            <div class="meta">Various | SOCC 2025</div>
+            <h3>Fast State Restoration in LLM Serving with HCache</h3>
+            <div class="meta">Shiwei Gao 等 | EuroSys 2025</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div></div>
+        </div>
+        <div class="paper" data-topic="Compression">
+            <h3>M2XFP: A Metadata-Augmented Microscaling Data Format for Efficient Low-bit Quantization</h3>
+            <div class="meta">Weiming Hu, Zihan Zhang, Haoyan Zhang, Chen Zhang, Cong Guo, Yu Feng, Tianchi Hu, Guanglin Li, Guipeng Hu, Junsong Wang, Jingwen Leng | ASPLOS 2026</div>
+            <div class="tags"><span>Compression</span></div>
+            <div><a href="https://arxiv.org/abs/2601.19213">arXiv</a></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>SNIP: An Adaptive Mixed Precision Framework for Subbyte Large Language Model Training</h3>
+            <div class="meta">Yunjie Pan, Yao Fu, Ziheng Qiao, Chengmai Mao, Yining Qi, Tianchen Du, Hongxiang Li, Lanbo Li, Chen Liang, Yong Li, Dilin Wang, Wei Liu | ASPLOS 2026</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div><a href="https://arxiv.org/abs/2602.01410">arXiv</a></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>RedFuser: An Automatic Operator Fusion Framework for Cascaded Reductions on AI Accelerators</h3>
+            <div class="meta">Xinsheng Tang, Yuhui Zhao, Jintao Li, Jiaming Xu, Shuo Li, Jiansong Chen, Chen Zhang, Yong Li, Xiaoyong Liu, Ji Liu, Jin Wang, Wei Lin | ASPLOS 2026</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div><a href="https://arxiv.org/abs/2603.10026">arXiv</a></div>
+        </div>
+        <div class="paper" data-topic="MoE">
+            <h3>LAER-MoE: Load-Adaptive Expert Re-layout for Efficient Mixture-of-Experts Training</h3>
+            <div class="meta">Xinyi Liu, Zijian Zhang, YongLi Zhu, Jiale Zhang, Peng Sun, XuanWang, Qi Qi, Jingren Zhou, Tong Yang, Bin Cui | ASPLOS 2026</div>
+            <div class="tags"><span>MoE</span></div>
+            <div><a href="https://arxiv.org/abs/2602.11686">arXiv</a></div>
+        </div>
+        <div class="paper" data-topic="Speculative Decoding">
+            <h3>SpeContext: Enabling Efficient Long-context Reasoning with Speculative Context Sparsity in LLMs</h3>
+            <div class="meta">Jiaming Xu, Hong Cao, Yuhan Lin, Jinyang Li, Zheng Liu, Jie Liu, Xingyu Li, Jin Wang, Jingyuan Jia, Ge Li | ASPLOS 2026</div>
+            <div class="tags"><span>Speculative Decoding</span></div>
+            <div><a href="https://arxiv.org/abs/2512.00722">arXiv</a></div>
+        </div>
+        <div class="paper" data-topic="Hardware">
+            <h3>Ouroboros: Wafer-Scale SRAM CIM with Token-Grained Pipelining for Large Language Model Inference</h3>
+            <div class="meta">Yiqi Liu, Cheng Liu, Zhen Gu, Tianchen Ding, Zongyue Zhao, Ziyu Yang, Yufei Ding, Yibo Lin, Mingjie Lin, Xiaowei Li, Zidong Du, Chen Liu, Yunji Chen | ASPLOS 2026</div>
+            <div class="tags"><span>Hardware</span></div>
+            <div><a href="https://arxiv.org/abs/2603.02737">arXiv</a></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>Serving Compound Inference Systems on Datacenter GPUs</h3>
+            <div class="meta">Sriram Devata, Rahul Sukthankar, Saurabh Adya | ASPLOS 2024</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div><a href="https://arxiv.org/abs/2603.08797">arXiv</a></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>FlashInfer: Kernel Library for LLM Serving</h3>
+            <div class="meta"> | arXiv 2024</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div><a href="https://arxiv.org/abs/2501.01005">arXiv</a> <a href="https://github.com/flashinfer-ai/flashinfer">GitHub</a></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>BitNet: Official Inference Framework for 1-bit LLMs</h3>
+            <div class="meta"> | arXiv 2024</div>
             <div class="tags"><span>LLM Serving</span></div>
             <div></div>
         </div>
         <div class="paper" data-topic="LLM Serving">
-            <h3>EdgeLoRA: An Efficient Multi-Tenant LLM Serving System on Edge Devices</h3>
-            <div class="meta">Various | MobiSys 2025</div>
+            <h3>RouteLLM: LLM路由服务与评估框架</h3>
+            <div class="meta"> | arXiv 2024</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div><a href="https://github.com/lm-sys/RouteLLM">GitHub</a></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>llama.cpp: LLM Inference in C/C++</h3>
+            <div class="meta"> | arXiv 2024</div>
             <div class="tags"><span>LLM Serving</span></div>
             <div></div>
         </div>
         <div class="paper" data-topic="LLM Serving">
-            <h3>LAPS: A Length-Aware-Prefill LLM Serving System</h3>
-            <div class="meta">Various | arXiv 2026</div>
-            <div class="tags"><span>LLM Serving</span></div>
-            <div></div>
-        </div>
-        <div class="paper" data-topic="LLM Serving">
-            <h3>QServe: W4A8KV4 Quantization and System Co-design for Efficient LLM Serving</h3>
-            <div class="meta">Various | MLSys 2024</div>
-            <div class="tags"><span>LLM Serving</span></div>
-            <div></div>
-        </div>
-        <div class="paper" data-topic="LLM Serving">
-            <h3>WAGES: Workload-Aware GPU Sharing for Energy-Efficient LLM Serving</h3>
-            <div class="meta">Various | SC 2025</div>
-            <div class="tags"><span>LLM Serving</span></div>
-            <div></div>
-        </div>
-        <div class="paper" data-topic="LLM Serving">
-            <h3>PICE: A Semantic-Driven Progressive Inference System for LLM</h3>
-            <div class="meta">Various | arXiv 2025</div>
-            <div class="tags"><span>LLM Serving</span></div>
-            <div></div>
-        </div>
-        <div class="paper" data-topic="LLM Serving">
-            <h3>DistServe: Disaggregating Prefill and Decoding for Goodput-Oriented LLM Serving</h3>
-            <div class="meta">Various | OSDI 2024</div>
-            <div class="tags"><span>LLM Serving</span></div>
-            <div></div>
-        </div>
-        <div class="paper" data-topic="LLM Serving">
-            <h3>Taming the Memory Footprint Crisis: System Design for Production LLM Serving</h3>
-            <div class="meta">Various | arXiv 2025</div>
-            <div class="tags"><span>LLM Serving</span></div>
-            <div></div>
-        </div>
-        <div class="paper" data-topic="LLM Serving">
-            <h3>TurboSpec: Closed-loop Speculation Control System for Optimizing LLM Inference</h3>
-            <div class="meta">Various | arXiv 2024</div>
-            <div class="tags"><span>LLM Serving</span></div>
-            <div></div>
-        </div>
-        <div class="paper" data-topic="LLM Serving">
-            <h3>SGLang: Efficient Serving Framework for Large Language Models and Multimodal Models</h3>
-            <div class="meta">Various | GitHub 2024</div>
-            <div class="tags"><span>LLM Serving</span></div>
-            <div><a href="https://github.com/sgl-project/sglang">GitHub</a></div>
-        </div>
-        <div class="paper" data-topic="LLM Serving">
-            <h3>Mooncake: Kimi's Serving Platform for LLM Inference</h3>
-            <div class="meta">Moonshot AI | GitHub 2024</div>
+            <h3>Mooncake: Kimi的LLM服务平台</h3>
+            <div class="meta"> | arXiv 2024</div>
             <div class="tags"><span>LLM Serving</span></div>
             <div><a href="https://github.com/kvcache-ai/Mooncake">GitHub</a></div>
         </div>
         <div class="paper" data-topic="LLM Serving">
-            <h3>vLLM: Easy, Fast, and Cheap LLM Serving with PagedAttention</h3>
-            <div class="meta">Various | GitHub 2023</div>
+            <h3>LMDeploy: LLM部署与服务工具包</h3>
+            <div class="meta"> | arXiv 2024</div>
             <div class="tags"><span>LLM Serving</span></div>
-            <div><a href="https://github.com/vllm-project/vllm">GitHub</a></div>
+            <div><a href="https://github.com/InternLM/lmdeploy">GitHub</a></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>LightLLM: Python-based LLM Inference Serving Framework</h3>
+            <div class="meta"> | arXiv 2024</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>nano-PEARL: Draft-Target Disaggregation LLM Serving System</h3>
+            <div class="meta"> | arXiv 2026</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div><a href="https://github.com/smart-lty/nano-PEARL">GitHub</a></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>Text Generation Inference (TGI)</h3>
+            <div class="meta"> | arXiv 2024</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div><a href="https://github.com/huggingface/text-generation-inference">GitHub</a></div>
         </div>
         <div class="paper" data-topic="Speculative Decoding">
-            <h3>SpecForge: Train Speculative Decoding Models for SGLang Serving</h3>
-            <div class="meta">Various | GitHub 2024</div>
+            <h3>SpecForge: Training Speculative Decoding Framework</h3>
+            <div class="meta">Shenggui Li, Chao Wang, Yikai Zhu, Yubo Wang, Fan Yin, Shuai Shi, Yefei Chen, Xiaomin Dong, Qiaoling Chen, Jin Pan, Ji Li, Laixin Xie, Yineng Zhang, Lei Yu, Yonggang Wen, Ivor Tsang, Tianwei Zhang | arXiv 2024</div>
+            <div class="tags"><span>Speculative Decoding</span></div>
+            <div></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>PowerInfer: 本地部署高速LLM推理引擎</h3>
+            <div class="meta"> | arXiv 2024</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div><a href="https://github.com/Tiiny-AI/PowerInfer">GitHub</a></div>
+        </div>
+        <div class="paper" data-topic="Speculative Decoding">
+            <h3>SpecForge: Speculative Decoding Training Framework</h3>
+            <div class="meta"> | arXiv 2026</div>
             <div class="tags"><span>Speculative Decoding</span></div>
             <div><a href="https://github.com/sgl-project/SpecForge">GitHub</a></div>
         </div>
-        <div class="paper" data-topic="Speculative Decoding">
-            <h3>Sequoia: Scalable and Robust Tree-Based Speculative Decoding</h3>
-            <div class="meta">Various | GitHub 2024</div>
-            <div class="tags"><span>Speculative Decoding</span></div>
-            <div><a href="https://github.com/Infini-AI-Lab/Sequoia">GitHub</a></div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>web-llm: High-performance In-browser LLM Inference Engine</h3>
+            <div class="meta"> | arXiv 2024</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div></div>
         </div>
-        <div class="paper" data-topic="Speculative Decoding">
-            <h3>TriForce: Hierarchical Speculative Decoding for Long Sequence Generation</h3>
-            <div class="meta">Various | COLM 2024</div>
-            <div class="tags"><span>Speculative Decoding</span></div>
-            <div><a href="https://github.com/Infini-AI-Lab/TriForce">GitHub</a></div>
-        </div>
-        <div class="paper" data-topic="Speculative Decoding">
-            <h3>LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding</h3>
-            <div class="meta">Meta Research | ACL 2024</div>
-            <div class="tags"><span>Speculative Decoding</span></div>
-            <div><a href="https://github.com/facebookresearch/LayerSkip">GitHub</a></div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>Tiny-LLM: Build a Tiny vLLM + Qwen on Apple Silicon</h3>
+            <div class="meta"> | arXiv 2024</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div></div>
         </div>
         <div class="paper" data-topic="Speculative Decoding">
-            <h3>SpecIter: Speculative Iteration for LLM Inference</h3>
-            <div class="meta">Various | arXiv 2024</div>
+            <h3>DSDE: Dynamic Speculative Decoding</h3>
+            <div class="meta"> | arXiv 2026</div>
+            <div class="tags"><span>Speculative Decoding</span></div>
+            <div><a href="https://github.com/samsungsds-opensource/DSDE">GitHub</a></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>FlashInfer</h3>
+            <div class="meta"> | arXiv 2024</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>vLLM</h3>
+            <div class="meta"> | arXiv 2024</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>ServerlessLLM</h3>
+            <div class="meta"> | arXiv 2024</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>RouteLLM</h3>
+            <div class="meta"> | arXiv 2024</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>LLM Engineer Handbook</h3>
+            <div class="meta"> | arXiv 2024</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>LLM Applications (Ray)</h3>
+            <div class="meta"> | arXiv 2024</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>LMDeploy</h3>
+            <div class="meta"> | arXiv 2024</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>LightLLM</h3>
+            <div class="meta"> | arXiv 2024</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>PowerInfer</h3>
+            <div class="meta"> | arXiv 2024</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>Tiny LLM: Learn LLM Inference Serving on Apple Silicon</h3>
+            <div class="meta"> | arXiv 2024</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>DeepSeek 相关技术</h3>
+            <div class="meta"> | arXiv 2024</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>NVIDIA Model Optimizer</h3>
+            <div class="meta"> | arXiv 2024</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div></div>
+        </div>
+        <div class="paper" data-topic="LLM Serving">
+            <h3>llm-inference-optimization-lab - Benchmark-Driven Serving Platform</h3>
+            <div class="meta"> | arXiv 2025</div>
+            <div class="tags"><span>LLM Serving</span></div>
+            <div></div>
+        </div>
+        <div class="paper" data-topic="Speculative Decoding">
+            <h3>vLLM Speculators: Unified Speculative Decoding Library</h3>
+            <div class="meta"> | arXiv 2024</div>
             <div class="tags"><span>Speculative Decoding</span></div>
             <div></div>
         </div>
-        <div class="paper" data-topic="KV Cache">
-            <h3>PagedAttention v2: Virtual Memory Management for LLM Serving</h3>
-            <div class="meta">Various | arXiv 2024</div>
-            <div class="tags"><span>KV Cache</span></div>
-            <div><a href="https://github.com/vllm-project/vllm">GitHub</a></div>
+        <div class="paper" data-topic="Speculative Decoding">
+            <h3>inferinse - High-Throughput Speculative Decoding Gateway</h3>
+            <div class="meta"> | arXiv 2025</div>
+            <div class="tags"><span>Speculative Decoding</span></div>
+            <div></div>
         </div>
         <div class="paper" data-topic="LLM Serving">
-            <h3>LightLLM: Lightweight LLM Inference Serving Framework</h3>
-            <div class="meta">ModelTC | GitHub 2023</div>
-            <div class="tags"><span>LLM Serving</span></div>
-            <div><a href="https://github.com/ModelTC/LightLLM">GitHub</a></div>
-        </div>
-        <div class="paper" data-topic="LLM Serving">
-            <h3>LMDeploy: Efficient Deployment of Large Language Models</h3>
-            <div class="meta">ModelTC | GitHub 2023</div>
-            <div class="tags"><span>LLM Serving</span></div>
-            <div><a href="https://github.com/ModelTC/lmdeploy">GitHub</a></div>
-        </div>
-        <div class="paper" data-topic="LLM Serving">
-            <h3>Text Generation Inference: Production Ready LLM Serving</h3>
-            <div class="meta">Hugging Face | GitHub 2023</div>
-            <div class="tags"><span>LLM Serving</span></div>
-            <div><a href="https://github.com/huggingface/text-generation-inference">GitHub</a></div>
-        </div>
-        <div class="paper" data-topic="LLM Serving">
-            <h3>PowerInfer: High-Speed LLM Inference on Consumer GPUs</h3>
-            <div class="meta">Various | arXiv 2024</div>
+            <h3>llm-serving-at-scale - Production-Ready LLM Serving at Massive Scale</h3>
+            <div class="meta"> | arXiv 2025</div>
             <div class="tags"><span>LLM Serving</span></div>
             <div></div>
         </div>
         <div class="paper" data-topic="LLM Serving">
-            <h3>Infini-AI: Efficient LLM Inference at Scale</h3>
-            <div class="meta">Various | arXiv 2025</div>
-            <div class="tags"><span>LLM Serving</span></div>
-            <div></div>
-        </div>
-        <div class="paper" data-topic="LLM Inference">
-            <h3>FlashInfer: Next-Gen Attention Kernel for LLM Inference</h3>
-            <div class="meta">Various | GitHub 2024</div>
-            <div class="tags"><span>LLM Inference</span></div>
-            <div><a href="https://github.com/flashinfer-ai/flashinfer">GitHub</a></div>
-        </div>
-        <div class="paper" data-topic="LLM Serving">
-            <h3>WebLLM: High-Performance LLM Inference in Browser</h3>
-            <div class="meta">Various | GitHub 2024</div>
-            <div class="tags"><span>LLM Serving</span></div>
-            <div><a href="https://github.com/mlc-ai/web-llm">GitHub</a></div>
-        </div>
-        <div class="paper" data-topic="LLM Inference">
-            <h3>TinyLLM: Learning LLM Inference on Apple Silicon</h3>
-            <div class="meta">Various | GitHub 2024</div>
-            <div class="tags"><span>LLM Inference</span></div>
-            <div><a href="https://github.com/skyzh/tiny-llm">GitHub</a></div>
-        </div>
-        <div class="paper" data-topic="LLM Optimization">
-            <h3>BitNet: Efficient 1-bit LLM Inference</h3>
-            <div class="meta">Microsoft Research | GitHub 2024</div>
-            <div class="tags"><span>LLM Optimization</span></div>
-            <div><a href="https://github.com/microsoft/BitNet">GitHub</a></div>
-        </div>
-        <div class="paper" data-topic="VLM Serving">
-            <h3>Ovis: Optimizing Vision-Language Model Inference Serving</h3>
-            <div class="meta">Various | arXiv 2025</div>
-            <div class="tags"><span>VLM Serving</span></div>
-            <div></div>
-        </div>
-        <div class="paper" data-topic="LLM Serving">
-            <h3>Deepsize: Memory-Efficient LLM Serving with Dynamic Sizing</h3>
-            <div class="meta">Various | OSDI 2025</div>
+            <h3>long-context-serving-lab - Minimal LLM Serving Lab</h3>
+            <div class="meta"> | arXiv 2025</div>
             <div class="tags"><span>LLM Serving</span></div>
             <div></div>
         </div>
         <div class="paper" data-topic="LLM Serving">
-            <h3>Rifle: Efficient LLM Inference with Request-Level Scheduling</h3>
-            <div class="meta">Various | SOSP 2025</div>
+            <h3>SGLang</h3>
+            <div class="meta"> | arXiv 2026</div>
             <div class="tags"><span>LLM Serving</span></div>
             <div></div>
         </div>
         <div class="paper" data-topic="LLM Serving">
-            <h3>SLO-aware LLM Serving with Adaptive Batching</h3>
-            <div class="meta">Various | EuroSys 2025</div>
+            <h3>MLC-LLM REST API Serving</h3>
+            <div class="meta"> | arXiv 2025</div>
             <div class="tags"><span>LLM Serving</span></div>
             <div></div>
         </div>
         <div class="paper" data-topic="LLM Serving">
-            <h3>Mammoth: Distributed LLM Training and Serving at Scale</h3>
-            <div class="meta">Various | SC 2025</div>
+            <h3>Awesome LLM Inference Papers</h3>
+            <div class="meta"> | arXiv 2024</div>
             <div class="tags"><span>LLM Serving</span></div>
             <div></div>
         </div>
         <div class="paper" data-topic="LLM Serving">
-            <h3>Anole: Efficient LLM Serving with Adaptive Context</h3>
-            <div class="meta">Various | arXiv 2025</div>
+            <h3>MemBoost: A Memory-Boosted Framework for Cost-Aware LLM Inference</h3>
+            <div class="meta">Joris Köster, Zixuan Liu, Siavash Khajavi, Zizhan Zheng | arXiv 2026</div>
             <div class="tags"><span>LLM Serving</span></div>
-            <div></div>
+            <div><a href="https://arxiv.org/abs/2603.26557">arXiv</a></div>
         </div>
         <div class="paper" data-topic="LLM Serving">
-            <h3>Hydra: Heterogeneous LLM Serving with Dynamic Scaling</h3>
-            <div class="meta">Various | ASPLOS 2026</div>
+            <h3>Rocks, Pebbles and Sand: Modality-aware Scheduling for Multimodal Large Language Model Inference</h3>
+            <div class="meta">Konstantinos Papaioannou, Thaleia Dimitra Doudali, et al. | arXiv 2026</div>
             <div class="tags"><span>LLM Serving</span></div>
-            <div></div>
-        </div>
-        <div class="paper" data-topic="LLM Serving">
-            <h3>SplitServe: Disaggregated LLM Serving for Reduced Latency</h3>
-            <div class="meta">Various | NSDI 2025</div>
-            <div class="tags"><span>LLM Serving</span></div>
-            <div></div>
-        </div>
-        <div class="paper" data-topic="LLM Inference">
-            <h3>Vela: Performance Profiling and Optimization for LLM Inference</h3>
-            <div class="meta">Various | SIGCOMM 2025</div>
-            <div class="tags"><span>LLM Inference</span></div>
-            <div></div>
-        </div>
-        <div class="paper" data-topic="LLM Serving">
-            <h3>Aero: Elastic LLM Serving with Minimal Cold Start</h3>
-            <div class="meta">Various | ATC 2025</div>
-            <div class="tags"><span>LLM Serving</span></div>
-            <div></div>
-        </div>
-        <div class="paper" data-topic="Memory Optimization">
-            <h3>Pinnacle: GPU Memory Optimization for Large Context LLM Serving</h3>
-            <div class="meta">Various | arXiv 2025</div>
-            <div class="tags"><span>Memory Optimization</span></div>
-            <div></div>
-        </div>
-        <div class="paper" data-topic="LLM Serving">
-            <h3>Orca: Serving Multiple LLM Models with Shared Infrastructure</h3>
-            <div class="meta">Various | OSDI 2025</div>
-            <div class="tags"><span>LLM Serving</span></div>
-            <div></div>
-        </div>
-        <div class="paper" data-topic="Attention Optimization">
-            <h3>FlashAttention-3: Fast and Accurate Attention for LLM Training and Inference</h3>
-            <div class="meta">Various | arXiv 2024</div>
-            <div class="tags"><span>Attention Optimization</span></div>
-            <div><a href="https://github.com/Dao-AILab/flash-attention">GitHub</a></div>
-        </div>
-        <div class="paper" data-topic="LLM Serving">
-            <h3>Sarathi: Balanced Batching for LLM Inference Serving</h3>
-            <div class="meta">Various | arXiv 2024</div>
-            <div class="tags"><span>LLM Serving</span></div>
-            <div></div>
-        </div>
-        <div class="paper" data-topic="LLM Serving">
-            <h3>TGI: Production-Grade LLM Inference at Hugging Face</h3>
-            <div class="meta">Hugging Face | GitHub 2023</div>
-            <div class="tags"><span>LLM Serving</span></div>
-            <div><a href="https://github.com/huggingface/text-generation-inference">GitHub</a></div>
+            <div><a href="https://arxiv.org/abs/2603.26498">arXiv</a></div>
         </div>
     </div>
     <script>
