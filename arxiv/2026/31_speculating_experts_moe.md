@@ -9,7 +9,7 @@
 
 ## 摘要 (Abstract)
 
-> ...per-token compute. However, in memory-constrained inference settings, expert weights must be offloaded to CPU, creating a performance bottleneck from CPU-GPU transfers during decoding. We propose an expert prefetching scheme that leverages currently computed internal model representations to...
+> ...per-token compute. However, in memory-constrained inference settings, expert权重必须卸载到CPU, creating a performance bottleneck from CPU-GPU transfers during decoding. We propose an expert prefetching scheme that leverages currently computed internal model representations to...
 
 ## 摘要 (中文)
 
