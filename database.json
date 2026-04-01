@@ -1886,6 +1886,186 @@
       "has_real_content": true,
       "id": "carbonedge_2026",
       "topic": "edge"
+    },
+    {
+      "title": "StepCache: Step-Level Reuse with Lightweight Verification and Selective Patching for LLM Serving",
+      "authors": "Azam Nouri",
+      "arxiv_id": "2603.28795",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "LLM Serving",
+      "abstract_en": "We address LLM serving workloads where repeated requests share a common solution structure but differ in localized constraints, such as output schema, variable names, or numeric constants. Prior caching approaches typically reuse either full responses (semantic caching) or model-internal KV/prefix states, which are respectively brittle under partial changes or tightly coupled to specific backends. We present StepCache, a backend-agnostic step-level reuse layer that segments outputs into ordered steps, retrieves the best-matching cached request, verifies steps using lightweight task-aware checks, and regenerates only failing regions via selective patching.",
+      "abstract_cn": "我们解决LLM服务场景中重复请求共享共同解决方案结构但在局部约束（如输出模式、变量名或数值常量）方面不同的问题。以往的缓存方法通常重用完整响应（语义缓存）或模型内部KV/前缀状态，分别在部分更改下脆弱或与特定后端紧密耦合。我们提出StepCache，一个后端无关的步骤级重用层，将输出分割为有序步骤，检索最佳匹配的缓存请求，使用轻量级任务感知检查验证步骤，并通过选择性修补仅重新生成失败区域。"
+    },
+    {
+      "title": "MemBoost: A Memory-Boosted Framework for Cost-Aware LLM Inference",
+      "authors": "Joris Köster, Zixuan Liu, Siavash Khajavi, Zizhan Zheng",
+      "arxiv_id": "2603.26557",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "LLM Inference",
+      "abstract_en": "Large Language Models (LLMs) deliver strong performance but incur high inference costs. Existing work either optimizes per-token latency or reduces total token consumption through caching, while largely ignoring the cost dynamics within the autoregressive generation process.",
+      "abstract_cn": "大型语言模型(LLM)提供强大的性能但产生高推理成本。现有工作要么优化每token延迟，要么通过缓存减少总token消耗，同时在很大程度上忽略自回归生成过程中的成本动态。"
+    },
+    {
+      "title": "Chimera: Latency- and Performance-Aware Multi-agent Serving for Heterogeneous LLMs",
+      "authors": "Kangqi Ni, Wenyue Hua, Xiaoxiang Shi, Jiang Guo, Shiyu Chang, Tianlong Chen",
+      "arxiv_id": "2603.22206",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "LLM Serving",
+      "abstract_en": "Multi-agent applications often execute complex tasks as multi-stage workflows, where each stage is an LLM call whose output becomes part of context for subsequent steps. Existing serving systems overlook this workflow structure and treat each LLM call independently, leading to suboptimal latency and performance.",
+      "abstract_cn": "多智能体应用通常将复杂任务执行为多阶段工作流，其中每个阶段是一个LLM调用，其输出成为后续步骤的上下文。现有的服务系统忽略这种工作流结构，将每个LLM调用独立对待，导致延迟和性能不理想。"
+    },
+    {
+      "title": "S2D2: Fast Decoding for Diffusion LLMs via Training-Free Self-Speculation",
+      "authors": "Ligong Han, Hao Wang, Han Gao, Kai Xu, Akash Srivastava",
+      "arxiv_id": "2603.19390",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "Speculative Decoding",
+      "abstract_en": "Block-diffusion language models offer a promising path toward faster-than-autoregressive generation by combining block-wise autoregressive decoding with within-block parallel denoising.",
+      "abstract_cn": "块扩散语言模型通过结合块式自回归解码和块内并行去噪，为超越自回归的生成提供了一条有前景的路径。"
+    },
+    {
+      "title": "SpecForge: A Flexible and Efficient Open-Source Training Framework for Speculative Decoding",
+      "authors": "Shenggui Li, Chao Wang, Yikai Zhu, Yubo Wang, Fan Yin, et al.",
+      "arxiv_id": "2603.07252",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "Speculative Decoding",
+      "abstract_en": "Large language models incur high inference latency due to sequential autoregressive decoding. Speculative decoding (SD) has emerged as a prominent solution to accelerate LLM inference.",
+      "abstract_cn": "大型语言模型由于顺序自回归解码而产生高推理延迟。推测解码(SD)已成为加速LLM推理的突出解决方案。"
+    },
+    {
+      "title": "A Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference",
+      "authors": "Yida Zhang, Zhiyong Gao, Shuaibing Yue, Jie Li, Rui Wang",
+      "arxiv_id": "2603.19371",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "Speculative Decoding",
+      "abstract_en": "Recent advancements and widespread adoption of Large Language Models (LLMs) in both industry and academia have catalyzed significant demand for efficient inference systems.",
+      "abstract_cn": "大型语言模型(LLM)在工业和学术界最近的进展和广泛采用刺激了对高效推理系统的重大需求。"
+    },
+    {
+      "title": "ParallelVLM: Lossless Video-LLM Acceleration with Visual Alignment Aware Parallel Speculative Decoding",
+      "authors": "Quan Kong, Yuhao Shen, Yicheng Ji, Huan Li, Cong Wang",
+      "arxiv_id": "2603.16236",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "Speculative Decoding",
+      "abstract_en": "Although current Video-LLMs achieve impressive performance in video understanding tasks, their autoregressive decoding efficiency remains constrained by the massive number of video tokens.",
+      "abstract_cn": "尽管当前的Video-LLM在视频理解任务中取得了令人印象深刻的性能，但其自回归解码效率仍然受到大量视频token的限制。"
+    },
+    {
+      "title": "MMSpec: Benchmarking Speculative Decoding for Vision-Language Models",
+      "authors": "Hui Shen, Xin Wang, Ping Zhang, Yunta Hsieh, Qi Han, et al.",
+      "arxiv_id": "2603.13017",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "Speculative Decoding",
+      "abstract_en": "Vision-language models (VLMs) achieve strong performance on multimodal tasks but suffer from high inference latency due to large model sizes and long multimodal contexts.",
+      "abstract_cn": "视觉语言模型(VLM)在多模态任务上表现出色，但由于大模型尺寸和长多模态上下文而遭受高推理延迟。"
+    },
+    {
+      "title": "Self-Speculative Decoding for LLM-based ASR with CTC Encoder Drafts",
+      "authors": "George Saon, Samuel Thomas, Takashi Fukuda, Tohru Nagano, Avihu Dekel, Luis Lastras",
+      "arxiv_id": "2603.09611",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "Speculative Decoding",
+      "abstract_en": "We propose self-speculative decoding for LLM-based automatic speech recognition (ASR) with CTC encoder drafts.",
+      "abstract_cn": "我们提出了基于LLM的自动语音识别(ASR)的自推测解码，使用CTC编码器草稿。"
+    },
+    {
+      "title": "ConFu: Contemplate the Future for Better Speculative Sampling",
+      "authors": "Zongyue Qin, Raghavv Goel, Mukul Gagrani, Risheek Garrepalli, Mingu Lee, Yizhou Sun",
+      "arxiv_id": "2603.04011",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "Speculative Decoding",
+      "abstract_en": "Speculative sampling (SpecSa) is a widely adopted technique to accelerate autoregressive language model generation without compromising output quality.",
+      "abstract_cn": "推测采样(SpecSa)是一种广泛采用的技术，可以在不影响输出质量的情况下加速自回归语言模型生成。"
+    },
+    {
+      "title": "PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving",
+      "authors": "Wenfeng Wang, Xiaofeng Hou, Peng Tang, Hengyi Zhou, Jing Wang, Xinkai Wang, Chao Li, Minyi Guo",
+      "arxiv_id": "2603.20053",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "LLM Serving",
+      "abstract_en": "Retrieval-Augmented Generation (RAG) systems enhance the performance of large language models (LLMs) by incorporating external knowledge.",
+      "abstract_cn": "检索增强生成(RAG)系统通过整合外部知识来增强大型语言模型(LLM)的性能。"
+    },
+    {
+      "title": "Rocks, Pebbles and Sand: Modality-aware Scheduling for Multimodal Large Language Model Inference",
+      "authors": "Anonymous",
+      "arxiv_id": "2603.20046",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "LLM Inference",
+      "abstract_en": "We investigate the unique scheduling challenges in serving Multimodal Large Language Models (MLLMs).",
+      "abstract_cn": "我们研究服务多模态大型语言模型(MLLM)的独特调度挑战。"
+    },
+    {
+      "title": "Characterizing CPU-Induced Slowdowns in Multi-GPU LLM Inference",
+      "authors": "Anonymous",
+      "arxiv_id": "2603.20047",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "LLM Inference",
+      "abstract_en": "We characterize CPU-induced slowdowns during multi-GPU LLM inference, identifying key bottlenecks.",
+      "abstract_cn": "我们表征了多GPU LLM推理期间CPU引起的减速，确定了关键瓶颈。"
+    },
+    {
+      "title": "RelayS2S: A Dual-Path Speculative Generation for Real-Time Dialogue",
+      "authors": "Anonymous",
+      "arxiv_id": "2603.20006",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "Speculative Decoding",
+      "abstract_en": "We propose RelayS2S, a dual-path speculative generation framework for real-time dialogue.",
+      "abstract_cn": "我们提出RelayS2S，一种用于实时对话的双路径推测生成框架。"
+    },
+    {
+      "title": "ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-computation for LLM Inference",
+      "authors": "Qiuyang Zhang, Kai Zhou, Ding Tang, Kai Lu, Cheng Li, Zhenyu Yang, Peng Xu, Jiguang Wan",
+      "arxiv_id": "2603.15803",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "LLM Inference",
+      "abstract_en": "Large language models encounter critical GPU memory capacity constraints during long-context inference, where KV cache memory consumption severely limits decode batch sizes.",
+      "abstract_cn": "大型语言模型在长上下文推理过程中遇到关键的GPU内存容量限制，其中KV缓存内存消耗严重限制了解码批处理大小。"
+    },
+    {
+      "title": "KVSculpt: KV Cache Compression as Distillation",
+      "authors": "Bo Jiang, Sian Jin",
+      "arxiv_id": "2603.19850",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "LLM Inference",
+      "abstract_en": "KV cache compression is critical for efficient long-context LLM inference.",
+      "abstract_cn": "KV缓存压缩对于高效的长上下文LLM推理至关重要。"
+    },
+    {
+      "title": "Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference",
+      "authors": "Zifan He, Rui Ma, Yizhou Sun, Jason Cong",
+      "arxiv_id": "2603.20293",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "LLM Inference",
+      "abstract_en": "Modern large language models increasingly depends on efficient long-context processing and generation mechanisms.",
+      "abstract_cn": "现代大型语言模型越来越依赖于高效的长上下文处理和生成机制。"
+    },
+    {
+      "title": "A Switch-Centric In-Network Architecture for Accelerating LLM Inference in Shared-Memory Network",
+      "authors": "Aojie Jiang, Kang Zhu, Zhiheng Zhang, Zhengxu Su, Juntao Liu, Yuan Du, Li Du",
+      "arxiv_id": "2603.20295",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "LLM Inference",
+      "abstract_en": "In-network computing techniques offer a promising approach to addressing the communication bottlenecks in LLM inference.",
+      "abstract_cn": "网络内计算技术为解决LLM推理中的通信瓶颈提供了一种有前景的方法。"
     }
   ],
   "topics": [
