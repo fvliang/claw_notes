@@ -2559,6 +2559,40 @@
       "file": "./github/nanoflow.md",
       "has_real_content": true,
       "id": 161
+    },
+    {
+      "title": "Cactus: Low-latency AI Engine for Mobile Devices & Wearables",
+      "authors": "Cactus Compute Team",
+      "arxiv_id": "",
+      "github_repo": "cactus-compute/cactus",
+      "conference": "GitHub",
+      "full_conference": "GitHub: Open Source",
+      "year": 2026,
+      "abstract_en": "Cactus is a low-latency AI engine designed for mobile devices and wearables. Key features include: fastest inference on ARM CPU, zero-copy memory mapping ensuring 10x lower RAM use than other engines, one SDK for speech, vision, and language models (multimodal), automatic cloud fallback, and NPU-accelerated prefill for energy efficiency.",
+      "abstract_cn": "Cactus是一款专为移动设备和可穿戴设备设计的低延迟AI引擎。主要特点包括：ARM CPU上最快的推理速度、零拷贝内存映射（比其他引擎低10倍的RAM使用）、支持语音、视觉和语言模型的统一SDK（多模态）、自动云端回退、以及NPU加速的预填充以提高能效。",
+      "intro_en": "",
+      "intro_cn": "",
+      "file": "./github/2026/cactus.md",
+      "has_real_content": true,
+      "id": 162,
+      "topic": "Mobile Inference"
+    },
+    {
+      "title": "Mistral Inference: Official Inference Library for Mistral Models",
+      "authors": "Mistral AI",
+      "arxiv_id": "",
+      "github_repo": "mistralai/mistral-inference",
+      "conference": "GitHub",
+      "full_conference": "GitHub: Open Source",
+      "year": 2026,
+      "abstract_en": "Official inference library for Mistral models including Mistral 7B, Mixtral 8x7B, Mixtral 8x22B, Codestral, Codestral Mamba, Mathstral, Mistral Nemo, Mistral Large 2, Pixtral 12B, and Mistral Small 3.1. Provides minimal code to run Mistral models with support for various model variants.",
+      "abstract_cn": "Mistral模型的官方推理库，支持Mistral 7B、Mixtral 8x7B、Mixtral 8x22B、Codestral、Codestral Mamba、Mathstral、Mistral Nemo、Mistral Large 2、Pixtral 12B和Mistral Small 3.1等模型。提供运行Mistral模型的最小代码，支持各种模型变体。",
+      "intro_en": "",
+      "intro_cn": "",
+      "file": "./github/2026/mistral_inference.md",
+      "has_real_content": true,
+      "id": 163,
+      "topic": "Inference Library"
     }
   ],
   "topics": [
