@@ -2593,6 +2593,42 @@
       "has_real_content": true,
       "id": 163,
       "topic": "Inference Library"
+    },
+    {
+      "id": 161,
+      "title": "Goose: Anisotropic Speculation Trees for Training-Free Speculative Decoding",
+      "authors": "Tao Jin, Phuong Minh Nguyen, Naoya Inoue",
+      "arxiv_id": "2604.02047",
+      "github_repo": "",
+      "conference": "arxiv",
+      "year": 2026,
+      "abstract_en": "Speculative decoding accelerates large language model inference by drafting multiple candidate tokens and verifying them in a single forward pass. Candidates are organized as a tree: deeper trees accept more tokens per step, but adding depth requires sacrificing breadth (fallback options) under a fixed verification budget. Existing training-free methods draft from a single token source and shape their trees without distinguishing candidate quality across origins.",
+      "abstract_cn": "",
+      "topic": "Speculative Decoding"
+    },
+    {
+      "id": 162,
+      "title": "Scheduling LLM Inference with Uncertainty-Aware Output Length Predictions",
+      "authors": "Haoyu Zheng, Yongqiang Zhang, Fangcheng Fu, Xiaokai Zhou, Hao Luo, Hongchao Zhu, Yuanyuan Zhu, Hao Wang, Xiao Yan, Jiawei Jiang",
+      "arxiv_id": "2604.00499",
+      "github_repo": "",
+      "conference": "arxiv",
+      "year": 2026,
+      "abstract_en": "To schedule LLM inference, the shortest job first (SJF) principle is favorable by prioritizing requests with short output lengths to avoid head-of-line (HOL) blocking. Existing methods usually predict a single output length for each request to facilitate scheduling. We argue that such a point estimate does not match the stochastic decoding process of LLM inference, where output length is uncertain by nature.",
+      "abstract_cn": "",
+      "topic": "LLM Serving"
+    },
+    {
+      "id": 163,
+      "title": "TIDE: Token-Informed Depth Execution for Per-Token Early Exit in LLM Inference",
+      "authors": "Jaber Jaber, Osama Jaber",
+      "arxiv_id": "2603.21365",
+      "github_repo": "",
+      "conference": "arxiv",
+      "year": 2026,
+      "abstract_en": "Large language models run every token through every layer, regardless of difficulty. We present TIDE, a post-training system that attaches tiny learned routers at periodic checkpoint layers and at inference time, selects the earliest layer whose hidden state has converged for each token.",
+      "abstract_cn": "",
+      "topic": "LLM Serving"
     }
   ],
   "topics": [
