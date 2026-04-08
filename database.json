@@ -4969,6 +4969,154 @@
       "notes": "",
       "topic": "LLM Serving, API Server, Agent Framework",
       "authors": "N/A"
+    },
+    {
+      "title": "CoStream: Codec-Guided Resource-Efficient System for Video Streaming Analytics",
+      "summary": "Video streaming analytics is a crucial workload for vision-language model serving, but the high cost of multimodal inference limits scalability. Prior systems reduce inference cost by exploiting temporal and spatial redundancy in video streams, but they target either the vision transformer (ViT) or the LLM with a limited view, leaving end-to-end opportunities untapped. Moreover, existing methods incur significant overhead to identify redundancy, either through offline profiling and training or costly online computation, making them ill-suited for dynamic real-time streams.\n  We present CoStream, a codec-guided streaming video analytics system built on a key observation that video codecs already extract the temporal and spatial structure of each stream as a byproduct of compression. CoStream treats this codec metadata as a low-cost runtime signal to unify optimization across video decoding, visual processing, and LLM prefilling, with transmission reduction as an inherent benefit of operating directly on compressed bitstreams. This drives codec-guided patch pruning before ViT encoding and selective key-value cache refresh during LLM prefilling, both of which are fully online and do not require offline training. Experiments show that CoStream achieves up to 3x throughput improvement and up to 87% GPU compute reduction over state-of-the-art baselines, while maintaining competitive accuracy with only 0-8% F1 drop.",
+      "authors": [
+        "Yulin Zou",
+        "Yan Chen",
+        "Wenyan Chen",
+        "JooYoung Park",
+        "Shivaraman Nitin",
+        "Luo Tao",
+        "Francisco Romero",
+        "Dmitrii Ustiugov"
+      ],
+      "published": "2026-04-07T16:31:45Z",
+      "link": "http://arxiv.org/abs/2604.06036v1",
+      "comment": "18 pages, 34 figures",
+      "arxiv_id": "2604.06036",
+      "source": "arxiv",
+      "year": 2026,
+      "category": "inference_system",
+      "topic": "LLM Serving",
+      "conference": "arxiv"
+    },
+    {
+      "title": "DualDiffusion: A Speculative Decoding Strategy for Masked Diffusion Models",
+      "summary": "Masked Diffusion Models (MDMs) offer a promising alternative to autoregressive language models by enabling parallel token generation and bidirectional context modeling. However, their inference speed is significantly limited by the inability to cache key-value pairs due to bidirectional attention, requiring $O(N^2)$ computations at each generation step. While recent methods like FastDLLM and DkvCache improve inference speed through attention approximations and caching strategies, they achieve speedups at the cost of generation quality. We propose DualDiffusion, a speculative decoding framework for MDMs that combines fast drafter models (using efficient approximations) with slower, more accurate verifier models. By running multiple steps of a lightweight drafter followed by a single verification step, DualDiffusion achieves a superior Pareto frontier between generation steps and accuracy compared to existing approaches. We evaluate our method on MMLU and GSM8K, demonstrating that DualDiffusion maintains high accuracy while reducing the number of generation steps required, effectively pushing the quality-efficiency trade-off curve for masked diffusion language models.",
+      "authors": [
+        "Satyam Goyal",
+        "Kushal Patel",
+        "Tanush Mittal",
+        "Arjun Laxman"
+      ],
+      "published": "2026-04-06T23:23:57Z",
+      "link": "http://arxiv.org/abs/2604.05250v1",
+      "comment": "",
+      "arxiv_id": "2604.05250",
+      "source": "arxiv",
+      "year": 2026,
+      "category": "inference_system",
+      "topic": "Speculative Decoding",
+      "conference": "arxiv"
+    },
+    {
+      "title": "When Drafts Evolve: Speculative Decoding Meets Online Learning",
+      "summary": "Speculative decoding has emerged as a widely adopted paradigm for accelerating large language model inference, where a lightweight draft model rapidly generates candidate tokens that are then verified in parallel by a larger target model. However, due to limited model capacity, drafts often struggle to approximate the target distribution, resulting in shorter acceptance lengths and diminished speedup. A key yet under-explored observation is that speculative decoding inherently provides verification feedback that quantifies the deviation between the draft and target models at no additional cost. This process naturally forms an iterative \"draft commits-feedback provides-draft adapts\" evolving loop, which precisely matches the online learning paradigm. Motivated by this connection, we propose OnlineSpec, a unified framework that systematically leverages interactive feedback to continuously evolve draft models. Grounded in dynamic regret minimization, we establish a formal link between online learning performance and speculative system's acceleration rate, and develop novel algorithms via modern online learning techniques, including optimistic online learning that adaptively reuses historical gradients as predictive update hints, and online ensemble learning that dynamically maintains multiple draft models. Our algorithms are equipped with theoretical justifications and improved acceleration rates, achieving up to 24% speedup over seven benchmarks and three foundation models.",
+      "authors": [
+        "Yu-Yang Qian",
+        "Hao-Cong Wu",
+        "Yichao Fu",
+        "Hao Zhang",
+        "Peng Zhao"
+      ],
+      "published": "2026-03-13T03:44:27Z",
+      "link": "http://arxiv.org/abs/2603.12617v1",
+      "comment": "",
+      "arxiv_id": "2603.12617",
+      "source": "arxiv",
+      "year": 2026,
+      "category": "inference_system",
+      "topic": "Speculative Decoding",
+      "conference": "arxiv"
+    },
+    {
+      "title": "ConFu: Contemplate the Future for Better Speculative Sampling",
+      "summary": "Speculative decoding has emerged as a powerful approach to accelerate large language model (LLM) inference by employing lightweight draft models to propose candidate tokens that are subsequently verified by the target model. The effectiveness of this paradigm critically depends on the quality of the draft model. While recent advances such as the EAGLE series achieve state-of-the-art speedup, existing draft models remain limited by error accumulation: they condition only on the current prefix, causing their predictions to drift from the target model over steps. In this work, we propose \\textbf{ConFu} (Contemplate the Future), a novel speculative decoding framework that enables draft models to anticipate the future direction of generation. ConFu introduces (i) contemplate tokens and soft prompts that allow the draft model to leverage future-oriented signals from the target model at negligible cost, (ii) a dynamic contemplate token mechanism with MoE to enable context-aware future prediction, and (iii) a training framework with anchor token sampling and future prediction replication that learns robust future prediction. Experiments demonstrate that ConFu improves token acceptance rates and generation speed over EAGLE-3 by 8--11% across various downstream tasks with Llama-3 3B and 8B models. We believe our work is the first to bridge speculative decoding with continuous reasoning tokens, offering a new direction for accelerating LLM inference.",
+      "authors": [
+        "Zongyue Qin",
+        "Raghavv Goel",
+        "Mukul Gagrani",
+        "Risheek Garrepalli",
+        "Mingu Lee",
+        "Yizhou Sun"
+      ],
+      "published": "2026-03-09T20:11:06Z",
+      "link": "http://arxiv.org/abs/2603.08899v1",
+      "comment": "accepted at ICLR 2026 workshop on Latent & Implicit Thinking - Going Beyond CoT Reasoning",
+      "arxiv_id": "2603.08899",
+      "source": "arxiv",
+      "year": 2026,
+      "category": "inference_system",
+      "topic": "Speculative Sampling",
+      "conference": "arxiv"
+    },
+    {
+      "title": "ThunderAgent: A Simple, Fast and Program-Aware Agentic Inference System",
+      "summary": "Large language models(LLMs) are now used to power complex multi-turn agentic workflows. Existing systems run agentic inference by loosely assembling isolated components: an LLM inference engine (e.g., vLLM) and a tool orchestrator (e.g., Kubernetes). Although agentic workflows involve multiple LLM and tool requests, these systems schedule and allocate resources separately on a per-request basis, without end-to-end knowledge of the workflow. This leads to sub-optimal management of KV cache and tool execution environments. To address the challenges, we propose ThunderAgent, a fast, simple, and program-aware agentic inference system. We first abstract agentic workflows as LLM Programs, enabling a unified view of heterogeneous resources, including KV caches, system states, and external tool assets such as disk memory and network ports. Built upon this abstraction, ThunderAgent introduces a program-aware scheduler and a tool resource manager designed to maximize KV cache hit rates, mitigate memory imbalances, and enable asynchronous environment preparation. Evaluations across coding, routing, and scientific discovery agents demonstrate that ThunderAgent achieves 1.5-3.6x throughput improvements in serving, 1.8-3.9x in RL rollout, and up to 4.2x disk memory savings compared to state-of-the-art inference systems. To facilitate reproducibility and support future development, we open-source the system implementations of the whole ThunderAgent at: https://github.com/Agentic-Kinetics/ThunderAgent.",
+      "authors": [
+        "Hao Kang",
+        "Ziyang Li",
+        "Xinyu Yang",
+        "Weili Xu",
+        "Yinfang Chen",
+        "Junxiong Wang",
+        "Beidi Chen",
+        "Tushar Krishna",
+        "Chenfeng Xu",
+        "Simran Arora"
+      ],
+      "published": "2026-02-14T09:26:41Z",
+      "link": "http://arxiv.org/abs/2602.13692v2",
+      "comment": "",
+      "arxiv_id": "2602.13692",
+      "source": "arxiv",
+      "year": 2026,
+      "category": "inference_system",
+      "topic": "Agent Framework",
+      "conference": "arxiv"
+    },
+    {
+      "title": "ContiguousKV: Accelerating LLM Prefill with Granularity-Aligned KV Cache Management",
+      "summary": "Efficiently serving Large Language Models (LLMs) with persistent Prefix Key-Value (KV) Cache is critical for applications like conversational search and multi-turn dialogue. Serving a request requires loading the pre-computed prefix KV cache and generating the first token, defined as the Re-Prefill Phase. Offloading this shared prefix cache to secondary storage is essential for memory scalability. Re-Prefill with offloading suffers from severe I/O bottlenecks in two aspects. First, semantic-aware KV cache pruning algorithms select important tokens in fine granularity, while systems manage I/O in coarse, fixed-size blocks, causing severe read amplification. Second, the sequential dependency between identifying important tokens and loading KV cache creates idle I/O and compute bubbles, under-utilizing system resources.\n  This paper proposes \\textit{ContiguousKV}, a high-performance prefix KV cache offloading system that bridges algorithmic semantics with I/O efficiency to accelerate the Re-Prefill phase. We first introduce \\textit{ContiguousChunk}, a unified data management granularity that aligns KV cache pruning with I/O operations. All the mechanisms critical for I/O performance are performed at the granularity of ContiguousChunk, thereby eliminating read amplification. By exploiting the high similarity in important ContiguousChunk indices across layers, we propose intra- and inter-period asynchronous prefetching to break the sequential dependency between I/O and compute, effectively eliminating idle bubbles. Finally, we propose attention-guided cache management to retain semantically critical prefix data in memory. Evaluations on Qwen2.5 series models show that ContiguousKV achieves a 3.85x speedup in the Re-Prefill phase over the state-of-the-art offloading system IMPRESS, while maintaining high output quality.",
+      "authors": [
+        "Jing Zou",
+        "Shangyu Wu",
+        "Hancong Duan",
+        "Qiao Li",
+        "Chun Jason Xue"
+      ],
+      "published": "2026-01-20T05:58:19Z",
+      "link": "http://arxiv.org/abs/2601.13631v1",
+      "comment": "",
+      "arxiv_id": "2601.13631",
+      "source": "arxiv",
+      "year": 2026,
+      "category": "inference_system",
+      "topic": "KV Cache",
+      "conference": "arxiv"
+    },
+    {
+      "title": "Nixie: Efficient, Transparent Temporal Multiplexing for Consumer GPUs",
+      "summary": "Consumer machines are increasingly running large ML workloads such as large language models (LLMs), text-to-image generation, and interactive image editing. Unlike datacenter GPUs, consumer GPUs serve single-user, rapidly changing workloads, and each model's working set often nearly fills the GPU memory. As a result, existing sharing mechanisms (e.g., NVIDIA Unified Virtual Memory) perform poorly due to memory thrashing and excessive use of CPU pinned memory when multiple applications are active.\n  We design and implement Nixie, a system that enables efficient and transparent temporal multiplexing on consumer GPUs without requiring any application or driver changes. Nixie is a system service that coordinates GPU memory allocation and kernel launch behavior to efficiently utilize the CPU-GPU bi-directional bandwidth and CPU pinned memory. A lightweight scheduler in Nixie further improves responsiveness by automatically prioritizing latency-sensitive interactive jobs using MLFQ-inspired techniques. Our evaluations show that Nixie improves latency of real interactive code-completion tasks by up to $3.8\\times$ and saves up to 66.8% CPU pinned memory usage given the same latency requirement.",
+      "authors": [
+        "Yechen Xu",
+        "Yifei Wang",
+        "Nathanael Ren",
+        "Yiran Chen",
+        "Danyang Zhuo"
+      ],
+      "published": "2026-01-16T19:52:19Z",
+      "link": "http://arxiv.org/abs/2601.11743v1",
+      "comment": "",
+      "arxiv_id": "2601.11743",
+      "source": "arxiv",
+      "year": 2026,
+      "category": "inference_system",
+      "topic": "LLM Serving",
+      "conference": "arxiv"
     }
   ],
   "topics": [
