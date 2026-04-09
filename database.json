@@ -19,7 +19,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention",
@@ -40,7 +45,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ZipServ: Fast and Memory-Efficient LLM Inference with Hardware-Aware Lossless Compression",
@@ -61,7 +71,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "QoServe: Breaking the Silos of LLM Inference Serving",
@@ -82,7 +97,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "PAT: Accelerating LLM Decoding via Prefix-Aware Attention with Resource Efficient Multi-Tile Kernel",
@@ -103,7 +123,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "MoE-APEX: An Efficient MoE Inference System with Adaptive Precision Expert Offloading",
@@ -124,7 +149,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "XY-Serve: End-to-End Versatile Production Serving for Dynamic LLM Workloads",
@@ -145,7 +175,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Shift Parallelism: Low-Latency, High-Throughput LLM Inference for Dynamic Workloads",
@@ -166,7 +201,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Towards High-Goodput LLM Serving with Prefill-decode Multiplexing",
@@ -187,7 +227,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Bullet: Boosting GPU Utilization for LLM Serving via Dynamic Spatial-Temporal Orchestration",
@@ -208,7 +253,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "BlendServe: Optimizing Offline Inference with Resource-Aware Batching",
@@ -229,7 +279,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "REST: Retrieval-Based Speculative Decoding",
@@ -250,7 +305,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "TokenSwift: Ultra Long Sequence Generation",
@@ -271,7 +331,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "LayerSkip: Early Exit and Self-Speculative Decoding",
@@ -292,7 +357,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "vLLM: Efficient Memory Management for Large Language Model Serving with PagedAttention",
@@ -313,7 +383,12 @@
       "added_date": "2026-03-20",
       "date": "2023-01-01",
       "url": "vllm-project/vllm",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ALISE: Speculative Scheduling for LLM Serving",
@@ -334,7 +409,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "PowerInfer-2: High-Speed LLM Inference for Smartphones",
@@ -355,7 +435,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "Tiiny-AI/PowerInfer",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "InstCache: Predictive Cache for LLM Serving",
@@ -376,7 +461,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized LLM Serving",
@@ -397,7 +487,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "TriForce: Hierarchical Speculative Decoding",
@@ -418,7 +513,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Sequoia: Tree-Based Speculative Decoding",
@@ -439,7 +539,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving",
@@ -460,7 +565,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "FlashAttention-3: Fast and Accurate Attention",
@@ -481,7 +591,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Chameleon: Adaptive Caching for Multi-Adapter LLM Inference",
@@ -502,7 +617,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "EAGLE: Early Exit and Speculative Decoding",
@@ -523,7 +643,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "PipeInfer: Asynchronous Pipelined Speculation",
@@ -544,7 +669,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ShadowKV: KV Cache in Shadows for Long-Context Inference",
@@ -565,7 +695,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "MiniKV: Layer-Discriminative KV Cache",
@@ -586,7 +721,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "DART: Diffusion-Inspired Speculative Decoding",
@@ -607,7 +747,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Star-Attention: Efficient LLM Inference over Long Sequences",
@@ -628,7 +773,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ParallelVLM: Lossless Video-LLM Acceleration with Visual Alignment Aware Parallel Speculative Decoding",
@@ -649,7 +799,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ReSpec: Towards Optimizing Speculative Decoding in Reinforcement Learning Systems",
@@ -670,7 +825,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Reasoning Language Model Inference Serving Unveiled: An Empirical Study",
@@ -691,7 +851,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Nightjar: Dynamic Adaptive Speculative Decoding for Large Language Models Serving",
@@ -712,7 +877,12 @@
       "added_date": "2026-03-20",
       "date": "2090-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "KV-Compress: Paged KV-Cache Compression with Variable Compression Rates per Attention Head",
@@ -733,7 +903,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "SpecSteer: Synergizing Local Context and Global Reasoning for Efficient Personalized Generation",
@@ -754,7 +929,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "MMSpec: Benchmarking Speculative Decoding for Vision-Language Models",
@@ -775,7 +955,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference",
@@ -796,7 +981,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "HeiSD: Hybrid Speculative Decoding for Embodied Vision-Language-Action Models with Kinematic Awareness",
@@ -817,7 +1007,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "xLLM Technical Report",
@@ -838,7 +1033,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "SpecForge: A Flexible and Efficient Open-Source Training Framework for Speculative Decoding",
@@ -859,7 +1059,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "SpecForge",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving",
@@ -880,7 +1085,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving",
@@ -901,7 +1111,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Speculating Experts: Accelerates Inference for Mixture-of-Experts",
@@ -922,7 +1137,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "A Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference",
@@ -943,7 +1163,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "FLYING SERVING: On-the-Fly Parallelism Switching for Large Language Model Serving",
@@ -964,7 +1189,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "WISP: Waste- and Interference-Suppressed Distributed Speculative LLM Serving at the Edge",
@@ -985,7 +1215,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "AE-LLM: Adaptive Efficiency Optimization for Large Language Models",
@@ -1006,7 +1241,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Beyond Test-Time Compute Strategies: Advocating Energy-per-Token in LLM Inference",
@@ -1027,7 +1267,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "MineDraft: A Framework for Batch Parallel Speculative Decoding",
@@ -1048,7 +1293,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "P-EAGLE: Parallel-Drafting EAGLE with Scalable Training",
@@ -1069,7 +1319,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "MoE-Spec: Expert Budgeting for Efficient Speculative Decoding",
@@ -1090,7 +1345,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective",
@@ -1111,7 +1371,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "DualPath: Breaking the Storage Bandwidth Bottleneck in Agentic LLM Inference",
@@ -1132,7 +1397,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "When RL Meets Adaptive Speculative Training: A Unified Training-Serving System",
@@ -1153,7 +1423,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ConsRoute: Consistency-Aware Adaptive Query Routing for Cloud-Edge-Device LLMs",
@@ -1174,7 +1449,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "RelayCaching: Accelerating LLM Collaboration via Decoding KV Cache Reuse",
@@ -1195,7 +1475,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Characterizing CPU-Induced Slowdowns in Multi-GPU LLM Inference",
@@ -1216,7 +1501,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "EAGLE-Pangu: Accelerator-Safe Tree Speculative Decoding on Ascend NPUs",
@@ -1237,7 +1527,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning",
@@ -1258,7 +1553,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "The Workload-Router-Pool Architecture for LLM Inference Optimization",
@@ -1279,7 +1579,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache",
@@ -1300,7 +1605,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "CXL-SpecKV: A Disaggregated FPGA Speculative KV-Cache for Datacenter LLM Serving",
@@ -1321,7 +1631,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "S2D2: Fast Decoding for Diffusion LLMs via Training-Free Self-Speculation",
@@ -1342,7 +1657,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "KV Cache Optimization Strategies for Scalable and Efficient LLM Inference",
@@ -1363,7 +1683,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Cross-Family Speculative Prefill: Training-Free Long-Context Compression with Small Draft Models",
@@ -1384,7 +1709,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "FlexServe: A Fast and Secure LLM Serving System for Mobile Devices with Flexible Resource Isolation",
@@ -1405,7 +1735,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "TIDE: Temporal Incremental Draft Engine for Self-Improving LLM Inference",
@@ -1426,7 +1761,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Rocks, Pebbles and Sand: Modality-aware Scheduling for Multimodal Large Language Model Inference",
@@ -1447,7 +1787,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "DFlash: Block Diffusion for Flash Speculative Decoding",
@@ -1468,7 +1813,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "CacheSolidarity: Preventing Prefix Caching Side Channels in Multi-tenant LLM Serving Systems",
@@ -1489,7 +1839,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "StarSD: One-for-Many Speculative Decoding",
@@ -1510,7 +1865,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "MemBoost: A Memory-Boosted Framework for Cost-Aware LLM Inference",
@@ -1531,7 +1891,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "NanoFlow: Towards Optimal Large Language Model Serving Throughput",
@@ -1552,7 +1917,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "SWIFT: On-the-Fly Self-Speculative Decoding",
@@ -1573,7 +1943,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Pie: A Programmable Serving System for Emerging LLM Applications",
@@ -1594,7 +1969,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Fast State Restoration in LLM Serving with HCache",
@@ -1615,7 +1995,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "M2XFP: A Metadata-Augmented Microscaling Data Format for Efficient Low-bit Quantization",
@@ -1636,7 +2021,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "SNIP: An Adaptive Mixed Precision Framework for Subbyte Large Language Model Training",
@@ -1657,7 +2047,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "RedFuser: An Automatic Operator Fusion Framework for Cascaded Reductions on AI Accelerators",
@@ -1678,7 +2073,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "LAER-MoE: Load-Adaptive Expert Re-layout for Efficient Mixture-of-Experts Training",
@@ -1699,7 +2099,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "SpeContext: Enabling Efficient Long-context Reasoning with Speculative Context Sparsity in LLMs",
@@ -1720,7 +2125,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Ouroboros: Wafer-Scale SRAM CIM with Token-Grained Pipelining for Large Language Model Inference",
@@ -1741,7 +2151,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Serving Compound Inference Systems on Datacenter GPUs",
@@ -1762,7 +2177,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "FlashInfer: Kernel Library for LLM Serving",
@@ -1783,7 +2203,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "flashinfer-ai/flashinfer",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "RouteLLM: LLM路由服务与评估框架",
@@ -1804,7 +2229,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "lm-sys/RouteLLM",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Mooncake: Kimi的LLM服务平台",
@@ -1825,7 +2255,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "kvcache-ai/Mooncake",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "LMDeploy: LLM部署与服务工具包",
@@ -1846,7 +2281,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "InternLM/lmdeploy",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "nano-PEARL: Draft-Target Disaggregation LLM Serving System",
@@ -1867,7 +2307,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "smart-lty/nano-PEARL",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Text Generation Inference (TGI)",
@@ -1888,7 +2333,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "huggingface/text-generation-inference",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "SpecForge: Training Speculative Decoding Framework",
@@ -1909,7 +2359,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "PowerInfer: 本地部署高速LLM推理引擎",
@@ -1930,7 +2385,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "Tiiny-AI/PowerInfer",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "SpecForge: Speculative Decoding Training Framework",
@@ -1951,7 +2411,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "sgl-project/SpecForge",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "DSDE: Dynamic Speculative Decoding",
@@ -1972,7 +2437,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "samsungsds-opensource/DSDE",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "SJD-VP: Speculative Jacobi Decoding with Verification Prediction for Autoregressive Image Generation",
@@ -1993,7 +2463,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "SJD-PAC: Accelerating Speculative Jacobi Decoding via Proactive Drafting and Adaptive Continuation",
@@ -2014,7 +2489,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "When Drafts Evolve: Speculative Decoding Meets Online Learning",
@@ -2035,7 +2515,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Edge-Cloud Collaborative Speech Emotion Captioning via Token-Level Speculative Decoding",
@@ -2056,7 +2541,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Self-Speculative Decoding for LLM-based ASR with CTC Encoder Drafts",
@@ -2077,7 +2567,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Speculative Decoding Scaling Laws (SDSL): Throughput Optimization Made Simple",
@@ -2098,7 +2593,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "SJD-PV: Speculative Jacobi Decoding with Phrase Verification for Autoregressive Image Generation",
@@ -2119,7 +2619,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Balancing Coverage and Draft Latency in Vocabulary Trimming for Faster Speculative Decoding",
@@ -2140,7 +2645,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Accelerating OpenPangu Inference on NPU via Speculative Decoding",
@@ -2161,7 +2671,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Training-free Dropout Sampling for Semantic Token Acceptance in Speculative Decoding",
@@ -2182,7 +2697,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Speculative Speculative Decoding",
@@ -2203,7 +2723,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Learning to Draft: Adaptive Speculative Decoding with Reinforcement Learning",
@@ -2224,7 +2749,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ITQ3_S: High-Fidelity 3-bit LLM Inference via Interleaved Ternary Quantization with Rotation-Domain Smoothing",
@@ -2245,7 +2775,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "LLM Inference at the Edge: Mobile, NPU, and GPU Performance Efficiency Trade-offs Under Sustained Load",
@@ -2266,7 +2801,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "CALVO: Improve Serving Efficiency for LLM Inferences with Intense Network Demands",
@@ -2287,7 +2827,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Trust-Aware Routing for Distributed Generative AI Inference at the Edge",
@@ -2308,7 +2853,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "CarbonEdge: Carbon-Aware Deep Learning Inference Framework for Sustainable Edge Computing",
@@ -2329,7 +2879,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "StepCache: Step-Level Reuse with Lightweight Verification and Selective Patching for LLM Serving",
@@ -2343,7 +2898,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "MemBoost: A Memory-Boosted Framework for Cost-Aware LLM Inference",
@@ -2357,7 +2917,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Chimera: Latency- and Performance-Aware Multi-agent Serving for Heterogeneous LLMs",
@@ -2371,7 +2936,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "S2D2: Fast Decoding for Diffusion LLMs via Training-Free Self-Speculation",
@@ -2385,7 +2955,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "SpecForge: A Flexible and Efficient Open-Source Training Framework for Speculative Decoding",
@@ -2399,7 +2974,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "A Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference",
@@ -2413,7 +2993,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ParallelVLM: Lossless Video-LLM Acceleration with Visual Alignment Aware Parallel Speculative Decoding",
@@ -2427,7 +3012,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "MMSpec: Benchmarking Speculative Decoding for Vision-Language Models",
@@ -2441,7 +3031,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Self-Speculative Decoding for LLM-based ASR with CTC Encoder Drafts",
@@ -2455,7 +3050,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ConFu: Contemplate the Future for Better Speculative Sampling",
@@ -2469,7 +3069,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving",
@@ -2483,7 +3088,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Rocks, Pebbles and Sand: Modality-aware Scheduling for Multimodal Large Language Model Inference",
@@ -2497,7 +3107,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Characterizing CPU-Induced Slowdowns in Multi-GPU LLM Inference",
@@ -2511,7 +3126,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "RelayS2S: A Dual-Path Speculative Generation for Real-Time Dialogue",
@@ -2525,7 +3145,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-computation for LLM Inference",
@@ -2539,7 +3164,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "KVSculpt: KV Cache Compression as Distillation",
@@ -2553,7 +3183,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference",
@@ -2567,7 +3202,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "A Switch-Centric In-Network Architecture for Accelerating LLM Inference in Shared-Memory Network",
@@ -2581,7 +3221,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Lookahead Decoding: Break the Sequential Dependency of LLM Inference",
@@ -2602,7 +3247,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "hao-ai-lab/LookaheadDecoding",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache",
@@ -2623,7 +3273,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "jy-yuan/KIVI",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference",
@@ -2644,7 +3299,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "mit-han-lab/Quest",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "KVQuant: Towards 10 Million Context Length LLM Inference",
@@ -2665,7 +3325,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "SqueezeAILab/KVQuant",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "DuoAttention: Efficient Long-Context LLM Inference",
@@ -2686,7 +3351,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "mit-han-lab/duo-attention",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "SWIFT: On-the-Fly Self-Speculative Decoding",
@@ -2707,7 +3377,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "hemingkx/SWIFT",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "DeFT: Decoding with Flash Tree-attention",
@@ -2728,7 +3403,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "LINs-lab/DeFT",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding",
@@ -2749,7 +3429,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "facebookresearch/LayerSkip",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "TriForce: Hierarchical Speculative Decoding",
@@ -2770,7 +3455,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "Infini-AI-Lab/TriForce",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "LMCache: KV Cache Acceleration Library",
@@ -2791,7 +3481,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "LMCache/LMCache",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Streaming LLM with Attention Sinks",
@@ -2812,7 +3507,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "mit-han-lab/streaming-llm",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Omlx: LLM Inference Server for Apple Silicon",
@@ -2833,7 +3533,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "jundot/omlx",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "LoRAX: Multi-LoRA Inference Server",
@@ -2854,7 +3559,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "predibase/lorax",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "LLMLingua: Prompt Compression",
@@ -2875,7 +3585,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "microsoft/LLMLingua",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Sequoia: Tree-based Speculative Decoding",
@@ -2896,7 +3611,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "Infini-AI-Lab/Sequoia",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "nano-PEARL: Parallel Speculative Decoding",
@@ -2917,7 +3637,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "smart-lty/nano-PEARL",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "mini-infer: LLM Inference Engine from Scratch",
@@ -2938,7 +3663,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "psmarter/mini-infer",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "vLLM Speculators: Unified Speculative Decoding Library",
@@ -2959,7 +3689,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "vllm-project/speculators",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "KVPress: KV Cache Compression",
@@ -2980,7 +3715,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "NVIDIA/kvpress",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ShadowKV: Efficient Long-Context LLM Inference",
@@ -3001,7 +3741,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "ByteDance-Seed/ShadowKV",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "TENT: A Declarative Slice Spraying Engine for Performant and Resilient Data Movement in Disaggregated LLM Serving",
@@ -3022,7 +3767,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ParetoBandit: Budget-Paced Adaptive Routing for Non-Stationary LLM Serving",
@@ -3043,7 +3793,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "TAPS: Task Aware Proposal Distributions for Speculative Sampling",
@@ -3064,7 +3819,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "EvoESAP: Non-Uniform Expert Pruning for Sparse MoE",
@@ -3085,7 +3845,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "MoE-SpAc: Efficient MoE Inference Based on Speculative Activation Utility in Heterogeneous Edge Scenarios",
@@ -3106,7 +3871,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "GPUStack: GPU Cluster Manager for AI Inference",
@@ -3127,7 +3897,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "gpustack/gpustack",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Chitu: High-Performance LLM Inference Framework",
@@ -3148,7 +3923,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "thu-pacman/chitu",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "RTP-LLM: Alibaba High-Performance LLM Inference Engine",
@@ -3169,7 +3949,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "alibaba/rtp-llm",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Nanoflow: Throughput-Oriented LLM Serving Framework",
@@ -3190,7 +3975,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "efeslab/Nanoflow",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Cactus: Low-latency AI Engine for Mobile Devices & Wearables",
@@ -3211,7 +4001,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "cactus-compute/cactus",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Mistral Inference: Official Inference Library for Mistral Models",
@@ -3232,7 +4027,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "mistralai/mistral-inference",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "id": 161,
@@ -3248,7 +4048,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "id": 162,
@@ -3264,7 +4069,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "id": 163,
@@ -3280,7 +4090,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "llama.cpp: LLM Inference in C/C++",
@@ -3301,7 +4116,12 @@
       "added_date": "2026-03-20",
       "date": "2023-01-01",
       "url": "ggml-org/llama.cpp",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "TensorRT-LLM: NVIDIA's High-Performance LLM Inference Framework",
@@ -3322,7 +4142,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "NVIDIA/TensorRT-LLM",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "llamafile: Distribute and Run LLMs with a Single File",
@@ -3343,7 +4168,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "mozilla-ai/llamafile",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "SGLang: High-Performance Serving Framework for LLMs and Multimodal Models",
@@ -3364,7 +4194,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "sgl-project/sglang",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "DeepSpeed Inference: High-Performance Deep Learning Inference",
@@ -3385,7 +4220,12 @@
       "added_date": "2026-03-20",
       "date": "2022-01-01",
       "url": "deepspeedai/DeepSpeed",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "A Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference",
@@ -3406,7 +4246,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "EAGLE-Pangu: Accelerator-Safe Tree Speculative Decoding on Ascend NPUs",
@@ -3427,7 +4272,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "When RL Meets Adaptive Speculative Training: A Unified Training-Serving System",
@@ -3448,7 +4298,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "TIDE: Temporal Incremental Draft Engine for Self-Improving LLM Inference",
@@ -3469,7 +4324,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "StarSD: One-for-Many Speculative Decoding",
@@ -3490,7 +4350,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "WISP: Waste- and Interference-Suppressed Distributed Speculative LLM Serving at the Edge",
@@ -3511,7 +4376,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Nightjar: Dynamic Adaptive Speculative Decoding for Large Language Models Serving",
@@ -3532,7 +4402,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving",
@@ -3553,7 +4428,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "xLLM Technical Report",
@@ -3574,7 +4454,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "FlowSpec: Continuous Pipelined Speculative Decoding for Efficient Distributed LLM Inference",
@@ -3595,7 +4480,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Utility-Driven Speculative Decoding for Mixture-of-Experts",
@@ -3616,7 +4506,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "DWDP: Distributed Weight Data Parallelism for High-Performance LLM Inference on NVL72",
@@ -3632,7 +4527,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "TENT: A Declarative Slice Spraying Engine for Disaggregated LLM Serving",
@@ -3648,7 +4548,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ParetoBandit: Budget-Paced Adaptive Routing for Non-Stationary LLM Serving",
@@ -3664,7 +4569,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Goose: Anisotropic Speculation Trees for Training-Free Speculative Decoding",
@@ -3680,7 +4590,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "SpecForge: A Flexible and Efficient Open-Source Training Framework for Speculative Decoding",
@@ -3696,7 +4611,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "sgl-project/SpecForge",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "MineDraft: A Framework for Batch Parallel Speculative Decoding",
@@ -3712,7 +4632,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Speculative Decoding Scaling Laws (SDSL)",
@@ -3728,7 +4653,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ConFu: Contemplate the Future for Better Speculative Sampling",
@@ -3744,7 +4674,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "EAGLE-Pangu: Accelerator-Safe Tree Speculative Decoding on Ascend NPUs",
@@ -3760,7 +4695,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Speculative Speculative Decoding",
@@ -3776,7 +4716,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Learning to Draft: Adaptive Speculative Decoding with Reinforcement Learning",
@@ -3792,7 +4737,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Quasar: Quantized Self-Speculative Acceleration",
@@ -3808,7 +4758,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Pre³: Enabling Deterministic Pushdown Automata for Faster Structured LLM Generation",
@@ -3829,7 +4784,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "ModelTC/lightllm",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Past-Future Scheduler for LLM Serving under SLA Guarantees",
@@ -3850,7 +4810,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "ModelTC/lightllm",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "LoongServe: Efficiently Serving Long-context Large Language Models with Elastic Sequence Parallelism",
@@ -3871,7 +4836,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "LoongServe/LoongServe",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Parrot: Efficient Serving of LLM-based Applications with Semantic Variable",
@@ -3892,7 +4862,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "microsoft/ParrotServe",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "S-LoRA: Serving Thousands of Concurrent LoRA Adapters",
@@ -3913,7 +4888,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "S-LoRA/S-LoRA",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "VTC: Virtual Token Computing for Fair Scheduling in LLM Serving",
@@ -3934,7 +4914,12 @@
       "added_date": "2026-03-20",
       "date": "2024-01-01",
       "url": "S-LoRA/S-LoRA",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "OmniKV: Dynamic Context Selection for Efficient Long-Context LLMs",
@@ -3955,7 +4940,12 @@
       "added_date": "2026-03-20",
       "date": "2025-01-01",
       "url": "antgroup/OmniKV",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "MAC-Attention: a Match-Amend-Complete Scheme for Fast and Accurate Attention Computation",
@@ -3976,7 +4966,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "YJHMITWEB/MAC-Attention",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Quasar: Quantized Self-Speculative Acceleration for Rapid Inference via Memory-Efficient Verification",
@@ -3997,7 +4992,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "LK Losses: Direct Acceptance Rate Optimization for Speculative Decoding",
@@ -4018,7 +5018,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Make Every Draft Count: Hidden State based Speculative Decoding",
@@ -4039,7 +5044,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Efficient Training-Free Multi-Token Prediction via Embedding-Space Probing",
@@ -4060,7 +5070,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "HillInfer: Efficient Long-Context LLM Inference on the Edge with Hierarchical KV Eviction using SmartSSD",
@@ -4081,7 +5096,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "PROTEUS: SLA-Aware Routing via Lagrangian RL for Multi-LLM Serving Systems",
@@ -4102,7 +5122,12 @@
       "added_date": "2026-03-20",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "id": 206,
@@ -4122,7 +5147,12 @@
       "added_date": "2026-04-07",
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "POD-Attention: Unlocking Full Prefill-Decode Overlap for Faster LLM Inference",
@@ -4137,7 +5167,12 @@
       "id": 207,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention",
@@ -4152,7 +5187,12 @@
       "id": 208,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "vLLM: Efficient Memory Management for Large Language Model Serving with PagedAttention",
@@ -4167,7 +5207,12 @@
       "id": 209,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ALISE: Speculative Scheduling for LLM Serving",
@@ -4182,7 +5227,12 @@
       "id": 210,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "PowerInfer-2: High-Speed LLM Inference for Smartphones",
@@ -4197,7 +5247,12 @@
       "id": 211,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "InstCache: Predictive Cache for LLM Serving",
@@ -4212,7 +5267,12 @@
       "id": 212,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized LLM Serving",
@@ -4227,7 +5287,12 @@
       "id": 213,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Chameleon: Adaptive Caching for Multi-Adapter LLM Inference",
@@ -4242,7 +5307,12 @@
       "id": 214,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ShadowKV: KV Cache in Shadows for Long-Context Inference",
@@ -4257,7 +5327,12 @@
       "id": 215,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "MiniKV: Layer-Discriminative KV Cache",
@@ -4272,7 +5347,12 @@
       "id": 216,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Star-Attention: Efficient LLM Inference over Long Sequences",
@@ -4287,7 +5367,12 @@
       "id": 217,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Reasoning Language Model Inference Serving Unveiled: An Empirical Study",
@@ -4302,7 +5387,12 @@
       "id": 218,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Nightjar: Dynamic Adaptive Speculative Decoding for Large Language Models Serving",
@@ -4317,7 +5407,12 @@
       "id": 219,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ReSpec: Towards Optimizing Speculative Decoding in Reinforcement Learning Systems",
@@ -4332,7 +5427,12 @@
       "id": 220,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "xLLM Technical Report",
@@ -4347,7 +5447,12 @@
       "id": 221,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "SpecForge: A Flexible and Efficient Open-Source Training Framework for Speculative Decoding",
@@ -4362,7 +5467,12 @@
       "id": 222,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving",
@@ -4377,7 +5487,12 @@
       "id": 223,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Accelerating OpenPangu Inference on NPU via Speculative Decoding",
@@ -4392,7 +5507,12 @@
       "id": 224,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "FLYING SERVING: On-the-Fly Parallelism Switching for Large Language Model Serving",
@@ -4407,7 +5527,12 @@
       "id": 225,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "SJD-PAC: Accelerating Speculative Jacobi Decoding via Proactive Drafting and Adaptive Continuation",
@@ -4422,7 +5547,12 @@
       "id": 226,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Training-free Dropout Sampling for Semantic Token Acceptance in Speculative Decoding",
@@ -4437,7 +5567,12 @@
       "id": 227,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "P-EAGLE: Parallel-Drafting EAGLE with Scalable Training",
@@ -4452,7 +5587,12 @@
       "id": 228,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "MoE-Spec: Expert Budgeting for Efficient Speculative Decoding",
@@ -4467,7 +5607,12 @@
       "id": 229,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "DualPath: Breaking the Storage Bandwidth Bottleneck in Agentic LLM Inference",
@@ -4482,7 +5627,12 @@
       "id": 230,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "When RL Meets Adaptive Speculative Training: A Unified Training-Serving System",
@@ -4497,7 +5647,12 @@
       "id": 231,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "RelayCaching: Accelerating LLM Collaboration via Decoding KV Cache Reuse",
@@ -4512,7 +5667,12 @@
       "id": 232,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning",
@@ -4527,7 +5687,12 @@
       "id": 233,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache",
@@ -4542,7 +5707,12 @@
       "id": 234,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "FlexServe: A Fast and Secure LLM Serving System for Mobile Devices with Flexible Resource Isolation",
@@ -4557,7 +5727,12 @@
       "id": 235,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "TIDE: Temporal Incremental Draft Engine for Self-Improving LLM Inference",
@@ -4572,7 +5747,12 @@
       "id": 236,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Rocks, Pebbles and Sand: Modality-aware Scheduling for Multimodal Large Language Model Inference",
@@ -4587,7 +5767,12 @@
       "id": 237,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "DFlash: Block Diffusion for Flash Speculative Decoding",
@@ -4602,7 +5787,12 @@
       "id": 238,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "WISP: Waste- and Interference-Suppressed Distributed Speculative LLM Serving at the Edge",
@@ -4617,7 +5807,12 @@
       "id": 239,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "KV Cache Optimization Strategies for Scalable and Efficient LLM Inference",
@@ -4632,7 +5827,12 @@
       "id": 240,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "CacheSolidarity: Preventing Prefix Caching Side Channels in Multi-tenant LLM Serving Systems",
@@ -4647,7 +5847,12 @@
       "id": 241,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "StarSD: One-for-Many Speculative Decoding",
@@ -4662,7 +5867,12 @@
       "id": 242,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "NanoFlow: Towards Optimal Large Language Model Serving Throughput",
@@ -4677,7 +5887,12 @@
       "id": 243,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Pie: A Programmable Serving System for Emerging LLM Applications",
@@ -4692,7 +5907,12 @@
       "id": 244,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Fast State Restoration in LLM Serving with HCache",
@@ -4707,7 +5927,12 @@
       "id": 245,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ZipServ: Fast and Memory-Efficient LLM Inference with Hardware-Aware Lossless Compression",
@@ -4722,7 +5947,12 @@
       "id": 246,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Bullet: Boosting GPU Utilization for LLM Serving through Spatial-Temporal GPU Resource Sharing",
@@ -4737,7 +5967,12 @@
       "id": 247,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "KV Cache Optimization Strategies for Scalable and Efficient LLM Inference",
@@ -4752,7 +5987,12 @@
       "id": 248,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Towards High-Goodput LLM Serving with Prefill-decode Multiplexing",
@@ -4767,7 +6007,12 @@
       "id": 249,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "RouteLLM: LLM路由服务与评估框架",
@@ -4782,7 +6027,12 @@
       "id": 250,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Mooncake: Kimi的LLM服务平台",
@@ -4797,7 +6047,12 @@
       "id": 251,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Not All Prefills Are Equal: PPD Disaggregation for Multi-turn LLM Serving",
@@ -4812,7 +6067,12 @@
       "id": 252,
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ICaRus: Identical Cache Reuse for Efficient Multi Model Inference",
@@ -4827,7 +6087,12 @@
       "id": 253,
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "CHESS: Context-aware Hierarchical Efficient Semantic Selection for Long-Context LLM Inference",
@@ -4842,7 +6107,12 @@
       "id": 254,
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
@@ -4857,7 +6127,12 @@
       "id": 255,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "KV Admission: Learning What to Write for Efficient Long-Context Inference",
@@ -4872,7 +6147,12 @@
       "id": 256,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "LLaMCAT: Optimizing Large Language Model Inference with Cache Arbitration and Throttling",
@@ -4887,7 +6167,12 @@
       "id": 257,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "DuetServe: Harmonizing Prefill and Decode for LLM Serving via Adaptive GPU Multiplexing",
@@ -4902,7 +6187,12 @@
       "id": 258,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "NOSA: Native and Offloadable Sparse Attention",
@@ -4917,7 +6207,12 @@
       "id": 259,
       "date": "2026-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Spiffy: Multiplying Diffusion LLM Acceleration via Lossless Speculative Decoding",
@@ -4932,7 +6227,12 @@
       "id": 260,
       "date": "2025-01-01",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "NIXL: NVIDIA Inference Xfer Library",
@@ -4950,7 +6250,12 @@
       ],
       "notes": "",
       "topic": "LLM Serving, KV Cache, Distributed Inference",
-      "authors": "N/A"
+      "authors": "N/A",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Llama Stack: Composable building blocks to build LLM Apps",
@@ -4968,7 +6273,12 @@
       ],
       "notes": "",
       "topic": "LLM Serving, API Server, Agent Framework",
-      "authors": "N/A"
+      "authors": "N/A",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "CoStream: Codec-Guided Resource-Efficient System for Video Streaming Analytics",
@@ -4991,7 +6301,13 @@
       "year": 2026,
       "category": "inference_system",
       "topic": "LLM Serving",
-      "conference": "arxiv"
+      "conference": "arxiv",
+      "abstract": "",
+      "venue": "",
+      "url": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "DualDiffusion: A Speculative Decoding Strategy for Masked Diffusion Models",
@@ -5010,7 +6326,13 @@
       "year": 2026,
       "category": "inference_system",
       "topic": "Speculative Decoding",
-      "conference": "arxiv"
+      "conference": "arxiv",
+      "abstract": "",
+      "venue": "",
+      "url": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "When Drafts Evolve: Speculative Decoding Meets Online Learning",
@@ -5030,7 +6352,13 @@
       "year": 2026,
       "category": "inference_system",
       "topic": "Speculative Decoding",
-      "conference": "arxiv"
+      "conference": "arxiv",
+      "abstract": "",
+      "venue": "",
+      "url": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ConFu: Contemplate the Future for Better Speculative Sampling",
@@ -5051,7 +6379,13 @@
       "year": 2026,
       "category": "inference_system",
       "topic": "Speculative Sampling",
-      "conference": "arxiv"
+      "conference": "arxiv",
+      "abstract": "",
+      "venue": "",
+      "url": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ThunderAgent: A Simple, Fast and Program-Aware Agentic Inference System",
@@ -5076,7 +6410,13 @@
       "year": 2026,
       "category": "inference_system",
       "topic": "Agent Framework",
-      "conference": "arxiv"
+      "conference": "arxiv",
+      "abstract": "",
+      "venue": "",
+      "url": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "ContiguousKV: Accelerating LLM Prefill with Granularity-Aligned KV Cache Management",
@@ -5096,7 +6436,13 @@
       "year": 2026,
       "category": "inference_system",
       "topic": "KV Cache",
-      "conference": "arxiv"
+      "conference": "arxiv",
+      "abstract": "",
+      "venue": "",
+      "url": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "title": "Nixie: Efficient, Transparent Temporal Multiplexing for Consumer GPUs",
@@ -5116,7 +6462,13 @@
       "year": 2026,
       "category": "inference_system",
       "topic": "LLM Serving",
-      "conference": "arxiv"
+      "conference": "arxiv",
+      "abstract": "",
+      "venue": "",
+      "url": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "id": 270,
@@ -5136,7 +6488,12 @@
       "added_date": "2026-04-09",
       "date": "2026-04-08",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "id": 271,
@@ -5156,7 +6513,12 @@
       "added_date": "2026-04-09",
       "date": "2026-03-23",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "id": 272,
@@ -5176,7 +6538,12 @@
       "added_date": "2026-04-09",
       "date": "2026-03-31",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "id": 273,
@@ -5196,7 +6563,12 @@
       "added_date": "2026-04-09",
       "date": "2026-03-18",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "id": 274,
@@ -5216,7 +6588,12 @@
       "added_date": "2026-04-09",
       "date": "2026-03-12",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "id": 275,
@@ -5236,7 +6613,12 @@
       "added_date": "2026-04-09",
       "date": "2026-03-13",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "id": 276,
@@ -5256,7 +6638,12 @@
       "added_date": "2026-04-09",
       "date": "2026-03-13",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
     },
     {
       "id": 277,
@@ -5276,7 +6663,157 @@
       "added_date": "2026-04-09",
       "date": "2026-03-18",
       "url": "",
-      "notes": ""
+      "notes": "",
+      "abstract": "",
+      "venue": "",
+      "pdf_url": "",
+      "github": "",
+      "blog": ""
+    },
+    {
+      "title": "InfiniLoRA: Disaggregated Multi-LoRA Serving for Large Language Models",
+      "authors": [
+        "Hongyu Chen",
+        "Letian Ruan",
+        "Zilin Xu",
+        "Yuchen Li",
+        "Xinyu Chen",
+        "Jingwen Leng",
+        "Bingsheng He",
+        "Minyi Guo",
+        "Shixuan Sun"
+      ],
+      "abstract": "LoRA enables efficient customization of LLMs and is widely used in multi-tenant and multi-task serving. However, emerging model architectures such as MoE significantly increase LoRA memory cost, making existing coupled LoRA serving designs poorly scalable and prone to tail-latency inflation. We present InfiniLoRA, a disaggregated LoRA serving system that decouples LoRA execution from base-model inference. InfiniLoRA introduces a shared LoRA Server with parallelism-aware execution, SLO-driven provisioning, and critical-path optimizations, including GPU-initiated communication and hardware-specialized LoRA kernels. Experiments show that InfiniLoRA can achieve an average 3.05× increase in serviceable request rate under strict latency SLOs, and improve the percentage of LoRA adapters satisfying the SLO requirement by 54.0%.",
+      "year": "2026",
+      "venue": "arxiv",
+      "url": "https://arxiv.org/abs/2604.07173",
+      "pdf_url": "https://arxiv.org/pdf/2604.07173.pdf",
+      "github": "",
+      "blog": "",
+      "date_added": "2026-04-10",
+      "topic": "LLM Serving",
+      "conference": "arxiv"
+    },
+    {
+      "title": "Autopoiesis: A Self-Evolving System Paradigm for LLM Serving Under Runtime Dynamics",
+      "authors": [
+        "Youhe Jiang",
+        "Ran Yan",
+        "You Peng",
+        "Wenshuang Li",
+        "Taiyi Wang",
+        "Fangcheng Fu",
+        "Binhang Yuan"
+      ],
+      "abstract": "Modern Large Language Model (LLM) serving operates in highly volatile environments characterized by severe runtime dynamics, such as workload fluctuations and elastic cluster autoscaling. Traditional serving systems rely on static, human-engineered serving policies to manage these dynamics. However, these policies must navigate deeply intertwined runtime trade-offs, whose optimal balance is workload-specific and shifts continuously as runtime conditions evolve. We propose Autopoiesis, a novel online self-evolving system that shifts LLM serving from static policy deployment to continuous online policy evolution. We evaluate Autopoiesis across diverse runtime dynamics and show up to 53% and on average 34% improvements over state-of-the-art LLM serving systems.",
+      "year": "2026",
+      "venue": "arxiv",
+      "url": "https://arxiv.org/abs/2604.07144",
+      "pdf_url": "https://arxiv.org/pdf/2604.07144.pdf",
+      "github": "",
+      "blog": "",
+      "date_added": "2026-04-10",
+      "topic": "LLM Serving",
+      "conference": "arxiv"
+    },
+    {
+      "title": "StructKV: Preserving the Structural Skeleton for Scalable Long-Context Inference",
+      "authors": [
+        "Zhirui Chen"
+      ],
+      "abstract": "As Large Language Models (LLMs) scale to support context windows exceeding one million tokens, the linear growth of Key-Value (KV) cache imposes severe memory capacity and bandwidth bottlenecks, constraining the efficiency of long-context inference. Existing compression approaches typically prioritize tokens based on local saliency metrics. However, these methods often systematically discard tokens that act as global information hubs across the network depth. To address this limitation, we propose StructKV, a structure-aware KV cache compression framework that introduces Global In-Degree Centrality, Dynamic Pivot Detection, and Structural Propagation and Decoupling. Experimental results on LongBench and RULER benchmarks demonstrate StructKV effectively preserves long-range dependencies.",
+      "year": "2026",
+      "venue": "arxiv",
+      "url": "https://arxiv.org/abs/2604.06746",
+      "pdf_url": "https://arxiv.org/pdf/2604.06746.pdf",
+      "github": "",
+      "blog": "",
+      "date_added": "2026-04-10",
+      "topic": "LLM Serving",
+      "conference": "arxiv"
+    },
+    {
+      "title": "CodecFlow: Codec-Guided End-to-End Optimization for Streaming Video Analytics",
+      "authors": [
+        "Yulin Zou",
+        "Yan Chen",
+        "Wenyan Chen",
+        "JooYoung Park",
+        "Shivaraman Nitin",
+        "Luo Tao",
+        "Francisco Romero",
+        "Dmitrii Ustiugov"
+      ],
+      "abstract": "Video streaming analytics is a crucial workload for vision-language model serving, but the high cost of multimodal inference limits scalability. Prior systems reduce inference cost by exploiting temporal and spatial redundancy in video streams, but they target either the vision transformer (ViT) or the LLM with a limited view. We present CodecFlow, a codec-guided streaming video analytics system that treats codec metadata as a low-cost runtime signal to unify optimization across video decoding, visual processing, and LLM prefilling. Experiments show that CodecFlow achieves up to 3x throughput improvement and up to 87% GPU compute reduction over state-of-the-art baselines.",
+      "year": "2026",
+      "venue": "arxiv",
+      "url": "https://arxiv.org/abs/2604.06036",
+      "pdf_url": "https://arxiv.org/pdf/2604.06036.pdf",
+      "github": "",
+      "blog": "",
+      "date_added": "2026-04-10",
+      "topic": "LLM Serving",
+      "conference": "arxiv"
+    },
+    {
+      "title": "See the Forest for the Trees: Loosely Speculative Decoding via Visual-Semantic Guidance for Efficient Inference of Video LLMs",
+      "authors": [
+        "Yicheng Ji",
+        "Jun Zhang",
+        "Jinpeng Chen",
+        "Cong Wang",
+        "Lidan Shou",
+        "Gang Chen",
+        "Huan Li"
+      ],
+      "abstract": "Video Large Language Models (Video-LLMs) excel in video understanding but suffer from high inference latency during autoregressive generation. Speculative Decoding (SD) mitigates this by applying a draft-and-verify paradigm, yet existing methods are constrained by rigid exact-match rules. To bridge this gap, we propose LVSpec, the first training-free loosely SD framework tailored for Video-LLMs. Experiments demonstrate that LVSpec achieves high fidelity and speed: it preserves >99.8 of target performance while accelerating Qwen2.5-VL-32B by 2.70x and LLaVA-OneVision-72B by 2.94x.",
+      "year": "2026",
+      "venue": "ACL",
+      "url": "https://arxiv.org/abs/2604.05650",
+      "pdf_url": "https://arxiv.org/pdf/2604.05650.pdf",
+      "github": "",
+      "blog": "",
+      "date_added": "2026-04-10",
+      "topic": "LLM Serving",
+      "conference": "ACL"
+    },
+    {
+      "title": "ParallelVLM: Lossless Video-LLM Acceleration with Visual Alignment Aware Parallel Speculative Decoding",
+      "authors": [
+        "Quan Kong",
+        "Yuhao Shen",
+        "Yicheng Ji",
+        "Huan Li",
+        "Cong Wang"
+      ],
+      "abstract": "Although current Video-LLMs achieve impressive performance in video understanding tasks, their autoregressive decoding efficiency remains constrained by the massive number of video tokens. Visual token pruning can partially ease this bottleneck, yet existing approaches still suffer from information loss. In this paper, we propose ParallelVLM, a training-free draft-then-verify speculative decoding framework that overcomes both mutual waiting and limited speedup-ratio problems. Extensive experiments demonstrate that ParallelVLM accelerates various video understanding benchmarks by 3.36x on LLaVA-Onevision-72B and 2.42x on Qwen2.5-VL-32B.",
+      "year": "2026",
+      "venue": "arxiv",
+      "url": "https://arxiv.org/abs/2603.19610",
+      "pdf_url": "https://arxiv.org/pdf/2603.19610.pdf",
+      "github": "",
+      "blog": "",
+      "date_added": "2026-04-10",
+      "topic": "LLM Serving",
+      "conference": "arxiv"
+    },
+    {
+      "title": "Multi-Drafter Speculative Decoding with Alignment Feedback",
+      "authors": [
+        "Taehyeon Kim",
+        "Hojung Jung",
+        "Se-Young Yun"
+      ],
+      "abstract": "Speculative decoding (SD) accelerates large language model (LLM) inference by using a smaller model to draft future tokens, which are then verified by the target LLM. This preserves generation quality by accepting only aligned tokens. However, existing methods often suffer from alignment drift between draft and target models. We propose Multi-Drafter, which uses multiple drafters with alignment feedback to improve the acceptance rate and speed up inference.",
+      "year": "2026",
+      "venue": "ACL",
+      "url": "https://arxiv.org/abs/2604.05417",
+      "pdf_url": "https://arxiv.org/pdf/2604.05417.pdf",
+      "github": "",
+      "blog": "",
+      "date_added": "2026-04-10",
+      "topic": "LLM Serving",
+      "conference": "ACL"
     }
   ],
   "topics": [
