@@ -6814,6 +6814,78 @@
       "date_added": "2026-04-10",
       "topic": "LLM Serving",
       "conference": "ACL"
+    },
+    {
+      "id": 285,
+      "title": "Dual-Pool Token-Budget Routing for Cost-Efficient and Reliable LLM Serving",
+      "authors": "Xunzhuo Liu, Bowei He, Xue Liu, Andy Luo, Haichen Zhang, Huamin Chen",
+      "arxiv_id": "",
+      "github_repo": "",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "LLM Serving",
+      "abstract_en": "In practice, 80-95% of requests are short, yet are served under configurations optimized for long contexts, wasting 4-8x throughput capacity and triggering reliability issues such as OOM crashes, preemption, and request rejection. We present Dual-Pool Token-Budget Routing to address these challenges.",
+      "abstract_cn": "在实践中，80-95%的请求是短请求，却按照针对长上下文优化的配置提供服务，导致4-8倍的吞吐能力浪费，并引发OOM崩溃、抢占和请求拒绝等可靠性问题。我们提出双池代币预算路由来解决这些挑战。"
+    },
+    {
+      "id": 286,
+      "title": "Blink: CPU-Free LLM Inference by Delegating the Serving Stack to GPU and SmartNIC",
+      "authors": "Mohammad Siavashi, Mariano Scazzariello, Gerald Q. Maguire Jr., Dejan Kostić, Marco Chiesa",
+      "arxiv_id": "",
+      "github_repo": "",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "LLM Serving",
+      "abstract_en": "Large Language Model (LLM) inference is rapidly becoming a core datacenter service, yet current systems require significant CPU resources for request handling, batching, and scheduling. We present Blink, a CPU-free LLM inference system that delegates the entire serving stack to GPU and SmartNIC.",
+      "abstract_cn": "大型语言模型推理正在迅速成为核心数据中心服务，但当前系统需要大量CPU资源来处理请求、批处理和调度。我们提出Blink，一个无CPU的LLM推理系统，将整个服务栈委托给GPU和SmartNIC。"
+    },
+    {
+      "id": 287,
+      "title": "Fast Heterogeneous Serving: Scalable Mixed-Scale LLM Allocation for SLO-Constrained Inference",
+      "authors": "Jiaming Cheng, Duong Tung Nguyen",
+      "arxiv_id": "",
+      "github_repo": "",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "LLM Serving",
+      "abstract_en": "Deploying large language model (LLM) inference at scale requires jointly selecting base models, provisioning heterogeneous GPUs, configuring parallelism, and distributing workloads under tight latency, accuracy, and budget constraints.",
+      "abstract_cn": "大规模部署大型语言模型推理需要联合选择基础模型、配置异构GPU、设置并行度，并在严格的延迟、准确性和预算约束下分配工作负载。"
+    },
+    {
+      "id": 288,
+      "title": "ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache",
+      "authors": "Shao Wang, Rui Ren, Lin Gui",
+      "arxiv_id": "",
+      "github_repo": "",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "LLM Serving",
+      "abstract_en": "We present ForkKV, a system for scaling multi-LoRA agent serving via copy-on-write disaggregated KV cache.",
+      "abstract_cn": "我们提出ForkKV，一个通过写时复制分解KV缓存来扩展多LoRA代理服务的系统。"
+    },
+    {
+      "id": 289,
+      "title": "Robust Length Prediction: A Perspective from Heavy-Tailed Prompt-Conditioned Distributions",
+      "authors": "Jing Wang, Yu-Yang Qian, Ke Xue, Chao Qian, Peng Zhao, Zhi-Hua Zhou",
+      "arxiv_id": "",
+      "github_repo": "",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "LLM Serving",
+      "abstract_en": "Output-length prediction is important for efficient LLM serving and resource allocation.",
+      "abstract_cn": "输出长度预测对于高效的LLM服务和资源分配至关重要。"
+    },
+    {
+      "id": 290,
+      "title": "CodecSight: Leveraging Video Codec Signals for Efficient Streaming VLM Inference",
+      "authors": "Yulin Zou, Yan Chen, Wenyan Chen, JooYoung Park, Shivaraman Nitin, Luo Tao, Francisco Romero, Dmitrii Ustiugov",
+      "arxiv_id": "",
+      "github_repo": "",
+      "conference": "arxiv",
+      "year": 2026,
+      "topic": "LLM Serving",
+      "abstract_en": "Video streaming analytics is a crucial workload for vision-language model serving, but the high cost of multimodal inference limits scalability. We present CodecSight to address this.",
+      "abstract_cn": "视频流分析是视觉语言模型服务的关键工作负载，但多模态推理的高成本限制了其可扩展性。我们提出CodecSight来解决这个问题。"
     }
   ],
   "topics": [
