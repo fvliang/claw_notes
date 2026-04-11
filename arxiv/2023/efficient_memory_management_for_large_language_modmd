@@ -1,0 +1,34 @@
+# Efficient Memory Management for Large Language Model Serving with PagedAttention
+
+**论文**: [2309.06180](https://arxiv.org/abs/2309.06180)
+
+**作者**: Kwon, Woosuk, Li, Zhuohan, Zhuang, Siyuan, Sheng, Ying, Zheng, Lianmin, Yu, Cody Hao, Gonzalez, Joseph E., Zhang, Hao, Stoica, Ion
+
+**年份**: 2023
+
+**会议/来源**: arXiv
+
+## 摘要 (Abstract)
+
+High throughput serving of large language models (LLMs) requires batching sufficiently many requests at a time. However, existing systems struggle because the key-value cache (KV cache) memory for each request is huge and grows and shrinks dynamically. When managed inefficiently, this memory can be significantly wasted by fragmentation and redundant duplication, limiting the batch size. To address this problem, we propose PagedAttention, an attention algorithm inspired by the classical virtual memory and paging techniques in operating systems. On top of it, we build vLLM, an LLM serving system that achieves (1) near-zero waste in KV cache memory and (2) flexible sharing of KV cache within and across requests to further reduce memory usage. Our evaluations show that vLLM improves the throughput of popular LLMs by 2-4$\times$ with the same level of latency compared to the state-of-the-art systems, such as FasterTransformer and Orca. The improvement is more pronounced with longer sequences, larger models, and more complex decoding algorithms. vLLM's source code is publicly available at https://github.com/vllm-project/vllm
+
+## 摘要 (中文)
+
+
+
+## 引言 (Introduction)
+
+
+
+## 资源
+
+- [论文原文](https://arxiv.org/abs/2309.06180)
+- [PDF下载](https://arxiv.org/pdf/2309.06180.pdf)
+- [GitHub仓库]()
+- [博客介绍]()
+
+## 标签
+
+- LLM Serving
+- Inference Optimization
+- System

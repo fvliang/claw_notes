@@ -1,0 +1,34 @@
+# Stateful Large Language Model Serving with Pensieve
+
+**论文**: [2312.05516](https://arxiv.org/abs/2312.05516)
+
+**作者**: Yu, Lingfan, Lin, Jinkun, Li, Jinyang
+
+**年份**: 2023
+
+**会议/来源**: arXiv
+
+## 摘要 (Abstract)
+
+Large Language Models (LLMs) are wildly popular today and it is important to serve them efficiently. Existing LLM serving systems are stateless across requests. Consequently, when LLMs are used in the common setting of multi-turn conversations, a growing log of the conversation history must be processed alongside any request by the serving system at each turn, resulting in repeated processing. In this paper, we design $Pensieve$, a system optimized for multi-turn conversation LLM serving. $Pensieve$ maintains the conversation state across requests by caching previously processed history to avoid duplicate processing. $Pensieve$'s multi-tier caching strategy can utilize both GPU and CPU memory to efficiently store and retrieve cached data. $Pensieve$ also generalizes the recent PagedAttention kernel to support attention between multiple input tokens with a GPU cache spread over non-contiguous memory. Our evaluation shows that $Pensieve$ can achieve $1.14$-$3.0\times$ the throughput of vLLM and TensorRT-LLM and significantly reduce latency.
+
+## 摘要 (中文)
+
+
+
+## 引言 (Introduction)
+
+
+
+## 资源
+
+- [论文原文](https://arxiv.org/abs/2312.05516)
+- [PDF下载](https://arxiv.org/pdf/2312.05516.pdf)
+- [GitHub仓库]()
+- [博客介绍]()
+
+## 标签
+
+- LLM Serving
+- Inference Optimization
+- System

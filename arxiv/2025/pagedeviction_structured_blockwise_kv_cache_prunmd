@@ -1,0 +1,34 @@
+# PagedEviction: Structured Block-wise KV Cache Pruning for Efficient Large Language Model Inference
+
+**论文**: [2509.04377](https://arxiv.org/abs/2509.04377)
+
+**作者**: Chitty-Venkata, Krishna Teja, Ye, Jie, Sun, Xian-He, Kougkas, Anthony, Emani, Murali, Vishwanath, Venkatram, Nicolae, Bogdan
+
+**年份**: 2025
+
+**会议/来源**: arXiv
+
+## 摘要 (Abstract)
+
+KV caching significantly improves the efficiency of Large Language Model (LLM) inference by storing attention states from previously processed tokens, enabling faster generation of subsequent tokens. However, as sequence length increases, the KV cache quickly becomes a major memory bottleneck. To address this, we propose PagedEviction, a novel fine-grained, structured KV cache pruning strategy that enhances the memory efficiency of vLLM's PagedAttention. Unlike existing approaches that rely on attention-based token importance or evict tokens across different vLLM pages, PagedEviction introduces an efficient block-wise eviction algorithm tailored for paged memory layouts. Our method integrates seamlessly with PagedAttention without requiring any modifications to its CUDA attention kernels. We evaluate PagedEviction across Llama-3.1-8B-Instruct, Llama-3.2-1B-Instruct, and Llama-3.2-3B-Instruct models on the LongBench benchmark suite, demonstrating improved memory usage with better accuracy than baselines on long context tasks.
+
+## 摘要 (中文)
+
+
+
+## 引言 (Introduction)
+
+
+
+## 资源
+
+- [论文原文](https://arxiv.org/abs/2509.04377)
+- [PDF下载](https://arxiv.org/pdf/2509.04377.pdf)
+- [GitHub仓库]()
+- [博客介绍]()
+
+## 标签
+
+- LLM Serving
+- Inference Optimization
+- System
