@@ -16,7 +16,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Attention",
-      "id": 1
+      "id": 1,
+      "added_date": "2026-03-15"
     },
     {
       "title": "vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention",
@@ -34,7 +35,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Attention",
-      "id": 2
+      "id": 2,
+      "added_date": "2026-03-15"
     },
     {
       "title": "ZipServ: Fast and Memory-Efficient LLM Inference with Hardware-Aware Lossless Compression",
@@ -52,7 +54,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Hardware",
-      "id": 3
+      "id": 3,
+      "added_date": "2026-03-15"
     },
     {
       "title": "QoServe: Breaking the Silos of LLM Inference Serving",
@@ -70,7 +73,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 4
+      "id": 4,
+      "added_date": "2026-03-15"
     },
     {
       "title": "PAT: Accelerating LLM Decoding via Prefix-Aware Attention with Resource Efficient Multi-Tile Kernel",
@@ -88,7 +92,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Attention",
-      "id": 5
+      "id": 5,
+      "added_date": "2026-03-15"
     },
     {
       "title": "MoE-APEX: An Efficient MoE Inference System with Adaptive Precision Expert Offloading",
@@ -106,7 +111,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "MoE",
-      "id": 6
+      "id": 6,
+      "added_date": "2026-03-16"
     },
     {
       "title": "XY-Serve: End-to-End Versatile Production Serving for Dynamic LLM Workloads",
@@ -124,7 +130,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 7
+      "id": 7,
+      "added_date": "2026-03-16"
     },
     {
       "title": "Shift Parallelism: Low-Latency, High-Throughput LLM Inference for Dynamic Workloads",
@@ -142,7 +149,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 8
+      "id": 8,
+      "added_date": "2026-03-16"
     },
     {
       "title": "Towards High-Goodput LLM Serving with Prefill-decode Multiplexing",
@@ -160,7 +168,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 9
+      "id": 9,
+      "added_date": "2026-03-16"
     },
     {
       "title": "Bullet: Boosting GPU Utilization for LLM Serving via Dynamic Spatial-Temporal Orchestration",
@@ -178,7 +187,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 10
+      "id": 10,
+      "added_date": "2026-03-16"
     },
     {
       "title": "BlendServe: Optimizing Offline Inference with Resource-Aware Batching",
@@ -196,7 +206,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 11
+      "id": 11,
+      "added_date": "2026-03-17"
     },
     {
       "title": "REST: Retrieval-Based Speculative Decoding",
@@ -214,7 +225,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 12
+      "id": 12,
+      "added_date": "2026-03-17"
     },
     {
       "title": "TokenSwift: Ultra Long Sequence Generation",
@@ -232,7 +244,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 13
+      "id": 13,
+      "added_date": "2026-03-17"
     },
     {
       "title": "LayerSkip: Early Exit and Self-Speculative Decoding",
@@ -250,7 +263,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 14
+      "id": 14,
+      "added_date": "2026-03-17"
     },
     {
       "title": "vLLM: Efficient Memory Management for Large Language Model Serving with PagedAttention",
@@ -268,7 +282,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Attention",
-      "id": 15
+      "id": 15,
+      "added_date": "2026-03-17"
     },
     {
       "title": "ALISE: Speculative Scheduling for LLM Serving",
@@ -286,7 +301,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 18
+      "id": 18,
+      "added_date": "2026-03-18"
     },
     {
       "title": "PowerInfer-2: High-Speed LLM Inference for Smartphones",
@@ -304,7 +320,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 19
+      "id": 19,
+      "added_date": "2026-03-18"
     },
     {
       "title": "InstCache: Predictive Cache for LLM Serving",
@@ -322,7 +339,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "KV Cache",
-      "id": 20
+      "id": 20,
+      "added_date": "2026-03-18"
     },
     {
       "title": "DistServe: Disaggregating Prefill and Decoding for Goodput-optimized LLM Serving",
@@ -340,7 +358,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 21
+      "id": 21,
+      "added_date": "2026-03-19"
     },
     {
       "title": "TriForce: Hierarchical Speculative Decoding",
@@ -358,7 +377,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 22
+      "id": 22,
+      "added_date": "2026-03-19"
     },
     {
       "title": "speculative_decoding_survey",
@@ -376,7 +396,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 23
+      "id": 23,
+      "added_date": "2026-03-19"
     },
     {
       "title": "Sequoia: Tree-Based Speculative Decoding",
@@ -394,7 +415,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 24
+      "id": 24,
+      "added_date": "2026-03-19"
     },
     {
       "title": "Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving",
@@ -412,7 +434,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "KV Cache",
-      "id": 25
+      "id": 25,
+      "added_date": "2026-03-19"
     },
     {
       "title": "FlashAttention-3: Fast and Accurate Attention",
@@ -430,7 +453,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Attention",
-      "id": 26
+      "id": 26,
+      "added_date": "2026-03-20"
     },
     {
       "title": "Lookahead Decoding: Break the Sequential Dependency of LLM Inference",
@@ -448,7 +472,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 27
+      "id": 27,
+      "added_date": "2026-03-20"
     },
     {
       "title": "Chameleon: Adaptive Caching for Multi-Adapter LLM Inference",
@@ -466,7 +491,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 28
+      "id": 28,
+      "added_date": "2026-03-20"
     },
     {
       "title": "Quest: Query-Aware Sparsity for Efficient Long-Context LLM Inference",
@@ -484,7 +510,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 29
+      "id": 29,
+      "added_date": "2026-03-20"
     },
     {
       "title": "EAGLE: Early Exit and Speculative Decoding",
@@ -502,7 +529,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 30
+      "id": 30,
+      "added_date": "2026-03-20"
     },
     {
       "title": "PipeInfer: Asynchronous Pipelined Speculation",
@@ -520,7 +548,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 31
+      "id": 31,
+      "added_date": "2026-03-21"
     },
     {
       "title": "ShadowKV: KV Cache in Shadows for Long-Context Inference",
@@ -538,7 +567,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "KV Cache",
-      "id": 32
+      "id": 32,
+      "added_date": "2026-03-21"
     },
     {
       "title": "MiniKV: Layer-Discriminative KV Cache",
@@ -556,7 +586,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "KV Cache",
-      "id": 33
+      "id": 33,
+      "added_date": "2026-03-21"
     },
     {
       "title": "DART: Diffusion-Inspired Speculative Decoding",
@@ -574,7 +605,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 34
+      "id": 34,
+      "added_date": "2026-03-21"
     },
     {
       "title": "KIVI: A Tuning-Free Asymmetric 2bit Quantization for KV Cache",
@@ -592,7 +624,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "KV Cache",
-      "id": 35
+      "id": 35,
+      "added_date": "2026-03-21"
     },
     {
       "title": "Star-Attention: Efficient LLM Inference over Long Sequences",
@@ -610,7 +643,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Attention",
-      "id": 36
+      "id": 36,
+      "added_date": "2026-03-22"
     },
     {
       "title": "ParallelVLM: Lossless Video-LLM Acceleration with Visual Alignment Aware Parallel Speculative Decodi",
@@ -628,7 +662,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 37
+      "id": 37,
+      "added_date": "2026-03-22"
     },
     {
       "title": "ReSpec: Towards Optimizing Speculative Decoding in Reinforcement Learning Systems",
@@ -646,7 +681,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 38
+      "id": 38,
+      "added_date": "2026-03-22"
     },
     {
       "title": "Reasoning Language Model Inference Serving Unveiled: An Empirical Study",
@@ -664,7 +700,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 39
+      "id": 39,
+      "added_date": "2026-03-22"
     },
     {
       "title": "LLaMCAT: Optimizing Large Language Model Inference with Cache Arbitration and Throttling",
@@ -682,7 +719,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "KV Cache",
-      "id": 40
+      "id": 40,
+      "added_date": "2026-03-22"
     },
     {
       "title": "Nightjar: Dynamic Adaptive Speculative Decoding for Large Language Models Serving",
@@ -700,7 +738,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 41
+      "id": 41,
+      "added_date": "2026-03-23"
     },
     {
       "title": "Spiffy: Multiplying Diffusion LLM Acceleration via Lossless Speculative Decoding",
@@ -718,7 +757,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 42
+      "id": 42,
+      "added_date": "2026-03-23"
     },
     {
       "title": "KV-Compress: Paged KV-Cache Compression with Variable Compression Rates per Attention Head",
@@ -736,7 +776,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "KV Cache",
-      "id": 43
+      "id": 43,
+      "added_date": "2026-03-23"
     },
     {
       "title": "SpecSteer: Synergizing Local Context and Global Reasoning for Efficient Personalized Generation",
@@ -754,7 +795,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 45
+      "id": 45,
+      "added_date": "2026-03-23"
     },
     {
       "title": "MMSpec: Benchmarking Speculative Decoding for Vision-Language Models",
@@ -772,7 +814,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 47
+      "id": 47,
+      "added_date": "2026-03-24"
     },
     {
       "title": "Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference",
@@ -790,7 +833,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 48
+      "id": 48,
+      "added_date": "2026-03-24"
     },
     {
       "title": "HeiSD: Hybrid Speculative Decoding for Embodied Vision-Language-Action Models with Kinematic Awarene",
@@ -808,7 +852,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 49
+      "id": 49,
+      "added_date": "2026-03-24"
     },
     {
       "title": "DuetServe: Harmonizing Prefill and Decode for LLM Serving via Adaptive GPU Multiplexing",
@@ -826,7 +871,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 50
+      "id": 50,
+      "added_date": "2026-03-24"
     },
     {
       "title": "xLLM Technical Report",
@@ -844,7 +890,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 51
+      "id": 51,
+      "added_date": "2026-03-25"
     },
     {
       "title": "SpecForge: A Flexible and Efficient Open-Source Training Framework for Speculative Decoding",
@@ -862,7 +909,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 52
+      "id": 52,
+      "added_date": "2026-03-25"
     },
     {
       "title": "TraCT: Disaggregated LLM Serving with CXL Shared Memory KV Cache at Rack-Scale",
@@ -880,7 +928,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "KV Cache",
-      "id": 53
+      "id": 53,
+      "added_date": "2026-03-25"
     },
     {
       "title": "PCR: A Prefetch-Enhanced Cache Reuse System for Low-Latency RAG Serving",
@@ -898,7 +947,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "KV Cache",
-      "id": 54
+      "id": 54,
+      "added_date": "2026-03-25"
     },
     {
       "title": "DSD: A Distributed Speculative Decoding Solution for Edge-Cloud Agile Large Model Serving",
@@ -916,7 +966,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 55
+      "id": 55,
+      "added_date": "2026-03-25"
     },
     {
       "title": "KV Admission: Learning What to Write for Efficient Long-Context Inference",
@@ -934,7 +985,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "KV Cache",
-      "id": 56
+      "id": 56,
+      "added_date": "2026-03-26"
     },
     {
       "title": "Accelerating OpenPangu Inference on NPU via Speculative Decoding",
@@ -952,7 +1004,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 57
+      "id": 57,
+      "added_date": "2026-03-26"
     },
     {
       "title": "Speculating Experts: Accelerates Inference for Mixture-of-Experts",
@@ -970,7 +1023,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 58
+      "id": 58,
+      "added_date": "2026-03-26"
     },
     {
       "title": "Not All Prefills Are Equal: PPD Disaggregation for Multi-turn LLM Serving",
@@ -988,7 +1042,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 59
+      "id": 59,
+      "added_date": "2026-03-26"
     },
     {
       "title": "TENT: A Declarative Slice Spraying Engine for Performant and Resilient Data Movement in Disaggregate",
@@ -1006,7 +1061,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 60
+      "id": 60,
+      "added_date": "2026-03-26"
     },
     {
       "title": "A Pipelined Collaborative Speculative Decoding Framework for Efficient Edge-Cloud LLM Inference",
@@ -1024,7 +1080,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 61
+      "id": 61,
+      "added_date": "2026-03-27"
     },
     {
       "title": "NOSA: Native and Offloadable Sparse Attention",
@@ -1042,7 +1099,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Attention",
-      "id": 62
+      "id": 62,
+      "added_date": "2026-03-27"
     },
     {
       "title": "Goose: Anisotropic Speculation Trees for Training-Free Speculative Decoding",
@@ -1060,7 +1118,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 63
+      "id": 63,
+      "added_date": "2026-03-27"
     },
     {
       "title": "FLYING SERVING: On-the-Fly Parallelism Switching for Large Language Model Serving",
@@ -1078,7 +1137,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 64
+      "id": 64,
+      "added_date": "2026-03-27"
     },
     {
       "title": "WISP: Waste- and Interference-Suppressed Distributed Speculative LLM Serving at the Edge",
@@ -1096,7 +1156,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 65
+      "id": 65,
+      "added_date": "2026-03-27"
     },
     {
       "title": "AE-LLM: Adaptive Efficiency Optimization for Large Language Models",
@@ -1114,7 +1175,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 66
+      "id": 66,
+      "added_date": "2026-03-28"
     },
     {
       "title": "Speculative Decoding Scaling Laws (SDSL): Throughput Optimization Made Simple",
@@ -1132,7 +1194,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 67
+      "id": 67,
+      "added_date": "2026-03-28"
     },
     {
       "title": "Learning to Draft: Adaptive Speculative Decoding with Reinforcement Learning",
@@ -1150,7 +1213,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 68
+      "id": 68,
+      "added_date": "2026-03-28"
     },
     {
       "title": "HillInfer: Efficient Long-Context LLM Inference on the Edge with Hierarchical KV Eviction using Smar",
@@ -1168,7 +1232,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "KV Cache",
-      "id": 69
+      "id": 69,
+      "added_date": "2026-03-28"
     },
     {
       "title": "Beyond Test-Time Compute Strategies: Advocating Energy-per-Token in LLM Inference",
@@ -1186,7 +1251,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 70
+      "id": 70,
+      "added_date": "2026-03-28"
     },
     {
       "title": "Balancing Coverage and Draft Latency in Vocabulary Trimming for Faster Speculative Decoding",
@@ -1204,7 +1270,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 71
+      "id": 71,
+      "added_date": "2026-03-29"
     },
     {
       "title": "MineDraft: A Framework for Batch Parallel Speculative Decoding",
@@ -1222,7 +1289,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 72
+      "id": 72,
+      "added_date": "2026-03-29"
     },
     {
       "title": "SJD-PAC: Accelerating Speculative Jacobi Decoding via Proactive Drafting and Adaptive Continuation",
@@ -1240,7 +1308,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 73
+      "id": 73,
+      "added_date": "2026-03-29"
     },
     {
       "title": "Training-free Dropout Sampling for Semantic Token Acceptance in Speculative Decoding",
@@ -1258,7 +1327,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 75
+      "id": 75,
+      "added_date": "2026-03-29"
     },
     {
       "title": "P-EAGLE: Parallel-Drafting EAGLE with Scalable Training",
@@ -1276,7 +1346,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 76
+      "id": 76,
+      "added_date": "2026-03-30"
     },
     {
       "title": "MoE-Spec: Expert Budgeting for Efficient Speculative Decoding",
@@ -1294,7 +1365,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 77
+      "id": 77,
+      "added_date": "2026-03-30"
     },
     {
       "title": "Self-Speculative Decoding for LLM-based ASR with CTC Encoder Drafts",
@@ -1312,7 +1384,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 80
+      "id": 80,
+      "added_date": "2026-03-30"
     },
     {
       "title": "Efficient LLM Serving for Agentic Workflows: A Data Systems Perspective",
@@ -1330,7 +1403,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 81
+      "id": 81,
+      "added_date": "2026-03-31"
     },
     {
       "title": "SJD-VP: Speculative Jacobi Decoding with Verification Prediction for Autoregressive Image Generation",
@@ -1348,7 +1422,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 82
+      "id": 82,
+      "added_date": "2026-03-31"
     },
     {
       "title": "DualPath: Breaking the Storage Bandwidth Bottleneck in Agentic LLM Inference",
@@ -1366,7 +1441,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 83
+      "id": 83,
+      "added_date": "2026-03-31"
     },
     {
       "title": "When RL Meets Adaptive Speculative Training: A Unified Training-Serving System",
@@ -1384,7 +1460,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 84
+      "id": 84,
+      "added_date": "2026-03-31"
     },
     {
       "title": "EAGLE-Pangu: Accelerator-Safe Tree Speculative Decoding on Ascend NPUs",
@@ -1402,7 +1479,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 85
+      "id": 85,
+      "added_date": "2026-03-31"
     },
     {
       "title": "ConsRoute: Consistency-Aware Adaptive Query Routing for Cloud-Edge-Device LLMs",
@@ -1420,7 +1498,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Edge-Cloud",
-      "id": 86
+      "id": 86,
+      "added_date": "2026-04-01"
     },
     {
       "title": "RelayCaching: Accelerating LLM Collaboration via Decoding KV Cache Reuse",
@@ -1438,7 +1517,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "KV Cache",
-      "id": 88
+      "id": 88,
+      "added_date": "2026-04-01"
     },
     {
       "title": "Characterizing CPU-Induced Slowdowns in Multi-GPU LLM Inference",
@@ -1456,7 +1536,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 89
+      "id": 89,
+      "added_date": "2026-04-01"
     },
     {
       "title": "ICaRus: Identical Cache Reuse for Efficient Multi Model Inference",
@@ -1474,7 +1555,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "KV Cache",
-      "id": 90
+      "id": 90,
+      "added_date": "2026-04-01"
     },
     {
       "title": "SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning",
@@ -1492,7 +1574,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 92
+      "id": 92,
+      "added_date": "2026-04-02"
     },
     {
       "title": "The Workload-Router-Pool Architecture for LLM Inference Optimization: A Vision Paper from the vLLM S",
@@ -1510,7 +1593,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 93
+      "id": 93,
+      "added_date": "2026-04-02"
     },
     {
       "title": "Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache",
@@ -1528,7 +1612,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "KV Cache",
-      "id": 94
+      "id": 94,
+      "added_date": "2026-04-02"
     },
     {
       "title": "CXL-SpecKV: A Disaggregated FPGA Speculative KV-Cache for Datacenter LLM Serving",
@@ -1546,7 +1631,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 96
+      "id": 96,
+      "added_date": "2026-04-03"
     },
     {
       "title": "Cactus: Accelerating Auto-Regressive Decoding with Constrained Acceptance Speculative Sampling",
@@ -1564,7 +1650,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 97
+      "id": 97,
+      "added_date": "2026-04-03"
     },
     {
       "title": "S2D2: Fast Decoding for Diffusion LLMs via Training-Free Self-Speculation",
@@ -1582,7 +1669,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 98
+      "id": 98,
+      "added_date": "2026-04-03"
     },
     {
       "title": "SJD-PV: Speculative Jacobi Decoding with Phrase Verification for Autoregressive Image Generation",
@@ -1600,7 +1688,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 99
+      "id": 99,
+      "added_date": "2026-04-03"
     },
     {
       "title": "KV Cache Optimization Strategies for Scalable and Efficient LLM Inference",
@@ -1618,7 +1707,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "KV Cache",
-      "id": 100
+      "id": 100,
+      "added_date": "2026-04-03"
     },
     {
       "title": "Cross-Family Speculative Prefill: Training-Free Long-Context Compression with Small Draft Models",
@@ -1636,7 +1726,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 101
+      "id": 101,
+      "added_date": "2026-04-04"
     },
     {
       "title": "Speculative Speculative Decoding",
@@ -1654,7 +1745,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 102
+      "id": 102,
+      "added_date": "2026-04-04"
     },
     {
       "title": "FlexServe: A Fast and Secure LLM Serving System for Mobile Devices with Flexible Resource Isolation",
@@ -1672,7 +1764,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 103
+      "id": 103,
+      "added_date": "2026-04-04"
     },
     {
       "title": "TIDE: Temporal Incremental Draft Engine for Self-Improving LLM Inference",
@@ -1690,7 +1783,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 105
+      "id": 105,
+      "added_date": "2026-04-04"
     },
     {
       "title": "Rocks, Pebbles and Sand: Modality-aware Scheduling for Multimodal Large Language Model Inference",
@@ -1708,7 +1802,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 106
+      "id": 106,
+      "added_date": "2026-04-05"
     },
     {
       "title": "TokenDance: Scaling Multi-Agent LLM Serving via Collective KV Cache Sharing",
@@ -1726,7 +1821,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "KV Cache",
-      "id": 107
+      "id": 107,
+      "added_date": "2026-04-05"
     },
     {
       "title": "DFlash: Block Diffusion for Flash Speculative Decoding",
@@ -1744,7 +1840,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 108
+      "id": 108,
+      "added_date": "2026-04-05"
     },
     {
       "title": "CacheSolidarity: Preventing Prefix Caching Side Channels in Multi-tenant LLM Serving Systems",
@@ -1762,7 +1859,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "KV Cache",
-      "id": 111
+      "id": 111,
+      "added_date": "2026-04-06"
     },
     {
       "title": "StarSD: One-for-Many Speculative Decoding",
@@ -1780,7 +1878,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 112
+      "id": 112,
+      "added_date": "2026-04-06"
     },
     {
       "title": "When Drafts Evolve: Speculative Decoding Meets Online Learning",
@@ -1798,7 +1897,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 113
+      "id": 113,
+      "added_date": "2026-04-06"
     },
     {
       "title": "ParetoBandit: Budget-Paced Adaptive Routing for Non-Stationary LLM Serving",
@@ -1816,7 +1916,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 115
+      "id": 115,
+      "added_date": "2026-04-06"
     },
     {
       "title": "DIVERSED: Relaxed Speculative Decoding via Dynamic Ensemble Verification",
@@ -1834,7 +1935,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 118
+      "id": 118,
+      "added_date": "2026-04-07"
     },
     {
       "title": "DWDP: Distributed Weight Data Parallelism for High-Performance LLM Inference on NVL72",
@@ -1852,7 +1954,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 119
+      "id": 119,
+      "added_date": "2026-04-07"
     },
     {
       "title": "ConFu: Contemplate the Future for Better Speculative Sampling",
@@ -1870,7 +1973,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 120
+      "id": 120,
+      "added_date": "2026-04-07"
     },
     {
       "title": "PROTEUS: SLA-Aware Routing via Lagrangian RL for Multi-LLM Serving Systems",
@@ -1888,7 +1992,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 121
+      "id": 121,
+      "added_date": "2026-04-08"
     },
     {
       "title": "Edge-Cloud Collaborative Speech Emotion Captioning via Token-Level Speculative Decoding",
@@ -1906,7 +2011,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 122
+      "id": 122,
+      "added_date": "2026-04-08"
     },
     {
       "title": "MARS: Enabling Autoregressive Models Multi-Token Generation",
@@ -1924,7 +2030,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 123
+      "id": 123,
+      "added_date": "2026-04-08"
     },
     {
       "title": "Quasar: Quantized Self-Speculative Acceleration for Rapid Inference via Memory-Efficient Verificatio",
@@ -1942,7 +2049,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 124
+      "id": 124,
+      "added_date": "2026-04-08"
     },
     {
       "title": "CHESS: Context-aware Hierarchical Efficient Semantic Selection for Long-Context LLM Inference",
@@ -1960,7 +2068,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 126
+      "id": 126,
+      "added_date": "2026-04-09"
     },
     {
       "title": "MemBoost: A Memory-Boosted Framework for Cost-Aware LLM Inference",
@@ -1978,7 +2087,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 128
+      "id": 128,
+      "added_date": "2026-04-09"
     },
     {
       "title": "KV Cache Offloading for Context-Intensive Tasks",
@@ -1996,7 +2106,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "KV Cache",
-      "id": 129
+      "id": 129,
+      "added_date": "2026-04-09"
     },
     {
       "title": "TriForce: Lossless Acceleration of Long Sequence Generation with Hierarchical Speculative Decoding",
@@ -2014,7 +2125,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 130
+      "id": 130,
+      "added_date": "2026-04-09"
     },
     {
       "title": "LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding",
@@ -2032,7 +2144,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 131
+      "id": 131,
+      "added_date": "2026-04-10"
     },
     {
       "title": "KVQuant: Towards 10 Million Context Length LLM Inference with KV Cache Quantization",
@@ -2050,7 +2163,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "KV Cache",
-      "id": 132
+      "id": 132,
+      "added_date": "2026-04-10"
     },
     {
       "title": "NanoFlow: Towards Optimal Large Language Model Serving Throughput",
@@ -2068,7 +2182,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 133
+      "id": 133,
+      "added_date": "2026-04-10"
     },
     {
       "title": "DeFT: Decoding with Flash Tree-attention for Efficient Tree-structured LLM Inference",
@@ -2086,7 +2201,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Attention",
-      "id": 134
+      "id": 134,
+      "added_date": "2026-04-10"
     },
     {
       "title": "DuoAttention: Efficient Long-Context LLM Inference with Retrieval and Streaming Heads",
@@ -2104,7 +2220,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Attention",
-      "id": 135
+      "id": 135,
+      "added_date": "2026-04-10"
     },
     {
       "title": "SWIFT: On-the-Fly Self-Speculative Decoding for LLM Inference Acceleration",
@@ -2122,7 +2239,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 136
+      "id": 136,
+      "added_date": "2026-04-11"
     },
     {
       "title": "Pie: A Programmable Serving System for Emerging LLM Applications",
@@ -2140,7 +2258,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 138
+      "id": 138,
+      "added_date": "2026-04-11"
     },
     {
       "title": "Fast State Restoration in LLM Serving with HCache",
@@ -2158,7 +2277,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "KV Cache",
-      "id": 139
+      "id": 139,
+      "added_date": "2026-04-11"
     },
     {
       "title": "M2XFP: A Metadata-Augmented Microscaling Data Format for Efficient Low-bit Quantization",
@@ -2176,7 +2296,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Compression",
-      "id": 140
+      "id": 140,
+      "added_date": "2026-04-11"
     },
     {
       "title": "SNIP: An Adaptive Mixed Precision Framework for Subbyte Large Language Model Training",
@@ -2194,7 +2315,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 141
+      "id": 141,
+      "added_date": "2026-04-12"
     },
     {
       "title": "RedFuser: An Automatic Operator Fusion Framework for Cascaded Reductions on AI Accelerators",
@@ -2212,7 +2334,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 142
+      "id": 142,
+      "added_date": "2026-04-12"
     },
     {
       "title": "LAER-MoE: Load-Adaptive Expert Re-layout for Efficient Mixture-of-Experts Training",
@@ -2230,7 +2353,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "MoE",
-      "id": 143
+      "id": 143,
+      "added_date": "2026-04-12"
     },
     {
       "title": "SpeContext: Enabling Efficient Long-context Reasoning with Speculative Context Sparsity in LLMs",
@@ -2248,7 +2372,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Speculative Decoding",
-      "id": 144
+      "id": 144,
+      "added_date": "2026-04-12"
     },
     {
       "title": "Ouroboros: Wafer-Scale SRAM CIM with Token-Grained Pipelining for Large Language Model Inference",
@@ -2266,7 +2391,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "Hardware",
-      "id": 148
+      "id": 148,
+      "added_date": "2026-04-13"
     },
     {
       "title": "Serving Compound Inference Systems on Datacenter GPUs",
@@ -2284,7 +2410,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": false,
       "topic": "LLM Serving",
-      "id": 151
+      "id": 151,
+      "added_date": "2026-04-14"
     },
     {
       "title": "FlashInfer: Kernel Library for LLM Serving",
@@ -2302,7 +2429,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "LLM Serving",
-      "id": 152
+      "id": 152,
+      "added_date": "2026-04-14"
     },
     {
       "title": "BitNet: Official Inference Framework for 1-bit LLMs",
@@ -2320,7 +2448,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 153
+      "id": 153,
+      "added_date": "2026-04-14"
     },
     {
       "title": "RouteLLM: LLM路由服务与评估框架",
@@ -2338,7 +2467,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 154
+      "id": 154,
+      "added_date": "2026-04-14"
     },
     {
       "title": "llama.cpp: LLM Inference in C/C++",
@@ -2356,7 +2486,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 155
+      "id": 155,
+      "added_date": "2026-04-14"
     },
     {
       "title": "Mooncake: Kimi的LLM服务平台",
@@ -2374,7 +2505,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 156
+      "id": 156,
+      "added_date": "2026-04-15"
     },
     {
       "title": "LMDeploy: LLM部署与服务工具包",
@@ -2392,7 +2524,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 157
+      "id": 157,
+      "added_date": "2026-04-15"
     },
     {
       "title": "LightLLM: Python-based LLM Inference Serving Framework",
@@ -2410,7 +2543,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "LLM Serving",
-      "id": 158
+      "id": 158,
+      "added_date": "2026-04-15"
     },
     {
       "title": "nano-PEARL: Draft-Target Disaggregation LLM Serving System",
@@ -2428,7 +2562,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "LLM Serving",
-      "id": 159
+      "id": 159,
+      "added_date": "2026-04-15"
     },
     {
       "title": "Text Generation Inference (TGI)",
@@ -2446,7 +2581,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 160
+      "id": 160,
+      "added_date": "2026-04-15"
     },
     {
       "title": "SpecForge: Training Speculative Decoding Framework",
@@ -2464,7 +2600,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "Speculative Decoding",
-      "id": 161
+      "id": 161,
+      "added_date": "2026-04-16"
     },
     {
       "title": "PowerInfer: 本地部署高速LLM推理引擎",
@@ -2482,7 +2619,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 162
+      "id": 162,
+      "added_date": "2026-04-16"
     },
     {
       "title": "SpecForge: Speculative Decoding Training Framework",
@@ -2500,7 +2638,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "Speculative Decoding",
-      "id": 163
+      "id": 163,
+      "added_date": "2026-04-16"
     },
     {
       "title": "web-llm: High-performance In-browser LLM Inference Engine",
@@ -2518,7 +2657,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 164
+      "id": 164,
+      "added_date": "2026-04-16"
     },
     {
       "title": "Tiny-LLM: Build a Tiny vLLM + Qwen on Apple Silicon",
@@ -2536,7 +2676,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 166
+      "id": 166,
+      "added_date": "2026-04-17"
     },
     {
       "title": "DSDE: Dynamic Speculative Decoding",
@@ -2554,7 +2695,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "Speculative Decoding",
-      "id": 167
+      "id": 167,
+      "added_date": "2026-04-17"
     },
     {
       "title": "FlashInfer",
@@ -2572,7 +2714,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 169
+      "id": 169,
+      "added_date": "2026-04-17"
     },
     {
       "title": "vLLM",
@@ -2590,7 +2733,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 170
+      "id": 170,
+      "added_date": "2026-04-17"
     },
     {
       "title": "ServerlessLLM",
@@ -2608,7 +2752,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 171
+      "id": 171,
+      "added_date": "2026-04-18"
     },
     {
       "title": "RouteLLM",
@@ -2626,7 +2771,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 172
+      "id": 172,
+      "added_date": "2026-04-18"
     },
     {
       "title": "LLM Engineer Handbook",
@@ -2644,7 +2790,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 173
+      "id": 173,
+      "added_date": "2026-04-18"
     },
     {
       "title": "LoRAX: Multi-LoRA Inference Server",
@@ -2662,7 +2809,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 174
+      "id": 174,
+      "added_date": "2026-04-18"
     },
     {
       "title": "LLM Applications (Ray)",
@@ -2680,7 +2828,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 175
+      "id": 175,
+      "added_date": "2026-04-18"
     },
     {
       "title": "LMDeploy",
@@ -2698,7 +2847,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 176
+      "id": 176,
+      "added_date": "2026-04-19"
     },
     {
       "title": "LightLLM",
@@ -2716,7 +2866,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 177
+      "id": 177,
+      "added_date": "2026-04-19"
     },
     {
       "title": "LMCache: Supercharge Your LLM with the Fastest KV Cache Layer",
@@ -2734,7 +2885,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "KV Cache",
-      "id": 178
+      "id": 178,
+      "added_date": "2026-04-19"
     },
     {
       "title": "PowerInfer",
@@ -2752,7 +2904,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 179
+      "id": 179,
+      "added_date": "2026-04-19"
     },
     {
       "title": "Streaming LLM: Efficient Streaming Language Models with Attention Sinks",
@@ -2770,7 +2923,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "Attention",
-      "id": 180
+      "id": 180,
+      "added_date": "2026-04-19"
     },
     {
       "title": "Tiny LLM: Learn LLM Inference Serving on Apple Silicon",
@@ -2788,7 +2942,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "LLM Serving",
-      "id": 181
+      "id": 181,
+      "added_date": "2026-04-20"
     },
     {
       "title": "Omlx: LLM Inference Server for Apple Silicon",
@@ -2806,7 +2961,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 182
+      "id": 182,
+      "added_date": "2026-04-20"
     },
     {
       "title": "KVPress: LLM KV Cache Compression",
@@ -2824,7 +2980,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "KV Cache",
-      "id": 183
+      "id": 183,
+      "added_date": "2026-04-20"
     },
     {
       "title": "LLMLingua: Prompt Compression for LLM Inference",
@@ -2842,7 +2999,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "Compression",
-      "id": 184
+      "id": 184,
+      "added_date": "2026-04-20"
     },
     {
       "title": "mini-infer: LLM Inference Engine from Scratch",
@@ -2860,7 +3018,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 185
+      "id": 185,
+      "added_date": "2026-04-20"
     },
     {
       "title": "vLLM Speculators: Unified Speculative Decoding Library",
@@ -2878,7 +3037,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "Speculative Decoding",
-      "id": 186
+      "id": 186,
+      "added_date": "2026-04-21"
     },
     {
       "title": "DeepSeek 相关技术",
@@ -2896,7 +3056,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 187
+      "id": 187,
+      "added_date": "2026-04-21"
     },
     {
       "title": "Sequoia: Scalable and Robust Tree-based Speculative Decoding",
@@ -2914,7 +3075,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "Speculative Decoding",
-      "id": 188
+      "id": 188,
+      "added_date": "2026-04-21"
     },
     {
       "title": "nano-PEARL: Parallel Speculative Decoding",
@@ -2932,7 +3094,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "Speculative Decoding",
-      "id": 189
+      "id": 189,
+      "added_date": "2026-04-21"
     },
     {
       "title": "Llama Stack",
@@ -2950,7 +3113,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 190
+      "id": 190,
+      "added_date": "2026-04-21"
     },
     {
       "title": "NIXL: NVIDIA Inference Xfer Library",
@@ -2968,7 +3132,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 191
+      "id": 191,
+      "added_date": "2026-04-22"
     },
     {
       "title": "ShadowKV: Efficient Long-Context LLM Inference",
@@ -2986,7 +3151,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "KV Cache",
-      "id": 192
+      "id": 192,
+      "added_date": "2026-04-22"
     },
     {
       "title": "NVIDIA Model Optimizer",
@@ -3004,7 +3170,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 193
+      "id": 193,
+      "added_date": "2026-04-22"
     },
     {
       "title": "llm-inference-optimization-lab - Benchmark-Driven Serving Platform",
@@ -3022,7 +3189,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "LLM Serving",
-      "id": 194
+      "id": 194,
+      "added_date": "2026-04-22"
     },
     {
       "title": "inferinse - High-Throughput Speculative Decoding Gateway",
@@ -3040,7 +3208,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "Speculative Decoding",
-      "id": 196
+      "id": 196,
+      "added_date": "2026-04-23"
     },
     {
       "title": "llm-serving-at-scale - Production-Ready LLM Serving at Massive Scale",
@@ -3058,7 +3227,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "LLM Serving",
-      "id": 197
+      "id": 197,
+      "added_date": "2026-04-23"
     },
     {
       "title": "long-context-serving-lab - Minimal LLM Serving Lab",
@@ -3076,7 +3246,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "LLM Serving",
-      "id": 198
+      "id": 198,
+      "added_date": "2026-04-23"
     },
     {
       "title": "SGLang",
@@ -3094,7 +3265,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 199
+      "id": 199,
+      "added_date": "2026-04-23"
     },
     {
       "title": "MLC-LLM REST API Serving",
@@ -3112,7 +3284,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "LLM Serving",
-      "id": 200
+      "id": 200,
+      "added_date": "2026-04-23"
     },
     {
       "title": "Awesome LLM Inference Papers",
@@ -3130,7 +3303,8 @@
       "is_placeholder_arxiv": false,
       "is_github_project": true,
       "topic": "GitHub Project",
-      "id": 201
+      "id": 201,
+      "added_date": "2026-04-24"
     },
     {
       "title": "EAGLE: Draft-Target Disaggregation LLM Serving System",
@@ -3146,7 +3320,7 @@
       "intro_cn": "",
       "file": "./github/2024/eagle.md",
       "has_real_content": true,
-      "added_date": "2026-04-15",
+      "added_date": "2026-04-18",
       "date": "2024-01-01",
       "url": "https://github.com/meta-llama/llama-recipes",
       "notes": "",
@@ -3171,7 +3345,7 @@
       "intro_cn": "",
       "file": "./github/2024/layerskip.md",
       "has_real_content": true,
-      "added_date": "2026-04-15",
+      "added_date": "2026-04-19",
       "date": "2024-06-01",
       "url": "https://github.com/facebookresearch/LayerSkip",
       "notes": "",
@@ -3196,7 +3370,7 @@
       "intro_cn": "",
       "file": "./github/2023/big_little_decoder.md",
       "has_real_content": true,
-      "added_date": "2026-04-15",
+      "added_date": "2026-04-19",
       "date": "2023-12-01",
       "url": "https://github.com/stanford-futuredata/BigLittleDecoder",
       "notes": "",
@@ -3221,7 +3395,7 @@
       "intro_cn": "",
       "file": "./github/2023/llama_cpp.md",
       "has_real_content": true,
-      "added_date": "2026-04-15",
+      "added_date": "2026-04-19",
       "date": "2023-03-01",
       "url": "https://github.com/ggerganov/llama.cpp",
       "notes": "",
@@ -3246,7 +3420,7 @@
       "intro_cn": "",
       "file": "./arxiv/2026/pipelive.md",
       "has_real_content": true,
-      "added_date": "2026-04-15",
+      "added_date": "2026-04-19",
       "date": "2026-04-13",
       "url": "",
       "notes": "",
@@ -3271,7 +3445,7 @@
       "intro_cn": "",
       "file": "./arxiv/2026/flow_controlled_scheduling.md",
       "has_real_content": true,
-      "added_date": "2026-04-15",
+      "added_date": "2026-04-19",
       "date": "2026-04-13",
       "url": "",
       "notes": "",
@@ -3296,7 +3470,7 @@
       "intro_cn": "",
       "file": "./arxiv/2026/routerwise.md",
       "has_real_content": true,
-      "added_date": "2026-04-15",
+      "added_date": "2026-04-20",
       "date": "2026-04-12",
       "url": "",
       "notes": "",
@@ -3321,7 +3495,7 @@
       "intro_cn": "",
       "file": "./arxiv/2026/specmoe.md",
       "has_real_content": true,
-      "added_date": "2026-04-15",
+      "added_date": "2026-04-20",
       "date": "2026-04-11",
       "url": "",
       "notes": "",
@@ -3346,7 +3520,7 @@
       "intro_cn": "",
       "file": "./arxiv/2026/smart_speculative.md",
       "has_real_content": true,
-      "added_date": "2026-04-15",
+      "added_date": "2026-04-20",
       "date": "2026-04-09",
       "url": "",
       "notes": "",
@@ -3371,7 +3545,7 @@
       "intro_cn": "",
       "file": "./arxiv/2026/echo_speculative.md",
       "has_real_content": true,
-      "added_date": "2026-04-15",
+      "added_date": "2026-04-20",
       "date": "2026-04-09",
       "url": "",
       "notes": "",
@@ -3396,7 +3570,7 @@
       "intro_cn": "",
       "file": "./arxiv/2026/streamserve.md",
       "has_real_content": true,
-      "added_date": "2026-04-15",
+      "added_date": "2026-04-20",
       "date": "2026-04-11",
       "url": "",
       "notes": "",
@@ -3421,7 +3595,7 @@
       "intro_cn": "",
       "file": "./arxiv/2026/specbound.md",
       "has_real_content": true,
-      "added_date": "2026-04-15",
+      "added_date": "2026-04-21",
       "date": "2026-04-13",
       "url": "",
       "notes": "",
@@ -3446,7 +3620,7 @@
       "intro_cn": "",
       "file": "./arxiv/2026/solaris.md",
       "has_real_content": true,
-      "added_date": "2026-04-15",
+      "added_date": "2026-04-21",
       "date": "2026-04-13",
       "url": "",
       "notes": "",
@@ -3471,7 +3645,7 @@
       "intro_cn": "",
       "file": "./arxiv/2026/configspec.md",
       "has_real_content": true,
-      "added_date": "2026-04-15",
+      "added_date": "2026-04-21",
       "date": "2026-04-08",
       "url": "",
       "notes": "",
@@ -3498,7 +3672,8 @@
       "file": "39_configspec.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-24"
     },
     {
       "id": 203,
@@ -3516,7 +3691,8 @@
       "file": "40_speed_bench.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-24"
     },
     {
       "id": 204,
@@ -3534,7 +3710,8 @@
       "file": "41_blink.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-24"
     },
     {
       "id": 205,
@@ -3552,7 +3729,8 @@
       "file": "42_fast_heterogeneous_serving.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-24"
     },
     {
       "id": 206,
@@ -3570,7 +3748,8 @@
       "file": "43_infinilora.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-25"
     },
     {
       "id": 207,
@@ -3588,7 +3767,8 @@
       "file": "44_autopoiesis.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-25"
     },
     {
       "id": 208,
@@ -3606,7 +3786,8 @@
       "file": "45_foundry.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-25"
     },
     {
       "id": 209,
@@ -3624,7 +3805,8 @@
       "file": "46_dual_pool_token_budget_routing.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-25"
     },
     {
       "id": 210,
@@ -3642,7 +3824,8 @@
       "file": "47_token_budget_aware_pool_routin.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-25"
     },
     {
       "id": 211,
@@ -3660,7 +3843,8 @@
       "file": "48_rocks_pebbles_and_sand.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-26"
     },
     {
       "id": 212,
@@ -3678,7 +3862,8 @@
       "file": "49_csattention.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-26"
     },
     {
       "id": 213,
@@ -3696,7 +3881,8 @@
       "file": "50_codecsight.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-26"
     },
     {
       "id": 214,
@@ -3714,7 +3900,8 @@
       "file": "51_probelogits.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-26"
     },
     {
       "id": 215,
@@ -3732,7 +3919,8 @@
       "file": "52_quasar.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-26"
     },
     {
       "id": 216,
@@ -3750,7 +3938,8 @@
       "file": "53_knapspec.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-27"
     },
     {
       "id": 217,
@@ -3768,7 +3957,8 @@
       "file": "54_efficient_training_free_multi_.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-27"
     },
     {
       "id": 218,
@@ -3786,7 +3976,8 @@
       "file": "55_lk_losses.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-27"
     },
     {
       "id": 219,
@@ -3804,7 +3995,8 @@
       "file": "56_make_every_draft_count.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-27"
     },
     {
       "id": 220,
@@ -3822,7 +4014,8 @@
       "file": "57_wanspec.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-27"
     },
     {
       "id": 221,
@@ -3840,7 +4033,8 @@
       "file": "58_privacy_aware_split_inference_.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-28"
     },
     {
       "id": 222,
@@ -3858,7 +4052,8 @@
       "file": "59_benchmarking_the_energy_saving.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-28"
     },
     {
       "id": 223,
@@ -3876,7 +4071,8 @@
       "file": "60_compiler_assisted_speculative_.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-28"
     },
     {
       "id": 224,
@@ -3894,7 +4090,8 @@
       "file": "61_specattn.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-28"
     },
     {
       "id": 225,
@@ -3912,7 +4109,8 @@
       "file": "62_sdfp.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-28"
     },
     {
       "id": 226,
@@ -3930,7 +4128,8 @@
       "file": "63_sparrow.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-29"
     },
     {
       "id": 227,
@@ -3948,7 +4147,8 @@
       "file": "64_balancing_latency_and_accuracy.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-29"
     },
     {
       "id": 228,
@@ -3966,7 +4166,8 @@
       "file": "65_evoesap.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-29"
     },
     {
       "id": 229,
@@ -3984,7 +4185,8 @@
       "file": "66_see_the_forest_for_the_trees.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-29"
     },
     {
       "id": 230,
@@ -4002,7 +4204,8 @@
       "file": "67_a_io.md",
       "has_content": true,
       "is_placeholder_arxiv": true,
-      "is_github_project": false
+      "is_github_project": false,
+      "added_date": "2026-04-29"
     },
     {
       "id": "paper_1776244119_0",
@@ -4024,7 +4227,8 @@
         "DDTree"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244119_1",
@@ -4047,7 +4251,8 @@
         "acl-2026"
       ],
       "conference": "ACL",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244119_2",
@@ -4070,7 +4275,8 @@
         "vllm"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244119_3",
@@ -4093,7 +4299,8 @@
         "disaggregated-inference"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244119_4",
@@ -4116,7 +4323,8 @@
         "aistats-2026"
       ],
       "conference": "AISTATS",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244119_5",
@@ -4139,7 +4347,8 @@
         "milp"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244119_6",
@@ -4162,7 +4371,8 @@
         "production-deployment"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244119_7",
@@ -4184,7 +4394,8 @@
         "inference-optimization"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244119_8",
@@ -4208,7 +4419,8 @@
         "training-free"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244119_9",
@@ -4230,7 +4442,8 @@
         "mtp"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244119_10",
@@ -4252,7 +4465,8 @@
         "modern-llms"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244334_11",
@@ -4276,7 +4490,8 @@
         "iclr-2026"
       ],
       "conference": "ICLR",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244334_12",
@@ -4299,7 +4514,8 @@
         "dynamic-serving"
       ],
       "conference": "arxiv",
-      "year": "2025"
+      "year": "2025",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244334_13",
@@ -4322,7 +4538,8 @@
         "wisp"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244334_14",
@@ -4346,7 +4563,8 @@
         "inference-efficiency"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244449_15",
@@ -4369,7 +4587,8 @@
         "kv-cache"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244449_16",
@@ -4392,7 +4611,8 @@
         "dac-2026"
       ],
       "conference": "DAC",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244449_17",
@@ -4415,7 +4635,8 @@
         "nvidia"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244449_18",
@@ -4438,7 +4659,8 @@
         "slo"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244522_19",
@@ -4461,7 +4683,8 @@
         "routing"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244522_20",
@@ -4484,7 +4707,8 @@
         "multi-model"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244677_21",
@@ -4507,7 +4731,8 @@
         "vllm"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244677_22",
@@ -4530,7 +4755,8 @@
         "heterogeneous-accelerator"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244677_23",
@@ -4553,7 +4779,8 @@
         "eagle-3"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244677_24",
@@ -4576,7 +4803,8 @@
         "eagle-3"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244677_25",
@@ -4599,7 +4827,8 @@
         "acl-2026"
       ],
       "conference": "ACL",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     },
     {
       "id": "paper_1776244677_26",
@@ -4622,7 +4851,8 @@
         "echoKV"
       ],
       "conference": "arxiv",
-      "year": "2026"
+      "year": "2026",
+      "added_date": "2026-03-15"
     }
   ],
   "topics": [
