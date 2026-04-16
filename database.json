@@ -4080,16 +4080,556 @@
       "topic": "KV Cache",
       "conference": "arXiv",
       "github_repo": "https://github.com/markli404/When-Less-Latent-Leads-to-Better-Relay"
+    },
+    {
+      "id": "paper_1776380822_0",
+      "title": "TENT: A Declarative Slice Spraying Engine for Performant and Resilient Data Movement in Disaggregated LLM Serving",
+      "authors": [
+        "Feng Ren",
+        "Ruoyu Qin",
+        "Teng Ma",
+        "Shangming Cai",
+        "Zheng Liu",
+        "Chao Lei"
+      ],
+      "conference": "arXiv",
+      "year": "2026",
+      "arxiv_id": "2604.00368",
+      "url": "https://arxiv.org/abs/2604.00368",
+      "tags": [
+        "LLM serving",
+        "disaggregation",
+        "GPU"
+      ],
+      "date": "2026-04-01",
+      "comment": "",
+      "filepath": "arXiv/2026/2604.00368_TENT_A_Declarative_Slice_Spraying_Engine_for_Performant_and_.md",
+      "topic": "LLM Serving"
+    },
+    {
+      "id": "paper_1776380822_1",
+      "title": "Multi-Drafter Speculative Decoding with Alignment Feedback",
+      "authors": [
+        "Taehyeon Kim",
+        "Hojung Jung",
+        "Se-Young Yun"
+      ],
+      "conference": "acl",
+      "year": "2026",
+      "arxiv_id": "2604.05417",
+      "url": "https://arxiv.org/abs/2604.05417",
+      "tags": [
+        "speculative decoding",
+        "LLM inference",
+        "acceleration"
+      ],
+      "date": "2026-04-07",
+      "comment": "ACL 2026 Findings",
+      "filepath": "acl/2026/2604.05417_MultiDrafter_Speculative_Decoding_with_Alignment_Feedback.md",
+      "topic": "Speculative Decoding"
+    },
+    {
+      "id": "paper_1776380822_2",
+      "title": "ParallelVLM: Lossless Video-LLM Acceleration with Visual Alignment Aware Parallel Speculative Decoding",
+      "authors": [
+        "Quan Kong",
+        "Yuhao Shen",
+        "Yicheng Ji",
+        "Huan Li",
+        "Cong Wang"
+      ],
+      "conference": "arXiv",
+      "year": "2026",
+      "arxiv_id": "2603.19610",
+      "url": "https://arxiv.org/abs/2603.19610",
+      "tags": [
+        "speculative decoding",
+        "acceleration"
+      ],
+      "date": "2026-03-20",
+      "comment": "",
+      "filepath": "arXiv/2026/2603.19610_ParallelVLM_Lossless_VideoLLM_Acceleration_with_Visual_Align.md",
+      "topic": "Speculative Decoding"
+    },
+    {
+      "id": "paper_1776380822_3",
+      "title": "CodeComp: Structural KV Cache Compression for Agentic Coding",
+      "authors": [
+        "Qiujiang Chen",
+        "Jing Xiong",
+        "Chenyang Zhao",
+        "Sidi Yang",
+        "Ngai Wong"
+      ],
+      "conference": "arXiv",
+      "year": "2026",
+      "arxiv_id": "2604.10235",
+      "url": "https://arxiv.org/abs/2604.10235",
+      "tags": [
+        "KV cache",
+        "LLM inference",
+        "memory",
+        "compression"
+      ],
+      "date": "2026-04-11",
+      "comment": "",
+      "filepath": "arXiv/2026/2604.10235_CodeComp_Structural_KV_Cache_Compression_for_Agentic_Coding.md",
+      "topic": "KV Cache"
+    },
+    {
+      "id": "paper_1776380822_4",
+      "title": "SHIELD: A Segmented Hierarchical Memory Architecture for Energy-Efficient LLM Inference on Edge NPUs",
+      "authors": [
+        "Jintao Zhang",
+        "Xuanyao Fong"
+      ],
+      "conference": "arXiv",
+      "year": "2026",
+      "arxiv_id": "2604.07396",
+      "url": "https://arxiv.org/abs/2604.07396",
+      "tags": [
+        "LLM inference",
+        "memory",
+        "edge",
+        "energy"
+      ],
+      "date": "2026-04-08",
+      "comment": "",
+      "filepath": "arXiv/2026/2604.07396_SHIELD_A_Segmented_Hierarchical_Memory_Architecture_for_Ener.md",
+      "topic": "LLM Inference"
+    },
+    {
+      "id": "paper_1776380822_5",
+      "title": "Comparative Characterization of KV Cache Management Strategies for LLM Inference",
+      "authors": [
+        "Oteo Mamo",
+        "Olga Kogiou",
+        "Hyunjin Yi",
+        "Weikuan Yu"
+      ],
+      "conference": "arXiv",
+      "year": "2026",
+      "arxiv_id": "2604.05012",
+      "url": "https://arxiv.org/abs/2604.05012",
+      "tags": [
+        "KV cache",
+        "LLM inference"
+      ],
+      "date": "2026-04-06",
+      "comment": "",
+      "filepath": "arXiv/2026/2604.05012_Comparative_Characterization_of_KV_Cache_Management_Strategi.md",
+      "topic": "KV Cache"
+    },
+    {
+      "id": "paper_1776380822_6",
+      "title": "Don't Waste Bits! Adaptive KV-Cache Quantization for Lightweight On-Device LLMs",
+      "authors": [
+        "Sayed Pedram Haeri Boroujeni",
+        "Niloufar Mehrabi",
+        "Patrick Woods",
+        "Gabriel Hillesheim",
+        "Abolfazl Razi"
+      ],
+      "conference": "cvpr",
+      "year": "2026",
+      "arxiv_id": "2604.04722",
+      "url": "https://arxiv.org/abs/2604.04722",
+      "tags": [
+        "KV cache",
+        "quantization",
+        "edge"
+      ],
+      "date": "2026-04-06",
+      "comment": "Accepted by the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026",
+      "filepath": "cvpr/2026/2604.04722_Dont_Waste_Bits_Adaptive_KVCache_Quantization_for_Lightweigh.md",
+      "topic": "KV Cache"
+    },
+    {
+      "id": "paper_1776380822_7",
+      "title": "QCFuse: Query-Centric Cache Fusion for Efficient RAG Inference",
+      "authors": [
+        "Jianxin Yan",
+        "Zeheng Qian",
+        "Wangze Ni",
+        "Zhitao Shen",
+        "Zhiping Wang",
+        "Haoyang Li"
+      ],
+      "conference": "arXiv",
+      "year": "2026",
+      "arxiv_id": "2604.08585",
+      "url": "https://arxiv.org/abs/2604.08585",
+      "tags": [
+        "LLM inference",
+        "acceleration"
+      ],
+      "date": "2026-03-30",
+      "comment": "",
+      "filepath": "arXiv/2026/2604.08585_QCFuse_QueryCentric_Cache_Fusion_for_Efficient_RAG_Inference.md",
+      "topic": "LLM Inference"
+    },
+    {
+      "id": "paper_1776380822_8",
+      "title": "KVSculpt: KV Cache Compression as Distillation",
+      "authors": [
+        "Bo Jiang",
+        "Sian Jin"
+      ],
+      "conference": "arXiv",
+      "year": "2026",
+      "arxiv_id": "2603.27819",
+      "url": "https://arxiv.org/abs/2603.27819",
+      "tags": [
+        "KV cache",
+        "LLM inference",
+        "quantization",
+        "compression"
+      ],
+      "date": "2026-03-29",
+      "comment": "",
+      "filepath": "arXiv/2026/2603.27819_KVSculpt_KV_Cache_Compression_as_Distillation.md",
+      "topic": "KV Cache"
+    },
+    {
+      "id": "paper_1776380822_9",
+      "title": "ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-computation for LLM Inference",
+      "authors": [
+        "Qiuyang Zhang",
+        "Kai Zhou",
+        "Ding Tang",
+        "Kai Lu",
+        "Cheng Li",
+        "Zhenyu Yang"
+      ],
+      "conference": "dac",
+      "year": "2026",
+      "arxiv_id": "2603.27138",
+      "url": "https://arxiv.org/abs/2603.27138",
+      "tags": [
+        "KV cache",
+        "LLM inference",
+        "attention",
+        "memory",
+        "GPU",
+        "batching",
+        "prefill-decode"
+      ],
+      "date": "2026-03-28",
+      "comment": "Accepted at the 63rd Design Automation Conference (DAC 2026)",
+      "filepath": "dac/2026/2603.27138_ScoutAttention_Efficient_KV_Cache_Offloading_via_LayerAhead_.md",
+      "topic": "KV Cache"
+    },
+    {
+      "id": "paper_1776380822_10",
+      "title": "PRISM: Breaking the O(n) Memory Wall in Long-Context LLM Inference via O(1) Photonic Block Selection",
+      "authors": [
+        "Hyoseok Park",
+        "Yeonsang Park"
+      ],
+      "conference": "arXiv",
+      "year": "2026",
+      "arxiv_id": "2603.21576",
+      "url": "https://arxiv.org/abs/2603.21576",
+      "tags": [
+        "KV cache",
+        "LLM inference",
+        "memory",
+        "prefill-decode"
+      ],
+      "date": "2026-03-23",
+      "comment": "28 pages, 27 figures, 15 tables, including supplementary material. Code available at https://github.com/hyoseokp/PRISM",
+      "filepath": "arXiv/2026/2603.21576_PRISM_Breaking_the_On_Memory_Wall_in_LongContext_LLM_Inferen.md",
+      "topic": "KV Cache"
+    },
+    {
+      "id": "paper_1776380822_11",
+      "title": "The Workload-Router-Pool Architecture for LLM Inference Optimization: A Vision Paper from the vLLM Semantic Router Project",
+      "authors": [
+        "Huamin Chen",
+        "Xunzhuo Liu",
+        "Bowei He",
+        "Fuyuan Lyu",
+        "Yankai Chen",
+        "Xue Liu"
+      ],
+      "conference": "arXiv",
+      "year": "2026",
+      "arxiv_id": "2603.21354",
+      "url": "https://arxiv.org/abs/2603.21354",
+      "tags": [
+        "LLM inference",
+        "routing"
+      ],
+      "date": "2026-03-22",
+      "comment": "Vision Paper",
+      "filepath": "arXiv/2026/2603.21354_The_WorkloadRouterPool_Architecture_for_LLM_Inference_Optimi.md",
+      "topic": "LLM Inference"
+    },
+    {
+      "id": "paper_1776380822_12",
+      "title": "IEMAS: An Incentive-Efficiency Routing Framework for Open Agentic Web Ecosystems",
+      "authors": [
+        "Hongze Liu",
+        "Chang Guo",
+        "Yingzeng Li",
+        "Mengru Wang",
+        "Jiong Lou",
+        "Shijing Yuan"
+      ],
+      "conference": "arXiv",
+      "year": "2026",
+      "arxiv_id": "2603.17302",
+      "url": "https://arxiv.org/abs/2603.17302",
+      "tags": [
+        "routing"
+      ],
+      "date": "2026-03-18",
+      "comment": "",
+      "filepath": "arXiv/2026/2603.17302_IEMAS_An_IncentiveEfficiency_Routing_Framework_for_Open_Agen.md",
+      "topic": "LLM Serving"
+    },
+    {
+      "id": "paper_1776380822_13",
+      "title": "The xPU-athalon: Quantifying the Competition of AI Acceleration",
+      "authors": [
+        "Alicia Golden",
+        "Carole-Jean Wu",
+        "Gu-Yeon Wei",
+        "David Brooks"
+      ],
+      "conference": "ispass",
+      "year": "2026",
+      "arxiv_id": "2604.10852",
+      "url": "https://arxiv.org/abs/2604.10852",
+      "tags": [
+        "GPU",
+        "acceleration"
+      ],
+      "date": "2026-04-12",
+      "comment": "Accepted to ISPASS 2026",
+      "filepath": "ispass/2026/2604.10852_The_xPUathalon_Quantifying_the_Competition_of_AI_Acceleratio.md",
+      "topic": "LLM Serving"
+    },
+    {
+      "id": "paper_1776380822_14",
+      "title": "WaveTune: Wave-aware Bilinear Modeling for Efficient GPU Kernel Auto-tuning",
+      "authors": [
+        "Kaixuan Zhang",
+        "Chutong Ding",
+        "Shiyou Qian",
+        "Luping Wang",
+        "Jian Cao",
+        "Guangtao Xue"
+      ],
+      "conference": "arXiv",
+      "year": "2026",
+      "arxiv_id": "2604.10187",
+      "url": "https://arxiv.org/abs/2604.10187",
+      "tags": [
+        "LLM inference",
+        "GPU"
+      ],
+      "date": "2026-04-11",
+      "comment": "",
+      "filepath": "arXiv/2026/2604.10187_WaveTune_Waveaware_Bilinear_Modeling_for_Efficient_GPU_Kerne.md",
+      "topic": "LLM Inference"
+    },
+    {
+      "id": "paper_1776380822_15",
+      "title": "Watt Counts: Energy-Aware Benchmark for Sustainable LLM Inference on Heterogeneous GPU Architectures",
+      "authors": [
+        "Mauricio Fadel Argerich",
+        "Jonathan Fürst",
+        "Marta Patiño-Martínez"
+      ],
+      "conference": "arXiv",
+      "year": "2026",
+      "arxiv_id": "2604.09048",
+      "url": "https://arxiv.org/abs/2604.09048",
+      "tags": [
+        "LLM inference",
+        "GPU",
+        "energy"
+      ],
+      "date": "2026-04-10",
+      "comment": "Under review",
+      "filepath": "arXiv/2026/2604.09048_Watt_Counts_EnergyAware_Benchmark_for_Sustainable_LLM_Infere.md",
+      "topic": "LLM Inference"
+    },
+    {
+      "id": "paper_1776380822_16",
+      "title": "Flux Attention: Context-Aware Hybrid Attention for Efficient LLMs Inference",
+      "authors": [
+        "Quantong Qiu",
+        "Zhiyi Hong",
+        "Yi Yang",
+        "Haitian Wang",
+        "Kebin Liu",
+        "Qingqing Dang"
+      ],
+      "conference": "arXiv",
+      "year": "2026",
+      "arxiv_id": "2604.07394",
+      "url": "https://arxiv.org/abs/2604.07394",
+      "tags": [
+        "LLM inference",
+        "attention"
+      ],
+      "date": "2026-04-08",
+      "comment": "",
+      "filepath": "arXiv/2026/2604.07394_Flux_Attention_ContextAware_Hybrid_Attention_for_Efficient_L.md",
+      "topic": "LLM Inference"
+    },
+    {
+      "id": "paper_1776380822_17",
+      "title": "DAT: Dual-Aware Adaptive Transmission for Efficient Multimodal LLM Inference in Edge-Cloud Systems",
+      "authors": [
+        "Qi Guo",
+        "Zheming Yang",
+        "Yunqing Hu",
+        "Chang Zhao",
+        "Wen Ji"
+      ],
+      "conference": "arXiv",
+      "year": "2026",
+      "arxiv_id": "2604.05375",
+      "url": "https://arxiv.org/abs/2604.05375",
+      "tags": [
+        "LLM inference",
+        "edge"
+      ],
+      "date": "2026-04-07",
+      "comment": "10 pages, 6 figures. Submitted to ACM Multimedia 2026",
+      "filepath": "arXiv/2026/2604.05375_DAT_DualAware_Adaptive_Transmission_for_Efficient_Multimodal.md",
+      "topic": "LLM Inference"
+    },
+    {
+      "id": "paper_1776380822_18",
+      "title": "GPU Acceleration of TFHE-Based High-Precision Nonlinear Layers for Encrypted LLM Inference",
+      "authors": [
+        "Guoci Chen",
+        "Xiurui Pan",
+        "Qiao Li",
+        "Bo Mao",
+        "Congming Gao",
+        "Chengying Huan"
+      ],
+      "conference": "arXiv",
+      "year": "2026",
+      "arxiv_id": "2604.04783",
+      "url": "https://arxiv.org/abs/2604.04783",
+      "tags": [
+        "LLM inference",
+        "GPU",
+        "acceleration"
+      ],
+      "date": "2026-04-06",
+      "comment": "11 pages, 7 figures",
+      "filepath": "arXiv/2026/2604.04783_GPU_Acceleration_of_TFHEBased_HighPrecision_Nonlinear_Layers.md",
+      "topic": "LLM Inference"
+    },
+    {
+      "id": "paper_1776380822_19",
+      "title": "Communication-Efficient Collaborative LLM Inference over LEO Satellite Networks",
+      "authors": [
+        "Songge Zhang",
+        "Wen Wu",
+        "Liang Li",
+        "Ye Wang",
+        "Xuemin",
+        "Shen"
+      ],
+      "conference": "arXiv",
+      "year": "2026",
+      "arxiv_id": "2604.04654",
+      "url": "https://arxiv.org/abs/2604.04654",
+      "tags": [
+        "LLM inference",
+        "memory"
+      ],
+      "date": "2026-04-06",
+      "comment": "13 pages, 12 figures,",
+      "filepath": "arXiv/2026/2604.04654_CommunicationEfficient_Collaborative_LLM_Inference_over_LEO_.md",
+      "topic": "LLM Inference"
+    },
+    {
+      "id": "paper_1776380822_20",
+      "title": "Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference",
+      "authors": [
+        "Zifan He",
+        "Rui Ma",
+        "Yizhou Sun",
+        "Jason Cong"
+      ],
+      "conference": "arXiv",
+      "year": "2026",
+      "arxiv_id": "2603.29002",
+      "url": "https://arxiv.org/abs/2603.29002",
+      "tags": [
+        "LLM inference",
+        "attention",
+        "memory",
+        "disaggregation",
+        "pipeline",
+        "acceleration"
+      ],
+      "date": "2026-03-30",
+      "comment": "",
+      "filepath": "arXiv/2026/2603.29002_Understand_and_Accelerate_Memory_Processing_Pipeline_for_Dis.md",
+      "topic": "LLM Inference"
+    },
+    {
+      "id": "paper_1776380822_21",
+      "title": "ITQ3_S: High-Fidelity 3-bit LLM Inference via Interleaved Ternary Quantization with Rotation-Domain Smoothing",
+      "authors": [
+        "Edward J. Yoon"
+      ],
+      "conference": "arXiv",
+      "year": "2026",
+      "arxiv_id": "2603.27914",
+      "url": "https://arxiv.org/abs/2603.27914",
+      "tags": [
+        "LLM inference",
+        "quantization"
+      ],
+      "date": "2026-03-30",
+      "comment": "12 pages, 4 figures, 3 tables",
+      "filepath": "arXiv/2026/2603.27914_ITQ3_S_HighFidelity_3bit_LLM_Inference_via_Interleaved_Terna.md",
+      "topic": "LLM Inference"
+    },
+    {
+      "id": "paper_1776380822_22",
+      "title": "Probabilistic Language Tries: A Unified Framework for Compression, Decision Policies, and Execution Reuse",
+      "authors": [
+        "Gregory Magarshak"
+      ],
+      "conference": "arXiv",
+      "year": "2026",
+      "arxiv_id": "2604.06228",
+      "url": "https://arxiv.org/abs/2604.06228",
+      "tags": [
+        "compression"
+      ],
+      "date": "2026-03-29",
+      "comment": "24 pages, 2 figures",
+      "filepath": "arXiv/2026/2604.06228_Probabilistic_Language_Tries_A_Unified_Framework_for_Compres.md",
+      "topic": "LLM Serving"
     }
   ],
   "topics": [
-    "KV Cache",
-    "Edge-Cloud",
-    "MoE",
-    "Hardware",
-    "Compression",
     "Attention",
+    "Compression",
+    "Disaggregated Serving",
+    "Edge-Cloud",
+    "Edge-Cloud Serving",
+    "Hardware",
+    "KV Cache",
+    "LLM Inference",
     "LLM Serving",
+    "Local Inference",
+    "MoE",
+    "Multi-Model Serving",
+    "Scheduling",
     "Speculative Decoding"
   ],
   "metadata": {
