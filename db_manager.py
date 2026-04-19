@@ -126,7 +126,7 @@ def generate_web():
         
         html += f'''        <div class="paper" data-topic="{p['topic']}">
             <h3>{p['title']}</h3>
-            <div class="meta">{p['authors']} | {p['conference']} {p['year']}</div>
+            <div class="meta">{p['authors']} | {p.get('conference', p.get('source', ''))} {p.get('year', '')}</div>
             <div class="tags"><span>{p['topic']}</span></div>
             <div>{" ".join(links)}</div>
         </div>
