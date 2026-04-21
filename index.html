@@ -21,19 +21,19 @@
     <div class="filter">
         <select id="topicFilter" onchange="filterPapers()">
             <option value="">All Topics</option>
-            <option value="Attention">Attention</option>
-            <option value="Compression">Compression</option>
-            <option value="Disaggregated Serving">Disaggregated Serving</option>
-            <option value="Edge-Cloud">Edge-Cloud</option>
-            <option value="Edge-Cloud Serving">Edge-Cloud Serving</option>
-            <option value="Hardware">Hardware</option>
+            <option value="Distributed Inference">Distributed Inference</option>
+            <option value="Early Exit">Early Exit</option>
+            <option value="Edge Inference">Edge Inference</option>
+            <option value="Hardware Acceleration">Hardware Acceleration</option>
+            <option value="Inference Kernel">Inference Kernel</option>
+            <option value="Inference Routing">Inference Routing</option>
+            <option value="Inference Scheduling">Inference Scheduling</option>
             <option value="KV Cache">KV Cache</option>
-            <option value="LLM Inference">LLM Inference</option>
             <option value="LLM Serving">LLM Serving</option>
-            <option value="Local Inference">Local Inference</option>
-            <option value="MoE">MoE</option>
-            <option value="Multi-Model Serving">Multi-Model Serving</option>
-            <option value="Scheduling">Scheduling</option>
+            <option value="MoE Inference">MoE Inference</option>
+            <option value="Other">Other</option>
+            <option value="Prefill/Disaggregation">Prefill/Disaggregation</option>
+            <option value="Quantization">Quantization</option>
             <option value="Speculative Decoding">Speculative Decoding</option>
         </select>
         <input type="text" id="search" placeholder="Search..." oninput="filterPapers()">
@@ -2186,6 +2186,30 @@
             <div class="meta">['(from arXiv)'] | arxiv 2026</div>
             <div class="tags"><span>Quantization</span></div>
             <div><a href="https://arxiv.org/abs/2604.17789">arXiv</a></div>
+        </div>
+        <div class="paper" data-topic="Inference Scheduling">
+            <h3>Hive: A Multi-Agent Infrastructure for Algorithm- and Task-Level Scaling</h3>
+            <div class="meta">Zizhang Luo, Yuhao Luo, Youwei Xiao, Yansong Xu, Runlin Guo, Yun Liang | arXiv 2026</div>
+            <div class="tags"><span>Inference Scheduling</span></div>
+            <div><a href="https://arxiv.org/abs/2604.17353">arXiv</a></div>
+        </div>
+        <div class="paper" data-topic="Speculative Decoding">
+            <h3>NI Sampling: Accelerating Discrete Diffusion Sampling by Token Order Optimization</h3>
+            <div class="meta">Enshu Liu, Xuefei Ning, Yu Wang, Zinan Lin | ICLR 2026</div>
+            <div class="tags"><span>Speculative Decoding</span></div>
+            <div><a href="https://arxiv.org/abs/2604.18471">arXiv</a> <a href="https://github.com/imagination-research/NI-Sampling">GitHub</a></div>
+        </div>
+        <div class="paper" data-topic="Speculative Decoding">
+            <h3>Speculative Decoding for Autoregressive Video Generation</h3>
+            <div class="meta">Yuezhou Hu, Jintao Zhang | arXiv 2026</div>
+            <div class="tags"><span>Speculative Decoding</span></div>
+            <div><a href="https://arxiv.org/abs/2604.17397">arXiv</a></div>
+        </div>
+        <div class="paper" data-topic="KV Cache">
+            <h3>Reducing Peak Memory Usage for Modern Multimodal Large Language Model Pipelines</h3>
+            <div class="meta">Junwan Kim, Hyunkyung Bae | ACL 2026</div>
+            <div class="tags"><span>KV Cache</span></div>
+            <div><a href="https://arxiv.org/abs/2604.16734">arXiv</a></div>
         </div>
     </div>
     <script>
