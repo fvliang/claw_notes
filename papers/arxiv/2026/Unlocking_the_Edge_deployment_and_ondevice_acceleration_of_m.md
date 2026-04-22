@@ -1,0 +1,36 @@
+# Unlocking the Edge deployment and ondevice acceleration of multi-LoRA enabled one-for-all foundational LLM
+
+**ArXiv ID:** 2604.18655
+**Published:** 2026-04-20
+**Authors:** Sravanth Kodavanti, Sowmya Vajrala, Srinivas Miriyala, Utsav Tiwari, Uttam Kumar, Utkarsh Kumar Mahawar, Achal Pratap Singh, Arya D, Narendra Mutyala, Vikram Nelvoy Rajendiran, Sharan Kumar Allur, Euntaik Lee, Dohyoung Kim, HyeonSu Lee, Gyusung Cho, JungBae Kim
+**URL:** https://arxiv.org/abs/2604.18655
+**PDF:** https://arxiv.org/pdf/2604.18655
+**GitHub:** 暂无
+**Categories:** cs.DC, cs.AI, cs.CL
+
+## Abstract (English)
+
+Deploying large language models (LLMs) on smartphones poses significant engineering challenges due to stringent constraints on memory, latency, and runtime flexibility. In this work, we present a hardware-aware framework for efficient on-device inference of a LLaMA-based multilingual foundation model supporting multiple use cases on Samsung Galaxy S24 and S25 devices with SM8650 and SM8750 Qualcomm chipsets respectively. Our approach integrates application-specific LoRAs as runtime inputs to a single frozen inference graph, enabling dynamic task switching without recompilation or memory overhead. We further introduce a multi-stream decoding mechanism that concurrently generates stylistic variations - such as formal, polite, or jovial responses - within a single forward pass, reducing latency by up to 6x. To accelerate token generation, we apply Dynamic Self-Speculative Decoding (DS2D), a tree-based strategy that predicts future tokens without requiring a draft model, yielding up to 2.3x speedup in decode time. Combined with quantization to INT4 and architecture-level optimizations, our system achieves 4-6x overall improvements in memory and latency while maintaining accuracy across 9 languages and 8 tasks. These results demonstrate practical feasibility of deploying multi-use-case LLMs on edge devices, advancing the commercial viability of Generative AI in mobile platforms.
+
+## 摘要 (中文)
+
+*(待翻译)*
+
+## Introduction (English)
+
+*(需要阅读原文PDF补充)*
+
+## 引言 (中文)
+
+*(需要阅读原文PDF补充)*
+
+## 博客内容
+
+*(待补充)*
+
+## GitHub 介绍
+
+暂无 GitHub 仓库
+
+---
+*注: 此文件由自动化论文搜集系统生成于 2026-04-23，部分内容待完善。*
