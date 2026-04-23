@@ -1,0 +1,266 @@
+#!/usr/bin/env python3
+"""Search Semantic Scholar for LLM serving papers - 2026-04-23 evening"""
+import json, urllib.request, urllib.parse, time, re, sys, os
+
+DB_PATH = '/home/admin/claw_notes/database.json'
+PAPERS_DIR = '/home/admin/claw_notes/papers'
+
+with open(DB_PATH) as f:
+    db = json.load(f)
+
+existing_titles = set()
+for p in db['papers']:
+    t = p.get('title', '').lower().strip().replace('\n', ' ').replace('{', '').replace('}', '')
+    existing_titles.add(t[:80])
+    existing_titles.add(t[:60])
+
+print(f"Existing: {len(db['papers'])} papers")
+
+SERVING_KEYWORDS = [
+    'serving', 'inference', 'speculative decoding', 'kv cache', 'kv-cache',
+    'prefill', 'decode', 'batching', 'scheduling', 'throughput', 'latency',
+    'memory management', 'paged attention', 'vllm', 'continuous batching',
+    'disaggregation', 'offloading', 'acceleration', 'ttft', 'tpot',
+    'inference speedup', 'inference latency', 'inference throughput',
+    'inference optimization', 'efficient inference', 'inference system',
+    'inference framework', 'inference engine', 'inference acceleration',
+    'self-speculative', 'early exit', 'layer skipping',
+    'parallel decoding', 'batched inference', 'speculative execution',
+    'distributed inference', 'edge inference', 'on-device inference',
+    'lora adapter serving', 'agentic inference', 'inference scaling',
+    'kv compression', 'cache compression', 'prefix caching', 'token eviction',
+    'moe inference', 'moe serving', 'multi-gpu inference', 'memory footprint',
+    'flash attention', 'draft model', 'tensor parallel inference',
+    'speculative sampling', 'medusa', 'eagle', 'long-context inference',
+    'generation latency', 'generation speedup', 'gpu memory',
+    'request scheduling', 'batch scheduling', 'weight quantization inference',
+    'cost-efficient inference',
+]
+TRAINING_EXCLUSIONS = [
+    'training system', 'distributed training', 'fine-tuning system',
+    'pre-training', 'gradient accumulation', 'optimizer',
+    'training efficiency', 'training acceleration', 'training framework',
+    'training infrastructure', 'distributed training system',
+]
+
+def is_llm_serving(title, abstract):
+    text = (title + ' ' + (abstract or '')).lower()
+    has_llm = any(k in text for k in ['llm', 'large language model', 'language model inference', 
+                                       'language model serving', 'transformer inference', 
+                                       'transformer serving', 'foundation model inference',
+                                       'autoregressive inference'])
+    if not has_llm:
+        return False
+    ss = sum(1 for k in SERVING_KEYWORDS if k in text)
+    ts = sum(1 for k in TRAINING_EXCLUSIONS if k in text)
+    return (ss >= 1 and ss > ts) or ss >= 2
+
+def search_s2(query, limit=30, year_from=2025):
+    encoded = urllib.parse.quote(query)
+    url = f"https://api.semanticscholar.org/graph/v1/paper/search?query={encoded}&limit={limit}&year={year_from}-2026&fields=title,abstract,url,externalIds,authors,publicationDate,fieldsOfStudy,venue&sort=relevance"
+    try:
+        req = urllib.request.Request(url)
+        req.add_header('User-Agent', 'Mozilla/5.0')
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            data = json.loads(resp.read().decode('utf-8'))
+        results = []
+        for p in data.get('data', []):
+            results.append({
+                'title': p.get('title', ''),
+                'abstract_en': p.get('abstract', '') or '',
+                'arxiv_id': p.get('externalIds', {}).get('ArXiv', ''),
+                'published': p.get('publicationDate', ''),
+                'authors': [a.get('name', '') for a in p.get('authors', [])] if isinstance(p.get('authors'), list) else [],
+                'venue': p.get('venue', '') or '',
+                'categories': p.get('fieldsOfStudy', []) or [],
+            })
+        return results
+    except Exception as e:
+        print(f"  S2 error: {e}")
+        return []
+
+queries = [
+    "LLM serving system",
+    "speculative decoding LLM",
+    "KV cache LLM inference",
+    "LLM inference optimization",
+    "LLM inference efficiency acceleration",
+    "distributed LLM inference serving",
+    "LLM inference latency throughput",
+    "paged attention continuous batching",
+    "prefill decode disaggregation",
+    "LLM inference system",
+    "efficient transformer inference",
+    "GPU memory LLM serving",
+    "MoE inference serving",
+    "long context LLM inference",
+]
+
+all_found = []
+seen = set()
+
+for q in queries:
+    print(f"Searching S2: {q}")
+    results = search_s2(q, limit=30)
+    added_count = 0
+    for p in results:
+        key = p['title'].lower().strip().replace('\n', ' ').replace('{', '').replace('}', '')[:80]
+        if key not in seen:
+            seen.add(key)
+            if is_llm_serving(p['title'], p['abstract_en']):
+                all_found.append(p)
+                added_count += 1
+    print(f"  Found {added_count} serving papers")
+    time.sleep(1)
+
+# Deduplicate against DB
+new_papers = []
+for p in all_found:
+    key = p['title'].lower().strip().replace('\n', ' ').replace('{', '').replace('}', '')[:80]
+    short = key[:60]
+    if key not in existing_titles and short not in existing_titles:
+        new_papers.append(p)
+
+print(f"\n=== Results ===")
+print(f"S2 total found (relevant): {len(all_found)}")
+print(f"Already in DB: {len(all_found) - len(new_papers)}")
+print(f"New papers: {len(new_papers)}")
+
+for i, p in enumerate(new_papers, 1):
+    aid = p.get('arxiv_id', '')
+    title_short = p['title'][:70]
+    pub = p.get('published', '')
+    ven = p.get('venue', '')
+    print(f"  {i}. [{aid}] {title_short} | {pub} | {ven}")
+
+# Now add papers to database and create files
+CONFERENCE_MAP = {
+    'osdi': 'OSDI', 'sosp': 'SOSP', 'nsdi': 'NSDI', 'sigcomm': 'SIGCOMM',
+    'sigmod': 'SIGMOD', 'atc': 'ATC', 'eurosys': 'EuroSys', 'dac': 'DAC',
+    'asplos': 'ASPLOS', 'sc': 'SC', 'nips': 'NeurIPS', 'neurips': 'NeurIPS',
+    'iclr': 'ICLR', 'icml': 'ICML', 'acl': 'ACL', 'emnlp': 'EMNLP',
+}
+
+def detect_conference(venue, categories, title, abstract):
+    text = (venue + ' ' + ' '.join(categories if categories else []) + ' ' + title + ' ' + (abstract or '')).lower()
+    for key, conf_name in CONFERENCE_MAP.items():
+        if key in text:
+            return conf_name
+    if venue:
+        return venue
+    return 'arxiv'
+
+added = 0
+for p in new_papers:
+    title = p.get('title', '')
+    abstract = p.get('abstract_en', '') or ''
+    arxiv_id = p.get('arxiv_id', '')
+    authors = p.get('authors', [])
+    author_str = ', '.join(authors) if isinstance(authors, list) else str(authors)
+    published = p.get('published', '')
+    categories = p.get('categories', [])
+    venue = p.get('venue', '')
+    
+    year = 2026
+    if published:
+        try:
+            year = int(published[:4])
+        except:
+            year = 2026
+    
+    conf = detect_conference(venue, categories, title, abstract)
+    
+    # Find GitHub in abstract
+    github = ""
+    gh_matches = re.findall(r'github\.com/([^\s\)\.\,]+)', abstract)
+    if gh_matches:
+        github = gh_matches[0]
+    
+    # Create directory
+    dir_path = os.path.join(PAPERS_DIR, conf, str(year))
+    os.makedirs(dir_path, exist_ok=True)
+    
+    safe_title = re.sub(r'[^\w\s-]', '', title[:60]).strip().replace(' ', '_')
+    if not safe_title:
+        safe_title = f"paper_{arxiv_id or int(time.time())}"
+    filename = f"{safe_title}.md"
+    filepath = os.path.join(dir_path, filename)
+    
+    if os.path.exists(filepath):
+        print(f"  Skip (file exists): {title[:60]}")
+        continue
+    
+    url_link = f"https://arxiv.org/abs/{arxiv_id}" if arxiv_id else ''
+    pdf_link = f"https://arxiv.org/pdf/{arxiv_id}" if arxiv_id else ''
+    
+    md_content = f"""# {title}
+
+**ArXiv ID:** {arxiv_id or 'N/A'}
+**Published:** {published or 'N/A'}
+**Authors:** {author_str}
+**Conference/Venue:** {venue or conf}
+**URL:** {url_link or 'N/A'}
+**PDF:** {pdf_link or 'N/A'}
+**GitHub:** {github if github else '暂无'}
+**Categories:** {', '.join(categories) if categories else 'N/A'}
+
+## Abstract (English)
+
+{abstract}
+
+## 摘要 (中文)
+
+*(待翻译)*
+
+## Introduction (English)
+
+*(需要阅读原文PDF补充)*
+
+## 引言 (中文)
+
+*(需要阅读原文PDF补充)*
+
+## 博客内容
+
+*(待补充)*
+
+## GitHub 介绍
+
+{'https://github.com/' + github if github else '暂无 GitHub 仓库'}
+
+---
+*注: 此文件由晚间自动化论文搜集系统生成于 2026-04-23，部分内容待完善。*
+"""
+    
+    with open(filepath, 'w') as f:
+        f.write(md_content)
+    
+    db_entry = {
+        "id": f"paper_{int(time.time())}_{added}",
+        "title": title,
+        "authors": author_str,
+        "conference": conf,
+        "year": year,
+        "url": url_link,
+        "github_repo": github,
+        "arxiv_id": arxiv_id,
+        "keywords": categories,
+        "published": published,
+        "abstract_en": abstract[:1000],
+        "abstract_cn": "",
+        "introduction_en": "",
+        "introduction_cn": "",
+        "markdown_path": os.path.join(conf, str(year), filename),
+        "topic": "LLM Serving",
+        "venue": venue,
+    }
+    db['papers'].append(db_entry)
+    added += 1
+    print(f"  Added: [{arxiv_id or conf}] {title[:70]}")
+
+with open(DB_PATH, 'w') as f:
+    json.dump(db, f, indent=2)
+
+print(f"\n=== Summary ===")
+print(f"New papers added: {added}")
+print(f"Total papers in database: {len(db['papers'])}")
