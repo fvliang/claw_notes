@@ -1,0 +1,18 @@
+# TensorRT-LLM
+
+## Metadata
+- **GitHub:** https://github.com/NVIDIA/TensorRT-LLM
+- **Stars:** 13464
+- **Language:** Python
+- **Topic:** LLM Serving
+
+## GitHub 介绍
+
+TensorRT LLM provides users with an easy-to-use Python API to define Large Language Models (LLMs) and supports state-of-the-art optimizations to perform inference efficiently on NVIDIA GPUs. TensorRT LLM also contains components to create Python and C++ runtimes that orchestrate the inference execution in a performant way.
+
+## README Highlights
+
+[需从GitHub README补充]
+
+---
+*Auto-collected on 2026-04-24 evening*
