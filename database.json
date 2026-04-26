@@ -11506,6 +11506,102 @@
       "topic": "Speculative Decoding",
       "abstract_en": "[NeurIPS 2024] The official implementation of \"Kangaroo: Lossless Self-Speculative Decoding for Accelerating LLMs via Double Early Exiting\"",
       "abstract_cn": "[中文翻译待补充]"
+    },
+    {
+      "id": 575,
+      "title": "Cloud Native System for LLM Inference Serving",
+      "authors": "Minxian Xu, Junhan Liao, Jingfeng Wu, Yiyuan He, Kejiang Ye",
+      "arxiv_id": "2507.18007",
+      "github_repo": "smart-lty/nano-PEARL",
+      "conference": "arXiv",
+      "year": "2025",
+      "topic": "Inference Scheduling",
+      "abstract_en": "Large Language Models (LLMs) are revolutionizing numerous industries, but their substantial computational demands create challenges for efficient deployment, particularly in cloud environments. Traditional approaches to inference serving often struggle with resource inefficiencies, leading to high operational costs, latency issues, and limited scalability. This article explores how Cloud Native technologies, such as containerization, microservices, and dynamic scheduling, can fundamentally improve LLM inference serving. By leveraging these technologies, we demonstrate how a Cloud Native system enables more efficient resource allocation, reduces latency, and enhances throughput in high-demand scenarios. Through real-world evaluations using Kubernetes-based autoscaling, we show that Cloud Native architectures can dynamically adapt to workload fluctuations, mitigating performance bottlenecks while optimizing LLM inference serving performance. This discussion provides a broader perspective on how Cloud Native frameworks could reshape the future of scalable LLM inference serving, offering key insights for researchers, practitioners, and industry leaders in cloud computing and artificial intelligence.",
+      "abstract_cn": "[中文翻译待补充] Large Language Models (LLMs) are revolutionizing numerous industries, but their substantial computational demands create challenges for efficient deployment, particularly in cloud environments. Tradit..."
+    },
+    {
+      "id": 576,
+      "title": "Niyama : Breaking the Silos of LLM Inference Serving",
+      "authors": "Kanishk Goel, Jayashree Mohan, Nipun Kwatra, R. S. Anupindi, R. Ramjee",
+      "arxiv_id": "2503.22562",
+      "github_repo": "",
+      "conference": "arXiv",
+      "year": "2025",
+      "topic": "Inference Scheduling",
+      "abstract_en": "The widespread adoption of Large Language Models (LLMs) has enabled diverse applications with very different latency requirements. Existing LLM serving frameworks rely on siloed infrastructure with coarse-grained workload segregation -- interactive and batch -- leading to inefficient resource utilization and limited support for fine-grained Quality-of-Service (QoS) differentiation. This results in operational inefficiencies, over-provisioning and poor load management during traffic surges. We present Niyama, a novel QoS-driven inference serving system that enables efficient co-scheduling of diverse workloads on shared infrastructure. Niyama introduces fine-grained QoS classification allowing applications to specify precise latency requirements, and dynamically adapts scheduling decisions based on real-time system state. Leveraging the predictable execution characteristics of LLM inference, Niyama implements a dynamic chunking mechanism to improve overall throughput while maintaining strict QoS guarantees. Additionally, Niyama employs a hybrid prioritization policy that balances fairness and efficiency, and employs selective request relegation that enables graceful service degradation during overload conditions. Our evaluation demonstrates that Niyama increases serving capacity by 32% compared to current siloed deployments, while maintaining QoS guarantees. Notably, under extreme load, our system reduces SLO violations by an order of magnitude compared to current strategies.",
+      "abstract_cn": "[中文翻译待补充] The widespread adoption of Large Language Models (LLMs) has enabled diverse applications with very different latency requirements. Existing LLM serving frameworks rely on siloed infrastructure with co..."
+    },
+    {
+      "id": 577,
+      "title": "Collaborative Speculative Inference for Efficient LLM Inference Serving",
+      "authors": "Luyao Gao, Jianchun Liu, Hong-Ze Xu, Liusheng Huang",
+      "arxiv_id": "2503.10325",
+      "github_repo": "vllm-project/vllm",
+      "conference": "arXiv",
+      "year": "2025",
+      "topic": "Speculative Decoding",
+      "abstract_en": "Speculative inference is a promising paradigm employing small speculative models (SSMs) as drafters to generate draft tokens, which are subsequently verified in parallel by the target large language model (LLM). This approach enhances the efficiency of inference serving by reducing LLM inference latency and costs while preserving generation quality. However, existing speculative methods face critical challenges, including inefficient resource utilization and limited draft acceptance, which constrain their scalability and overall effectiveness. To overcome these obstacles, we present CoSine, a novel speculative inference system that decouples sequential speculative decoding from parallel verification, enabling efficient collaboration among multiple nodes. Specifically, CoSine routes inference requests to specialized drafters based on their expertise and incorporates a confidence-based token fusion mechanism to synthesize outputs from cooperating drafters, ensuring high-quality draft generation. Additionally, CoSine dynamically orchestrates the execution of speculative decoding and verification in a pipelined manner, employing batch scheduling to selectively group requests and adaptive speculation control to minimize idle periods. By optimizing parallel workflows through heterogeneous node collaboration, CoSine balances draft generation and verification throughput in real-time, thereby maximizing resource utilization. Experimental results demonstrate that CoSine achieves superior performance compared to state-of-the-art speculative approaches. Notably, with equivalent resource costs, CoSine achieves up to a 23.2% decrease in latency and a 32.5% increase in throughput compared to baseline methods.",
+      "abstract_cn": "[中文翻译待补充] Speculative inference is a promising paradigm employing small speculative models (SSMs) as drafters to generate draft tokens, which are subsequently verified in parallel by the target large language m..."
+    },
+    {
+      "id": 578,
+      "title": "AccelGen: Heterogeneous SLO-Guaranteed High-Throughput LLM Inference Serving for Diverse Applications",
+      "authors": "Haiying Shen, Tanmoy Sen",
+      "arxiv_id": "2503.13737",
+      "github_repo": "vllm-project/vllm",
+      "conference": "arXiv",
+      "year": "2025",
+      "topic": "Inference Scheduling",
+      "abstract_en": "In this paper, we consider a mixed-prompt scenario for a large language model (LLM) inference serving system that supports diverse applications with both short prompts and long prompts and heterogeneous SLOs for iteration time. To improve throughput when handling long prompts, previous research introduces a chunking method, but has not addressed heterogeneous SLOs. To address the limitation, we propose AccelGen, a high-throughput LLM inference serving system with heterogeneous SLO guarantees for diverse applications. AccelGen introduces four core components: (1) SLO-guaranteed dynamic chunking, which dynamically adjusts chunk sizes to maximize GPU compute utilization while meeting iteration-level SLOs; (2) Iteration-level SLO-based task prioritization, which prioritizes tight-SLO requests and batches requests with similar SLOs; (3) Multi-resource-aware batching, which selects queued requests to maximize the utilizations of both GPU compute resource and key-value cache (KVC). Trace-driven real experiments demonstrate that AccelGen achieves 1.42-11.21X higher throughput, 1.43-13.71X higher goodput, 37-90% higher SLO attainment, and 1.61-12.22X lower response latency compared to the state-of-the-art approaches. It achieves performance near the Oracle, which optimally maximizes goodput.",
+      "abstract_cn": "[中文翻译待补充] In this paper, we consider a mixed-prompt scenario for a large language model (LLM) inference serving system that supports diverse applications with both short prompts and long prompts and heterogeneo..."
+    },
+    {
+      "id": 579,
+      "title": "LLMShare: Optimizing LLM Inference Serving with Hardware Architecture Exploration",
+      "authors": "Hongduo Liu, Chen Bai, Peng Xu, Lihao Yin, Xianzhi Yu",
+      "arxiv_id": "",
+      "github_repo": "vllm-project/vllm",
+      "conference": "arXiv",
+      "year": "2025",
+      "topic": "Prefill/Disaggregation",
+      "abstract_en": "Large Language Models (LLMs) have revolutionized language tasks but pose significant deployment challenges due to their substantial computational demands during inference. The hardware configurations of existing LLM serving systems do not optimize for the different computational and bandwidth needs of the prefill and decoding phases in LLM inference, leading to inefficient resource use and increased costs. In this paper, we systematically investigate promising hardware configurations for LLM inference serving. We develop a simulator that models the performance and cost across different hardware solutions and introduce a customized design space exploration framework to identify optimal setups efficiently. By aligning hardware capabilities with the specific demands of the prefill and decoding phases, we achieve $13 \\%$ cost savings and over $4 \\times$ throughput improvements compared to conventional serving system setups.",
+      "abstract_cn": "[中文翻译待补充] Large Language Models (LLMs) have revolutionized language tasks but pose significant deployment challenges due to their substantial computational demands during inference. The hardware configurations ..."
+    },
+    {
+      "id": 580,
+      "title": "DOPD: A Dynamic PD-Disaggregation Architecture for Maximizing Goodput in LLM Inference Serving",
+      "authors": "Junhan Liao, Minxian Xu, Wanyi Zheng, Yan Wang, Kejiang Ye",
+      "arxiv_id": "2511.20982",
+      "github_repo": "",
+      "conference": "arXiv",
+      "year": "2025",
+      "topic": "Prefill/Disaggregation",
+      "abstract_en": "To meet strict Service-Level Objectives (SLO), contemporary Large Language Models (LLMs) decouple the prefill and decoding stages and place them on separate GPUs to mitigate the distinct bottlenecks inherent to each stage. However, the heterogeneity of LLM workloads causes producer-consumer imbalance between the two instance types in such disaggregated architecture. To address this problem, we propose DOPD (Dynamic Optimal Prefill/Decoding), a dynamic LLM inference system that adjusts instance allocations to achieve an optimal prefill-to-decoding (P/D) ratio based on real-time load monitoring. Combined with an appropriate request-scheduling policy, DOPD effectively resolves imbalances between prefill and decoding instances and mitigates resource allocation mismatches due to mixed-length requests under high concurrency. Experimental evaluations show that, compared with vLLM and DistServe (representative aggregation-based and disaggregation-based approaches), DOPD improves overall system goodput by up to <inline-formula><tex-math notation=\"LaTeX\">$1.5\\times$</tex-math><alternatives><mml:math><mml:mrow><mml:mn>1</mml:mn><mml:mo>.</mml:mo><mml:mn>5</mml:mn><mml:mo>×</mml:mo></mml:mrow></mml:math><inline-graphic xlink:href=\"xu-ieq1-3670011.gif\"/></alternatives></inline-formula>, decreases P90 time-to-first-token (TTFT) by up to 67.5%, and decreases P90 time-per-output-token (TPOT) by up to 22.8%. Furthermore, our dynamic P/D adjustment technique performs proactive reconfiguration based on historical load, achieving over 99% SLO attainment while using fewer additional resources.",
+      "abstract_cn": "[中文翻译待补充] To meet strict Service-Level Objectives (SLO), contemporary Large Language Models (LLMs) decouple the prefill and decoding stages and place them on separate GPUs to mitigate the distinct bottlenecks i..."
+    },
+    {
+      "id": 581,
+      "title": "SwiftServe: Efficient Disaggregated LLM Inference Serving via Hierarchical Max-Flow in Heterogeneous GPUs and Network",
+      "authors": "Tao Zhang, Yan Hu, Shuangwu Chen, Zian Wang, Huihuang Qin",
+      "arxiv_id": "",
+      "github_repo": "vllm-project/vllm",
+      "conference": "arXiv",
+      "year": "2025",
+      "topic": "Prefill/Disaggregation",
+      "abstract_en": "Large language models (LLMs) have achieved remarkable performance across a variety of tasks. Disaggregated LLM inference serving (DLIS), which separates the compute-intensive prefill phase and the memory-intensive decode phase, enables more flexible and efficient resource utilization in heterogeneous GPUs. However, deploying DLIS in real-world environments presents two significant challenges. Firstly, the heterogeneity of phase-specific resource requirements complicates the alignment of GPU capabilities with workload demands, often resulting in suboptimal performance. Secondly, transferring key-value (KV) caches between the prefill and decode phases over heterogeneous links introduces substantial communication overhead, creating performance bottlenecks. To address these challenges, we propose SwiftServe, an efficient disaggregated LLM inference serving system for heterogeneous GPUs. SwiftServe models DLIS deployment as a hierarchical max-flow deploying problem formulated as a constrained mixed-integer nonlinear program accounting for hardware and phase heterogeneity. We design a hierarchical alternating max-flow optimization algorithm for effective resource deployment. Experiments show SwiftServe achieves up to 1.68× higher throughput and 2.25× lower latency than existing methods.",
+      "abstract_cn": "[中文翻译待补充] Large language models (LLMs) have achieved remarkable performance across a variety of tasks. Disaggregated LLM inference serving (DLIS), which separates the compute-intensive prefill phase and the mem..."
+    },
+    {
+      "id": 582,
+      "title": "Toppings: CPU-Assisted, Rank-Aware Adapter Serving for LLM Inference",
+      "authors": "Suyi Li, Hanfeng Lu, Tianyuan Wu, Minchen Yu, Qizhen Weng",
+      "arxiv_id": "",
+      "github_repo": "",
+      "conference": "arXiv",
+      "year": "2026",
+      "topic": "LoRA/Adapter Serving",
+      "abstract_en": "",
+      "abstract_cn": "[中文翻译待补充] ..."
     }
   ],
   "topics": [
