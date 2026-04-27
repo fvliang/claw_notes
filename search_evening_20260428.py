@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""LLM serving paper search - 2026-04-27 evening run"""
+"""LLM serving paper search - 2026-04-28 morning"""
 import json, urllib.request, urllib.parse, time, re, os, xml.etree.ElementTree as ET
 
 DB_PATH = '/home/admin/claw_notes/database.json'
@@ -12,6 +12,7 @@ existing_titles = set()
 existing_arxiv = set()
 for p in db['papers']:
     t = p.get('title', '').lower().strip().replace('\n', ' ').replace('{', '').replace('}', '').replace('$', '')
+    # Handle backslash separately
     t = t.replace('\\', '')
     existing_titles.add(t[:80])
     existing_titles.add(t[:60])
@@ -87,7 +88,8 @@ def is_llm_serving(title, abstract):
     ns = sum(1 for k in NOT_SERVING_KEYWORDS if k in text)
     return (ss >= 2 and ss > ns) or (ss >= 1 and ns == 0 and has_llm)
 
-def search_arxiv(query, max_results=20):
+# ── ArXiv search ──
+def search_arxiv(query, max_results=30):
     url = f"http://export.arxiv.org/api/query?search_query=all:{urllib.parse.quote(query)}&sortBy=submittedDate&sortOrder=descending&max_results={max_results}"
     try:
         req = urllib.request.Request(url)
@@ -121,6 +123,7 @@ def parse_arxiv_xml(xml_data):
             continue
     return papers
 
+# ── Semantic Scholar search ──
 def search_s2(query, limit=15, year_from=2025):
     encoded = urllib.parse.quote(query)
     url = f"https://api.semanticscholar.org/graph/v1/paper/search?query={encoded}&limit={limit}&year={year_from}-2026&fields=title,abstract,url,externalIds,authors,publicationDate,venue&sort=relevance"
@@ -146,7 +149,8 @@ def search_s2(query, limit=15, year_from=2025):
         print(f"  S2 error: {e}")
         return []
 
-def search_github(query, per_page=10):
+# ── GitHub search ──
+def search_github(query, per_page=15):
     url = f"https://api.github.com/search/repositories?q={urllib.parse.quote(query)}&sort=stars&order=desc&per_page={per_page}"
     try:
         req = urllib.request.Request(url)
@@ -172,6 +176,7 @@ def search_github(query, per_page=10):
         print(f"  GitHub error: {e}")
         return []
 
+# ── Conference mapping ──
 CONFERENCE_MAP = {
     'osdi': 'OSDI', 'sosp': 'SOSP', 'nsdi': 'NSDI',
     'sigcomm': 'SIGCOMM', 'sigmod': 'SIGMOD',
@@ -233,26 +238,28 @@ all_papers = []
 all_repos = []
 seen_titles = set()
 
-# Evening queries - different from morning to find more papers
+# 1. ArXiv search - focused on recent papers
 arxiv_queries = [
-    "llm inference efficiency serving",
-    "speculative decoding verification draft model",
-    "llm serving throughput latency optimization",
-    "llm inference memory management gpu",
-    "kv cache compression llm",
-    "llm inference system architecture",
-    "continuous batching llm decode",
-    "llm serving cost optimization cloud",
-    "distributed llm inference cluster",
-    "moe model inference routing expert",
-    "llm inference parallelism tensor pipeline",
-    "llm inference quantization int8 int4",
-    "llm serving disaggregated architecture",
-    "efficient transformer inference kernel",
-    "llm serving load balancing scheduling",
+    "llm serving system",
+    "speculative decoding llm",
+    "llm inference optimization",
+    "kv cache llm serving",
+    "llm inference scheduling batching",
+    "continuous batching llm serving",
+    "llm serving disaggregation prefill",
+    "moe llm inference serving",
+    "llm inference acceleration draft",
+    "efficient llm inference quantization serving",
+    "llm inference gpu kernel flash attention",
+    "llm serving heterogeneous offloading",
+    "long context llm inference serving",
+    "distributed llm inference serving",
+    "llm inference serving framework",
+    "llm serving throughput latency",
+    "llm inference memory management",
 ]
 
-print("\n🔍 Phase 1: ArXiv Search (Evening)")
+print("\n🔍 Phase 1: ArXiv Search")
 for q in arxiv_queries:
     print(f"  Searching arXiv: {q}")
     results = search_arxiv(q, max_results=15)
@@ -268,18 +275,25 @@ for q in arxiv_queries:
     print(f"    → found {found} relevant papers")
     time.sleep(4)
 
-# Semantic Scholar - conference-focused
+# 2. Semantic Scholar for conference papers
 s2_queries = [
-    "LLM serving inference system OSDI SOSP",
-    "speculative decoding LLM efficient",
-    "KV cache LLM serving memory",
-    "LLM inference scheduling batching throughput",
-    "LLM inference prefill decode disaggregation",
-    "efficient LLM inference kernel optimization",
-    "MoE LLM inference serving expert routing",
-    "LLM inference quantization serving deployment",
-    "distributed LLM inference serving cluster",
-    "LLM serving framework engine vLLM",
+    "LLM inference serving system",
+    "speculative decoding LLM verification",
+    "KV cache management LLM serving",
+    "LLM serving scheduling throughput",
+    "LLM inference disaggregation prefill decode",
+    "efficient LLM inference kernel",
+    "MoE LLM inference serving routing",
+    "LLM inference heterogeneous offloading",
+    "distributed LLM inference serving",
+    "LLM inference quantization serving",
+    "LLM serving system OSDI SOSP",
+    "LLM inference system NSDI SIGCOMM",
+    "speculative decoding LLM ATC EuroSys",
+    "LLM serving ASPLOS DAC SC",
+    "LLM inference ICLR ICML NeurIPS",
+    "LLM serving ACL EMNLP",
+    "LLM inference SIGMOD",
 ]
 
 print("\n🔍 Phase 2: Semantic Scholar Search")
@@ -298,14 +312,15 @@ for q in s2_queries:
     print(f"    → found {found} relevant papers")
     time.sleep(3.5)
 
-# GitHub
+# 3. GitHub search
 print("\n🔍 Phase 3: GitHub Search")
 gh_queries = [
-    "llm inference serving engine",
-    "speculative decoding",
-    "llm serving framework",
-    "kv cache llm inference",
-    "llm inference acceleration",
+    "llm serving inference engine",
+    "speculative decoding llm",
+    "llm inference framework",
+    "kv cache llm serving",
+    "llm serving scheduler",
+    "llm inference throughput",
 ]
 for q in gh_queries:
     print(f"  Searching GitHub: {q}")
@@ -332,7 +347,7 @@ for p in all_papers:
     if arxiv_id and arxiv_id in existing_arxiv:
         continue
     
-    # Date validation - only 2025-2026 papers
+    # Validate arxiv ID date range (2025-2026)
     if arxiv_id:
         base = arxiv_id.split('v')[0]
         try:
@@ -401,6 +416,7 @@ def sanitize_filename(title, arxiv_id=''):
     return name + '.md'
 
 def translate_abstract_cn(abstract_en):
+    """Stub for Chinese translation."""
     return "[中文翻译待补充] " + abstract_en[:200] + "..."
 
 max_id = max((int(p.get('id', 0)) if str(p.get('id', '0')).isdigit() else 0) for p in db['papers']) if db['papers'] else 0
@@ -424,6 +440,7 @@ for p in new_papers:
     title_lower = p['title'].lower()
     for r in new_repos + all_repos:
         desc = (r.get('description', '') or '').lower()
+        repo_name = r.get('name', '').lower()
         title_words = [w for w in title_lower.split()[:4] if len(w) > 3]
         if any(w in desc for w in title_words) and r.get('stars', 0) >= 50:
             github_repo = r.get('full_name', '')
@@ -476,7 +493,7 @@ for p in new_papers:
 {github_repo if github_repo else '[GitHub仓库待搜索补充]'}
 
 ---
-*Auto-collected on 2026-04-27 evening*
+*Auto-collected on 2026-04-28 morning*
 """
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write(md)
@@ -551,7 +568,7 @@ for r in sorted(new_repos, key=lambda x: x.get('stars', 0), reverse=True)[:5]:
 [需从GitHub README补充]
 
 ---
-*Auto-collected on 2026-04-27 evening*
+*Auto-collected on 2026-04-28 morning*
 """
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write(md)
@@ -562,8 +579,7 @@ for r in sorted(new_repos, key=lambda x: x.get('stars', 0), reverse=True)[:5]:
 with open(DB_PATH, 'w', encoding='utf-8') as f:
     json.dump(db, f, ensure_ascii=False, indent=2)
 
-total_added = added_count + gh_added
-print(f"\n📊 Evening Search Summary:")
+print(f"\n📊 Summary:")
 print(f"  Papers added to DB: {added_count}")
 print(f"  GitHub repos added: {gh_added}")
 print(f"  Markdown notes created: {len(added_files)}")
