@@ -1,6 +1,6 @@
 # LLM Serving Papers Index
 
-_Generated: 2026-07-23 06:18_
+_Generated: 2026-07-24 06:18_
 
 
 ## 2026
@@ -640,6 +640,10 @@ _Generated: 2026-07-23 06:18_
   [arXiv](https://arxiv.org/abs/2607.15738v1)
   > Generative AI (GenAI) is increasingly used by students for programming explanation, debugging, and assignment support. Yet unrestricted large language model (LLM) tutors can hallucinate, contradict co...
 
+- **Efficient Clustering with Provable Guardrails for LLM Inference at Scale** — Longshaokan Wang, Wai Tsang Keung, Punit Ghodasara, Roman Wang, Ali Dashti, Francesc Moreno-Noguer
+  [arXiv](https://arxiv.org/abs/2607.19704v1)
+  > Scaling LLM-based applications to millions of users is bottlenecked by the inference cost and latency of modern foundation models. A natural fix is to cluster the inputs and call the LLM only on clust...
+
 - **Efficient Multi-round LLM Inference over Disaggregated Serving (AMPD)** — Wenhao He, Youhe Jiang, Penghao Zhao, Quanqing Xu, Eiko Yoneki, Bin Cui, Fangcheng Fu
   [arXiv](https://arxiv.org/abs/2602.14516)
   > Multi-round workflows raise hurdles for PD disaggregation — existing systems overlook interleaved prefill-decode workload patterns. AMPD adaptively coordinates prefill workloads based on real-time con...
@@ -681,6 +685,10 @@ _Generated: 2026-07-23 06:18_
 - **Find Before You Fine-Tune: A Diagnostic Study of Small LLMs for Cybersecurity QA** — Shaswata Mitra, Subash Neupane, Trisha Chakraborty, Himanshu Tripathi, Sudip Mittal, Aritran Piplai, Shahram Rahimi
   [arXiv](https://arxiv.org/abs/2607.18725v1)
   > Large Language Models (LLMs) are increasingly fine-tuned for critical-domain Question-Answering (QA), yet choosing which small model to adapt, before paying the cost of adaptation, remains difficult. ...
+
+- **Fine-grained Computation-Communication Overlap via Tile-level Signaling and Scheduling for Mixture-of-Experts** — Minyu Cui, Anna Wingkvist, Morgan Ericsson
+  [arXiv](https://arxiv.org/abs/2607.19539v1)
+  > Mixture-of-Experts (MoE) architectures increase model capacity without proportionally increasing computation cost and have become a key building block for scaling large language models (LLMs) to trill...
 
 - **FlashRT: Agent Harness for Guiding Agents to Deploy Real-Time Multimodal Applications** — Krish Agarwal, Zhuoming Chen, Yanyuan Qin, Zhenyu Gu, Atri Rudra, Beidi Chen
   [arXiv](https://arxiv.org/abs/2607.18171v1)
@@ -770,6 +778,10 @@ _Generated: 2026-07-23 06:18_
 - **Harness Engineering for LLM-Driven GPU Kernel Generation** — Yue Shui, Chenyu Ma, Hangfei Xu, Shengzhao Wen, Yanpeng Wang
   [arXiv](https://arxiv.org/abs/2607.17979v1)
   > Large language models (LLMs) can assist GPU kernel generation, but their practical effectiveness depends on whether generated code can be reliably constrained, validated, profiled, and selected. This ...
+
+- **HijackKV: New Threat in Position-Independent KV Cache Reuse** — Yichi Zhang, Zhiqi Wang, Huan Zhang, Yuchen Yang
+  [arXiv](https://arxiv.org/abs/2607.19957v1)
+  > Key-Value (KV) cache reduces inference latency in large language models (LLMs). Traditional prefix-based reuse has low cache hit rates across inference requests because it requires exact token and pos...
 
 - **HiveMind: OS-Inspired Scheduling for Concurrent LLM Agent Workloads** — Justice Owusu Agyemang, Jerry John Kponyo, Obed Kwasi Somuah, Elliot Amponsah, Godfred Manu Addo Boakye, Kwame Opuni-Boachie Obour Agyekum
   [arXiv](https://arxiv.org/abs/2604.16790)
@@ -867,6 +879,10 @@ _Generated: 2026-07-23 06:18_
 - **Local-Splitter: A Measurement Study of Seven Tactics for Reducing Cloud LLM Token Usage on Coding-Agent Workloads** — Justice Owusu Agyemang, Jerry John Kponyo, Elliot Amponsah, Godfred Manu Addo Boakye, Kwame Opuni-Boachie Obour Agyekum
   [arXiv](https://arxiv.org/abs/2604.12301)
   > We present a systematic measurement study of seven tactics for reducing cloud LLM token usage when a small local model can act as a triage layer in front of a frontier cloud model. Local routing combi...
+
+- **Look Less, Think Faster: Joint Token-Compute Adaptation for Multimodal LLMs** — Pengcheng Wang, Zhiquan Wang, Jayoung Lee, Zhuoyan Xu, Ran Xu, Saurabh Bagchi, Yin Li, Somali Chaterji
+  [arXiv](https://arxiv.org/abs/2607.20357v1)
+  > Multimodal Large Language Models (MLLMs) have recently demonstrated strong performance across vision-language tasks. However, their high inference cost, arising from both the large number of input vis...
 
 - **Lossless but Not Free: An Empirical Anatomy of Speculative Decoding on Consumer Hardware** — Param Chordiya
   [arXiv](https://arxiv.org/abs/2607.17283v1)
@@ -999,6 +1015,10 @@ _Generated: 2026-07-23 06:18_
   [arXiv](https://arxiv.org/abs/2604.12171)
   > Pipeline parallelism (PP) is widely used to partition LLM layers across GPUs. However, existing systems rely on static PP configurations that fail to adapt to dynamic settings. PipeLive enables live i...
 
+- **PoTRE: Test-Time Reasoning inspired by Cognitive Heterogeneity** — Anmol Kankariya, Sercan Ö. Arık
+  [arXiv](https://arxiv.org/abs/2607.20268v1)
+  > While Large Language Models (LLMs) excel at many tasks, they frequently struggle with complex reasoning that requires long-horizon planning and iterative error correction. Furthermore, standard single...
+
 - **PolyQ: Codesigning End-to-End Quantization Framework for Scalable Edge CPU LLM Inference** — Hyunwoo Oh, Suyeon Jang, Hanning Chen, KyungIn Nam, Sanggeon Yun, Ryozo Masukawa, Mohsen Imani
   [arXiv](https://arxiv.org/abs/2607.14618v1)
   > CPUs are the most universal target for on-device LLM inference, but existing low-bit quantization methods offer either coarse operating points or fine-grained mixed precision that is difficult to exec...
@@ -1016,6 +1036,10 @@ _Generated: 2026-07-23 06:18_
 
 - **ProbeLogits: Kernel-Level LLM Inference Primitives for AI-Native Operating Systems** — Daeyeon Son
   > An OS kernel that runs LLM inference internally can read logit distributions before any text is generated and act on them as a governance primitive. We present ProbeLogits, a kernel-level operation th...
+
+- **PyroDash: Cost-Efficient Token-Level Small-Large Language Model Collaborative Inference** — Niqi Lyu, Pengtao Shi, Wei Qiu, Jianlin Zhong, Sicong Xia, Jianyao Ma, Yicheng Ding
+  [arXiv](https://arxiv.org/abs/2607.20327v1)
+  > Large language models (LLMs) provide strong reasoning capabilities but are expensive to serve at scale, whereas small language models (SLMs) are cheaper but less reliable on difficult problems. We int...
 
 - **QCFuse: Query-Centric Cache Fusion for Efficient RAG Inference** — ['Jianxin Yan', 'Zeheng Qian', 'Wangze Ni', 'Zhitao Shen', 'Zhiping Wang', 'Haoyang Li']
   [arXiv](https://arxiv.org/abs/2604.08585)
@@ -1053,6 +1077,10 @@ _Generated: 2026-07-23 06:18_
 - **RedFuser: An Automatic Operator Fusion Framework for Cascaded Reductions on AI Accelerators** — Xinsheng Tang, Yuhui Zhao, Jintao Li, Jiaming Xu, Shuo Li, Jiansong Chen, Chen Zhang, Yong Li, Xiaoyong Liu, Ji Liu, Jin Wang, Wei Lin
   [arXiv](https://arxiv.org/abs/2603.10026)
   > Operator fusion, as a key performance optimization technique in the deployment of AI models, significantly improves execution efficiency and has been widely adopted in modern AI compilers. However, fo...
+
+- **Reinforcement Learning for Large Language Model Selective Evidence Adoption from Contaminated Retrieval Results** — Yanyu Chen, Yue Li, Yongyi Cui, Dongsheng Shi, Lichang Dai
+  [arXiv](https://arxiv.org/abs/2607.20090v1)
+  > Retrieval-augmented large language models frequently face contexts that interleave useful evidence with misleading statements or instruction-like content. Blanket refusal discards valid evidence, wher...
 
 - **Resource Multiplexing in Tuning and Serving Large Language Models** — Yongjun He, Hao Yang, Yao Lu, Ana Klimovic, Gustavo Alonso
   [GitHub](https://github.com/aerlabsAI/ai-inference-resources)
@@ -1248,6 +1276,10 @@ _Generated: 2026-07-23 06:18_
   [arXiv](https://arxiv.org/abs/2603.15183) | [GitHub](https://github.com/hipvlady/agent-coherence)
   > Multi-agent LLM orchestration incurs synchronization costs scaling as O(n x S x |D|). This work maps synchronization cost explosion onto the cache coherence problem and adapts MESI-protocol invalidati...
 
+- **Total Variation Distance Estimation in Autoregressive Models** — Eric Price, Kevin Tian, Zhiyang Xun, Yusong Zhu
+  [arXiv](https://arxiv.org/abs/2607.19510v1)
+  > Modern LLM deployments use a number of implementation choices and inference optimizations (e.g., batching, custom kernels, and quantization) on top of fixed weights, so two engines serving "the same m...
+
 - **Towards High-Goodput LLM Serving with Prefill-decode Multiplexing** — Weihao Cui, Yukang Chen, Han Zhao, Ziyi Xu, Xiaoze Fan, Xusheng Chen, Yangjie Zhou, Shixuan Sun, Bingsheng He, Quan Chen
   > 现代大型语言模型(LLM)的部署需要同时优化延迟和吞吐量。传统的LLM serving系统通常将prefill阶段和解码阶段分开处理，但这导致了资源利用不均衡的问题。本文提出了Prefill-Decode Multiplexing (PDM) 框架，通过创新的请求调度和资源分配策略，实现了更高的goodput（服务质量感知的吞吐量）。...
 
@@ -1260,6 +1292,10 @@ _Generated: 2026-07-23 06:18_
 
 - **Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference** — ['Zifan He', 'Rui Ma', 'Yizhou Sun', 'Jason Cong']
   [arXiv](https://arxiv.org/abs/2603.29002)
+
+- **Understanding the Impact of Linguistic Realization Choices on LLM Stance with Causal Tracing** — Langchen Huang, Sebastian Padó, Franziska Weeber
+  [arXiv](https://arxiv.org/abs/2607.20115v1)
+  > Large language models (LLMs) are known to be sensitive to prompt and input formulations. However, existing studies have focused on lexical realization and largely ignored constructional choice. This p...
 
 - **Using Fine-Tuned LLMs to Identify Indicators of Vulnerability in UK Police Incident Logs** — Sam Relins, Daniel Birks
   [arXiv](https://arxiv.org/abs/2607.18446v1)
