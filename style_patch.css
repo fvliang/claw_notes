@@ -1,0 +1,15 @@
+/* AI Summary section */
+.ai-summary-box{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:16px 20px;border-radius:12px;margin:0 0 20px}
+.ai-summary-label{font-size:11px;opacity:.8;margin-bottom:6px;text-transform:uppercase;letter-spacing:1px}
+.ai-summary-text{font-size:14px;line-height:1.7;font-weight:500}
+
+/* Section tabs */
+.section-tabs{display:flex;gap:4px;margin:0 15px 12px;background:#fff;padding:4px;border-radius:10px}
+.section-tab{flex:1;padding:10px;border:none;border-radius:8px;background:transparent;color:#666;font-size:13px;cursor:pointer;font-weight:500}
+.section-tab.on{background:#007AFF;color:#fff}
+
+.section-content{display:none;padding:20px;background:#fff;margin:0 15px 12px;border-radius:14px}
+.section-content.on{display:block}
+.section-content h4{font-size:13px;color:#007AFF;margin:0 0 10px}
+.section-content p{font-size:14px;line-height:1.8;color:#333;margin:0}
+
