@@ -52,7 +52,7 @@ def update_html():
             paper_data["abstract_en"] = abstract_en
         
         abstract_cn = p.get("abstract_cn", "")
-        if abstract_cn and "[中文翻译" not in str(abstract_cn) and "[自动翻译" not in str(abstract_cn) and len(str(abstract_cn)) > 50:
+        if abstract_cn and "[中文翻译" not in str(abstract_cn) and "[自动翻译" not in str(abstract_cn) and len(str(abstract_cn)) > 10:
             paper_data["abstract_cn"] = abstract_cn
         
         ai_summary = p.get("ai_summary", "")
