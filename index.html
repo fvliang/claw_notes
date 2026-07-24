@@ -25,7 +25,7 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 </head>
 <body>
 <h1>📚 LLM Serving Papers</h1>
-<div class="stats">672 papers | Updated 2026-07-24</div>
+<div class="stats">678 papers | Updated 2026-07-25</div>
 <div class="filter">
 <select id="topicFilter" onchange="filterPapers()">
 <option value="">All Topics</option><option value="Distributed Inference">Distributed Inference</option>
@@ -778,15 +778,15 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 </div><div class="paper" data-topic="LLM Serving">
 <h3>FlashInfer: Kernel Library for LLM Serving</h3>
 <div class="meta">Unknown | arXiv 2025</div>
-<div class="abstract"></div>
+<div class="abstract">Transformers, driven by attention mechanisms, form the foundation of large language models (LLMs). As these models scale up, efficient GPU attention kernels become essential for high-throughput and low-latency inference. Diverse LLM applications demand flexible and high-performan...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2501.01005">arXiv</a> <a href="https://github.com/flashinfer-ai/flashinfer">GitHub</a></div>
 </div><div class="paper" data-topic="KV Cache">
 <h3>LLMLingua: Prompt Compression for LLM Inference</h3>
 <div class="meta">Unknown | EMNLP 2023, ACL 2024 2026</div>
-<div class="abstract"></div>
+<div class="abstract">Large language models (LLMs) have been applied in various applications due to their astonishing capabilities. With advancements in technologies such as chain-of-thought (CoT) prompting and in-context learning (ICL), the prompts fed to LLMs are becoming increasingly lengthy, even ...</div>
 <div class="tags"><span>KV Cache</span></div>
-<div class="links"><a href="https://github.com/microsoft/LLMLingua">GitHub</a></div>
+<div class="links"><a href="https://arxiv.org/abs/2310.05736">arXiv</a> <a href="https://github.com/microsoft/LLMLingua">GitHub</a></div>
 </div><div class="paper" data-topic="LLM Serving">
 <h3>Llama Stack</h3>
 <div class="meta">Unknown | arXiv 2025</div>
@@ -1156,121 +1156,121 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 </div><div class="paper" data-topic="Speculative Decoding">
 <h3>Multi-Drafter Speculative Decoding with Alignment Feedback</h3>
 <div class="meta">['Taehyeon Kim', 'Hojung Jung', 'Se-Young Yun'] | acl 2026</div>
-<div class="abstract"></div>
+<div class="abstract">Speculative decoding (SD) accelerates large language model (LLM) inference by using a smaller model to draft future tokens, which are then verified by the target LLM. This preserves generation quality by accepting only aligned tokens. However, individual drafters, often trained f...</div>
 <div class="tags"><span>Speculative Decoding</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2604.05417">arXiv</a></div>
 </div><div class="paper" data-topic="KV Cache">
 <h3>CodeComp: Structural KV Cache Compression for Agentic Coding</h3>
 <div class="meta">['Qiujiang Chen', 'Jing Xiong', 'Chenyang Zhao', 'Sidi Yang', 'Ngai Wong'] | arXiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">Agentic code tasks such as fault localization and patch generation require processing long codebases under tight memory constraints, where the Key-Value (KV) cache becomes the primary inference bottleneck. Existing compression methods rely exclusively on attention signals to esti...</div>
 <div class="tags"><span>KV Cache</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2604.10235">arXiv</a></div>
 </div><div class="paper" data-topic="LLM Serving">
 <h3>SHIELD: A Segmented Hierarchical Memory Architecture for Energy-Efficient LLM Inference on Edge NPUs</h3>
 <div class="meta">['Jintao Zhang', 'Xuanyao Fong'] | arXiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">Large Language Model (LLM) inference on edge Neural Processing Units (NPUs) is fundamentally constrained by limited on-chip memory capacity. Although high-density embedded DRAM (eDRAM) is attractive for storing activation workspaces, its periodic refresh consumes substantial ener...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2604.07396">arXiv</a></div>
 </div><div class="paper" data-topic="KV Cache">
 <h3>Comparative Characterization of KV Cache Management Strategies for LLM Inference</h3>
 <div class="meta">['Oteo Mamo', 'Olga Kogiou', 'Hyunjin Yi', 'Weikuan Yu'] | arXiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">Efficient inference with Large Language Models (LLMs) increasingly relies on Key-Value (KV) caches to store previously computed key and value vectors at each layer. These caches are essential to minimize redundant computation during autoregressive token generation, lowering compu...</div>
 <div class="tags"><span>KV Cache</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2604.05012">arXiv</a></div>
 </div><div class="paper" data-topic="KV Cache">
 <h3>Don't Waste Bits! Adaptive KV-Cache Quantization for Lightweight On-Device LLMs</h3>
 <div class="meta">['Sayed Pedram Haeri Boroujeni', 'Niloufar Mehrabi', 'Patrick Woods', 'Gabriel Hillesheim', 'Abolfazl Razi'] | cvpr 2026</div>
-<div class="abstract"></div>
+<div class="abstract">Large Language Models (LLMs) have achieved remarkable progress across reasoning, generation, and decision-making tasks, yet deploying them on mobile, embedded, and edge devices remains particularly challenging. On-device LLM inference is heavily constrained by the memory and band...</div>
 <div class="tags"><span>KV Cache</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2604.04722">arXiv</a></div>
 </div><div class="paper" data-topic="LLM Serving">
 <h3>QCFuse: Query-Centric Cache Fusion for Efficient RAG Inference</h3>
 <div class="meta">['Jianxin Yan', 'Zeheng Qian', 'Wangze Ni', 'Zhitao Shen', 'Zhiping Wang', 'Haoyang Li'] | arXiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">Cache fusion accelerates generation process of LLMs equipped with RAG through KV caching and selective token recomputation, thereby reducing computational costs and improving efficiency. However, existing methods primarily rely on local perspectives for token selection and lack g...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2604.08585">arXiv</a></div>
 </div><div class="paper" data-topic="KV Cache">
 <h3>KVSculpt: KV Cache Compression as Distillation</h3>
 <div class="meta">['Bo Jiang', 'Sian Jin'] | arXiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">KV cache compression is critical for efficient long-context LLM inference. Approaches that reduce the per-pair footprint -- quantization and low-rank decomposition -- are orthogonal to those that reduce the sequence length of the cache. Along the sequence-length dimension, existi...</div>
 <div class="tags"><span>KV Cache</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2603.27819">arXiv</a></div>
 </div><div class="paper" data-topic="KV Cache">
 <h3>ScoutAttention: Efficient KV Cache Offloading via Layer-Ahead CPU Pre-computation for LLM Inference</h3>
 <div class="meta">['Qiuyang Zhang', 'Kai Zhou', 'Ding Tang', 'Kai Lu', 'Cheng Li', 'Zhenyu Yang'] | dac 2026</div>
-<div class="abstract"></div>
+<div class="abstract">Large language models encounter critical GPU memory capacity constraints during long-context inference, where KV cache memory consumption severely limits decode batch sizes. While existing research has explored offloading KV cache to DRAM, these approaches either demand frequent ...</div>
 <div class="tags"><span>KV Cache</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2603.27138">arXiv</a></div>
 </div><div class="paper" data-topic="KV Cache">
 <h3>PRISM: Breaking the O(n) Memory Wall in Long-Context LLM Inference via O(1) Photonic Block Selection</h3>
 <div class="meta">['Hyoseok Park', 'Yeonsang Park'] | arXiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">Long-context LLM inference is bottlenecked not by compute but by the O(n) memory bandwidth cost of scanning the KV cache at every decode step -- a wall that no amount of arithmetic scaling can break. Recent photonic accelerators have demonstrated impressive throughput for dense a...</div>
 <div class="tags"><span>KV Cache</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2603.21576">arXiv</a></div>
 </div><div class="paper" data-topic="LLM Serving">
 <h3>IEMAS: An Incentive-Efficiency Routing Framework for Open Agentic Web Ecosystems</h3>
 <div class="meta">['Hongze Liu', 'Chang Guo', 'Yingzeng Li', 'Mengru Wang', 'Jiong Lou', 'Shijing Yuan'] | arXiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">The transition to open, distributed Multi-Agent Systems (MAS) promises scalable intelligence but introduces a non-trivial tension: maximizing global efficiency requires cooperative, resource-aware scheduling, yet autonomous agents may be self-interested and cannot be managed by a...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2603.17302">arXiv</a></div>
 </div><div class="paper" data-topic="LLM Serving">
 <h3>The xPU-athalon: Quantifying the Competition of AI Acceleration</h3>
 <div class="meta">['Alicia Golden', 'Carole-Jean Wu', 'Gu-Yeon Wei', 'David Brooks'] | ispass 2026</div>
-<div class="abstract"></div>
+<div class="abstract">The push for greater efficiency in AI computation has given rise to an array of accelerator architectures that increasingly challenge the GPU's long-standing dominance. In this work, we provide a quantitative view of this evolving landscape of AI accelerators, including the Cereb...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2604.10852">arXiv</a></div>
 </div><div class="paper" data-topic="LLM Serving">
 <h3>WaveTune: Wave-aware Bilinear Modeling for Efficient GPU Kernel Auto-tuning</h3>
 <div class="meta">['Kaixuan Zhang', 'Chutong Ding', 'Shiyou Qian', 'Luping Wang', 'Jian Cao', 'Guangtao Xue'] | arXiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">The rapid adoption of Large Language Models (LLMs) has made GPU inference efficiency an increasingly critical system concern. The runtime of LLM workloads is largely dominated by tile-based kernels, particularly General Matrix Multiplications (GEMMs). Although these kernels are h...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2604.10187">arXiv</a></div>
 </div><div class="paper" data-topic="LLM Serving">
 <h3>Watt Counts: Energy-Aware Benchmark for Sustainable LLM Inference on Heterogeneous GPU Architectures</h3>
 <div class="meta">['Mauricio Fadel Argerich', 'Jonathan Fürst', 'Marta Patiño-Martínez'] | arXiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">While the large energy consumption of Large Language Models (LLMs) is recognized by the community, system operators lack guidance for energy-efficient LLM inference deployments that leverage energy trade-offs of heterogeneous hardware due to a lack of energy-aware benchmarks and ...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2604.09048">arXiv</a></div>
 </div><div class="paper" data-topic="LLM Serving">
 <h3>Flux Attention: Context-Aware Hybrid Attention for Efficient LLMs Inference</h3>
 <div class="meta">['Quantong Qiu', 'Zhiyi Hong', 'Yi Yang', 'Haitian Wang', 'Kebin Liu', 'Qingqing Dang'] | arXiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">The quadratic computational complexity of standard attention mechanisms presents a severe scalability bottleneck for LLMs in long-context scenarios. While hybrid attention mechanisms combining Full Attention (FA) and Sparse Attention (SA) offer a potential solution, existing meth...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2604.07394">arXiv</a></div>
 </div><div class="paper" data-topic="LLM Serving">
 <h3>DAT: Dual-Aware Adaptive Transmission for Efficient Multimodal LLM Inference in Edge-Cloud Systems</h3>
 <div class="meta">['Qi Guo', 'Zheming Yang', 'Yunqing Hu', 'Chang Zhao', 'Wen Ji'] | arXiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">Multimodal large language models (MLLMs) have shown strong capability in semantic understanding and visual reasoning, yet their use on continuous video streams in bandwidth-constrained edge-cloud systems incurs prohibitive computation and communication overhead and hinders low-la...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2604.05375">arXiv</a></div>
 </div><div class="paper" data-topic="LLM Serving">
 <h3>GPU Acceleration of TFHE-Based High-Precision Nonlinear Layers for Encrypted LLM Inference</h3>
 <div class="meta">['Guoci Chen', 'Xiurui Pan', 'Qiao Li', 'Bo Mao', 'Congming Gao', 'Chengying Huan'] | arXiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">Deploying large language models (LLMs) as cloud services raises privacy concerns as inference may leak sensitive data. Fully Homomorphic Encryption (FHE) allows computation on encrypted data, but current FHE methods struggle with efficient and precise nonlinear function evaluatio...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2604.04783">arXiv</a></div>
 </div><div class="paper" data-topic="LLM Serving">
 <h3>Communication-Efficient Collaborative LLM Inference over LEO Satellite Networks</h3>
 <div class="meta">['Songge Zhang', 'Wen Wu', 'Liang Li', 'Ye Wang', 'Xuemin', 'Shen'] | arXiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">Low Earth orbit (LEO) satellites play an essential role in intelligent Earth observation by leveraging artificial intelligence models. However, limited onboard memory and excessive inference delay prevent the practical deployment of large language models (LLMs) on a single satell...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2604.04654">arXiv</a></div>
 </div><div class="paper" data-topic="LLM Serving">
 <h3>Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference</h3>
 <div class="meta">['Zifan He', 'Rui Ma', 'Yizhou Sun', 'Jason Cong'] | arXiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">Modern large language models (LLMs) increasingly depends on efficient long-context processing and generation mechanisms, including sparse attention, retrieval-augmented generation (RAG), and compressed contextual memory, to support complex reasoning. We show that these optimizati...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2603.29002">arXiv</a></div>
 </div><div class="paper" data-topic="LLM Serving">
 <h3>ITQ3_S: High-Fidelity 3-bit LLM Inference via Interleaved Ternary Quantization with Rotation-Domain Smoothing</h3>
 <div class="meta">['Edward J. Yoon'] | arXiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">We present ITQ3_S (Interleaved Ternary Quantization -- Specialized), a novel 3-bit weight quantization format for LLMs integrating TurboQuant (TQ), a rotation-domain strategy based on the Fast Walsh-Hadamard Transform (FWHT). Conventional 3-bit methods suffer precision loss from ...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2603.27914">arXiv</a></div>
 </div><div class="paper" data-topic="LLM Serving">
 <h3>Probabilistic Language Tries: A Unified Framework for Compression, Decision Policies, and Execution Reuse</h3>
 <div class="meta">['Gregory Magarshak'] | arXiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">We introduce probabilistic language tries (PLTs), a unified representation that makes explicit the prefix structure implicitly defined by any generative model over sequences. By assigning to each outgoing edge the conditional probability of the corresponding token or action, a PL...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2604.06228">arXiv</a></div>
 </div><div class="paper" data-topic="LLM Serving">
@@ -1732,31 +1732,31 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 </div><div class="paper" data-topic="LLM Serving">
 <h3>Ragged Paged Attention: A High-Performance and Flexible LLM Inference Kernel for TPU</h3>
 <div class="meta">N/A | arxiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">Large Language Model (LLM) deployment is increasingly shifting to cost-efficient accelerators like Google's Tensor Processing Units (TPUs), prioritizing both performance and total cost of ownership (TCO). However, existing LLM inference kernels and serving systems remain largely ...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2604.15464">arXiv</a></div>
 </div><div class="paper" data-topic="LLM Serving">
 <h3>The Illusion of Equivalence: Systematic FP16 Divergence in KV-Cached Autoregressive Inference</h3>
 <div class="meta">N/A | arxiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">KV caching is a ubiquitous optimization in autoregressive transformer inference, long presumed to be numerically equivalent to cache-free computation. This assumption fails under standard FP16 precision: cache-ON and cache-OFF execution paths employ different floating-point accum...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2604.15409">arXiv</a></div>
 </div><div class="paper" data-topic="LLM Serving">
 <h3>Fleet: Hierarchical Task-based Abstraction for Megakernels on Multi-Die GPUs</h3>
 <div class="meta">N/A | arxiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">Modern GPUs adopt chiplet-based designs with multiple private cache hierarchies, but current programming models (CUDA/HIP) expose a flat execution hierarchy that cannot express chiplet-level locality or synchronization. This mismatch leads to redundant memory traffic and poor cac...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2604.15379">arXiv</a></div>
 </div><div class="paper" data-topic="LLM Serving">
 <h3>Fully Homomorphic Encryption on Llama 3 model for privacy preserving LLM inference</h3>
 <div class="meta">N/A | arxiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">The applications of Generative Artificial Intelligence (GenAI) and their intersections with data-driven fields, such as healthcare, finance, transportation, and information security, have led to significant improvements in service efficiency and low latency. However, this synergy...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2604.12168">arXiv</a></div>
 </div><div class="paper" data-topic="LLM Serving">
 <h3>DualDiffusion: A Speculative Decoding Strategy for Masked Diffusion Models</h3>
 <div class="meta">N/A | icml 2026</div>
-<div class="abstract"></div>
+<div class="abstract">Masked Diffusion Models (MDMs) offer a promising alternative to autoregressive language models by enabling parallel token generation and bidirectional context modeling. However, their inference speed is significantly limited by the inability to cache key-value pairs due to bidire...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2604.05250">arXiv</a></div>
 </div><div class="paper" data-topic="Prefill/Disaggregation">
@@ -2176,7 +2176,7 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 </div><div class="paper" data-topic="LLM Serving">
 <h3>EdgeSD: Efficient Speculative Decoding with Vision-Decoding Disaggregation for MLLM Inference in Edge-Cloud Networks</h3>
 <div class="meta">Hualong Huang, Wenhan Zhan, Hancong Duan, Kai Peng, Geyong Min, Zijia Zhao, Zitian Zhao, Yalan Ye | semantic_scholar 2025</div>
-<div class="abstract"></div>
+<div class="abstract">The deployment of multimodal large language models (MLLMs) in edge-cloud networks faces critical challenges, including computational resource heterogeneity, memory bottlenecks, and bandwidth constraints. To address these issues, we propose EdgeSD, a novel framework that accelerat...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"></div>
 </div><div class="paper" data-topic="LLM Serving">
@@ -2470,9 +2470,9 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 </div><div class="paper" data-topic="Speculative Decoding">
 <h3>AdaServe: SLO-Customized LLM Serving with Fine-Grained Speculative Decoding</h3>
 <div class="meta">['Zikun Li', 'Zhuofu Chen', 'Rémi Delacourt', 'Gabriele Oliaro', 'Zeyu Wang', 'Qinghan Chen', 'Shuhuai Lin', 'April Yang', 'Zhihao Zhang', 'Zhuoming Chen', 'Sean Lai', 'Xupeng Miao', 'Zhihao Jia'] | arXiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">Modern large language model (LLM) applications exhibit diverse service-level objectives (SLOs), from low-latency requirements in interactive coding assistants to more relaxed constraints in data wrangling tasks. Existing LLM serving systems, which rely on uniform batching and sch...</div>
 <div class="tags"><span>Speculative Decoding</span></div>
-<div class="links"><a href="https://github.com/kvcache-ai/Mooncake">GitHub</a></div>
+<div class="links"><a href="https://arxiv.org/abs/2501.12162v2">arXiv</a> <a href="https://github.com/kvcache-ai/Mooncake">GitHub</a></div>
 </div><div class="paper" data-topic="Speculative Decoding">
 <h3>Accelerating LLM Inference with Lossless Speculative Decoding Algorithms for Heterogeneous Vocabularies</h3>
 <div class="meta">['Nadav Timor', 'J. Mamou', 'Daniel Korat', 'Moshe Berchansky', 'Oren Pereg', 'Gaurav Jain', 'Roy Schwartz', 'Moshe Wasserblat', 'David Harel'] | arXiv 2025</div>
@@ -2962,9 +2962,9 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 </div><div class="paper" data-topic="KV Cache">
 <h3>[GitHub] kvpress: LLM KV cache compression made easy</h3>
 <div class="meta">NVIDIA | GitHub 2026</div>
-<div class="abstract">LLM KV cache compression made easy</div>
+<div class="abstract">We present PolyKV, a system in which multiple concurrent inference agents share a single, asymmetrically compressed KV cache pool. Rather than allocating a separate KV cache per agent -- the standard paradigm -- PolyKV writes a compressed cache once and injects it into N independ...</div>
 <div class="tags"><span>KV Cache</span></div>
-<div class="links"><a href="https://github.com/NVIDIA/kvpress">GitHub</a></div>
+<div class="links"><a href="https://arxiv.org/abs/2604.24971v1">arXiv</a> <a href="https://github.com/NVIDIA/kvpress">GitHub</a></div>
 </div><div class="paper" data-topic="KV Cache">
 <h3>[GitHub] turboquant-pytorch: From-scratch PyTorch implementation of Google's TurboQuant (ICLR 2026) for LLM KV cache compression.</h3>
 <div class="meta">tonbistudio | GitHub 2026</div>
@@ -3070,7 +3070,7 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 </div><div class="paper" data-topic="Inference Kernel">
 <h3>FastTree: Optimizing Attention Kernel and Runtime for Tree-Structured LLM Inference</h3>
 <div class="meta">Zaifeng Pan, Yitong Ding, Yue Guan, Zheng Wang, Zhongkai Yu | arXiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">Tree-structured prefix sharing is prevalent in recent large language model (LLM) applications. Existing LLM serving systems use a radix tree to organize the global key-value (KV) cache, facilitating cache reuse across different queries and thus reducing unnecessary memory use. De...</div>
 <div class="tags"><span>Inference Kernel</span></div>
 <div class="links"><a href="https://github.com/aerlabsAI/ai-inference-resources">GitHub</a></div>
 </div><div class="paper" data-topic="Quantization">
@@ -3154,9 +3154,9 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 </div><div class="paper" data-topic="KV Cache">
 <h3>[GitHub] InfiniStore: KV cache store for distributed LLM inference</h3>
 <div class="meta">bytedance | GitHub 2026</div>
-<div class="abstract">KV cache store for distributed LLM inference</div>
+<div class="abstract">We present PolyKV, a system in which multiple concurrent inference agents share a single, asymmetrically compressed KV cache pool. Rather than allocating a separate KV cache per agent -- the standard paradigm -- PolyKV writes a compressed cache once and injects it into N independ...</div>
 <div class="tags"><span>KV Cache</span></div>
-<div class="links"><a href="https://github.com/bytedance/InfiniStore">GitHub</a></div>
+<div class="links"><a href="https://arxiv.org/abs/2604.24971v1">arXiv</a> <a href="https://github.com/bytedance/InfiniStore">GitHub</a></div>
 </div><div class="paper" data-topic="Speculative Decoding">
 <h3>[GitHub] Spec-Bench: Spec-Bench: A Comprehensive Benchmark and Unified Evaluation Platform for Speculative Decoding (ACL </h3>
 <div class="meta">hemingkx | GitHub 2026</div>
@@ -3256,9 +3256,9 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 </div><div class="paper" data-topic="LLM Serving">
 <h3>[GitHub] BitNet: Official inference framework for 1-bit LLMs</h3>
 <div class="meta">microsoft | GitHub 2026</div>
-<div class="abstract">Official inference framework for 1-bit LLMs</div>
+<div class="abstract">Recent research on the 1-bit Large Language Models (LLMs), such as BitNet b1.58, presents a promising direction for reducing the inference cost of LLMs while maintaining their performance. In this work, we introduce BitNet a4.8, enabling 4-bit activations for 1-bit LLMs. BitNet a...</div>
 <div class="tags"><span>LLM Serving</span></div>
-<div class="links"><a href="https://github.com/microsoft/BitNet">GitHub</a></div>
+<div class="links"><a href="https://arxiv.org/abs/2411.04965v1">arXiv</a> <a href="https://github.com/microsoft/BitNet">GitHub</a></div>
 </div><div class="paper" data-topic="Offloading/Heterogeneous">
 <h3>[GitHub] ktransformers: A Flexible Framework for Experiencing Heterogeneous LLM Inference/Fine-tune Optimizations</h3>
 <div class="meta">kvcache-ai | GitHub 2026</div>
@@ -3286,9 +3286,9 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 </div><div class="paper" data-topic="LLM Serving">
 <h3>[GitHub] InferLLM: a lightweight LLM model inference framework</h3>
 <div class="meta">MegEngine | GitHub 2026</div>
-<div class="abstract">a lightweight LLM model inference framework</div>
+<div class="abstract">A joint measurement is presented of the branching fractions $B^0_s\toμ^+μ^-$ and $B^0\toμ^+μ^-$ in proton-proton collisions at the LHC by the CMS and LHCb experiments. The data samples were collected in 2011 at a centre-of-mass energy of 7 TeV, and in 2012 at 8 TeV. The combined ...</div>
 <div class="tags"><span>LLM Serving</span></div>
-<div class="links"><a href="https://github.com/MegEngine/InferLLM">GitHub</a></div>
+<div class="links"><a href="https://arxiv.org/abs/1411.4413v2">arXiv</a> <a href="https://github.com/MegEngine/InferLLM">GitHub</a></div>
 </div><div class="paper" data-topic="LLM Serving">
 <h3>[GitHub] MARTI: A Framework for LLM-based Multi-Agent Reinforced Training and Inference</h3>
 <div class="meta">TsinghuaC3I | GitHub 2026</div>
@@ -3316,7 +3316,7 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 </div><div class="paper" data-topic="LLM Serving">
 <h3>AdaGen: Workload-Adaptive Cluster Scheduler for Latency-Optimal LLM Inference Serving</h3>
 <div class="meta">Sudipta Saha Shubha, Ayush Goel, D. Z. Tootaghaj, Khaled Diab, Hardik Soni | arXiv 2026</div>
-<div class="abstract"></div>
+<div class="abstract">The inference workloads of Large Language Models (LLMs) pose significant latency and cost challenges due to increasing model sizes and demand for real-time responses. Existing cluster schedulers for multi-instance LLM serving primarily focus on load balancing to optimize memory u...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"></div>
 </div><div class="paper" data-topic="Speculative Decoding">
@@ -3574,13 +3574,13 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 </div><div class="paper" data-topic="LLM Serving">
 <h3>Continuous Semantic Caching for Low-Cost LLM Serving</h3>
 <div class="meta">Baran Atalar, Xutong Liu, Jinhang Zuo, Siwei Wang, Wei Chen, Carlee Joe-Wong | arXiv 2026</div>
-<div class="abstract">[Abstract待从arxiv页面获取]</div>
+<div class="abstract">Large language models (LLMs) are increasingly studied as repositories of linguistic knowledge. In this line of work, models are commonly evaluated both as generators of language and as judges of linguistic output, yet these two roles are rarely examined in direct relation to one ...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2604.15873">arXiv</a></div>
 </div><div class="paper" data-topic="Prefill/Disaggregation">
 <h3>Stream2LLM: Overlap Context Streaming and Prefill for Reduced Time-to-First-Token (TTFT)</h3>
 <div class="meta">Rajveer Bachkaniwala, Chengqi Luo, Richard So, Divya Mahajan, Kexin Rong | arXiv 2026</div>
-<div class="abstract">[Abstract待从arxiv页面获取]</div>
+<div class="abstract">In this work, we investigate observable signatures of a magnetically charged Anti-de Sitter black hole in string-inspired Euler-Heisenberg theory. We analyze photon trajectories, the photon sphere, and the resulting black hole shadow. We derive the photon sphere and shadow radii ...</div>
 <div class="tags"><span>Prefill/Disaggregation</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2603.19458">arXiv</a></div>
 </div><div class="paper" data-topic="Distributed Inference">
@@ -4081,6 +4081,42 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 <div class="abstract">Modern LLM deployments use a number of implementation choices and inference optimizations (e.g., batching, custom kernels, and quantization) on top of fixed weights, so two engines serving "the same model" can produce meaningfully different distributions. We study the problem of ...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2607.19510v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.19510v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context</h3>
+<div class="meta">Alagappan Valliappan | arXiv 2026</div>
+<div class="abstract">Speculative decoding accelerates autoregressive generation by having a cheap draft propose tokens that a target verifies in parallel. Frontier models increasingly ship a built-in Multi-Token-Prediction (MTP/NEXTN) draft head under the assumption that the draft is negligibly cheap...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.21535v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.21535v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>C-PTQ: Fisher-weighted Channel-wise Sensitivity for Post-training Quantization of MLLMs</h3>
+<div class="meta">Jiameng Li, Han Zhou, Matthew B. Blaschko | arXiv 2026</div>
+<div class="abstract">Multimodal large language models (MLLMs) require huge memory and computational costs, which limits their practical deployment. Post-training quantization (PTQ) techniques offer an efficient solution for model compression and inference acceleration. Yet, the quantized model faces ...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.21076v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.21076v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Refusal-Gated Decoding: Preserving Refusal Behavior Under High-Temperature Sampling</h3>
+<div class="meta">Phillip Howard, Xin Su, Allen Roush, Manikandan Ravikiran, Amir Abdullah | arXiv 2026</div>
+<div class="abstract">High-temperature sampling is one of the primary mechanisms for increasing diversity in LLMs. Recent advances in truncation-based sampling techniques have helped mitigate drawbacks of high-temperature sampling such as neural text degeneration, thereby enabling greater diversity in...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.20791v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.20791v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>PATS: Policy-Aware Training Scaffolding for Agentic Reinforcement Learning</h3>
+<div class="meta">Yipeng Shi, Zhipeng Ma, Yue Wang, Qitai Tan, Yang Li, Peng Chen, Zhengzhou Zhu | arXiv 2026</div>
+<div class="abstract">In long-horizon LLM agent reinforcement learning, weak policies often repeat similar failures, producing uninformative rollout trajectories and limiting effective policy optimization. Existing skill-centric methods improve exploration by optimizing, filtering, or internalizing re...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.21419v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.21419v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Euclid-MCP: A Model Context Protocol Server for Deterministic Logical Reasoning via Prolog</h3>
+<div class="meta">Bartolomeo Bogliolo | arXiv 2026</div>
+<div class="abstract">Large Language Models (LLMs) excel at natural language understanding and generation but remain unreliable for multi-step logical reasoning, especially in safety-critical or compliance-sensitive domains. Recent neuro-symbolic approaches address this gap by coupling neural models w...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.21412v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.21412v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Adaptive Depth Sparse Framework: Similarity-Driven Resource Allocation for Pre-Trained LLMs</h3>
+<div class="meta">Yidu Wu, Xiang Wang, Kejie Zhao, Zhangchi Wang, Qinghai Guo, Xiaoying Tang | arXiv 2026</div>
+<div class="abstract">Large language models (LLMs) achieve strong generation and reasoning performance, but the Transformer architecture incurs high inference cost. Existing acceleration methods often rely on task-specific fine-tuning or training from scratch, increasing adaptation cost and limiting c...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.21291v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.21291v1.pdf">PDF</a></div>
 </div></div>
 <div class="empty" id="emptyState" style="display:none">No papers match your filters.</div>
 <script>

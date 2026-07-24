@@ -524,6 +524,9 @@ html = '''<!DOCTYPE html>
         document.getElementById('detailLinks').innerHTML = links;
         
         let body = '';
+        if (p.ai_summary) {
+            body += `<h3>AI 总结</h3><p style="background:#f8f9fa;padding:12px;border-radius:8px;border-left:3px solid #007AFF;">${p.ai_summary}</p>`;
+        }
         if (p.abstract_en) {
             body += `<h3>Abstract</h3><p>${p.abstract_en}</p>`;
         }
