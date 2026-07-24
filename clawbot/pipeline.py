@@ -210,6 +210,59 @@ document.getElementById('emptyState').style.display=visible?'none':'block';
     logger.info("Generated index.html with %d papers", len(papers))
 
 
+
+def generate_docs_html(db: PaperDatabase, output_path: str = None):
+    """Generate docs/index.html (mobile UI with read/unread/favorites)."""
+    import json as _json
+    output_path = output_path or str(config.REPO_ROOT / "docs" / "index.html")
+    papers = db.all_papers()
+
+    # Read template from existing docs/index.html
+    docs_html_path = config.REPO_ROOT / "docs" / "index.html"
+    if not docs_html_path.exists():
+        logger.warning("docs/index.html not found, skipping docs generation")
+        return
+
+    with open(docs_html_path, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+
+    # Find the data line (starts with 'const P=')
+    data_line_idx = None
+    for i, line in enumerate(lines):
+        if line.strip().startswith("const P="):
+            data_line_idx = i
+            break
+
+    if data_line_idx is None:
+        logger.warning("Could not find data line in docs/index.html, skipping")
+        return
+
+    # Build paper data
+    paper_data = []
+    for p in papers:
+        paper_data.append({
+            "id": p.id,
+            "title": p.title or "",
+            "authors": p.authors or "",
+            "topic": p.topic or "",
+            "conference": p.conference or "",
+            "added_date": getattr(p, "added_date", None) or getattr(p, "collected_date", None) or "2026-03-15",
+            "abstract": p.abstract_en or "",
+            "abstract_cn": getattr(p, "abstract_cn", None) or "",
+            "arxiv_id": getattr(p, "arxiv_id", None) or "",
+            "github_repo": getattr(p, "github_repo", None) or "",
+        })
+
+    # Replace data line
+    new_data_line = "const P=" + _json.dumps(paper_data, ensure_ascii=False) + ";\n"
+    lines[data_line_idx] = new_data_line
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.writelines(lines)
+
+    logger.info("Generated docs/index.html with %d papers", len(papers))
+
+
 def run_full_pipeline(
     db_path: str = None,
     queries: List[str] = None,
@@ -223,6 +276,7 @@ def run_full_pipeline(
 
     if generate_web:
         generate_web_html(db)
+        generate_docs_html(db)
     if generate_index:
         generate_markdown_index(db)
 
