@@ -498,14 +498,11 @@ html = '''<!DOCTYPE html>
             border-top: 1px solid var(--border);
         }
 
-        /* Desktop: 3 columns */
-        @media (min-width: 768px) {
+        /* Desktop: 3 columns only on very wide screens */
+        @media (min-width: 1100px) {
             .paper-list { grid-template-columns: repeat(3, 1fr); gap: 10px; }
             .paper-card { padding: 14px; }
             .paper-card .title { font-size: 13px; -webkit-line-clamp: 2; }
-        }
-        @media (min-width: 1200px) {
-            .paper-list { grid-template-columns: repeat(4, 1fr); }
         }
     </style>
 </head>
