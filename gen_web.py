@@ -622,10 +622,37 @@ html = '''<!DOCTYPE html>
     </div>
 
     <script>
-    const papers = ''' + json.dumps(papers, ensure_ascii=False) + ''';
-    const topics = ''' + json.dumps(topics) + ''';
-    const confCategories = ''' + json.dumps(conf_categories) + ''';
-    const allYears = ''' + json.dumps(all_years) + ''';
+    // Load papers data asynchronously
+    let papers = [];
+    let topics = [];
+    let confCategories = {};
+    let allYears = [];
+
+    async function loadData() {
+        const list = document.getElementById('paperList');
+        list.innerHTML = '<div class="empty-state"><div class="empty-state-icon">&#128228;</div><div>Loading papers...</div></div>';
+
+        try {
+            const resp = await fetch('papers.json');
+            if (!resp.ok) throw new Error('Failed to load papers.json');
+            const data = await resp.json();
+            papers = data.papers || [];
+            topics = data.topics || [];
+            confCategories = data.confCategories || {};
+            allYears = data.allYears || [];
+
+            // Rebuild confs list
+            allConfs = [...new Set(papers.map(p => p.conference || 'arXiv'))].sort();
+
+            initNav();
+            render();
+        } catch (e) {
+            list.innerHTML = '<div class="empty-state"><div class="empty-state-icon">&#9888;</div><div>Failed to load papers: ' + e.message + '</div></div>';
+            console.error(e);
+        }
+    }
+
+    let allConfs = [];
 
     let filterMode = "topic";
     let activeTopic = "";
@@ -983,11 +1010,18 @@ html = '''<!DOCTYPE html>
 
     document.getElementById('searchInput').addEventListener('input', render);
 
-    initNav();
-    render();
+    loadData();
     </script>
 </body>
 </html>'''
+
+with open('docs/papers.json', 'w', encoding='utf-8') as f:
+    json.dump({
+        'papers': papers,
+        'topics': topics,
+        'confCategories': conf_categories,
+        'allYears': all_years,
+    }, f, ensure_ascii=False)
 
 with open('docs/index.html', 'w', encoding='utf-8') as f:
     f.write(html)
