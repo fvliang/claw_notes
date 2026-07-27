@@ -830,7 +830,7 @@ html = '''<!DOCTYPE html>
                 ${hasSummary ? '<span class="tag has-summary">&#10003; AI</span>' : ''}
             </div>
             <div class="links">
-                ${p.arxiv_id ? `<a href="https://arxiv.org/abs/${p.arxiv_id}" target="_blank" onclick="event.stopPropagation()">arXiv</a>` : ''}
+                ${p.arxiv_id ? `<a href="https://arxiv.org/abs/${p.arxiv_id}" target="_blank" onclick="event.stopPropagation()">arXiv</a>` : (p.conference === 'arXiv' ? `<a href="https://www.google.com/search?q=${encodeURIComponent(p.title)}+arxiv" target="_blank" onclick="event.stopPropagation()">Find arXiv</a>` : '')}
                 ${p.github_repo ? `<a href="https://github.com/${p.github_repo}" target="_blank" onclick="event.stopPropagation()">GitHub</a>` : ''}
             </div>
         </div>`;
