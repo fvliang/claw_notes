@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
-"""Batch translate abstracts and generate bilingual AI summaries using Kimi API."""
+"""Batch generate bilingual AI summaries using Bailian API with parallel requests."""
 
 import json
 import os
 import time
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import requests
 
 DB_PATH = Path("database.json")
-API_KEY = os.environ.get("KIMI_API_KEY", "")
-API_URL = "https://api.moonshot.cn/v1/chat/completions"
+API_KEY = os.environ.get("BAILIAN_API_KEY", "")
+API_URL = "https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1/chat/completions"
+API_MODEL = "qwen3.8-max-preview"
+MAX_WORKERS = 200  # Parallel API calls
 
 SUMMARY_PROMPT_EN = """You are an AI research assistant specialized in LLM systems. Summarize the following academic paper in 2-3 concise sentences in English. Focus on: 1) What problem it solves, 2) Key method/insight, 3) Main results or impact. Be technical and precise."""
 
@@ -27,14 +30,14 @@ def save_db(db):
         json.dump(db, f, ensure_ascii=False, indent=2)
 
 
-def call_kimi(messages, max_retries=3, timeout=60):
-    """Call Kimi API with retry."""
+def call_api(messages, max_retries=3, timeout=90):
+    """Call Bailian API with retry."""
     headers = {
         "Authorization": f"Bearer {API_KEY}",
         "Content-Type": "application/json"
     }
     data = {
-        "model": "moonshot-v1-8k",
+        "model": API_MODEL,
         "messages": messages,
         "temperature": 0.3
     }
@@ -43,51 +46,71 @@ def call_kimi(messages, max_retries=3, timeout=60):
         try:
             resp = requests.post(API_URL, headers=headers, json=data, timeout=timeout)
             resp.raise_for_status()
-            return resp.json()["choices"][0]["message"]["content"]
+            result = resp.json()
+            return result["choices"][0]["message"]["content"]
         except Exception as e:
-            print(f"  API error (attempt {attempt+1}): {e}")
             time.sleep(2 ** attempt)
     return None
 
 
-def generate_summary_en(abstract_en, title, topic):
-    """Generate English AI summary of the paper."""
-    if not abstract_en or len(abstract_en) < 50:
+def generate_summary_en(paper):
+    """Generate English AI summary."""
+    abstract = paper.get("abstract_en", "")
+    if not abstract or len(abstract) < 50:
         return None
-
     messages = [
         {"role": "system", "content": SUMMARY_PROMPT_EN},
-        {"role": "user", "content": f"Title: {title}\nTopic: {topic}\nAbstract: {abstract_en[:2500]}"}
+        {"role": "user", "content": f"Title: {paper.get('title', '')}\nTopic: {paper.get('topic', '')}\nAbstract: {abstract[:2500]}"}
     ]
-    return call_kimi(messages)
+    return call_api(messages)
 
 
-def generate_summary_cn(abstract_en, title, topic):
-    """Generate Chinese AI summary of the paper."""
-    if not abstract_en or len(abstract_en) < 50:
+def generate_summary_cn(paper):
+    """Generate Chinese AI summary."""
+    abstract = paper.get("abstract_en", "")
+    if not abstract or len(abstract) < 50:
         return None
-
     messages = [
         {"role": "system", "content": SUMMARY_PROMPT_CN},
-        {"role": "user", "content": f"Title: {title}\nTopic: {topic}\nAbstract: {abstract_en[:2500]}"}
+        {"role": "user", "content": f"Title: {paper.get('title', '')}\nTopic: {paper.get('topic', '')}\nAbstract: {abstract[:2500]}"}
     ]
-    return call_kimi(messages)
+    return call_api(messages)
 
 
-def translate_abstract(abstract_en):
-    """Translate English abstract to Chinese."""
-    if not abstract_en or len(abstract_en) < 50:
-        return None
+def process_single_paper(paper):
+    """Process one paper: generate EN and CN summaries in parallel threads."""
+    pid = paper['id']
+    title = paper.get('title', '')[:40]
+    needs_en = not paper.get("ai_summary_en")
+    needs_cn = not paper.get("ai_summary_cn")
 
-    messages = [
-        {"role": "system", "content": "You are a professional academic translator. Translate the following academic paper abstract from English to Chinese. Maintain technical accuracy and academic tone. Only output the translation, no explanations."},
-        {"role": "user", "content": abstract_en[:3000]}
-    ]
-    return call_kimi(messages)
+    if not needs_en and not needs_cn:
+        return pid, None, None
+
+    en_result = None
+    cn_result = None
+
+    # Launch EN and CN in parallel
+    with ThreadPoolExecutor(max_workers=2) as ex:
+        future_en = ex.submit(generate_summary_en, paper) if needs_en else None
+        future_cn = ex.submit(generate_summary_cn, paper) if needs_cn else None
+
+        if future_en:
+            try:
+                en_result = future_en.result(timeout=120)
+            except Exception as e:
+                pass
+        if future_cn:
+            try:
+                cn_result = future_cn.result(timeout=120)
+            except Exception as e:
+                pass
+
+    return pid, en_result, cn_result
 
 
-def process_papers(batch_size=3, max_papers=None, skip_existing=True):
-    """Process papers in batches: generate bilingual AI summaries + translate abstracts."""
+def process_papers_parallel(batch_size=200, max_papers=None):
+    """Process papers with parallel API calls."""
     db = load_db()
     papers = db["papers"]
 
@@ -97,83 +120,64 @@ def process_papers(batch_size=3, max_papers=None, skip_existing=True):
         has_en = bool(p.get("abstract_en")) and len(p.get("abstract_en", "")) > 50
         if not has_en:
             continue
-
-        needs_en_summary = not p.get("ai_summary_en")
-        needs_cn_summary = not p.get("ai_summary_cn")
-        needs_cn_abstract = not p.get("abstract_cn") or "[中文翻译待补充]" in str(p.get("abstract_cn", "")) or "[自动翻译生成中...]" in str(p.get("abstract_cn", ""))
-
-        if skip_existing and not needs_en_summary and not needs_cn_summary and not needs_cn_abstract:
+        needs_en = not p.get("ai_summary_en")
+        needs_cn = not p.get("ai_summary_cn")
+        if not needs_en and not needs_cn:
             continue
-
-        need_processing.append((p, needs_en_summary, needs_cn_summary, needs_cn_abstract))
+        need_processing.append(p)
 
     if max_papers:
         need_processing = need_processing[:max_papers]
 
-    print(f"Found {len(need_processing)} papers to process")
-
     total = len(need_processing)
-    processed = 0
+    print(f"Found {total} papers to process, max_workers={MAX_WORKERS}")
 
-    for i in range(0, total, batch_size):
-        batch = need_processing[i:i+batch_size]
-        print(f"\n--- Batch {i//batch_size + 1}/{(total-1)//batch_size + 1} ---")
+    completed = 0
+    processed_ids = set()
 
-        for p, needs_en, needs_cn, needs_abstract_cn in batch:
-            print(f"Processing [{p['id']}]: {p['title'][:50]}...")
+    # Process in chunks to allow periodic DB saves
+    for chunk_start in range(0, total, batch_size):
+        chunk = need_processing[chunk_start:chunk_start + batch_size]
+        chunk_num = chunk_start // batch_size + 1
+        total_chunks = (total - 1) // batch_size + 1
+        print(f"\n--- Chunk {chunk_num}/{total_chunks} ({len(chunk)} papers) ---")
 
-            # Generate English summary
-            if needs_en:
-                print("  Generating EN summary...")
-                summary = generate_summary_en(p.get("abstract_en", ""), p.get("title", ""), p.get("topic", ""))
-                if summary:
-                    p["ai_summary_en"] = summary.strip()
-                    print(f"  EN: {summary[:80]}...")
-                else:
-                    print("  EN summary failed")
-                time.sleep(1)
+        # Build a map for quick lookup
+        paper_map = {p['id']: p for p in papers}
 
-            # Generate Chinese summary
-            if needs_cn:
-                print("  Generating CN summary...")
-                summary = generate_summary_cn(p.get("abstract_en", ""), p.get("title", ""), p.get("topic", ""))
-                if summary:
-                    p["ai_summary_cn"] = summary.strip()
-                    print(f"  CN: {summary[:80]}...")
-                else:
-                    print("  CN summary failed")
-                time.sleep(1)
+        with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+            future_to_paper = {executor.submit(process_single_paper, p): p for p in chunk}
 
-            # Translate abstract to Chinese
-            if needs_abstract_cn:
-                print("  Translating abstract...")
-                cn = translate_abstract(p.get("abstract_en", ""))
-                if cn:
-                    p["abstract_cn"] = cn.strip()
-                    print(f"  Abstract translated ({len(cn)} chars)")
-                else:
-                    print("  Translation failed")
-                time.sleep(1)
+            for future in as_completed(future_to_paper):
+                p = future_to_paper[future]
+                try:
+                    pid, en_summary, cn_summary = future.result(timeout=180)
+                    paper = paper_map.get(pid)
+                    if paper:
+                        if en_summary:
+                            paper["ai_summary_en"] = en_summary.strip()
+                        if cn_summary:
+                            paper["ai_summary_cn"] = cn_summary.strip()
+                        processed_ids.add(pid)
+                except Exception as e:
+                    print(f"  Error processing paper {p['id']}: {e}")
 
-            processed += 1
+                completed += 1
+                if completed % 10 == 0:
+                    print(f"  Progress: {completed}/{total}")
 
-        # Save progress every batch
+        # Save after each chunk
         save_db(db)
-        print(f"Saved progress: {processed}/{total}")
+        print(f"Saved progress: {len(processed_ids)}/{total}")
 
-        # Rate limit between batches
-        if i + batch_size < total:
-            time.sleep(3)
-
-    print(f"\nDone! Processed {processed} papers")
+    print(f"\nDone! Processed {len(processed_ids)} papers")
 
 
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description="Batch process papers for bilingual AI summaries")
-    parser.add_argument("--batch-size", type=int, default=3, help="Batch size (default: 3)")
-    parser.add_argument("--max-papers", type=int, default=None, help="Max papers to process")
-    parser.add_argument("--no-skip", action="store_true", help="Re-process papers that already have summaries")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--batch-size", type=int, default=200)
+    parser.add_argument("--max-papers", type=int, default=None)
     args = parser.parse_args()
 
-    process_papers(batch_size=args.batch_size, max_papers=args.max_papers, skip_existing=not args.no_skip)
+    process_papers_parallel(batch_size=args.batch_size, max_papers=args.max_papers)
