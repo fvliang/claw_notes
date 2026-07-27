@@ -8,8 +8,33 @@ topics = db['topics']
 # Extract unique years sorted descending
 all_years = sorted(set(str(p.get('year', 2024)) for p in papers), reverse=True)
 
-# Extract unique conferences
+# Conference categories with influence ranking (higher = more influential, earlier in list)
+CONF_CATEGORIES = {
+    'ML': ['NeurIPS', 'ICML', 'ICLR', 'AAAI', 'AISTATS'],
+    'NLP': ['ACL', 'EMNLP', 'NAACL', 'EACL', 'CoNLL', 'TACL', 'Findings'],
+    'Systems': ['OSDI', 'SOSP', 'ASPLOS', 'EuroSys', 'ATC', 'PLDI', 'FAST'],
+    'Arch': ['ISCA', 'MICRO', 'HPCA'],
+    'Database': ['SIGMOD', 'VLDB', 'CIDR', 'ICDE'],
+    'Networks': ['SIGCOMM', 'NSDI', 'CoNEXT'],
+    'Vision': ['CVPR', 'ICCV', 'ECCV'],
+    'Security': ['S&P', 'CCS', 'USENIX Security', 'NDSS'],
+}
+
+# Build categorized conf list
 all_confs = sorted(set(p.get('conference', 'arXiv') for p in papers))
+conf_categories = {}
+for cat, confs in CONF_CATEGORIES.items():
+    matched = [c for c in confs if c in all_confs]
+    if matched:
+        conf_categories[cat] = matched
+
+# Unclassified -> Other
+classified = set()
+for confs in conf_categories.values():
+    classified.update(confs)
+other_confs = sorted([c for c in all_confs if c not in classified])
+if other_confs:
+    conf_categories['Other'] = other_confs
 
 html = '''<!DOCTYPE html>
 <html lang="zh-CN">
@@ -224,6 +249,51 @@ html = '''<!DOCTYPE html>
             color: white;
         }
 
+        /* Tooltip preview */
+        .paper-tooltip {
+            position: fixed;
+            z-index: 1000;
+            max-width: 360px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 14px 16px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.15s ease;
+            display: none;
+        }
+        .paper-tooltip.show {
+            display: block;
+            opacity: 1;
+        }
+        .paper-tooltip .tt-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+        .paper-tooltip .tt-label {
+            font-size: 10px;
+            color: var(--accent-soft);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+        .paper-tooltip .tt-content {
+            font-size: 11px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+        .paper-tooltip .tt-empty {
+            font-size: 11px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
         /* Paper list - auto-fit columns */
         .paper-list {
             display: grid;
@@ -272,10 +342,6 @@ html = '''<!DOCTYPE html>
             color: var(--text);
             line-height: 1.45;
             margin-bottom: 4px;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
         }
         .paper-card .authors {
             font-size: 10px;
@@ -501,7 +567,7 @@ html = '''<!DOCTYPE html>
         @media (min-width: 1100px) {
             .paper-list { gap: 10px; }
             .paper-card { padding: 14px; }
-            .paper-card .title { font-size: 13px; -webkit-line-clamp: 2; }
+            .paper-card .title { font-size: 13px; }
         }
     </style>
 </head>
@@ -545,6 +611,12 @@ html = '''<!DOCTYPE html>
         <div class="detail-body" id="detailBody"></div>
     </div>
 
+    <div class="paper-tooltip" id="paperTooltip">
+        <div class="tt-title" id="ttTitle"></div>
+        <div class="tt-label">AI Summary</div>
+        <div class="tt-content" id="ttContent"></div>
+    </div>
+
     <div class="footer">
         <span id="totalCount">0</span> papers &middot; Auto-updated daily
     </div>
@@ -552,7 +624,7 @@ html = '''<!DOCTYPE html>
     <script>
     const papers = ''' + json.dumps(papers, ensure_ascii=False) + ''';
     const topics = ''' + json.dumps(topics) + ''';
-    const allConfs = ''' + json.dumps(all_confs) + ''';
+    const confCategories = ''' + json.dumps(conf_categories) + ''';
     const allYears = ''' + json.dumps(all_years) + ''';
 
     let filterMode = "topic";
@@ -598,28 +670,30 @@ html = '''<!DOCTYPE html>
         });
         container.appendChild(topicRow);
 
-        // Venue + Year rows (for confYear mode)
-        const confRow = document.createElement('div');
-        confRow.className = 'filter-row';
-        confRow.id = 'confRow';
+        // Venue rows (for confYear mode) - grouped by category
+        Object.keys(confCategories).forEach(cat => {
+            const catRow = document.createElement('div');
+            catRow.className = 'filter-row conf-cat-row';
+            catRow.dataset.cat = cat;
+            catRow.style.display = 'none';
 
-        const label1 = document.createElement('span');
-        label1.className = 'filter-row-label';
-        label1.textContent = 'Venue';
-        confRow.appendChild(label1);
+            const label = document.createElement('span');
+            label.className = 'filter-row-label';
+            label.textContent = cat;
+            catRow.appendChild(label);
 
-        const allConf = makeChip('All', '', 'conf', () => { activeConf = ''; updateFilters(); });
-        allConf.classList.add('conf-filter');
-        confRow.appendChild(allConf);
-
-        allConfs.forEach(c => {
-            const chip = makeChip(c, c, 'conf', () => { activeConf = c; updateFilters(); });
-            chip.classList.add('conf-filter');
-            confRow.appendChild(chip);
+            confCategories[cat].forEach(c => {
+                const chip = makeChip(c, c, 'conf', () => { activeConf = c; updateFilters(); });
+                chip.classList.add('conf-filter');
+                catRow.appendChild(chip);
+            });
+            container.appendChild(catRow);
         });
-        container.appendChild(confRow);
 
         const yearRow = document.createElement('div');
+        yearRow.className = 'filter-row';
+        yearRow.id = 'yearRow';
+        yearRow.style.display = 'none';
         yearRow.className = 'filter-row';
         yearRow.id = 'yearRow';
 
@@ -671,8 +745,11 @@ html = '''<!DOCTYPE html>
         });
 
         document.getElementById('topicRow').style.display = mode === 'topic' ? 'flex' : 'none';
-        document.getElementById('confRow').style.display = mode === 'confYear' ? 'flex' : 'none';
-        document.getElementById('yearRow').style.display = mode === 'confYear' ? 'flex' : 'none';
+        document.querySelectorAll('.conf-cat-row').forEach(r => {
+            r.style.display = mode === 'confYear' ? 'flex' : 'none';
+        });
+        const yr = document.getElementById('yearRow');
+        if (yr) yr.style.display = mode === 'confYear' ? 'flex' : 'none';
 
         // Reset filters
         activeTopic = '';
@@ -764,6 +841,62 @@ html = '''<!DOCTYPE html>
         div.textContent = text;
         return div.innerHTML;
     }
+
+    // Tooltip for AI Summary preview
+    const tooltip = document.getElementById('paperTooltip');
+    const ttTitle = document.getElementById('ttTitle');
+    const ttContent = document.getElementById('ttContent');
+
+    function showTooltip(p, x, y) {
+        ttTitle.textContent = p.title || 'Untitled';
+        const ai = p.ai_summary_en || p.ai_summary_cn || p.ai_summary;
+        if (ai) {
+            ttContent.textContent = ai.substring(0, 280) + (ai.length > 280 ? '...' : '');
+            ttContent.className = 'tt-content';
+        } else {
+            ttContent.textContent = 'No AI summary yet';
+            ttContent.className = 'tt-empty';
+        }
+        tooltip.classList.add('show');
+        positionTooltip(x, y);
+    }
+
+    function positionTooltip(x, y) {
+        const rect = tooltip.getBoundingClientRect();
+        let left = x + 16;
+        let top = y + 16;
+        if (left + rect.width > window.innerWidth - 12) {
+            left = x - rect.width - 16;
+        }
+        if (top + rect.height > window.innerHeight - 12) {
+            top = y - rect.height - 16;
+        }
+        tooltip.style.left = left + 'px';
+        tooltip.style.top = top + 'px';
+    }
+
+    function hideTooltip() {
+        tooltip.classList.remove('show');
+    }
+
+    // Delegate hover events for paper cards
+    document.addEventListener('mouseover', function(e) {
+        const card = e.target.closest('.paper-card');
+        if (card) {
+            const id = parseInt(card.dataset.id);
+            const p = papers.find(pp => pp.id === id);
+            if (p) showTooltip(p, e.clientX, e.clientY);
+        }
+    });
+    document.addEventListener('mousemove', function(e) {
+        if (tooltip.classList.contains('show')) {
+            positionTooltip(e.clientX, e.clientY);
+        }
+    });
+    document.addEventListener('mouseout', function(e) {
+        const card = e.target.closest('.paper-card');
+        if (card) hideTooltip();
+    });
 
     function showDetail(id) {
         const p = papers.find(p => p.id === id);
