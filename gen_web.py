@@ -630,24 +630,31 @@ html = '''<!DOCTYPE html>
 
     async function loadData() {
         const list = document.getElementById('paperList');
-        list.innerHTML = '<div class="empty-state"><div class="empty-state-icon">&#128228;</div><div>Loading papers...</div></div>';
+        list.innerHTML = '<div class="empty-state"><div class="empty-state-icon">&#128228;</div><div>Loading papers...</div><div style="margin-top:8px;font-size:12px;color:#666">This may take 5-15 seconds on first visit</div></div>';
+
+        const dataUrl = new URL('papers.json', window.location.href).href;
 
         try {
-            const resp = await fetch('papers.json');
-            if (!resp.ok) throw new Error('Failed to load papers.json');
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 30000);
+            const resp = await fetch(dataUrl, {signal: controller.signal});
+            clearTimeout(timeoutId);
+
+            if (!resp.ok) throw new Error('HTTP ' + resp.status);
             const data = await resp.json();
             papers = data.papers || [];
             topics = data.topics || [];
             confCategories = data.confCategories || {};
             allYears = data.allYears || [];
 
-            // Rebuild confs list
             allConfs = [...new Set(papers.map(p => p.conference || 'arXiv'))].sort();
 
             initNav();
             render();
         } catch (e) {
-            list.innerHTML = '<div class="empty-state"><div class="empty-state-icon">&#9888;</div><div>Failed to load papers: ' + e.message + '</div></div>';
+            let msg = e.message || 'Unknown error';
+            if (e.name === 'AbortError') msg = 'Request timed out. Please refresh.';
+            list.innerHTML = '<div class="empty-state"><div class="empty-state-icon">&#9888;</div><div>Failed to load papers: ' + msg + '</div><div style="margin-top:12px;font-size:13px;color:#888">Try: <a href="' + dataUrl + '" target="_blank" style="color:#818cf8">direct link</a></div></div>';
             console.error(e);
         }
     }
