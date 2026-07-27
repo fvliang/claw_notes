@@ -253,7 +253,7 @@ html = '''<!DOCTYPE html>
         .paper-tooltip {
             position: fixed;
             z-index: 1000;
-            max-width: 360px;
+            max-width: 420px;
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: var(--radius-md);
@@ -613,8 +613,10 @@ html = '''<!DOCTYPE html>
 
     <div class="paper-tooltip" id="paperTooltip">
         <div class="tt-title" id="ttTitle"></div>
-        <div class="tt-label">AI Summary</div>
-        <div class="tt-content" id="ttContent"></div>
+        <div class="tt-label">AI Summary (EN)</div>
+        <div class="tt-content" id="ttContentEn"></div>
+        <div class="tt-label" style="margin-top:8px;">AI Summary (CN)</div>
+        <div class="tt-content" id="ttContentCn"></div>
     </div>
 
     <div class="footer">
@@ -879,18 +881,31 @@ html = '''<!DOCTYPE html>
     // Tooltip for AI Summary preview
     const tooltip = document.getElementById('paperTooltip');
     const ttTitle = document.getElementById('ttTitle');
-    const ttContent = document.getElementById('ttContent');
+    const ttContentEn = document.getElementById('ttContentEn');
+    const ttContentCn = document.getElementById('ttContentCn');
 
     function showTooltip(p, x, y) {
         ttTitle.textContent = p.title || 'Untitled';
-        const ai = p.ai_summary_en || p.ai_summary_cn || p.ai_summary;
-        if (ai) {
-            ttContent.textContent = ai.substring(0, 280) + (ai.length > 280 ? '...' : '');
-            ttContent.className = 'tt-content';
+
+        const aiEn = p.ai_summary_en || p.ai_summary;
+        if (aiEn) {
+            ttContentEn.textContent = aiEn.substring(0, 240) + (aiEn.length > 240 ? '...' : '');
+            ttContentEn.className = 'tt-content';
         } else {
-            ttContent.textContent = 'No AI summary yet';
-            ttContent.className = 'tt-empty';
+            ttContentEn.textContent = 'No AI summary yet';
+            ttContentEn.className = 'tt-empty';
         }
+
+        const aiCn = p.ai_summary_cn;
+        if (aiCn) {
+            ttContentCn.textContent = aiCn.substring(0, 240) + (aiCn.length > 240 ? '...' : '');
+            ttContentCn.className = 'tt-content';
+            ttContentCn.style.display = 'block';
+        } else {
+            ttContentCn.textContent = '';
+            ttContentCn.style.display = 'none';
+        }
+
         tooltip.classList.add('show');
         positionTooltip(x, y);
     }
