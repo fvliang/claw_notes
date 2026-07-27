@@ -5,18 +5,11 @@ db = json.load(open('database.json'))
 papers = db['papers']
 topics = db['topics']
 
-# 按会议-年份分组
-conf_year_papers = {}
-for p in papers:
-    conf = p.get('conference', 'arXiv')
-    year = p.get('year', 2024)
-    key = f"{conf}|{year}"
-    if key not in conf_year_papers:
-        conf_year_papers[key] = []
-    conf_year_papers[key].append(p)
+# Extract unique years sorted descending
+all_years = sorted(set(str(p.get('year', 2024)) for p in papers), reverse=True)
 
-# 生成会议-年份目录
-conf_years = sorted(set(k.split('|')[0] + '/' + str(k.split('|')[1]) for k in conf_year_papers.keys()))
+# Extract unique conferences
+all_confs = sorted(set(p.get('conference', 'arXiv') for p in papers))
 
 html = '''<!DOCTYPE html>
 <html lang="zh-CN">
@@ -40,7 +33,7 @@ html = '''<!DOCTYPE html>
             --tag-bg: rgba(99, 102, 241, 0.1);
             --radius-sm: 8px;
             --radius-md: 12px;
-            --radius-lg: 16px;
+            --radius-lg: 14px;
             --shadow: 0 1px 3px rgba(0,0,0,0.3);
             --shadow-lg: 0 8px 30px rgba(0,0,0,0.4);
         }
@@ -51,14 +44,14 @@ html = '''<!DOCTYPE html>
             font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, "Noto Sans SC", sans-serif;
             background: var(--bg);
             color: var(--text);
-            line-height: 1.6;
+            line-height: 1.5;
             -webkit-font-smoothing: antialiased;
         }
 
         /* Header */
         .header {
             background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg) 100%);
-            padding: 24px 20px 16px;
+            padding: 20px 16px 12px;
             border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
@@ -69,51 +62,51 @@ html = '''<!DOCTYPE html>
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
         .header h1 {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
-            letter-spacing: -0.5px;
+            letter-spacing: -0.3px;
             background: linear-gradient(135deg, var(--text) 0%, var(--accent-soft) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         .header .subtitle {
-            font-size: 12px;
+            font-size: 11px;
             color: var(--text-muted);
-            margin-top: 2px;
+            margin-top: 1px;
         }
         .header-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 10px;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
             background: linear-gradient(135deg, var(--accent) 0%, #8b5cf6 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
+            font-size: 16px;
             box-shadow: 0 2px 12px var(--accent-glow);
         }
 
         /* Stats */
         .stats {
             display: flex;
-            gap: 24px;
+            gap: 16px;
         }
         .stat {
             display: flex;
             flex-direction: column;
         }
         .stat .num {
-            font-size: 20px;
+            font-size: 17px;
             font-weight: 700;
             color: var(--text);
             line-height: 1.2;
         }
         .stat .label {
-            font-size: 11px;
+            font-size: 10px;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -121,21 +114,21 @@ html = '''<!DOCTYPE html>
 
         /* Search */
         .search-box {
-            padding: 12px 16px;
+            padding: 10px 12px;
             background: var(--bg);
             border-bottom: 1px solid var(--border);
             position: sticky;
-            top: 108px;
+            top: 88px;
             z-index: 99;
         }
         .search-box input {
             width: 100%;
-            padding: 10px 16px;
+            padding: 8px 14px;
             border: 1px solid var(--border);
             border-radius: 100px;
             background: var(--bg-card);
             color: var(--text);
-            font-size: 14px;
+            font-size: 13px;
             outline: none;
             transition: all 0.2s;
         }
@@ -148,8 +141,8 @@ html = '''<!DOCTYPE html>
         /* Nav */
         .nav-bar {
             display: flex;
-            gap: 8px;
-            padding: 12px 16px;
+            gap: 6px;
+            padding: 10px 12px;
             background: var(--bg);
             border-bottom: 1px solid var(--border);
             overflow-x: auto;
@@ -158,9 +151,9 @@ html = '''<!DOCTYPE html>
         .nav-bar::-webkit-scrollbar { display: none; }
 
         .nav-chip, .filter-chip {
-            padding: 6px 14px;
+            padding: 5px 12px;
             border-radius: 100px;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 500;
             white-space: nowrap;
             cursor: pointer;
@@ -178,22 +171,38 @@ html = '''<!DOCTYPE html>
             background: var(--accent);
             color: white;
             border-color: var(--accent);
-            box-shadow: 0 2px 12px var(--accent-glow);
+            box-shadow: 0 2px 10px var(--accent-glow);
         }
 
         .mode-toggle.active {
             background: linear-gradient(135deg, var(--accent) 0%, #8b5cf6 100%);
         }
 
-        /* Filter group */
-        .filter-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            padding: 10px 16px;
+        /* Filter rows */
+        .filter-rows {
             background: var(--bg);
             border-bottom: 1px solid var(--border);
-            min-height: 48px;
+        }
+        .filter-row {
+            display: flex;
+            gap: 6px;
+            padding: 8px 12px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            align-items: center;
+        }
+        .filter-row::-webkit-scrollbar { display: none; }
+        .filter-row + .filter-row {
+            border-top: 1px solid var(--border);
+        }
+        .filter-row-label {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            flex-shrink: 0;
+            padding: 4px 0;
+            min-width: 40px;
         }
 
         .conf-filter {
@@ -204,48 +213,49 @@ html = '''<!DOCTYPE html>
         .conf-filter.active {
             background: #ff9f40;
             color: var(--bg);
-            box-shadow: 0 2px 12px rgba(255, 159, 64, 0.2);
+            box-shadow: 0 2px 10px rgba(255, 159, 64, 0.2);
         }
         .year-filter {
-            font-size: 12px;
-            padding: 5px 12px;
-            margin-left: 16px;
-            background: var(--bg-elevated);
-            border-left: 2px solid var(--accent);
+            background: rgba(99, 102, 241, 0.08);
+            color: var(--accent-soft);
         }
         .year-filter.active {
             background: var(--accent);
             color: white;
-            border-left-color: white;
         }
 
-        /* Paper list */
-        .paper-list { padding: 12px 16px 80px; }
+        /* Paper list - 2 columns default */
+        .paper-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            padding: 10px 12px 80px;
+        }
 
         .section-title {
-            font-size: 13px;
+            grid-column: 1 / -1;
+            font-size: 11px;
             font-weight: 600;
             color: var(--text-muted);
-            margin: 20px 0 10px;
+            margin: 14px 0 6px;
             text-transform: uppercase;
             letter-spacing: 1px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
         .section-title::before {
             content: '';
             width: 3px;
-            height: 14px;
+            height: 12px;
             background: var(--accent);
             border-radius: 2px;
         }
 
         .paper-card {
             background: var(--bg-card);
-            border-radius: var(--radius-lg);
-            padding: 16px;
-            margin-bottom: 10px;
+            border-radius: var(--radius-md);
+            padding: 12px;
             border: 1px solid var(--border);
             transition: all 0.2s ease;
             cursor: pointer;
@@ -257,30 +267,34 @@ html = '''<!DOCTYPE html>
         }
 
         .paper-card .title {
-            font-size: 15px;
+            font-size: 12px;
             font-weight: 600;
             color: var(--text);
-            line-height: 1.5;
-            margin-bottom: 6px;
+            line-height: 1.45;
+            margin-bottom: 4px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
         .paper-card .authors {
-            font-size: 12px;
+            font-size: 10px;
             color: var(--text-muted);
-            margin-bottom: 10px;
+            margin-bottom: 6px;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
         }
         .paper-card .meta {
             display: flex;
-            gap: 6px;
+            gap: 4px;
             flex-wrap: wrap;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
         }
         .tag {
-            padding: 3px 10px;
+            padding: 2px 7px;
             border-radius: 100px;
-            font-size: 11px;
+            font-size: 9px;
             font-weight: 500;
         }
         .tag.conf { background: var(--tag-bg); color: var(--accent-soft); }
@@ -290,13 +304,13 @@ html = '''<!DOCTYPE html>
 
         .paper-card .links {
             display: flex;
-            gap: 16px;
-            margin-top: 10px;
-            padding-top: 10px;
+            gap: 10px;
+            margin-top: 6px;
+            padding-top: 6px;
             border-top: 1px solid var(--border);
         }
         .paper-card .links a {
-            font-size: 13px;
+            font-size: 10px;
             color: var(--accent-soft);
             text-decoration: none;
             font-weight: 500;
@@ -308,15 +322,15 @@ html = '''<!DOCTYPE html>
         .abstract-toggle {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            padding: 6px 12px;
+            gap: 4px;
+            padding: 4px 8px;
             background: var(--bg-elevated);
             border: 1px solid var(--border);
             border-radius: var(--radius-sm);
-            font-size: 12px;
+            font-size: 10px;
             color: var(--text-secondary);
             cursor: pointer;
-            margin-top: 8px;
+            margin-top: 4px;
             transition: all 0.15s;
         }
         .abstract-toggle:hover {
@@ -326,8 +340,8 @@ html = '''<!DOCTYPE html>
 
         .abstract-content {
             display: none;
-            margin-top: 14px;
-            padding-top: 14px;
+            margin-top: 10px;
+            padding-top: 10px;
             border-top: 1px solid var(--border);
             animation: fadeIn 0.2s ease;
         }
@@ -339,29 +353,19 @@ html = '''<!DOCTYPE html>
         }
 
         .abstract-content h4 {
-            font-size: 11px;
+            font-size: 10px;
             color: var(--text-muted);
-            margin: 12px 0 6px;
+            margin: 8px 0 4px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
         .abstract-content p {
-            font-size: 13px;
-            line-height: 1.7;
+            font-size: 11px;
+            line-height: 1.6;
             color: var(--text-secondary);
             margin: 0;
         }
         .abstract-content .cn { color: var(--text-muted); }
-
-        /* AI Summary badge on card */
-        .summary-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            font-size: 11px;
-            color: var(--success);
-            margin-left: auto;
-        }
 
         /* Detail page */
         .detail-page { display: none; }
@@ -369,90 +373,90 @@ html = '''<!DOCTYPE html>
 
         .detail-header {
             background: var(--bg-card);
-            padding: 20px;
+            padding: 16px;
             border-bottom: 1px solid var(--border);
         }
         .detail-header .back-btn {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            font-size: 14px;
+            font-size: 13px;
             color: var(--accent-soft);
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             cursor: pointer;
             font-weight: 500;
         }
         .detail-header h2 {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 700;
-            margin: 0 0 10px;
+            margin: 0 0 8px;
             line-height: 1.4;
             color: var(--text);
         }
         .detail-header .authors {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--text-secondary);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
         .detail-header .meta {
             display: flex;
-            gap: 8px;
+            gap: 6px;
             flex-wrap: wrap;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
         .detail-header .links {
             display: flex;
-            gap: 16px;
-            margin-top: 12px;
+            gap: 14px;
+            margin-top: 10px;
         }
         .detail-header .links a {
-            font-size: 14px;
+            font-size: 13px;
             color: var(--accent-soft);
             text-decoration: none;
             font-weight: 500;
         }
 
         .detail-body {
-            padding: 0 16px 40px;
+            padding: 0 12px 40px;
             max-width: 800px;
             margin: 0 auto;
         }
 
         .detail-section {
             background: var(--bg-card);
-            border-radius: var(--radius-lg);
-            padding: 20px;
-            margin: 16px 0;
+            border-radius: var(--radius-md);
+            padding: 16px;
+            margin: 12px 0;
             border: 1px solid var(--border);
         }
 
         .detail-section h3 {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
             color: var(--text);
-            margin: 0 0 14px;
-            padding-bottom: 10px;
+            margin: 0 0 12px;
+            padding-bottom: 8px;
             border-bottom: 1px solid var(--border);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
         .detail-section h3:first-child { margin-top: 0; }
 
         .detail-section p {
-            font-size: 14px;
+            font-size: 13px;
             line-height: 1.8;
             color: var(--text-secondary);
-            margin: 0 0 12px;
+            margin: 0 0 10px;
         }
         .detail-section p:last-child { margin-bottom: 0; }
 
         .detail-section .lang-label {
-            font-size: 11px;
+            font-size: 10px;
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin: 16px 0 8px;
+            margin: 12px 0 6px;
         }
         .detail-section .lang-label:first-of-type { margin-top: 0; }
 
@@ -460,9 +464,9 @@ html = '''<!DOCTYPE html>
         .ai-summary-box {
             background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.05) 100%);
             border: 1px solid rgba(99, 102, 241, 0.2);
-            border-radius: var(--radius-md);
-            padding: 16px;
-            margin: 12px 0;
+            border-radius: var(--radius-sm);
+            padding: 12px;
+            margin: 8px 0;
         }
         .ai-summary-box .lang-label {
             color: var(--accent-soft);
@@ -474,37 +478,34 @@ html = '''<!DOCTYPE html>
 
         /* Empty state */
         .empty-state {
+            grid-column: 1 / -1;
             text-align: center;
-            padding: 60px 20px;
+            padding: 50px 20px;
             color: var(--text-muted);
         }
         .empty-state-icon {
-            font-size: 48px;
-            margin-bottom: 16px;
+            font-size: 40px;
+            margin-bottom: 12px;
             opacity: 0.5;
         }
 
         /* Footer */
         .footer {
             text-align: center;
-            padding: 24px;
+            padding: 20px;
             color: var(--text-muted);
-            font-size: 12px;
+            font-size: 11px;
             border-top: 1px solid var(--border);
         }
 
-        /* Responsive */
+        /* Desktop: 3 columns */
         @media (min-width: 768px) {
-            .paper-list {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 12px;
-            }
-            .paper-card { margin-bottom: 0; }
-            .section-title { grid-column: 1 / -1; }
+            .paper-list { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+            .paper-card { padding: 14px; }
+            .paper-card .title { font-size: 13px; -webkit-line-clamp: 2; }
         }
         @media (min-width: 1200px) {
-            .paper-list { grid-template-columns: repeat(3, 1fr); }
+            .paper-list { grid-template-columns: repeat(4, 1fr); }
         }
     </style>
 </head>
@@ -525,7 +526,6 @@ html = '''<!DOCTYPE html>
         </div>
     </div>
 
-    <!-- Search -->
     <div class="search-box">
         <input type="text" id="searchInput" placeholder="Search papers by title, author, topic...">
     </div>
@@ -533,7 +533,7 @@ html = '''<!DOCTYPE html>
     <!-- List page -->
     <div id="listPage">
         <div class="nav-bar" id="navBar"></div>
-        <div class="filter-group" id="filterGroup"></div>
+        <div class="filter-rows" id="filterRows"></div>
         <div class="paper-list" id="paperList"></div>
     </div>
 
@@ -556,37 +556,17 @@ html = '''<!DOCTYPE html>
     <script>
     const papers = ''' + json.dumps(papers, ensure_ascii=False) + ''';
     const topics = ''' + json.dumps(topics) + ''';
+    const allConfs = ''' + json.dumps(all_confs) + ''';
+    const allYears = ''' + json.dumps(all_years) + ''';
 
-    // Group by conf-year
-    const confYearPapers = {};
-    papers.forEach(p => {
-        const conf = p.conference || 'arXiv';
-        const year = p.year || 2024;
-        const key = conf + '|' + year;
-        if (!confYearPapers[key]) confYearPapers[key] = [];
-        confYearPapers[key].push(p);
-    });
-
-    const confYears = Object.keys(confYearPapers).sort();
-
-    let currentFilter = "";
-    let currentSearch = "";
     let filterMode = "topic";
-    let expandedConf = null;
-
-    const confYearMap = {};
-    confYears.forEach(cy => {
-        const [conf, year] = cy.split('|');
-        if (!confYearMap[conf]) confYearMap[conf] = [];
-        confYearMap[conf].push(year);
-    });
-    const conferences = Object.keys(confYearMap).sort();
+    let activeTopic = "";
+    let activeConf = "";
+    let activeYear = "";
 
     function initNav() {
         const navBar = document.getElementById('navBar');
-        const filterGroup = document.getElementById('filterGroup');
 
-        // Mode toggle
         const modeChip = document.createElement('div');
         modeChip.className = 'nav-chip mode-toggle';
         modeChip.dataset.mode = 'topic';
@@ -601,139 +581,131 @@ html = '''<!DOCTYPE html>
         confChip.onclick = () => setFilterMode('confYear');
         navBar.appendChild(confChip);
 
-        // "All" filter
-        const allChip = document.createElement('div');
-        allChip.className = 'filter-chip';
-        allChip.dataset.filter = '';
-        allChip.textContent = 'All';
-        allChip.onclick = () => {
-            currentFilter = "";
-            document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
-            render();
-        };
-        filterGroup.appendChild(allChip);
-
-        // Topic filters
-        topics.forEach(t => {
-            const chip = document.createElement('div');
-            chip.className = 'filter-chip topic-filter';
-            chip.dataset.filter = t;
-            chip.dataset.mode = 'topic';
-            chip.textContent = t;
-            chip.onclick = () => setFilter(t);
-            chip.style.display = 'none';
-            filterGroup.appendChild(chip);
-        });
-
-        // Conf filters with year sub-options in containers
-        conferences.forEach(conf => {
-            const container = document.createElement('div');
-            container.className = 'conf-container';
-            container.dataset.conf = conf;
-            container.style.display = 'none';
-            container.style.cssText = 'display:none; flex-wrap:wrap; gap:8px; align-items:center; width:100%;';
-
-            const confChip = document.createElement('div');
-            confChip.className = 'filter-chip conf-filter';
-            confChip.dataset.conf = conf;
-            confChip.dataset.mode = 'confYear';
-            confChip.textContent = conf;
-            confChip.onclick = () => toggleConf(conf);
-            container.appendChild(confChip);
-
-            const years = confYearMap[conf].sort((a,b) => b - a);
-            const yearGroup = document.createElement('div');
-            yearGroup.className = 'year-group';
-            yearGroup.dataset.conf = conf;
-            yearGroup.style.cssText = 'display:none; flex-wrap:wrap; gap:6px; flex:1;';
-
-            years.forEach(year => {
-                const yearChip = document.createElement('div');
-                yearChip.className = 'filter-chip year-filter';
-                yearChip.dataset.filter = conf + '|' + year;
-                yearChip.dataset.mode = 'confYear';
-                yearChip.dataset.conf = conf;
-                yearChip.textContent = year;
-                yearChip.onclick = (e) => {
-                    e.stopPropagation();
-                    setFilter(conf + '|' + year);
-                };
-                yearGroup.appendChild(yearChip);
-            });
-
-            container.appendChild(yearGroup);
-            filterGroup.appendChild(container);
-        });
-
+        buildFilterRows();
         setFilterMode('topic');
     }
 
-    function toggleConf(conf) {
-        expandedConf = (expandedConf === conf) ? null : conf;
-        // Show/hide year groups
-        document.querySelectorAll('.conf-container').forEach(c => {
-            const isTarget = c.dataset.conf === expandedConf;
-            const yearGroup = c.querySelector('.year-group');
-            const confChip = c.querySelector('.conf-filter');
-            if (yearGroup) yearGroup.style.display = isTarget ? 'flex' : 'none';
-            if (confChip) confChip.classList.toggle('active', isTarget);
+    function buildFilterRows() {
+        const container = document.getElementById('filterRows');
+        container.innerHTML = '';
+
+        // Topic filters row
+        const topicRow = document.createElement('div');
+        topicRow.className = 'filter-row';
+        topicRow.id = 'topicRow';
+
+        const allTopic = makeChip('All', '', 'topic', () => { activeTopic = ''; updateFilters(); });
+        topicRow.appendChild(allTopic);
+
+        topics.forEach(t => {
+            topicRow.appendChild(makeChip(t, t, 'topic', () => { activeTopic = t; updateFilters(); }));
         });
+        container.appendChild(topicRow);
+
+        // Venue + Year rows (for confYear mode)
+        const confRow = document.createElement('div');
+        confRow.className = 'filter-row';
+        confRow.id = 'confRow';
+
+        const label1 = document.createElement('span');
+        label1.className = 'filter-row-label';
+        label1.textContent = 'Venue';
+        confRow.appendChild(label1);
+
+        const allConf = makeChip('All', '', 'conf', () => { activeConf = ''; updateFilters(); });
+        allConf.classList.add('conf-filter');
+        confRow.appendChild(allConf);
+
+        allConfs.forEach(c => {
+            const chip = makeChip(c, c, 'conf', () => { activeConf = c; updateFilters(); });
+            chip.classList.add('conf-filter');
+            confRow.appendChild(chip);
+        });
+        container.appendChild(confRow);
+
+        const yearRow = document.createElement('div');
+        yearRow.className = 'filter-row';
+        yearRow.id = 'yearRow';
+
+        const label2 = document.createElement('span');
+        label2.className = 'filter-row-label';
+        label2.textContent = 'Year';
+        yearRow.appendChild(label2);
+
+        const allYear = makeChip('All', '', 'year', () => { activeYear = ''; updateFilters(); });
+        allYear.classList.add('year-filter');
+        yearRow.appendChild(allYear);
+
+        allYears.forEach(y => {
+            const chip = makeChip(y, y, 'year', () => { activeYear = y; updateFilters(); });
+            chip.classList.add('year-filter');
+            yearRow.appendChild(chip);
+        });
+        container.appendChild(yearRow);
+    }
+
+    function makeChip(text, value, type, onClick) {
+        const chip = document.createElement('div');
+        chip.className = 'filter-chip';
+        chip.dataset.value = value;
+        chip.dataset.type = type;
+        chip.textContent = text;
+        chip.onclick = onClick;
+        return chip;
+    }
+
+    function updateFilters() {
+        // Update active states
+        document.querySelectorAll('.filter-chip').forEach(c => {
+            const t = c.dataset.type;
+            const v = c.dataset.value;
+            let isActive = false;
+            if (t === 'topic') isActive = v === activeTopic;
+            if (t === 'conf') isActive = v === activeConf;
+            if (t === 'year') isActive = v === activeYear;
+            c.classList.toggle('active', isActive);
+        });
+        render();
     }
 
     function setFilterMode(mode) {
         filterMode = mode;
-        expandedConf = null;
-
         document.querySelectorAll('.mode-toggle').forEach(c => {
             c.classList.toggle('active', c.dataset.mode === mode);
         });
 
-        document.querySelectorAll('.topic-filter').forEach(c => {
-            c.style.display = mode === 'topic' ? '' : 'none';
-        });
-        document.querySelectorAll('.conf-container').forEach(c => {
-            c.style.display = mode === 'confYear' ? 'flex' : 'none';
-            const yearGroup = c.querySelector('.year-group');
-            const confChip = c.querySelector('.conf-filter');
-            if (yearGroup) yearGroup.style.display = 'none';
-            if (confChip) confChip.classList.remove('active');
-        });
+        document.getElementById('topicRow').style.display = mode === 'topic' ? 'flex' : 'none';
+        document.getElementById('confRow').style.display = mode === 'confYear' ? 'flex' : 'none';
+        document.getElementById('yearRow').style.display = mode === 'confYear' ? 'flex' : 'none';
 
-        currentFilter = "";
-        document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
-        render();
-    }
-
-    function setFilter(filter) {
-        currentFilter = (currentFilter === filter) ? "" : filter;
-        document.querySelectorAll('.filter-chip').forEach(c => {
-            c.classList.toggle('active', c.dataset.filter === currentFilter);
-        });
-        render();
+        // Reset filters
+        activeTopic = '';
+        activeConf = '';
+        activeYear = '';
+        updateFilters();
     }
 
     function render() {
         const search = document.getElementById('searchInput').value.toLowerCase();
-        currentSearch = search;
 
         let filtered = papers.filter(p => {
-            let matchFilter = true;
-            if (currentFilter) {
-                if (filterMode === 'topic') {
-                    matchFilter = p.topic === currentFilter;
-                } else if (filterMode === 'confYear') {
-                    const conf = p.conference || 'arXiv';
-                    const year = p.year || 2024;
-                    matchFilter = (conf + '|' + year) === currentFilter;
-                }
+            let match = true;
+            if (filterMode === 'topic' && activeTopic) {
+                match = p.topic === activeTopic;
             }
+            if (filterMode === 'confYear') {
+                if (activeConf && p.conference !== activeConf) match = false;
+                if (activeYear && String(p.year || 2024) !== activeYear) match = false;
+            }
+            if (!match) return false;
+
             const matchSearch = !search ||
                 (p.title && p.title.toLowerCase().includes(search)) ||
                 (p.authors && p.authors.toLowerCase().includes(search)) ||
                 (p.topic && p.topic.toLowerCase().includes(search)) ||
                 (p.abstract_en && p.abstract_en.toLowerCase().includes(search)) ||
                 (p.abstract_cn && p.abstract_cn.toLowerCase().includes(search));
-            return matchFilter && matchSearch;
+            return matchSearch;
         });
 
         const list = document.getElementById('paperList');
@@ -765,10 +737,9 @@ html = '''<!DOCTYPE html>
 
         list.innerHTML = html;
 
-        // Update stats
         const summaryCount = papers.filter(p => p.ai_summary_en || p.ai_summary_cn || p.ai_summary).length;
         document.getElementById('paperCount').textContent = papers.length;
-        document.getElementById('confCount').textContent = Object.keys(confYearMap).length;
+        document.getElementById('confCount').textContent = allConfs.length;
         document.getElementById('topicCount').textContent = topics.length;
         document.getElementById('summaryCount').textContent = summaryCount;
         document.getElementById('totalCount').textContent = papers.length;
@@ -776,7 +747,6 @@ html = '''<!DOCTYPE html>
 
     function renderPaperCard(p) {
         const hasSummary = p.ai_summary_en || p.ai_summary_cn || p.ai_summary;
-        const hasAbstract = p.abstract_en || p.abstract_cn;
         return `
         <div class="paper-card" onclick="showDetail(${p.id})" data-id="${p.id}">
             <div class="title">${p.title || 'Untitled'}</div>
@@ -784,23 +754,12 @@ html = '''<!DOCTYPE html>
             <div class="meta">
                 <span class="tag conf">${p.conference || 'arXiv'}</span>
                 <span class="tag year">${p.year || '2024'}</span>
-                <span class="tag topic">${p.topic || 'LLM Serving'}</span>
-                ${hasSummary ? '<span class="tag has-summary">&#10003; AI Summary</span>' : ''}
+                ${hasSummary ? '<span class="tag has-summary">&#10003; AI</span>' : ''}
             </div>
             <div class="links">
                 ${p.arxiv_id ? `<a href="https://arxiv.org/abs/${p.arxiv_id}" target="_blank" onclick="event.stopPropagation()">arXiv</a>` : ''}
                 ${p.github_repo ? `<a href="https://github.com/${p.github_repo}" target="_blank" onclick="event.stopPropagation()">GitHub</a>` : ''}
-                <a href="javascript:void(0)" onclick="event.stopPropagation();showDetail(${p.id})">Read more &rarr;</a>
             </div>
-            ${hasAbstract ? `
-            <button class="abstract-toggle" onclick="event.stopPropagation();toggleAbstract(${p.id}, this)">
-                <span>Abstract</span> <span>&#9662;</span>
-            </button>
-            <div class="abstract-content" id="abstract-${p.id}">
-                ${p.abstract_en ? `<h4>English</h4><p>${escapeHtml(p.abstract_en.substring(0,500))}${p.abstract_en.length>500?'...':''}</p>` : ''}
-                ${p.abstract_cn ? `<h4>中文</h4><p class="cn">${escapeHtml(p.abstract_cn.substring(0,350))}${p.abstract_cn.length>350?'...':''}</p>` : ''}
-            </div>
-            ` : ''}
         </div>`;
     }
 
@@ -808,18 +767,6 @@ html = '''<!DOCTYPE html>
         const div = document.createElement('div');
         div.textContent = text;
         return div.innerHTML;
-    }
-
-    function toggleAbstract(id, btn) {
-        const content = document.getElementById('abstract-' + id);
-        const arrow = btn.querySelector('span:last-child');
-        if (content.classList.contains('show')) {
-            content.classList.remove('show');
-            arrow.innerHTML = '&#9662;';
-        } else {
-            content.classList.add('show');
-            arrow.innerHTML = '&#9652;';
-        }
     }
 
     function showDetail(id) {
