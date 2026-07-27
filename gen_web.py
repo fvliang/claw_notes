@@ -625,18 +625,28 @@ html = '''<!DOCTYPE html>
             filterGroup.appendChild(chip);
         });
 
-        // Conf filters
+        // Conf filters with year sub-options in containers
         conferences.forEach(conf => {
+            const container = document.createElement('div');
+            container.className = 'conf-container';
+            container.dataset.conf = conf;
+            container.style.display = 'none';
+            container.style.cssText = 'display:none; flex-wrap:wrap; gap:8px; align-items:center; width:100%;';
+
             const confChip = document.createElement('div');
             confChip.className = 'filter-chip conf-filter';
             confChip.dataset.conf = conf;
             confChip.dataset.mode = 'confYear';
             confChip.textContent = conf;
-            confChip.style.display = 'none';
             confChip.onclick = () => toggleConf(conf);
-            filterGroup.appendChild(confChip);
+            container.appendChild(confChip);
 
             const years = confYearMap[conf].sort((a,b) => b - a);
+            const yearGroup = document.createElement('div');
+            yearGroup.className = 'year-group';
+            yearGroup.dataset.conf = conf;
+            yearGroup.style.cssText = 'display:none; flex-wrap:wrap; gap:6px; flex:1;';
+
             years.forEach(year => {
                 const yearChip = document.createElement('div');
                 yearChip.className = 'filter-chip year-filter';
@@ -644,13 +654,15 @@ html = '''<!DOCTYPE html>
                 yearChip.dataset.mode = 'confYear';
                 yearChip.dataset.conf = conf;
                 yearChip.textContent = year;
-                yearChip.style.display = 'none';
                 yearChip.onclick = (e) => {
                     e.stopPropagation();
                     setFilter(conf + '|' + year);
                 };
-                filterGroup.appendChild(yearChip);
+                yearGroup.appendChild(yearChip);
             });
+
+            container.appendChild(yearGroup);
+            filterGroup.appendChild(container);
         });
 
         setFilterMode('topic');
@@ -658,15 +670,13 @@ html = '''<!DOCTYPE html>
 
     function toggleConf(conf) {
         expandedConf = (expandedConf === conf) ? null : conf;
-        updateConfDisplay();
-    }
-
-    function updateConfDisplay() {
-        document.querySelectorAll('.conf-filter').forEach(c => {
-            c.classList.toggle('active', c.dataset.conf === expandedConf);
-        });
-        document.querySelectorAll('.year-filter').forEach(c => {
-            c.style.display = (c.dataset.conf === expandedConf && filterMode === 'confYear') ? '' : 'none';
+        // Show/hide year groups
+        document.querySelectorAll('.conf-container').forEach(c => {
+            const isTarget = c.dataset.conf === expandedConf;
+            const yearGroup = c.querySelector('.year-group');
+            const confChip = c.querySelector('.conf-filter');
+            if (yearGroup) yearGroup.style.display = isTarget ? 'flex' : 'none';
+            if (confChip) confChip.classList.toggle('active', isTarget);
         });
     }
 
@@ -681,11 +691,12 @@ html = '''<!DOCTYPE html>
         document.querySelectorAll('.topic-filter').forEach(c => {
             c.style.display = mode === 'topic' ? '' : 'none';
         });
-        document.querySelectorAll('.conf-filter').forEach(c => {
-            c.style.display = mode === 'confYear' ? '' : 'none';
-        });
-        document.querySelectorAll('.year-filter').forEach(c => {
-            c.style.display = 'none';
+        document.querySelectorAll('.conf-container').forEach(c => {
+            c.style.display = mode === 'confYear' ? 'flex' : 'none';
+            const yearGroup = c.querySelector('.year-group');
+            const confChip = c.querySelector('.conf-filter');
+            if (yearGroup) yearGroup.style.display = 'none';
+            if (confChip) confChip.classList.remove('active');
         });
 
         currentFilter = "";
