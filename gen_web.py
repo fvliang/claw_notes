@@ -224,10 +224,10 @@ html = '''<!DOCTYPE html>
             color: white;
         }
 
-        /* Paper list - 2 columns default */
+        /* Paper list - auto-fit columns */
         .paper-list {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
             gap: 8px;
             padding: 10px 12px 80px;
         }
@@ -498,9 +498,8 @@ html = '''<!DOCTYPE html>
             border-top: 1px solid var(--border);
         }
 
-        /* Desktop: 3 columns only on very wide screens */
         @media (min-width: 1100px) {
-            .paper-list { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+            .paper-list { gap: 10px; }
             .paper-card { padding: 14px; }
             .paper-card .title { font-size: 13px; -webkit-line-clamp: 2; }
         }
