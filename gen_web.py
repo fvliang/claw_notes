@@ -46,6 +46,8 @@ html = '''<!DOCTYPE html>
             color: var(--text);
             line-height: 1.5;
             -webkit-font-smoothing: antialiased;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         /* Header */
@@ -185,13 +187,11 @@ html = '''<!DOCTYPE html>
         }
         .filter-row {
             display: flex;
+            flex-wrap: wrap;
             gap: 6px;
             padding: 8px 12px;
-            overflow-x: auto;
-            scrollbar-width: none;
             align-items: center;
         }
-        .filter-row::-webkit-scrollbar { display: none; }
         .filter-row + .filter-row {
             border-top: 1px solid var(--border);
         }
