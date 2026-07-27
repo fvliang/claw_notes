@@ -649,7 +649,8 @@ html = '''<!DOCTYPE html>
         const list = document.getElementById('paperList');
         list.innerHTML = '<div class="empty-state"><div class="empty-state-icon">&#128228;</div><div>Loading papers...</div><div style="margin-top:8px;font-size:12px;color:#666">This may take 5-15 seconds on first visit</div></div>';
 
-        const dataUrl = new URL('papers.json', window.location.href).href;
+        const baseUrl = window.location.href.split('#')[0].split('?')[0];
+        const dataUrl = new URL('papers.json', baseUrl + (baseUrl.endsWith('/') ? '' : '/')).href;
 
         try {
             const controller = new AbortController();
