@@ -141,6 +141,8 @@ html = '''<!DOCTYPE html>
 
         /* Search */
         .search-box {
+            display: flex;
+            gap: 8px;
             padding: 10px 12px;
             background: var(--bg);
             border-bottom: 1px solid var(--border);
@@ -149,7 +151,7 @@ html = '''<!DOCTYPE html>
             z-index: 99;
         }
         .search-box input {
-            width: 100%;
+            flex: 1;
             padding: 8px 14px;
             border: 1px solid var(--border);
             border-radius: 100px;
@@ -164,6 +166,20 @@ html = '''<!DOCTYPE html>
             box-shadow: 0 0 0 3px var(--accent-glow);
         }
         .search-box input::placeholder { color: var(--text-muted); }
+        .search-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 100px;
+            padding: 0 16px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.2s;
+            flex-shrink: 0;
+        }
+        .search-btn:hover {
+            background: var(--accent-soft);
+        }
 
         /* Nav */
         .nav-bar {
@@ -578,7 +594,6 @@ html = '''<!DOCTYPE html>
                 <h1>claw notes</h1>
                 <div class="subtitle">LLM Serving / Speculative Decoding / KV Cache / MoE</div>
             </div>
-            <div class="header-icon">&#9889;</div>
         </div>
         <div class="stats">
             <div class="stat"><div class="num" id="paperCount">-</div><div class="label">Papers</div></div>
@@ -1030,7 +1045,10 @@ html = '''<!DOCTYPE html>
         document.getElementById('listPage').style.display = 'block';
     }
 
-    document.getElementById('searchInput').addEventListener('input', render);
+    document.getElementById('searchInput').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') render();
+    });
+    document.getElementById('searchBtn').addEventListener('click', render);
 
     loadData();
     </script>
