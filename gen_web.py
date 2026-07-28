@@ -812,7 +812,15 @@ html = '''<!DOCTYPE html>
     }
 
     function render() {
-        const search = document.getElementById('searchInput').value.toLowerCase();
+        const searchInput = document.getElementById('searchInput');
+        const search = searchInput.value.toLowerCase().trim();
+
+        const list = document.getElementById('paperList');
+
+        if (papers.length === 0) {
+            list.innerHTML = '<div class="empty-state"><div class="empty-state-icon">&#128228;</div><div>Loading papers...</div></div>';
+            return;
+        }
 
         let filtered = papers.filter(p => {
             let match = true;
@@ -825,21 +833,23 @@ html = '''<!DOCTYPE html>
             }
             if (!match) return false;
 
-            const matchSearch = !search ||
-                (p.title && p.title.toLowerCase().includes(search)) ||
-                (p.authors && p.authors.toLowerCase().includes(search)) ||
-                (p.topic && p.topic.toLowerCase().includes(search)) ||
-                (p.abstract_en && p.abstract_en.toLowerCase().includes(search)) ||
-                (p.abstract_cn && p.abstract_cn.toLowerCase().includes(search));
-            return matchSearch;
-        });
+            if (!search) return true;
 
-        const list = document.getElementById('paperList');
+            const haystack = (
+                (p.title || '') + ' ' +
+                (p.authors || '') + ' ' +
+                (p.topic || '') + ' ' +
+                (p.abstract_en || '') + ' ' +
+                (p.abstract_cn || '')
+            ).toLowerCase();
+            return haystack.includes(search);
+        });
 
         if (filtered.length === 0) {
             list.innerHTML = `<div class="empty-state">
                 <div class="empty-state-icon">&#128269;</div>
-                <div>No papers found matching your criteria.</div>
+                <div>No papers found matching "${escapeHtml(searchInput.value)}"</div>
+                ${search ? '<div style="margin-top:8px;font-size:12px;color:#666">Try a different keyword or clear filters</div>' : ''}
             </div>`;
             return;
         }
@@ -1047,10 +1057,20 @@ html = '''<!DOCTYPE html>
         document.getElementById('listPage').style.display = 'block';
     }
 
-    document.getElementById('searchInput').addEventListener('keydown', function(e) {
-        if (e.key === 'Enter') render();
+    document.getElementById('searchInput').addEventListener('input', function(e) {
+        clearTimeout(window.searchDebounce);
+        window.searchDebounce = setTimeout(render, 200);
     });
-    document.getElementById('searchBtn').addEventListener('click', render);
+    document.getElementById('searchInput').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            clearTimeout(window.searchDebounce);
+            render();
+        }
+    });
+    document.getElementById('searchBtn').addEventListener('click', function() {
+        clearTimeout(window.searchDebounce);
+        render();
+    });
 
     loadData();
     </script>
