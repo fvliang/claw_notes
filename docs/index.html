@@ -219,6 +219,7 @@
             background: var(--accent);
             color: white;
             box-shadow: 0 2px 10px var(--accent-glow);
+            font-weight: 700;
         }
 
         /* Timeline mode layout */
@@ -1023,10 +1024,15 @@
             const keys = Object.keys(grouped).sort().reverse();
             sb.innerHTML = keys.map(k => {
                 const slug = 'grp-' + k.replace(/[^a-zA-Z0-9]/g, '-');
-                return `<div class="toc-chip" onclick="scrollToGroup('${slug}')">${k}</div>`;
+                return `<div class="toc-chip" data-slug="${slug}" onclick="scrollToGroup('${slug}')">${k}</div>`;
             }).join('');
+            setupTimelineObserver();
         } else {
             document.getElementById('timelineSidebar').innerHTML = '';
+            if (window._timelineObserver) {
+                window._timelineObserver.disconnect();
+                window._timelineObserver = null;
+            }
         }
 
         // Update all star buttons
@@ -1232,6 +1238,37 @@
             const top = el.getBoundingClientRect().top + window.pageYOffset - headerOffset;
             window.scrollTo({ top: top, behavior: 'smooth' });
         }
+    }
+
+    function setupTimelineObserver() {
+        if (window._timelineObserver) {
+            window._timelineObserver.disconnect();
+        }
+        const sections = document.querySelectorAll('.section-title[id^="grp-"]');
+        if (sections.length === 0) return;
+
+        window._timelineObserver = new IntersectionObserver((entries) => {
+            let best = null;
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Pick the one closest to top of viewport
+                    if (!best || entry.boundingClientRect.top < best.boundingClientRect.top) {
+                        best = entry;
+                    }
+                }
+            });
+            if (best) {
+                const slug = best.target.id;
+                document.querySelectorAll('.timeline-sidebar .toc-chip').forEach(chip => {
+                    chip.classList.toggle('active', chip.dataset.slug === slug);
+                });
+            }
+        }, {
+            rootMargin: '-120px 0px -60% 0px',
+            threshold: 0
+        });
+
+        sections.forEach(sec => window._timelineObserver.observe(sec));
     }
 
     document.getElementById('searchInput').addEventListener('input', function(e) {
