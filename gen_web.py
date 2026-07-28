@@ -61,6 +61,8 @@ html = '''<!DOCTYPE html>
             --radius-lg: 14px;
             --shadow: 0 1px 3px rgba(0,0,0,0.3);
             --shadow-lg: 0 8px 30px rgba(0,0,0,0.4);
+            --star-yellow: #fbbf24;
+            --star-yellow-glow: rgba(251, 191, 36, 0.2);
         }
 
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; margin: 0; padding: 0; }
@@ -104,17 +106,6 @@ html = '''<!DOCTYPE html>
             font-size: 11px;
             color: var(--text-muted);
             margin-top: 1px;
-        }
-        .header-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            background: linear-gradient(135deg, var(--accent) 0%, #8b5cf6 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 16px;
-            box-shadow: 0 2px 12px var(--accent-glow);
         }
 
         /* Stats */
@@ -265,6 +256,112 @@ html = '''<!DOCTYPE html>
             color: white;
         }
 
+        /* Star button */
+        .star-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(15, 15, 18, 0.7);
+            backdrop-filter: blur(4px);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            line-height: 1;
+            color: var(--text-muted);
+            transition: all 0.15s ease;
+            z-index: 5;
+            padding: 0;
+            user-select: none;
+        }
+        .star-btn:hover {
+            background: rgba(251, 191, 36, 0.15);
+            transform: scale(1.1);
+        }
+        .star-btn .star-icon {
+            transition: all 0.2s ease;
+        }
+        .star-btn.favorited {
+            color: var(--star-yellow);
+        }
+        .star-btn.favorited .star-icon {
+            text-shadow: 0 0 8px var(--star-yellow-glow);
+        }
+        .star-btn:active {
+            transform: scale(0.9);
+        }
+
+        /* Paper card */
+        .paper-card {
+            position: relative;
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            padding: 12px;
+            padding-right: 38px;
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .paper-card:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-1px);
+        }
+
+        .paper-card .title {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text);
+            line-height: 1.45;
+            margin-bottom: 4px;
+            padding-right: 4px;
+        }
+        .paper-card .authors {
+            font-size: 10px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .paper-card .meta {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+            margin-bottom: 6px;
+        }
+        .tag {
+            padding: 2px 7px;
+            border-radius: 100px;
+            font-size: 9px;
+            font-weight: 500;
+        }
+        .tag.conf { background: var(--tag-bg); color: var(--accent-soft); }
+        .tag.topic { background: rgba(255,255,255,0.05); color: var(--text-secondary); }
+        .tag.year { background: rgba(255, 159, 64, 0.1); color: #ff9f40; }
+        .tag.has-summary { background: rgba(34, 197, 94, 0.1); color: var(--success); }
+
+        .paper-card .links {
+            display: flex;
+            gap: 10px;
+            margin-top: 6px;
+            padding-top: 6px;
+            border-top: 1px solid var(--border);
+        }
+        .paper-card .links a {
+            font-size: 10px;
+            color: var(--accent-soft);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.15s;
+        }
+        .paper-card .links a:hover { opacity: 0.7; }
+
         /* Tooltip preview */
         .paper-tooltip {
             position: fixed;
@@ -310,7 +407,7 @@ html = '''<!DOCTYPE html>
             font-style: italic;
         }
 
-        /* Paper list - auto-fit columns */
+        /* Paper list */
         .paper-list {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -337,117 +434,6 @@ html = '''<!DOCTYPE html>
             background: var(--accent);
             border-radius: 2px;
         }
-
-        .paper-card {
-            background: var(--bg-card);
-            border-radius: var(--radius-md);
-            padding: 12px;
-            border: 1px solid var(--border);
-            transition: all 0.2s ease;
-            cursor: pointer;
-        }
-        .paper-card:hover {
-            border-color: rgba(99, 102, 241, 0.3);
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-1px);
-        }
-
-        .paper-card .title {
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--text);
-            line-height: 1.45;
-            margin-bottom: 4px;
-        }
-        .paper-card .authors {
-            font-size: 10px;
-            color: var(--text-muted);
-            margin-bottom: 6px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-        .paper-card .meta {
-            display: flex;
-            gap: 4px;
-            flex-wrap: wrap;
-            margin-bottom: 6px;
-        }
-        .tag {
-            padding: 2px 7px;
-            border-radius: 100px;
-            font-size: 9px;
-            font-weight: 500;
-        }
-        .tag.conf { background: var(--tag-bg); color: var(--accent-soft); }
-        .tag.topic { background: rgba(255,255,255,0.05); color: var(--text-secondary); }
-        .tag.year { background: rgba(255, 159, 64, 0.1); color: #ff9f40; }
-        .tag.has-summary { background: rgba(34, 197, 94, 0.1); color: var(--success); }
-
-        .paper-card .links {
-            display: flex;
-            gap: 10px;
-            margin-top: 6px;
-            padding-top: 6px;
-            border-top: 1px solid var(--border);
-        }
-        .paper-card .links a {
-            font-size: 10px;
-            color: var(--accent-soft);
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.15s;
-        }
-        .paper-card .links a:hover { opacity: 0.7; }
-
-        /* Abstract toggle */
-        .abstract-toggle {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            padding: 4px 8px;
-            background: var(--bg-elevated);
-            border: 1px solid var(--border);
-            border-radius: var(--radius-sm);
-            font-size: 10px;
-            color: var(--text-secondary);
-            cursor: pointer;
-            margin-top: 4px;
-            transition: all 0.15s;
-        }
-        .abstract-toggle:hover {
-            background: var(--border);
-            color: var(--text);
-        }
-
-        .abstract-content {
-            display: none;
-            margin-top: 10px;
-            padding-top: 10px;
-            border-top: 1px solid var(--border);
-            animation: fadeIn 0.2s ease;
-        }
-        .abstract-content.show { display: block; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-4px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .abstract-content h4 {
-            font-size: 10px;
-            color: var(--text-muted);
-            margin: 8px 0 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .abstract-content p {
-            font-size: 11px;
-            line-height: 1.6;
-            color: var(--text-secondary);
-            margin: 0;
-        }
-        .abstract-content .cn { color: var(--text-muted); }
 
         /* Detail page */
         .detail-page { display: none; }
@@ -571,6 +557,33 @@ html = '''<!DOCTYPE html>
             opacity: 0.5;
         }
 
+        /* Favorites banner */
+        .fav-banner {
+            grid-column: 1 / -1;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 16px;
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.08) 0%, rgba(251, 191, 36, 0.02) 100%);
+            border: 1px solid rgba(251, 191, 36, 0.15);
+            border-radius: var(--radius-md);
+            margin-bottom: 4px;
+        }
+        .fav-banner .fav-icon {
+            font-size: 18px;
+            color: var(--star-yellow);
+        }
+        .fav-banner .fav-text {
+            font-size: 13px;
+            color: var(--text);
+            font-weight: 600;
+        }
+        .fav-banner .fav-count {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-left: auto;
+        }
+
         /* Footer */
         .footer {
             text-align: center;
@@ -582,7 +595,7 @@ html = '''<!DOCTYPE html>
 
         @media (min-width: 1100px) {
             .paper-list { gap: 10px; }
-            .paper-card { padding: 14px; }
+            .paper-card { padding: 14px; padding-right: 40px; }
             .paper-card .title { font-size: 13px; }
         }
     </style>
@@ -599,7 +612,7 @@ html = '''<!DOCTYPE html>
             <div class="stat"><div class="num" id="paperCount">-</div><div class="label">Papers</div></div>
             <div class="stat"><div class="num" id="confCount">-</div><div class="label">Venues</div></div>
             <div class="stat"><div class="num" id="topicCount">-</div><div class="label">Topics</div></div>
-            <div class="stat"><div class="num" id="summaryCount">-</div><div class="label">Summarized</div></div>
+            <div class="stat"><div class="num" id="favCount">-</div><div class="label">Favorites</div></div>
         </div>
     </div>
 
@@ -646,6 +659,51 @@ html = '''<!DOCTYPE html>
     let confCategories = {};
     let allYears = [];
 
+    // Favorites stored in localStorage
+    const FAV_KEY = 'claw_notes_favorites';
+    function getFavorites() {
+        try {
+            const raw = localStorage.getItem(FAV_KEY);
+            return raw ? JSON.parse(raw) : [];
+        } catch (e) {
+            return [];
+        }
+    }
+    function saveFavorites(favs) {
+        localStorage.setItem(FAV_KEY, JSON.stringify(favs));
+    }
+    function isFavorited(id) {
+        return getFavorites().includes(id);
+    }
+    function toggleFavorite(id) {
+        const favs = getFavorites();
+        const idx = favs.indexOf(id);
+        if (idx >= 0) {
+            favs.splice(idx, 1);
+        } else {
+            favs.push(id);
+        }
+        saveFavorites(favs);
+        updateStarUI(id);
+        updateFavCount();
+        // If in favorites mode, re-render
+        if (filterMode === 'favorites') {
+            render();
+        }
+    }
+    function updateStarUI(id) {
+        document.querySelectorAll(`.star-btn[data-id="${id}"]`).forEach(btn => {
+            const favorited = isFavorited(id);
+            btn.classList.toggle('favorited', favorited);
+            btn.innerHTML = favorited
+                ? '<span class="star-icon">&#9733;</span>'
+                : '<span class="star-icon">&#9734;</span>';
+        });
+    }
+    function updateFavCount() {
+        document.getElementById('favCount').textContent = getFavorites().length;
+    }
+
     async function loadData() {
         const list = document.getElementById('paperList');
         list.innerHTML = '<div class="empty-state"><div class="empty-state-icon">&#128228;</div><div>Loading papers...</div><div style="margin-top:8px;font-size:12px;color:#666">This may take 5-15 seconds on first visit</div></div>';
@@ -669,6 +727,7 @@ html = '''<!DOCTYPE html>
             allConfs = [...new Set(papers.map(p => p.conference || 'arXiv'))].sort();
 
             initNav();
+            updateFavCount();
             render();
         } catch (e) {
             let msg = e.message || 'Unknown error';
@@ -687,20 +746,23 @@ html = '''<!DOCTYPE html>
 
     function initNav() {
         const navBar = document.getElementById('navBar');
+        navBar.innerHTML = '';
 
-        const modeChip = document.createElement('div');
-        modeChip.className = 'nav-chip mode-toggle';
-        modeChip.dataset.mode = 'topic';
-        modeChip.textContent = 'Topics';
-        modeChip.onclick = () => setFilterMode('topic');
-        navBar.appendChild(modeChip);
+        const modes = [
+            {key: 'topic', label: 'Topics'},
+            {key: 'confYear', label: 'Venues'},
+            {key: 'timeline', label: 'Timeline'},
+            {key: 'favorites', label: 'Favorites'},
+        ];
 
-        const confChip = document.createElement('div');
-        confChip.className = 'nav-chip mode-toggle';
-        confChip.dataset.mode = 'confYear';
-        confChip.textContent = 'Venues';
-        confChip.onclick = () => setFilterMode('confYear');
-        navBar.appendChild(confChip);
+        modes.forEach(m => {
+            const chip = document.createElement('div');
+            chip.className = 'nav-chip mode-toggle';
+            chip.dataset.mode = m.key;
+            chip.textContent = m.label;
+            chip.onclick = () => setFilterMode(m.key);
+            navBar.appendChild(chip);
+        });
 
         buildFilterRows();
         setFilterMode('topic');
@@ -747,8 +809,6 @@ html = '''<!DOCTYPE html>
         yearRow.className = 'filter-row';
         yearRow.id = 'yearRow';
         yearRow.style.display = 'none';
-        yearRow.className = 'filter-row';
-        yearRow.id = 'yearRow';
 
         const label2 = document.createElement('span');
         label2.className = 'filter-row-label';
@@ -778,7 +838,6 @@ html = '''<!DOCTYPE html>
     }
 
     function updateFilters() {
-        // Update active states
         document.querySelectorAll('.filter-chip').forEach(c => {
             const t = c.dataset.type;
             const v = c.dataset.value;
@@ -797,12 +856,13 @@ html = '''<!DOCTYPE html>
             c.classList.toggle('active', c.dataset.mode === mode);
         });
 
-        document.getElementById('topicRow').style.display = mode === 'topic' ? 'flex' : 'none';
+        // Show/hide filter rows based on mode
+        document.getElementById('topicRow').style.display = (mode === 'topic') ? 'flex' : 'none';
         document.querySelectorAll('.conf-cat-row').forEach(r => {
-            r.style.display = mode === 'confYear' ? 'flex' : 'none';
+            r.style.display = (mode === 'confYear') ? 'flex' : 'none';
         });
         const yr = document.getElementById('yearRow');
-        if (yr) yr.style.display = mode === 'confYear' ? 'flex' : 'none';
+        if (yr) yr.style.display = (mode === 'confYear') ? 'flex' : 'none';
 
         // Reset filters
         activeTopic = '';
@@ -823,6 +883,11 @@ html = '''<!DOCTYPE html>
         }
 
         let filtered = papers.filter(p => {
+            // Favorites mode: only show favorited
+            if (filterMode === 'favorites') {
+                return isFavorited(p.id);
+            }
+
             let match = true;
             if (filterMode === 'topic' && activeTopic) {
                 match = p.topic === activeTopic;
@@ -846,23 +911,52 @@ html = '''<!DOCTYPE html>
         });
 
         if (filtered.length === 0) {
-            list.innerHTML = `<div class="empty-state">
-                <div class="empty-state-icon">&#128269;</div>
-                <div>No papers found matching "${escapeHtml(searchInput.value)}"</div>
-                ${search ? '<div style="margin-top:8px;font-size:12px;color:#666">Try a different keyword or clear filters</div>' : ''}
-            </div>`;
+            if (filterMode === 'favorites') {
+                list.innerHTML = `<div class="empty-state">
+                    <div class="empty-state-icon">&#9734;</div>
+                    <div>No favorites yet.</div>
+                    <div style="margin-top:8px;font-size:12px;color:#666">Click the star on any paper to add it here.</div>
+                </div>`;
+            } else {
+                list.innerHTML = `<div class="empty-state">
+                    <div class="empty-state-icon">&#128269;</div>
+                    <div>No papers found matching "${escapeHtml(searchInput.value)}"</div>
+                    ${search ? '<div style="margin-top:8px;font-size:12px;color:#666">Try a different keyword or clear filters</div>' : ''}
+                </div>`;
+            }
             return;
         }
 
         let html = '';
+
+        // Favorites banner
+        if (filterMode === 'favorites') {
+            html += `<div class="fav-banner">
+                <span class="fav-icon">&#9733;</span>
+                <span class="fav-text">Your Favorites</span>
+                <span class="fav-count">${filtered.length} paper${filtered.length !== 1 ? 's' : ''}</span>
+            </div>`;
+        }
+
+        // Grouping logic
         const grouped = {};
-        filtered.forEach(p => {
-            const conf = p.conference || 'arXiv';
-            const year = p.year || 2024;
-            const key = conf + ' / ' + year;
-            if (!grouped[key]) grouped[key] = [];
-            grouped[key].push(p);
-        });
+        if (filterMode === 'timeline') {
+            // Group by YYYY-MM from added_date, sorted descending
+            filtered.forEach(p => {
+                const date = p.added_date || 'unknown';
+                const key = date.length >= 7 ? date.substring(0, 7) : date;
+                if (!grouped[key]) grouped[key] = [];
+                grouped[key].push(p);
+            });
+        } else {
+            filtered.forEach(p => {
+                const conf = p.conference || 'arXiv';
+                const year = p.year || 2024;
+                const key = conf + ' / ' + year;
+                if (!grouped[key]) grouped[key] = [];
+                grouped[key].push(p);
+            });
+        }
 
         Object.keys(grouped).sort().reverse().forEach(key => {
             html += `<div class="section-title">${key}</div>`;
@@ -873,22 +967,33 @@ html = '''<!DOCTYPE html>
 
         list.innerHTML = html;
 
+        // Update all star buttons
+        document.querySelectorAll('.star-btn').forEach(btn => {
+            const id = parseInt(btn.dataset.id);
+            updateStarUI(id);
+        });
+
         const summaryCount = papers.filter(p => p.ai_summary_en || p.ai_summary_cn || p.ai_summary).length;
         document.getElementById('paperCount').textContent = papers.length;
         document.getElementById('confCount').textContent = allConfs.length;
         document.getElementById('topicCount').textContent = topics.length;
-        document.getElementById('summaryCount').textContent = summaryCount;
         document.getElementById('totalCount').textContent = papers.length;
     }
 
     function renderPaperCard(p) {
         const hasSummary = p.ai_summary_en || p.ai_summary_cn || p.ai_summary;
+        const fav = isFavorited(p.id);
         return `
         <div class="paper-card" onclick="showDetail(${p.id})" data-id="${p.id}">
-            <div class="title">${p.title || 'Untitled'}</div>
-            <div class="authors">${p.authors || 'Unknown'}</div>
+            <button class="star-btn${fav ? ' favorited' : ''}" data-id="${p.id}"
+                onclick="event.stopPropagation(); toggleFavorite(${p.id});"
+                title="${fav ? 'Remove from favorites' : 'Add to favorites'}">
+                <span class="star-icon">${fav ? '&#9733;' : '&#9734;'}</span>
+            </button>
+            <div class="title">${escapeHtml(p.title) || 'Untitled'}</div>
+            <div class="authors">${escapeHtml(p.authors) || 'Unknown'}</div>
             <div class="meta">
-                <span class="tag conf">${p.conference || 'arXiv'}</span>
+                <span class="tag conf">${escapeHtml(p.conference || 'arXiv')}</span>
                 <span class="tag year">${p.year || '2024'}</span>
                 ${hasSummary ? '<span class="tag has-summary">&#10003; AI</span>' : ''}
             </div>
@@ -900,6 +1005,7 @@ html = '''<!DOCTYPE html>
     }
 
     function escapeHtml(text) {
+        if (!text) return '';
         const div = document.createElement('div');
         div.textContent = text;
         return div.innerHTML;
