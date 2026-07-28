@@ -950,12 +950,12 @@
         // Grouping logic
         const grouped = {};
         if (filterMode === 'timeline') {
-            // Group by YYYY-MM from added_date, or fallback to year
+            // Group by YYYY-MM-DD from added_date, or fallback to year
             filtered.forEach(p => {
                 let key;
                 const date = p.added_date;
-                if (date && date.length >= 7) {
-                    key = date.substring(0, 7); // YYYY-MM
+                if (date && date.length >= 10) {
+                    key = date; // YYYY-MM-DD
                 } else if (p.year) {
                     key = String(p.year); // fallback to year only
                 } else {
