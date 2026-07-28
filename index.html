@@ -25,7 +25,7 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 </head>
 <body>
 <h1>📚 LLM Serving Papers</h1>
-<div class="stats">551 papers | Updated 2026-07-28</div>
+<div class="stats">569 papers | Updated 2026-07-29</div>
 <div class="filter">
 <select id="topicFilter" onchange="filterPapers()">
 <option value="">All Topics</option><option value="Distributed Inference">Distributed Inference</option>
@@ -52,13 +52,13 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 <div id="paperList"><div class="paper" data-topic="Inference Kernel">
 <h3>vLLM: Efficient Memory Management for Large Language Model Serving with PagedAttention</h3>
 <div class="meta">Unknown | arXiv 2023</div>
-<div class="abstract">## 摘要 (中文) 大型语言模型（LLM）的高吞吐量服务需要同时批处理足够多的请求。然而，现有系统面临挑战，因为每个请求的键值缓存（KV缓存）内存很大，且会动态增长和收缩。当管理不高效时，这些内存会因碎片化和冗余复制而严重浪费，限制了批处理大小。为解决这一问题，我们提出了PagedAttention，这是一种受操作系统中经典虚拟内存和分页技术启发的注意力算法。在此基础上，我们构建了vLLM，一个LLM服务系统，实现了（1）KV缓存内存近零浪费，（2）灵活共享KV缓存在请求内部和跨请求以进一步减少内存使用。我们的评估表明，vLLM与FasterTrans...</div>
+<div class="abstract">High throughput serving of large language models (LLMs) requires batching sufficiently many requests at a time. However, existing systems struggle because the key-value cache (KV cache) memory for each request is huge and grows and shrinks dynamically. When managed inefficiently,...</div>
 <div class="tags"><span>Inference Kernel</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2309.06180">arXiv</a> <a href="https://github.com/vllm-project/vllm">GitHub</a></div>
 </div><div class="paper" data-topic="LLM Serving">
 <h3>PowerInfer-2: High-Speed LLM Inference for Smartphones</h3>
 <div class="meta">来自上海交通大学IPADS实验室 | arXiv 2024</div>
-<div class="abstract">PowerInfer-2是一个专为智能手机设计的高度优化推理框架。  使用TurboSparse-Mixtral-47B，PowerInfer-2在智能手机上实现了**11.68 tokens/s**的推理速度，比其他SOTA框架快达**22倍**。</div>
+<div class="abstract"></div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://github.com/Tiiny-AI/PowerInfer">GitHub</a></div>
 </div><div class="paper" data-topic="LLM Serving">
@@ -88,7 +88,7 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 </div><div class="paper" data-topic="Speculative Decoding">
 <h3>SpecForge: A Flexible and Efficient Open-Source Training Framework for Speculative Decoding</h3>
 <div class="meta">Shenggui Li, Chao Wang, Yikai Zhu, Yubo Wang, Fan Yin, Shuai Shi, Yefei Chen, Xiaomin Dong, Qiaoling Chen, Jin Pan, Ji Li, Laixin Xie, Yineng Zhang, Lei Yu, Yonggang Wen, Ivor Tsang, Tianwei Zhang | arXiv 2025</div>
-<div class="abstract">大型语言模型由于顺序自回归解码而产生高推理延迟。Speculative Decoding (投机解码) 通过使用draft模型预测多个token，然后使用target模型并行验证，是加速自回归LLM推理的一种有前景的方法。  然而，现有的投机解码框架主要关注推理阶段，缺乏对draft模型训练的支持，导致部署效率受限。  **SpecForge** 是一个灵活高效的**开源训练框架**，专门用于投机解码。</div>
+<div class="abstract"></div>
 <div class="tags"><span>Speculative Decoding</span></div>
 <div class="links"><a href="https://github.com/SpecForge">GitHub</a></div>
 </div><div class="paper" data-topic="Speculative Decoding">
@@ -3355,6 +3355,114 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 <div class="abstract">We study baking documents directly into the weights of a 4-bit Gemma-4-e4b model via LoRA, so a system can answer questions about a corpus closed-book: no retrieval and no context-window budget. Across roughly 100 training runs from single documents to a 99-document corpus, we fi...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2607.21861v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.21861v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>LOCKS: Page-Local Compact Key Summaries for Efficient Long-Context Decoding</h3>
+<div class="meta">Junsung Hwang | arXiv 2026</div>
+<div class="abstract">Serving large language models at long context is bottlenecked by the key-value (KV) cache, which is read in full at every decode step. Attention keys are locally low-rank though globally high-rank: shared low-rank bases discard page-specific directions that a page's own compact b...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.24555v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.24555v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>KAP: Bridging the Knowledge Selection-Runtime Consumption Gap in LLM Systems</h3>
+<div class="meta">Shuo Wang, Fang Xi, Wenyuan Huang, Qing Wang, Junming Su | arXiv 2026</div>
+<div class="abstract">Modern LLM systems increasingly rely on knowledge-selection processes that produce high-value structured priors, such as ranked evidence, graph topology, multimodal alignment, and confidence signals. Yet LLM serving remains fundamentally oblivious to this rich structure: once suc...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.24260v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.24260v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>UniGen-AR: Unifying Visual Generation with Auto-Regressive Modeling</h3>
+<div class="meta">Zhipeng Bao, Zhen Zhu, Nupur Kumari, Anurag Bagchi, Yu-Xiong Wang, Pavel Tokmakov, Martial Hebert | arXiv 2026</div>
+<div class="abstract">Modern computer vision pipelines remain fragmented, with tasks such as text-to-image generation, editing, restoration, and classical perception handled by separate models. We study Unified Visual Generation (UVG), where a single model produces diverse image-valued outputs through...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.24157v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.24157v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>SpecBox: Speculative Sandbox Scheduling for Efficient LLM Agent Serving</h3>
+<div class="meta">Yihui Zhang, Tianyu Wo, Jinghao Wang, Xiaoyang Sun, Menghao Zhang, Cangzhou Yuan, Li Li, Chunming Hu, Albert Y. Zomaya, Renyu Yang | arXiv 2026</div>
+<div class="abstract">As LLM agents increasingly rely on the Model Context Protocol (MCP) to invoke isolated external sandboxes, disaggregated sandbox deployment introduces a fundamental tension between resource utilization and interactive tail latency. Persistent long-lived sandbox reservations incur...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.23933v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.23933v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>MemVLN: Episodic and Procedural Memory for Vision-and-Language Navigation</h3>
+<div class="meta">Yuqi Liu, Shengju Qian, Tianyuan Qu, Mingxian Lin, Zixuan Wang, Xin Wang, Bei Yu, Jiaya Jia | arXiv 2026</div>
+<div class="abstract">Vision-and-Language Navigation in Continuous Environments (VLN-CE) requires agents to maintain long-horizon visual history for trajectory consistency while executing actions with low latency. Existing video-based VLN approaches typically struggle to satisfy both demands simultane...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.23504v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.23504v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Robust Interpretation of Historical Documents in Knowledge Graphs Through Query Inference and Execution</h3>
+<div class="meta">Sebastià Nicolau, Adrià Molina, Oriol Ramos Terrades, Josep Lladós | arXiv 2026</div>
+<div class="abstract">The emergence of Large Language Models (LLMs) has redefined how users interact with information in digital environments. However, their widespread and often indiscriminate integration has raised significant concerns regarding reliability and trustworthiness issues that are partic...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.24475v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.24475v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>MAViE: A Multi-scale Adaptive Vision Encoder for Fine-grained Visual Perception and Efficient Multimodal Reasoning</h3>
+<div class="meta">Shaofei Lei | arXiv 2026</div>
+<div class="abstract">Vision-language models commonly project all tokens produced by a pretrained vision encoder into a large language model. However, final-layer features can discard text, local attributes, and spatial relationships, while high-resolution inputs substantially increase context length ...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.24424v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.24424v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Failures Reveal What Metrics Miss: An Evidence-Driven Agent for Recursive Refinement of ECG Classifiers</h3>
+<div class="meta">Jinliang Deng, Yiming Niu, Yibo Pan, Zhiqi Shao, Qin Luo, Yongxin Tong | arXiv 2026</div>
+<div class="abstract">Deep models have substantially advanced 12-lead ECG classification, yet their refinement still relies heavily on human experts to inspect failures and iteratively revise classifier designs. Recent LLM-based agents have demonstrated the potential for automated model design, but wh...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.24419v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.24419v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>When LLM Defenses Backfire: Characterizing Safety, Performance, and Cost Trade-offs</h3>
+<div class="meta">Tong Zhang, Zexin Li, Simin Chen, Yun Peng | arXiv 2026</div>
+<div class="abstract">Jailbreak defenses are essential for protecting large language models (LLMs), but they can also introduce secondary costs that weaken model utility. We present a systematic study of these defense trade-offs along three dimensions: performance impact, over-refusal on benign inputs...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.24392v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.24392v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>DynaCalKV: Key-Value Cache Compression via Head Grouping and Adaptive Rank Allocation</h3>
+<div class="meta">Tan T. Nguyen, Quan V. Dang | arXiv 2026</div>
+<div class="abstract">As the inference phase of Large Language Models (LLMs) requires handling long context windows, the Key-Value (KV) cache initially appears to address this challenge but eventually becomes a significant bottleneck as the context window continues to grow. Low-rank compression has re...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.24331v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.24331v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>CONSISTRE: A Unified Consistency-Aware Framework for Document-Level Relation Extraction with Large Language Models</h3>
+<div class="meta">Mingxuan Sun | arXiv 2026</div>
+<div class="abstract">Document-level relation extraction (DocRE) aims to extract relations among multiple entities across extended contexts while maintaining consistency across predicted triples. Although large language models (LLMs) show remarkable reasoning capabilities in information extraction, th...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.24312v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.24312v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>LLM-based Source Code Compression via Thresholded Symbol Ranking</h3>
+<div class="meta">Angelo Nardone, Paolo Ferragina | arXiv 2026</div>
+<div class="abstract">We study the problem of lossless compression of source code, motivated by the storage demands of large-scale software archives, such as Software Heritage (https://www.softwareheritage.org/). General-purpose compressors (e.g., zstd, bzip2) offer a good trade-off between compressio...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.24192v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.24192v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>ACRL: Adaptive Control of Training-Inference Discrepancy for Stable Reinforcement Learning</h3>
+<div class="meta">Wenwu Fan, Qihong Lin, Zhijie Xia, Zhuo Zheng, Sihao Wang, Qiang Chen, Liangsheng Zhu | arXiv 2026</div>
+<div class="abstract">Reinforcement Learning (RL) training for Large Language Models (LLMs) often suffers from instability due to the discrepancy between training and inference. This training-inference discrepancy stems from two primary factors: an architectural separation between training and inferen...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.24062v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.24062v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Kalypso: Relational LLM Serving</h3>
+<div class="meta">Hojae Son, Md Ashraful Islam, Huy Gia Cao, Hui Guan, Marco Serafini | arXiv 2026</div>
+<div class="abstract">Large language models are increasingly used as semantic operators for filtering, extracting, ranking, joining, and transforming unstructured data. Existing semantic query processing systems invoke request-centric LLM serving systems that are unaware of the query plan, leaving sub...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.23815v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.23815v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>A Frozen 12B Beats Frontier Models on Verified Work: 100% Accuracy, 0 Tokens, Bit-Exact, Forever</h3>
+<div class="meta">Sietse Schelpe | arXiv 2026</div>
+<div class="abstract">Improving a language model today means retraining it: enormous compute, a new opaque model each cycle, non-deterministic output. We take the opposite path: the model stays frozen, and a persistent memory of verified solutions grows beside it. Once a problem family is solved and h...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.23806v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.23806v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Zing: Social Mind for LLMs</h3>
+<div class="meta"> Zing Team, Ao Xiang, Bi Jingping, Chen Jiahui, Chen Lehan, Chen Yilin, Cheng Xueqi, Fan Yixing, Gan Kairong, Gao Haowen, Gao Jinhua, Gao Shuxuan, Gong Chang, Guo Jiafeng, Guo Ruijie, Han Zhouyu, He Guangfu, He Yichun, Jiang Shuo, Jing Shaoling, Jing Ya, Lei Chenhao, Lei Yan, Li Anqi, Li Chengao, Li Haoyu, Li Shitian, Liang Xinjian, Liu Zhaoge, Lyu Xingyu, Nie Zhuwei, Pang Liang, Quan Zeping, Shan Shiguang, Shen Huawei, Tang Xinran, Tian Feng, Wang Qian, Wang Ruiping, Wang Xiaohong, Xia Zaiyu, Xiao Yi, Xu Jiayuan, Xu Kehan, Xu Qianqian, Xu Tianyu, Xu Yongjun, Yang Haoming, Yang Jun, Yao Di, Yu Xiaoming, Zhang Futong, Zhang Jie, Zhang Shixuan, Zhang Yuxuan, Zhao Xinyu, Zhao Zhuoran, Zhong Yunfei, Zhu Shengyu | arXiv 2026</div>
+<div class="abstract">As large language models move from isolated task solving toward long-term service in human environments, they require social intelligence: the ability to infer mental states, track social relations, reason over norms, and adapt behavior under context. This report presents Zhijing...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.23740v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.23740v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>The Illusion of Secure LLM Code: Closing the Security Gap via Iterative Reprompting</h3>
+<div class="meta">Ishpuneet Singh, Shreyas Mahajan, Gurjot Singh, Maninder Singh | arXiv 2026</div>
+<div class="abstract">Large Language Models (LLMs) are increasingly integrated into software development workflows, yet their ability to autonomously generate secure authentication code remains uncertain. This paper evaluates the security architecture of authentication systems generated by five promin...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.23710v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.23710v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>HiTMS: A High-Throughput Multi-Stream Linguistic Steganography Framework</h3>
+<div class="meta">Ruiyi Yan, Yugo Murawaki, Zhongliang Yang | arXiv 2026</div>
+<div class="abstract">Generative linguistic steganography conceals secret bits within the sampling randomness of large language models. Existing schemes are single-stream, conveying an entire secret through a single response to a single prompt. This convention incurs two limitations: it provides no pr...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2607.23597v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.23597v1.pdf">PDF</a></div>
 </div></div>
 <div class="empty" id="emptyState" style="display:none">No papers match your filters.</div>
 <script>
