@@ -223,26 +223,32 @@
 
         /* Timeline mode layout */
         #listPage.timeline-mode {
-            display: flex;
-            flex-direction: row;
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            grid-template-areas:
+                "nav nav"
+                "filters filters"
+                "sidebar content";
+            gap: 0;
             padding: 0 12px;
-            gap: 12px;
         }
-        #listPage.timeline-mode .nav-bar,
-        #listPage.timeline-mode .filter-rows {
-            width: 100%;
-            flex-shrink: 0;
-        }
+        #listPage.timeline-mode .nav-bar { grid-area: nav; width: 100%; }
+        #listPage.timeline-mode .filter-rows { grid-area: filters; width: 100%; }
         #listPage.timeline-mode .timeline-sidebar {
+            grid-area: sidebar;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            padding: 8px 0;
             position: sticky;
             top: calc(88px + 42px + 1px);
-            align-self: flex-start;
+            align-self: start;
             max-height: calc(100vh - 140px);
             overflow-y: auto;
             scrollbar-width: none;
         }
         #listPage.timeline-mode .paper-list {
-            flex: 1;
+            grid-area: content;
             padding: 10px 0 80px;
         }
         .filter-row {
