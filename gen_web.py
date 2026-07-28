@@ -218,46 +218,70 @@ html = '''<!DOCTYPE html>
             border-bottom: 1px solid var(--border);
         }
 
-        /* Timeline TOC */
-        .timeline-toc {
+        /* Timeline Sidebar */
+        .timeline-sidebar {
             display: none;
-            gap: 6px;
-            padding: 8px 12px;
-            background: var(--bg);
-            border-bottom: 1px solid var(--border);
-            overflow-x: auto;
-            scrollbar-width: none;
+            flex-direction: column;
+            gap: 2px;
+            width: 120px;
+            flex-shrink: 0;
+            padding: 8px 0;
             position: sticky;
             top: calc(88px + 42px + 1px);
-            z-index: 98;
+            max-height: calc(100vh - 140px);
+            overflow-y: auto;
+            scrollbar-width: none;
         }
-        .timeline-toc::-webkit-scrollbar { display: none; }
-        .timeline-toc.show {
+        .timeline-sidebar::-webkit-scrollbar { display: none; }
+        .timeline-sidebar.show {
             display: flex;
         }
-        .timeline-toc .toc-chip {
-            padding: 4px 10px;
-            border-radius: 100px;
+        .timeline-sidebar .toc-chip {
+            padding: 5px 10px;
+            border-radius: 6px;
             font-size: 11px;
             font-weight: 500;
-            white-space: nowrap;
             cursor: pointer;
-            flex-shrink: 0;
             transition: all 0.15s ease;
-            border: 1px solid var(--border);
-            background: var(--bg-card);
             color: var(--text-secondary);
+            text-align: left;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
-        .timeline-toc .toc-chip:hover {
+        .timeline-sidebar .toc-chip:hover {
             background: var(--bg-elevated);
             color: var(--text);
-            border-color: var(--accent);
         }
-        .timeline-toc .toc-chip.active {
+        .timeline-sidebar .toc-chip.active {
             background: var(--accent);
             color: white;
-            border-color: var(--accent);
             box-shadow: 0 2px 10px var(--accent-glow);
+        }
+
+        /* Timeline mode layout */
+        #listPage.timeline-mode {
+            display: flex;
+            flex-direction: row;
+            padding: 0 12px;
+            gap: 12px;
+        }
+        #listPage.timeline-mode .nav-bar,
+        #listPage.timeline-mode .filter-rows {
+            width: 100%;
+            flex-shrink: 0;
+        }
+        #listPage.timeline-mode .timeline-sidebar {
+            position: sticky;
+            top: calc(88px + 42px + 1px);
+            align-self: flex-start;
+            max-height: calc(100vh - 140px);
+            overflow-y: auto;
+            scrollbar-width: none;
+        }
+        #listPage.timeline-mode .paper-list {
+            flex: 1;
+            padding: 10px 0 80px;
         }
         .filter-row {
             display: flex;
@@ -667,7 +691,7 @@ html = '''<!DOCTYPE html>
     <div id="listPage">
         <div class="nav-bar" id="navBar"></div>
         <div class="filter-rows" id="filterRows"></div>
-        <div class="timeline-toc" id="timelineToc"></div>
+        <div class="timeline-sidebar" id="timelineSidebar"></div>
         <div class="paper-list" id="paperList"></div>
     </div>
 
@@ -907,9 +931,12 @@ html = '''<!DOCTYPE html>
         const yr = document.getElementById('yearRow');
         if (yr) yr.style.display = (mode === 'confYear') ? 'flex' : 'none';
 
-        // Show/hide timeline TOC
-        const toc = document.getElementById('timelineToc');
-        if (toc) toc.classList.toggle('show', mode === 'timeline');
+        // Show/hide timeline sidebar
+        const sidebar = document.getElementById('timelineSidebar');
+        if (sidebar) sidebar.classList.toggle('show', mode === 'timeline');
+
+        // Toggle timeline-mode class on listPage
+        document.getElementById('listPage').classList.toggle('timeline-mode', mode === 'timeline');
 
         // Reset filters
         activeTopic = '';
@@ -1022,16 +1049,16 @@ html = '''<!DOCTYPE html>
 
         list.innerHTML = html;
 
-        // Build Timeline TOC if in timeline mode
+        // Build Timeline Sidebar if in timeline mode
         if (filterMode === 'timeline') {
-            const toc = document.getElementById('timelineToc');
+            const sb = document.getElementById('timelineSidebar');
             const keys = Object.keys(grouped).sort().reverse();
-            toc.innerHTML = keys.map(k => {
+            sb.innerHTML = keys.map(k => {
                 const slug = 'grp-' + k.replace(/[^a-zA-Z0-9]/g, '-');
                 return `<div class="toc-chip" onclick="scrollToGroup('${slug}')">${k}</div>`;
             }).join('');
         } else {
-            document.getElementById('timelineToc').innerHTML = '';
+            document.getElementById('timelineSidebar').innerHTML = '';
         }
 
         // Update all star buttons
