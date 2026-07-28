@@ -605,6 +605,7 @@ html = '''<!DOCTYPE html>
 
     <div class="search-box">
         <input type="text" id="searchInput" placeholder="Search papers by title, author, topic...">
+        <button id="searchBtn" class="search-btn">Search</button>
     </div>
 
     <!-- List page -->

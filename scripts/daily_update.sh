@@ -7,6 +7,9 @@ cd /root/.openclaw/workspace/claw_notes
 # Run daily search
 python3 scripts/daily_search.py --verbose 2>&1 | tee /tmp/clawbot_daily.log
 
+# Regenerate web files
+python3 gen_web.py 2>&1 | tee -a /tmp/clawbot_daily.log
+
 # If there are changes, commit and push
 if [[ -n $(git status --porcelain) ]]; then
     git add -A
