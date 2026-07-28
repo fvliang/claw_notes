@@ -941,10 +941,17 @@ html = '''<!DOCTYPE html>
         // Grouping logic
         const grouped = {};
         if (filterMode === 'timeline') {
-            // Group by YYYY-MM from added_date, sorted descending
+            // Group by YYYY-MM from added_date, or fallback to year
             filtered.forEach(p => {
-                const date = p.added_date || 'unknown';
-                const key = date.length >= 7 ? date.substring(0, 7) : date;
+                let key;
+                const date = p.added_date;
+                if (date && date.length >= 7) {
+                    key = date.substring(0, 7); // YYYY-MM
+                } else if (p.year) {
+                    key = String(p.year); // fallback to year only
+                } else {
+                    key = 'unknown';
+                }
                 if (!grouped[key]) grouped[key] = [];
                 grouped[key].push(p);
             });
