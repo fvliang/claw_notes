@@ -217,6 +217,48 @@ html = '''<!DOCTYPE html>
             background: var(--bg);
             border-bottom: 1px solid var(--border);
         }
+
+        /* Timeline TOC */
+        .timeline-toc {
+            display: none;
+            gap: 6px;
+            padding: 8px 12px;
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+            overflow-x: auto;
+            scrollbar-width: none;
+            position: sticky;
+            top: calc(88px + 42px + 1px);
+            z-index: 98;
+        }
+        .timeline-toc::-webkit-scrollbar { display: none; }
+        .timeline-toc.show {
+            display: flex;
+        }
+        .timeline-toc .toc-chip {
+            padding: 4px 10px;
+            border-radius: 100px;
+            font-size: 11px;
+            font-weight: 500;
+            white-space: nowrap;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: all 0.15s ease;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            color: var(--text-secondary);
+        }
+        .timeline-toc .toc-chip:hover {
+            background: var(--bg-elevated);
+            color: var(--text);
+            border-color: var(--accent);
+        }
+        .timeline-toc .toc-chip.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+            box-shadow: 0 2px 10px var(--accent-glow);
+        }
         .filter-row {
             display: flex;
             flex-wrap: wrap;
@@ -625,6 +667,7 @@ html = '''<!DOCTYPE html>
     <div id="listPage">
         <div class="nav-bar" id="navBar"></div>
         <div class="filter-rows" id="filterRows"></div>
+        <div class="timeline-toc" id="timelineToc"></div>
         <div class="paper-list" id="paperList"></div>
     </div>
 
@@ -864,6 +907,10 @@ html = '''<!DOCTYPE html>
         const yr = document.getElementById('yearRow');
         if (yr) yr.style.display = (mode === 'confYear') ? 'flex' : 'none';
 
+        // Show/hide timeline TOC
+        const toc = document.getElementById('timelineToc');
+        if (toc) toc.classList.toggle('show', mode === 'timeline');
+
         // Reset filters
         activeTopic = '';
         activeConf = '';
@@ -966,13 +1013,26 @@ html = '''<!DOCTYPE html>
         }
 
         Object.keys(grouped).sort().reverse().forEach(key => {
-            html += `<div class="section-title">${key}</div>`;
+            const slug = 'grp-' + key.replace(/[^a-zA-Z0-9]/g, '-');
+            html += `<div class="section-title" id="${slug}">${key}</div>`;
             grouped[key].forEach(p => {
                 html += renderPaperCard(p);
             });
         });
 
         list.innerHTML = html;
+
+        // Build Timeline TOC if in timeline mode
+        if (filterMode === 'timeline') {
+            const toc = document.getElementById('timelineToc');
+            const keys = Object.keys(grouped).sort().reverse();
+            toc.innerHTML = keys.map(k => {
+                const slug = 'grp-' + k.replace(/[^a-zA-Z0-9]/g, '-');
+                return `<div class="toc-chip" onclick="scrollToGroup('${slug}')">${k}</div>`;
+            }).join('');
+        } else {
+            document.getElementById('timelineToc').innerHTML = '';
+        }
 
         // Update all star buttons
         document.querySelectorAll('.star-btn').forEach(btn => {
@@ -1168,6 +1228,15 @@ html = '''<!DOCTYPE html>
     function showList() {
         document.getElementById('detailPage').classList.remove('show');
         document.getElementById('listPage').style.display = 'block';
+    }
+
+    function scrollToGroup(slug) {
+        const el = document.getElementById(slug);
+        if (el) {
+            const headerOffset = 140; // approximate sticky header height
+            const top = el.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+        }
     }
 
     document.getElementById('searchInput').addEventListener('input', function(e) {
