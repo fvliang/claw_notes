@@ -10,6 +10,7 @@ from .arxiv_client import search_arxiv, fetch_recent_by_category
 from .filter import filter_papers
 from .dedup import DedupEngine
 from .database import PaperDatabase
+from .summarizer import generate_summaries_for_papers
 
 logger = logging.getLogger("clawbot.pipeline")
 
@@ -249,6 +250,8 @@ def generate_docs_html(db: PaperDatabase, output_path: str = None):
             "added_date": getattr(p, "added_date", None) or getattr(p, "collected_date", None) or "2026-03-15",
             "abstract": p.abstract_en or "",
             "abstract_cn": getattr(p, "abstract_cn", None) or "",
+            "ai_summary_en": getattr(p, "ai_summary_en", None) or "",
+            "ai_summary_cn": getattr(p, "ai_summary_cn", None) or "",
             "arxiv_id": getattr(p, "arxiv_id", None) or "",
             "github_repo": getattr(p, "github_repo", None) or "",
         })
@@ -269,10 +272,17 @@ def run_full_pipeline(
     categories: List[str] = None,
     generate_web: bool = True,
     generate_index: bool = True,
+    generate_summaries: bool = True,
 ) -> dict:
     """Run the complete daily pipeline."""
     db = PaperDatabase(Path(db_path) if db_path else None)
     new_papers = run_search_pipeline(db, queries=queries, categories=categories)
+
+    # Generate AI summaries for papers missing them (including newly added)
+    if generate_summaries:
+        summary_count = generate_summaries_for_papers(db.all_papers())
+        if summary_count > 0:
+            db.save()
 
     if generate_web:
         generate_web_html(db)

@@ -8688,7 +8688,7 @@
       "is_github_project": false,
       "is_placeholder_arxiv": false,
       "id": 424,
-      "ai_summary_en": null,
+      "ai_summary_en": "The paper tackles the high latency of autoregressive LLM decoding by introducing a heterogeneous speculative decoding framework that pairs a small “little” draft model with a large “big” target model. The little model proposes multiple candidate tokens, which the big model verifies or corrects in parallel using an acceptance mechanism designed to preserve generation quality, with confidence-based control to reduce verification overhead. Experiments show substantial inference speedups—often several-fold over standard decoding—while maintaining accuracy close to that of the large model.",
       "ai_summary_cn": "该工作针对大语言模型自回归解码延迟高的问题，提出 Big Little Decoder（BiLD）推测解码框架。其核心洞见是用小模型快速草拟 token，并在小模型置信度不足时由大模型进行并行验证或回退纠正，从而减少大模型前向计算。实验表明，该方法在基本保持目标大模型生成质量的同时，显著降低推理时延并实现数倍加速。"
     },
     {
@@ -9254,7 +9254,7 @@
       "is_github_project": false,
       "is_placeholder_arxiv": false,
       "id": 457,
-      "ai_summary_en": null,
+      "ai_summary_en": "ShadowKV addresses the GPU-memory bottleneck of KV caches in long-context LLM inference, where large KV states limit batch size and serving throughput. It keeps the full KV cache in host-side “shadow” storage while maintaining compact GPU-resident shadow representations that approximate attention scores, allowing the system to selectively prefetch only the most relevant KV blocks and overlap transfer with computation. This reduces GPU memory pressure and I/O overhead, yielding substantially higher long-context throughput with minimal accuracy degradation.",
       "ai_summary_cn": "ShadowKV 针对长上下文 LLM 推理中 KV cache 显存占用过高、限制批处理吞吐的问题。其核心思路是利用注意力访问的稀疏性与局部性，将大部分“冷” KV 放入 GPU 外的影子内存层，只在 GPU 保留热 KV，并按当前注意力需求进行预测与异步预取。实验表明，该方法能在保持模型精度基本不变的同时，显著降低显存压力并提升长上下文高吞吐推理能力。"
     },
     {
@@ -11233,7 +11233,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.22389v1",
       "pdf_url": "https://arxiv.org/pdf/2607.22389v1.pdf",
-      "comment": "To appear in the IEEE Transactions on Circuits and Systems I: Regular Papers (TCAS-I)"
+      "comment": "To appear in the IEEE Transactions on Circuits and Systems I: Regular Papers (TCAS-I)",
+      "ai_summary_en": "HiKV addresses the memory bottleneck of expanding KV caches during long-context LLM decoding by exploiting hierarchical importance-aware cache redundancy through an algorithm–hardware co-design. Its two-stage method first evicts unimportant tokens under a fixed budget, then loads only significant elements of retained tokens, accelerated by a reconfigurable importance sorter that unifies both sorting datapaths with low overhead. Experiments show up to 7.95× attention speedup and 90% energy reduction with about 1% accuracy loss, plus 1.82–4.87× fewer external memory accesses than state-of-the-art importance-based methods under iso-accuracy constraints.",
+      "ai_summary_cn": "该论文针对长上下文 LLM 解码中 KV cache 持续膨胀导致的内存带宽与能耗瓶颈，提出算法-硬件协同的 HiKV。其核心洞见是按层级重要性压缩 KV cache：先在 token 级淘汰不重要 token，再在保留 token 内只加载关键元素，并用可重构重要性排序加速器统一支持两阶段处理。实验显示，在约 1% 精度损失下，注意力计算最高加速 7.95 倍、能耗降低 90%，且等精度下外部内存访问较现有方法再降 1.82–4.87 倍。"
     },
     {
       "title": "A Roadmap to Impactful Pluralistic Alignment Research",
@@ -11254,7 +11256,9 @@
         "cs.AI"
       ],
       "url": "http://arxiv.org/abs/2607.22305v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.22305v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.22305v1.pdf",
+      "ai_summary_en": "The paper addresses the adoption gap in pluralistic value alignment: despite research aiming to make LLMs represent diverse human values, public documentation and evaluations of frontier deployed models show no explicit training or testing for pluralism. Its key contribution is a roadmap arguing that the field must move from normative justifications to empirical user/societal benefit studies, concrete operational definitions of pluralistic behavior, and production-compatible methods with trade-off-aware, optimizable metrics. The main impact is framing pluralistic alignment as a deployment and evaluation problem, urging research that can be adopted in widely served LLM systems rather than remaining speculative.",
+      "ai_summary_cn": "该文针对“多元价值对齐”研究未能影响实际部署的大模型训练与评估这一问题，审计前沿实验室公开文档后发现生产系统并未明确以多元主义为目标。论文提出应转向可落地的研究路线：提供多元对齐益处的实证证据、定义可操作化的理想多元行为，并开发权衡感知、可优化的评估与方法。其核心影响是呼吁该领域从规范性论证走向面向生产系统采纳的实证基础与工程可行方案。"
     },
     {
       "title": "Unified Static-Dynamic Pruning for Efficient LLM Inference",
@@ -11279,7 +11283,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.21985v1",
       "pdf_url": "https://arxiv.org/pdf/2607.21985v1.pdf",
-      "comment": "14 pages, 13 figures. Accepted for publication in Proceedings of the VLDB Endowment (PVLDB), Volume 19, Issue 11, 2026. Code: https://github.com/AIDASLab/SPDP"
+      "comment": "14 pages, 13 figures. Accepted for publication in Proceedings of the VLDB Endowment (PVLDB), Volume 19, Issue 11, 2026. Code: https://github.com/AIDASLab/SPDP",
+      "ai_summary_en": "The paper addresses the memory-bandwidth bottleneck of autoregressive LLM decoding and the tradeoff between static pruning’s efficiency and dynamic pruning’s adaptivity. It proposes SPDP, a unified GPU sparse-inference framework that combines unstructured static weight pruning with input-adaptive dynamic pruning using a Tiled-Column-wise Bitmap Compressed format, a CUDA-core spMspV kernel for fine-grained activation skipping, and a Tensor-Core SpMM kernel for prefill. SPDP achieves 1.24×–1.37× average speedup (up to 2.51×) over state-of-the-art sparse frameworks such as SpInfer while matching perplexity at up to 25% higher sparsity, improving LLM serving throughput and performance-per-watt.",
+      "ai_summary_cn": "该论文针对LLM推理中自回归解码带宽受限、现有静态剪枝缺乏自适应性而动态剪枝又带来不规则开销的问题，提出SPDP统一静态-动态稀疏推理框架。其核心洞见是通过Tiled-CBC压缩格式与配套GPU kernel（面向解码的spMspV和面向prefill的Tensor-Core SpMM）协同设计，在保持内存访问与计算效率的同时融合固定权重稀疏和输入自适应稀疏。实验显示，相较SpInfer等先进稀疏框架平均加速1.24–1.37倍、最高2.51倍，并可在提高最多25%稀疏度的情况下保持相近困惑度，推进了LLM服务的效率-质量权衡前沿。"
     },
     {
       "title": "Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills",
@@ -11300,7 +11306,9 @@
         "cs.CL"
       ],
       "url": "http://arxiv.org/abs/2607.22529v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.22529v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.22529v1.pdf",
+      "ai_summary_en": "Skill Self-Play addresses the core tension in LLM self-evolution between environment-bound methods that provide reliable verification but limited task diversity and open-ended self-generation that broadens tasks but suffers from unreliable reward signals. The paper proposes Skill-SP, an RL-orchestrated co-evolutionary framework in which a proposer generates skill-conditioned tasks, a solver attempts them, and a dynamic skill controller updates and expands a verifiable skill library through execution feedback. Experiments on tool-use and reasoning benchmarks show that the method consistently improves strong backbone models and can substantially recover initially misaligned models, bridging structured verification with open-ended exploration.",
+      "ai_summary_cn": "该论文针对大模型自演化训练中“任务多样性”和“反馈可验证性”难以兼顾的问题，提出以智能体技能作为中间载体来平衡开放探索与可靠验证。其核心方法是 Skill Self-Play（Skill-SP），通过提议器、求解器和动态技能控制器在强化学习自博弈中共同演化，持续生成、求解并扩展可验证技能任务。实验显示，该方法在工具使用和推理基准上能进一步提升强模型能力上限，并显著改善初始不对齐模型的表现。"
     },
     {
       "title": "CausalForge: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal Inference",
@@ -11324,7 +11332,9 @@
         "econ.EM"
       ],
       "url": "http://arxiv.org/abs/2607.22511v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.22511v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.22511v1.pdf",
+      "ai_summary_en": "CausalForge addresses the unreliable evaluation problem in LLM-driven automated theoretical research, where LLM reviewers may accept invalid results and kernel-checked proofs alone do not guarantee that formal statements capture intended scientific claims. The framework combines Causalean, a 7,035-declaration Lean library for causal inference, with CausalSmith, a self-improving agentic pipeline that selects topics, proposes results, formalizes theorems, constructs proofs, and audits formal statements against informal claims. Its main contribution is a formally grounded, human-inspectable autonomous research loop, evaluated via completed run artifacts and released with source code, formal library, and run records.",
+      "ai_summary_cn": "该工作针对自动化理论研究中 LLM 评审不可靠、生成结论难以可信验证的问题，聚焦因果推断领域的自动研究与证明。其核心方法是构建基于 Lean 的形式化框架 CausalForge：一方面建立包含 7,035 个机器检查声明的 Causalean 库，另一方面用自改进智能体 CausalSmith 完成选题、命题、形式化、证明，并通过“陈述审计”校验形式定理是否忠实表达原始科学主张。主要结果是形成了一套可验证、可审查的自主因果研究流程与开源制品，提升了 LLM 驱动理论研究的可靠性。"
     },
     {
       "title": "TRACE-ROUTER: Task-Consistent and Adaptive Online Routing for Agentic AI",
@@ -11347,7 +11357,9 @@
         "cs.MA"
       ],
       "url": "http://arxiv.org/abs/2607.22465v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.22465v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.22465v1.pdf",
+      "ai_summary_en": "TRACE-Router addresses the mismatch between per-call LLM routing and delayed task-level supervision in long-horizon agentic workflows, where independent routing decisions make feedback attribution difficult. It proposes a task-level online routing framework that assigns an entire task to a single backend model at admission using a contextual bandit, pins all subsequent calls to that model, and updates the policy from terminal task rewards that jointly capture accuracy and latency. Across three agentic benchmarks, TRACE-Router yields non-dominated accuracy–latency Pareto improvements, including 7–8 accuracy points over latency-matched model interpolation on tau2-Bench and 7.1 higher accuracy than the strongest single model on Terminal-Bench with 36% lower latency.",
+      "ai_summary_cn": "针对智能体工作流中逐次LLM路由难以利用延迟任务反馈的问题，TRACE-Router将路由决策提升到任务级：在任务接入时用上下文多臂赌博机选择模型并固定整个工作流，再以任务最终的准确率-延迟奖励在线更新策略。该方法无需显式估计任务复杂度即可自适应工作负载，在三个智能体基准上取得更优的准确率-延迟Pareto前沿。例如在tau2-Bench上较延迟匹配的模型插值提升7-8个准确率点，在Terminal-Bench上较最强单模型提升7.1个准确率点并降低36%延迟。"
     },
     {
       "title": "Where FactsGo Missing: A LayerwiseTaxonomy and Per-Layer Attribution of Information Omissionin Air-Gapped LLM Agent Pipelines",
@@ -11368,7 +11380,9 @@
         "cs.MA"
       ],
       "url": "http://arxiv.org/abs/2607.22448v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.22448v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.22448v1.pdf",
+      "ai_summary_en": "The paper addresses silent information omission in air-gapped/on-premises LLM agent pipelines, where quantized 4–8B models served via llama.cpp or vLLM can fail to surface decision-critical facts. It proposes a nine-layer pipeline taxonomy and an attribution methodology using controlled ablations and logit decomposition to separate deterministic middleware layers from behavioral model/agent layers, alongside a cross-architecture evaluation harness and runtime detection framework. Across 75,476 trials, it reports a pooled omission rate of 0.62, with 68% of omissions originating in deterministic middleware layers (L0–L3), shifting the reliability focus from model capability to serving and tooling infrastructure.",
+      "ai_summary_cn": "该论文针对离网/本地部署的 LLM Agent 管道中“关键事实被静默遗漏”的可靠性问题，提出从数据摄入到代理循环的九层分类，并用受控消融与 logit 分解进行逐层归因。其核心洞见是信息遗漏主要不是模型能力问题，而是管道问题，尤其集中在确定性中间件层。基于 5 个模型、2 个推理引擎的 75,476 次实验，论文发现总体遗漏率为 0.62，其中 68% 来自 L0–L3 层，为离网场景的故障定位和运行时检测提供了明确干预方向。"
     },
     {
       "title": "TileSight: A First-Principles Tile-Centric Analytical GPU Performance Model from Cores to Clusters",
@@ -11390,7 +11404,9 @@
         "cs.PF"
       ],
       "url": "http://arxiv.org/abs/2607.22432v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.22432v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.22432v1.pdf",
+      "ai_summary_en": "TileSight addresses the lack of accurate performance-analysis tooling for modern tile-centric GPU kernels in AI and LLM serving, where programmers currently rely on coarse rooflines, opaque ML predictors, or post-hoc profilers. It introduces a first-principles analytical model that treats tiles as the core analysis primitive, modeling intra-tile compute/memory/network pipeline overlap, inter-tile scheduling and multi-level cache reuse, and cross-GPU communication using an alpha-beta cost model. Evaluated on A100, H200, B200, and B6000, TileSight predicts single-GPU kernel latency with 12.35% pooled MAPE, L2 hit rates within ~1 percentage point, and distributed fused-kernel/end-to-end vLLM serving latency up to 32 GPUs with 16.18%/13.52% weighted MAPE, while selecting tile configurations competitive with strong baselines.",
+      "ai_summary_cn": "针对GPU内核性能分析工具难以适配tile编程、且无法统一刻画计算/缓存/跨GPU通信的问题，TileSight将tile提升为核心分析原语，分层建模核内计算-内存流水线重叠、核间多级缓存复用与跨设备远程张量访问成本。该方法通过资源向量和tile调度推断合法并行及缓存命中率，并用alpha-beta模型刻画分布式通信。实验显示其在多代GPU上单内核延迟MAPE约12.35%、L2命中率误差约1个百分点，并在32 GPU融合内核和vLLM端到端服务上分别取得16.18%和13.52%加权MAPE，可有效指导tile配置优化。"
     },
     {
       "title": "SMEFT-Pheno-Agent: a natural-language-driven AI agent for machine-learning-assisted Standard Model Effective Field Theory phenomenology",
@@ -11412,7 +11428,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.22331v1",
       "pdf_url": "https://arxiv.org/pdf/2607.22331v1.pdf",
-      "comment": "10 pages, 4 figures, 4 tables"
+      "comment": "10 pages, 4 figures, 4 tables",
+      "ai_summary_en": "The paper addresses the complexity and reproducibility burden of Standard Model Effective Field Theory phenomenology at high-energy colliders by enabling natural-language-driven automation of simulation and machine-learning analysis workflows. It introduces SMEFT-Pheno-Agent, a Python-based LLM agent that converts user intent into locked configuration files and auditable phase manifests, orchestrating MadGraph5_aMC@NLO, Pythia, Delphes, and MLAnalysis across twelve validated execution phases. The main impact is an end-to-end, reproducible, and auditable SMEFT analysis pipeline in which the agent proposes observables and ML methods while all numerical computation remains delegated to domain-specific tools.",
+      "ai_summary_cn": "该工作面向高能对撞机SMEFT现象学分析流程复杂、可复现性要求高的问题，提出一个由自然语言驱动的AI代理工作流。其核心方法是让LLM代理解析用户意图并协调配置、事件生成、ML选择、统计推断等12个阶段，同时严格调用MadGraph、Pythia、Delphes等验证工具执行数值计算，并将所有生成产物记录到机器可读清单中。该方案实现了端到端自动化与审计追踪，提升了SMEFT分析的可复现性和易用性。"
     },
     {
       "title": "Agentic CPU-GPU Scheduling for Heterogeneous AI Workloads",
@@ -11434,7 +11452,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.22242v1",
       "pdf_url": "https://arxiv.org/pdf/2607.22242v1.pdf",
-      "comment": "15 pages, 5 figures"
+      "comment": "15 pages, 5 figures",
+      "ai_summary_en": "This paper tackles suboptimal GPU-first scheduling for heterogeneous agentic AI tool workloads on shared CPU/GPU systems, where PCIe transfer costs, GPU contention, and VRAM limits can make CPU offloading or queued GPU execution preferable. It formulates tool placement as choosing among immediate GPU, queued GPU, or CPU execution under a VRAM budget, and introduces an agentic scheduler where an LLM agent is guided by an algorithmic runtime monitor that expands observability via running averages, reprobing, and exploration hints without directly prescribing mappings. Across 13 serial, parallel, and memory-constrained scenarios, the scheduler reaches the brute-force optimal mapping in all cases and outperforms HEFT, StarPU, and all-GPU baselines while requiring no offline training.",
+      "ai_summary_cn": "该论文针对智能体系统中异构 AI 工具在共享 CPU/GPU 上被默认全量调度到 GPU 导致次优的问题，指出现有策略忽略了 PCIe 传输、GPU 利用率和显存容量等运行时竞争。其核心方法是将工具映射为立即 GPU、排队 GPU 或 CPU 卸载三类决策，并用 LLM 智能体结合算法化运行时监控器扩展观测信息，但不直接替智能体做映射选择。实验在 13 个串行、并行和显存受限场景中均达到暴力搜索最优映射，优于 HEFT、StarPU 和全 GPU 策略，且无需离线训练。"
     },
     {
       "title": "HarnessLLM: Rust Verification Harness Generation with Large Language Models",
@@ -11456,7 +11476,9 @@
         "cs.CR"
       ],
       "url": "http://arxiv.org/abs/2607.22161v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.22161v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.22161v1.pdf",
+      "ai_summary_en": "HarnessLLM addresses the manual and error-prone problem of generating formal verification harnesses for Rust, where direct LLM use often produces incorrect API calls, poor nondeterministic input generation, and hallucinated fixes. Its key method is an automated workflow that mines calling scenarios from existing test suites, uses dependency analysis to synthesize nondeterministic arguments, incrementally constructs harnesses, and iteratively repairs them by preserving valid code regions and flagging fabricated types or functions for LLM correction. Evaluated on nine real-world Rust projects, it extracted 294 scenarios with 94.66% precision, generated harnesses for all scenarios in ~145 seconds each, outperformed Autoharness (41% success), and detected six real memory-safety bugs.",
+      "ai_summary_cn": "该论文针对 Rust 内存安全验证中验证 harness 手工构建困难、直接用 LLM 生成易出现错误 API 调用和虚构代码的问题。HarnessLLM 从现有测试用例提取调用场景，结合依赖分析生成非确定性参数并增量合成 harness，再通过保留关键代码区域和反馈虚构类型/函数进行迭代修正。在 9 个真实 Rust 项目上，它以 94.66% 精度提取 294 个场景，显著优于 Autoharness，并发现 6 个真实内存安全缺陷。"
     },
     {
       "title": "Visual Saliency Steering Distillation for Multimodal Chain-of-Thought Reasoning",
@@ -11478,7 +11500,9 @@
         "cs.AI"
       ],
       "url": "http://arxiv.org/abs/2607.22013v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.22013v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.22013v1.pdf",
+      "ai_summary_en": "The paper addresses multimodal chain-of-thought reasoning in small models, where modality fusion can suppress subtle cross-modal differences and make distinct image–text pairs nearly indistinguishable. VSSD leverages multimodal LLM attention maps to generate task-sensitive perturbed images, extracts dominant steering vectors via singular value decomposition, and uses inter-layer distillation to guide smaller models toward salient visual features. Experiments on ScienceQA and M³CoT show improved rationale generation and answer inference, indicating better preservation of cross-modal discriminability under limited token budgets.",
+      "ai_summary_cn": "该论文针对小模型在多模态思维链推理中因模态融合抑制细微跨模态差异，导致“同文异图”或“同图异文”输入难以区分的问题。提出视觉显著性引导蒸馏（VSSD），利用多模态大模型的注意力图生成任务敏感扰动图像，并通过奇异值分解提取主导引导向量来指导层间蒸馏。实验在 ScienceQA 和 M³CoT 上表明，该方法能同时提升推理依据生成与答案推断效果。"
     },
     {
       "title": "Semiotic logical hexagon theory for LLM logical reasoning",
@@ -11499,7 +11523,9 @@
         "cs.AI"
       ],
       "url": "http://arxiv.org/abs/2607.21933v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.21933v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.21933v1.pdf",
+      "ai_summary_en": "The paper addresses LLM logical-reasoning failures arising from implicit and incomplete semantic relations in natural-language premises, arguing that missing semantic structure—not only flawed deduction—is a primary error source. It proposes HexLogicAgent, a framework that explicitly organizes statement meanings using a logical-hexagon model of semantic opposition and then guides reasoning through structured verification. Experiments on challenging benchmarks show consistent reliability improvements across multiple LLMs, with complete semantic-opposition modeling delaying performance degradation as logical complexity increases.",
+      "ai_summary_cn": "该论文针对LLM在逻辑推理中因自然语言隐含语义关系未被充分组织而导致错误的问题，提出 HexLogicAgent 框架，先构建语句的语义对立结构，再通过结构化验证引导推理。其核心洞见是推理失败主要源于语义表示不完整，而非演绎推理本身不足，并借助“逻辑六边形”理论说明完整对立语义结构对可靠推理的必要性。实验表明，该方法在多个高难度逻辑推理基准上稳定提升了不同LLM的推理可靠性，并能延缓复杂度增加带来的性能退化。"
     },
     {
       "title": "RIS-Kernel: A Model-Agnostic Architecture for Long-Context LLM Inference via Sparse Attention",
@@ -11521,7 +11547,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.21927v1",
       "pdf_url": "https://arxiv.org/pdf/2607.21927v1.pdf",
-      "comment": "20 pages, 9 figures, 5 tables"
+      "comment": "20 pages, 9 figures, 5 tables",
+      "ai_summary_en": "The paper addresses the quadratic memory and compute bottleneck of full self-attention in long-context LLM inference, which restricts dense attention on commodity hardware. It proposes RIS-Kernel, a model-agnostic sparse attention engine that uses reduced interaction sampling and stochastic sparse geometry to lower attention complexity to O(N log N) without modifying model weights, with multi-seed ensembling acting as a regularizer. Experiments on Qwen2-1.5B-Instruct show that 1% sparse density with 70 seeds outperforms dense attention at 32,768 tokens, and RIS enables 65,536-token CPU-only inference where dense attention fails, achieving up to 14.06 percentage-point gains over zero-context baselines.",
+      "ai_summary_cn": "该论文针对长上下文 LLM 中全自注意力 O(N²) 复杂度高、易受显存限制的问题，提出模型无关的 RIS 稀疏注意力推理架构，在不修改模型权重的情况下将注意力复杂度降至 O(N log N)。其核心洞见是低密度、多种子的随机稀疏注意力可起到正则化作用，能够过滤序列噪声，在 32K token 上匹配甚至超过稠密注意力，并在 65K token 稠密注意力 OOM 时仍带来最高 14.06 个百分点的边际显著提升。该工作表明，长上下文 LLM 推理可在普通 CPU 服务器上实现，降低了对高端 GPU 集群的依赖。"
     },
     {
       "title": "RED-PIM: Reducing Data Movement for Transformers using Processing-in-Memory",
@@ -11543,7 +11571,9 @@
         "cs.AR"
       ],
       "url": "http://arxiv.org/abs/2607.21731v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.21731v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.21731v1.pdf",
+      "ai_summary_en": "RED-PIM addresses the data-movement bottleneck in transformer attention under processing-in-memory architectures, where prior PIM designs suffer from costly inter-bank communication and limited scalability due to splitting large attention matrices across banks. It proposes an algorithm–architecture co-design that reorganizes attention operations for local in-bank computation, reducing inter-bank traffic from O(N²) to O(N) and shrinking intermediate attention matrices from N×N to d×d with an optimized transfer strategy. Experiments show substantial inference-latency reductions over baseline PIM—geometric mean 66.42%, up to 99.99%—with the largest gains on long sequences while maintaining or improving accuracy.",
+      "ai_summary_cn": "该论文针对 Transformer 注意力计算中内存与计算单元间数据搬运过多、且现有 PIM 方案受跨 bank 通信和容量限制影响的问题，提出算法-架构协同设计的 RED-PIM。其核心洞见是通过重组矩阵运算、在内存内本地计算和优化传输策略，将跨 bank 数据移动从 O(N²) 降至 O(N)，并把中间注意力矩阵从 N×N 压缩为 d×d。实验显示，相比基线 PIM，推理时延平均降低约 66.42%，在长序列上最高可降低 99.99%，同时保持或提升精度。"
     },
     {
       "title": "Agentic Root Cause Analysis through Evidence-Grounded Reasoning",
@@ -11566,7 +11596,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.22385v1",
       "pdf_url": "https://arxiv.org/pdf/2607.22385v1.pdf",
-      "comment": "21 pages, 9 figures"
+      "comment": "21 pages, 9 figures",
+      "ai_summary_en": "AgentRCA addresses industrial root-cause analysis under scarce fault labels and opaque data-driven diagnostics by formulating diagnosis as zero-shot, evidence-grounded hypothesis testing. It couples a data-driven digital twin of normal system dynamics with a tool-augmented LLM agent that iteratively collects statistical evidence, evaluates competing physical fault hypotheses, and selects the best explanation. On real multiphase-flow and chemical-plant benchmarks, it achieves performance competitive with supervised baselines without fault-specific training while producing transparent reasoning traces linking symptoms to causes.",
+      "ai_summary_cn": "该论文针对工业异常根因分析中现有方法多为黑箱且依赖稀缺故障标签的问题，提出零样本智能体框架 AgentRCA。其核心是将建模正常系统动态的数据驱动数字孪生与工具增强的大语言模型结合，在推理时迭代收集统计证据、评估竞争假设并定位最符合观测行为的物理故障。实验在真实多相流设施和大型化工厂上显示，该方法无需故障专用训练即可达到与全监督基线相当的性能，并能生成将症状与物理原因显式关联的透明推理链。"
     },
     {
       "title": "Fewer Paths, Better Performance: Understanding the ZCube Topology through Braess's Paradox",
@@ -11588,7 +11620,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.21893v1",
       "pdf_url": "https://arxiv.org/pdf/2607.21893v1.pdf",
-      "comment": "12 pages, 2 figures, 3 tables"
+      "comment": "12 pages, 2 figures, 3 tables",
+      "ai_summary_en": "The paper addresses why conventional multipath datacenter fabrics with static ECMP hashing can underperform for structured LLM training and serving traffic, showing they are vulnerable to Braess’s-paradox-style congestion. It proves that ZCube’s spine-reduced, low-path topology is immune to this paradox and can provably balance load for arbitrary traffic matrices via an orthogonal dual partition, with AllReduce and KV-cache transfers as corollaries. Production measurements on GLM-5.1 inference show 33% lower network cost, 15% higher GPU throughput, and 40.6% lower P99 time-to-first-token, indicating that traffic-matched topology can outperform path multiplicity.",
+      "ai_summary_cn": "该文针对LLM训练/推理中“多路径数据中心网络反而不如少路径ZCube”的反常现象，从Braess悖论角度解释其机理。作者证明在结构化LLM流量下，静态ECMP多路径哈希可能产生无界负载失衡，而ZCube通过去除Spine层和正交对偶划分实现可证明的负载均衡并免疫Braess悖论。生产测试显示其以更低网络成本获得更高GPU吞吐和显著更低的P99首token时延，表明面向模型流量设计拓扑比盲目增加路径更有效。"
     },
     {
       "title": "Data Quality over Capacity: Internalizing Documents into LoRA Adapters for Closed-Book QA",
@@ -11610,7 +11644,9 @@
         "cs.AI"
       ],
       "url": "http://arxiv.org/abs/2607.21861v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.21861v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.21861v1.pdf",
+      "ai_summary_en": "The paper addresses closed-book question answering over a private corpus by internalizing documents directly into the weights of a quantized LLM via LoRA, eliminating retrieval and context-window constraints. Through ~100 training runs, it shows that adapter capacity is a hard prerequisite, but once sufficient, training-data quality—especially concise canonical answer spans and trivia removal—dominates accuracy over LoRA rank, learning rate, and architecture choices. A single curation pass improves 15-document accuracy from 57.7% to 85.7%, and the internalized adapter outperforms BM25-RAG and even a gold-chunk retrieval oracle at lower latency.",
+      "ai_summary_cn": "本文针对无需检索和上下文窗口的闭卷问答，研究通过 LoRA 将文档知识直接内化到 4-bit Gemma 模型权重中，并系统比较容量、超参与数据质量的影响。实验表明适配器容量是硬门槛，但一旦足够，答案规范化与去噪等数据质量改进比 rank、学习率或架构选择更关键，可将 15 文档准确率从 57.7% 提升至 85.7%，并在低延迟下超过 BM25-RAG 及 gold-chunk 检索基线。"
     },
     {
       "title": "LOCKS: Page-Local Compact Key Summaries for Efficient Long-Context Decoding",
@@ -11632,7 +11668,9 @@
         "cs.AI"
       ],
       "url": "http://arxiv.org/abs/2607.24555v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24555v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.24555v1.pdf",
+      "ai_summary_en": "LOCKS addresses the long-context LLM serving bottleneck caused by reading the full KV cache at every decode step. It assigns each KV page a compact page-local spectral key summary, uses these summaries to reconstruct within-page logits and estimate page-level attention mass via log-sum-exp, and then attends only the top pages without reading candidate keys or values. With a 2048-token summary budget, LOCKS matches full-cache aggregate quality on 100K+ contexts while attending about 2% of tokens and achieves roughly 2× decode latency reduction at 1M tokens, with a drop-in vLLM/CUDA-graph-compatible implementation.",
+      "ai_summary_cn": "该论文针对长上下文 LLM 解码中每步需读取完整 KV 缓存导致的带宽与延迟瓶颈，利用注意力键“页内低秩、全局高秩”的特性，为每个 KV 页维护一个常驻的紧凑谱摘要。LOCKS 通过页内摘要重建 logit，并用 log-sum-exp 估计每页注意力质量，在不读取候选键值的情况下选择 Top 页进行稀疏注意力。实验表明，其在 LongBench、RULER 和数学推理任务上接近全缓存效果，在 100K+ 上下文仅需关注约 2% token 即可匹配 FullKV，并将解码延迟降低约 2 倍，且可作为 vLLM 插件直接部署。"
     },
     {
       "title": "KAP: Bridging the Knowledge Selection-Runtime Consumption Gap in LLM Systems",
@@ -11654,7 +11692,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.24260v1",
       "pdf_url": "https://arxiv.org/pdf/2607.24260v1.pdf",
-      "comment": "3 figures, 5 tables"
+      "comment": "3 figures, 5 tables",
+      "ai_summary_en": "The paper addresses the Knowledge Selection–Runtime Consumption (KSRC) gap in LLM serving, where structured knowledge priors are flattened into prompts and force dense, uniform KV-state access despite only a small fraction of context being needed. It proposes Knowledge Access Planning (KAP), an intermediate representation that compiles knowledge-selection signals into runtime access plans governing physical KV access without changing prompt semantics, model weights, or training. Implemented as GraphSpec, the system preserves full-context answer quality on 4K–128K QA workloads while reducing KV access to 5.5% of the source KV state at 128K, decoupling serving cost from prompt length and improving long-context scalability.",
+      "ai_summary_cn": "该论文针对LLM服务中“知识选择产生的结构化先验”与“运行时仍将提示视为扁平token并全量访问KV”的不匹配问题，指出这会在长上下文下显著增加内存访问、延迟和吞吐压力。其核心方法是提出Knowledge Access Planning（KAP），将排序证据、图结构、置信度等知识信号编译为运行时访问计划这一中间表示，在不改变提示语义、模型权重和训练流程的前提下指导物理KV访问。GraphSpec实例在4K–128K长上下文QA中保持接近全上下文的答案质量，并将128K时规划阶段KV访问降至原始KV状态的5.5%，从而解耦生成开销与上下文长度。"
     },
     {
       "title": "UniGen-AR: Unifying Visual Generation with Auto-Regressive Modeling",
@@ -11675,7 +11715,9 @@
         "cs.CV"
       ],
       "url": "http://arxiv.org/abs/2607.24157v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24157v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.24157v1.pdf",
+      "ai_summary_en": "UniGen-AR addresses the fragmentation and high inference latency of unified visual generation systems, where a single model must handle text-to-image synthesis, editing, restoration, and perception tasks but diffusion-based approaches are slow due to iterative sampling. The paper proposes pairing a general-purpose multimodal language model that encodes free-form instructions and control signals with an efficient next-scale visual auto-regressive decoder, enabling latent-unified image generation across diverse tasks. Experiments show up to 19× lower latency than diffusion baselines while maintaining or improving quality over 15+ tasks, and ablations identify VQ-VAE codebook size and hierarchy as key to VAR scalability.",
+      "ai_summary_cn": "该论文针对统一视觉生成中扩散模型因迭代采样导致推理延迟高的问题，提出 UniGen-AR，将通用多模态语言模型与 next-scale 视觉自回归解码器结合，以统一序列条件驱动文本生成图像、编辑、修复等 15+ 任务。其核心洞见是利用 VAR 的高效采样与潜在统一性，并发现 VQ-VAE 的码本大小与层级设计是 VAR 可扩展性的关键因素。实验表明，该方法在保持或提升输出质量的同时，较扩散基线最高降低 19 倍推理延迟，为统一视觉生成提供了高效的自回归方案。"
     },
     {
       "title": "SpecBox: Speculative Sandbox Scheduling for Efficient LLM Agent Serving",
@@ -11699,7 +11741,9 @@
         "cs.PF"
       ],
       "url": "http://arxiv.org/abs/2607.23933v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.23933v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.23933v1.pdf",
+      "ai_summary_en": "SpecBox addresses the resource–latency tradeoff in LLM agent serving with external MCP sandboxes, where persistent sandbox reservations waste memory while on-demand instantiation causes cold-start tail latency. Its key insight is speculative sandbox preallocation: it uses keyword matching and streaming semantic embeddings to infer pending tool calls during token generation, overlaps sandbox bootstrapping with inference, and applies context-aware stochastic prefetching over a sandbox dependency graph, complemented by semantic result caching and zero-copy shared-memory transfers. On multi-turn agent workloads, SpecBox reduces P99 end-to-end latency by up to 2.9× versus on-demand sandboxes and cuts peak memory by 45.9% versus permanently reserved deployments.",
+      "ai_summary_cn": "该论文针对 LLM Agent 通过 MCP 调用外部沙箱时，长期预留沙箱导致内存浪费、按需启动又带来冷启动尾延迟的问题。核心方法是 SpecBox 提出投机式沙箱预分配，通过关键词匹配、流式语义嵌入和依赖图上的上下文感知预取，在模型生成阶段提前预热沙箱，并配合语义缓存与共享内存零拷贝传输。实验显示，其相比按需启动可将 P99 端到端延迟最高降低 2.9 倍，相比永久预留可将峰值内存消耗降低 45.9%。"
     },
     {
       "title": "MemVLN: Episodic and Procedural Memory for Vision-and-Language Navigation",
@@ -11720,7 +11764,9 @@
         "cs.CV"
       ],
       "url": "http://arxiv.org/abs/2607.23504v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.23504v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.23504v1.pdf",
+      "ai_summary_en": "MemVLN addresses Vision-and-Language Navigation in Continuous Environments (VLN-CE), where agents must retain long-horizon visual history for trajectory consistency while executing actions with low latency. It introduces an episodic memory mechanism with pyramidal-resolution compression to prioritize recent observations while preserving long-term context, plus a procedural memory over atomic mid-level actions that bypasses slow autoregressive LLM decoding. MemVLN-4B improves success rate over Qwen3-VL-4B by 5.8% on R2R and 9.7% on RxR while achieving 14 FPS and about 7× lower inference latency.",
+      "ai_summary_cn": "该论文针对连续环境视觉-语言导航中既要保留长时视觉轨迹历史、又要低延迟执行动作的矛盾，提出了 MemVLN 框架。  \n其核心是结合情景记忆与程序记忆：情景记忆采用金字塔式分辨率管理，对近期观测精细处理、对长期历史压缩保留；程序记忆通过紧凑的原子中层动作词表绕过自回归解码延迟。  \n在 VLN-CE 上，MemVLN-4B 相比 Qwen3-VL-4B 在 R2R 和 RxR 的成功率分别提升 5.8% 和 9.7%，并将推理延迟加速约 7 倍，达到 14 FPS 的实时效率。"
     },
     {
       "title": "Robust Interpretation of Historical Documents in Knowledge Graphs Through Query Inference and Execution",
@@ -11743,7 +11789,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.24475v1",
       "pdf_url": "https://arxiv.org/pdf/2607.24475v1.pdf",
-      "comment": "Accepted at ICDAR2026"
+      "comment": "Accepted at ICDAR2026",
+      "ai_summary_en": "The paper addresses the problem of providing reliable, accountable LLM-based access to historical archives, where OCR/transcription errors and hallucination can undermine trust. It proposes a semi-symbolic agentic GraphRAG framework that combines word-spotting-based post-OCR correction, knowledge-graph representation, and LLM-synthesized query execution, allowing approximate retrieval under noise while preserving verifiability. Compared with traditional RAG, the approach yields more robust and interpretable historical document retrieval under realistic noisy conditions.",
+      "ai_summary_cn": "该论文针对历史档案检索中 OCR/转录错误导致 LLM 易幻觉、且缺乏可验证性的问题，研究如何在保持 LLM灵活性的同时实现可问责的历史文档访问。其核心方法是提出一种半符号代理式 GraphRAG 框架，将 word-spotting 的 OCR 后校正与知识图谱表示结合，并通过代码生成合成和执行检索查询。结果显示，相较传统 RAG，该方法在噪声环境下能构建更鲁棒的查询，降低误解与幻觉，提高历史数据访问的准确性和可验证性。"
     },
     {
       "title": "MAViE: A Multi-scale Adaptive Vision Encoder for Fine-grained Visual Perception and Efficient Multimodal Reasoning",
@@ -11765,7 +11813,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.24424v1",
       "pdf_url": "https://arxiv.org/pdf/2607.24424v1.pdf",
-      "comment": "10 pages"
+      "comment": "10 pages",
+      "ai_summary_en": "MAViE addresses the inefficiency and information loss in vision-language models that project all final-layer visual tokens into the LLM, which can discard local attributes, text, and spatial detail while inflating context length and latency. Its key method is a multi-scale adaptive vision encoder that gates and fuses shallow, intermediate, and deep ViT features, then performs question-conditioned token routing under an adaptive budget using relevance, local information, global semantics, and spatial coverage, with full-to-compressed distillation and spatial-diversity regularization. In an illustrative 7B-model simulation, it reports reducing SigLIP-SO400M tokens from 729 to 146 (~80%), improving mean VQA/MMBench score by 2.2 points, and lowering time-to-first-token from 228 ms to 129 ms, though the authors note these numbers are placeholders pending formal evaluation.",
+      "ai_summary_cn": "该论文针对视觉语言模型将全部视觉 token 输入 LLM 所造成的细粒度信息丢失、上下文过长和推理延迟高等问题，提出 MAViE：通过位置相关门控融合浅、中、深层视觉特征，并基于问题相关性、局部信息量、全局语义与空间覆盖进行自适应 token 路由，同时用表示蒸馏和空间多样性正则缓解压缩损失。示意性结果显示，在 7B 模型框架下可将 SigLIP 视觉 token 从 729 降至 146，在多个多模态基准上平均提升约 2.2 个百分点，并将单图首 token 延迟从 228ms 降至 129ms；但作者强调当前数值仅为占位，需正式实验验证。"
     },
     {
       "title": "Failures Reveal What Metrics Miss: An Evidence-Driven Agent for Recursive Refinement of ECG Classifiers",
@@ -11786,7 +11836,9 @@
         "cs.AI"
       ],
       "url": "http://arxiv.org/abs/2607.24419v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24419v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.24419v1.pdf",
+      "ai_summary_en": "RecursiveECG addresses the problem of iteratively improving 12-lead ECG classifiers, where aggregate metrics give LLM-based designers insufficient insight into individual failure modes. It introduces an offline LLM-as-designer framework that compiles clinical ECG criteria into deterministic measurement functions and uses evidence-grounded failure review over waveforms, measurements, and model outputs to propose, execute, and retain only validated classifier revisions. The resulting frozen predictor requires no LLM inference at deployment and achieves an average relative improvement of 10.0% over strong baselines on PTB-XL, Georgia, and CPSC2018, with an auditable link between revisions and supporting evidence.",
+      "ai_summary_cn": "该论文针对12导联ECG分类器迭代优化依赖人工、且仅靠总体指标驱动的LLM智能体难以定位个体失败原因的问题。  \n其核心方法是RecursiveECG：将ECG诊断标准编译为可执行、可复现的测量函数，并结合原始波形、客观测量和模型输出进行证据驱动的失败分析，由LLM离线提出、验证并保留有针对性的分类器修改。  \n在PTB-XL、Georgia和CPSC2018上，该方法相较强基线平均相对提升10.0%，且最终部署无需LLM推理并保留可审计的修改证据链。"
     },
     {
       "title": "When LLM Defenses Backfire: Characterizing Safety, Performance, and Cost Trade-offs",
@@ -11808,7 +11860,9 @@
         "cs.LG"
       ],
       "url": "http://arxiv.org/abs/2607.24392v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24392v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.24392v1.pdf",
+      "ai_summary_en": "This paper addresses the problem that LLM jailbreak defenses can degrade utility through reduced performance, over-refusal, and added inference cost. It systematically characterizes defenses by operational strategy—e.g., rule-based, self-reflective, and multi-round methods—and evaluates their safety–usability–efficiency trade-offs across benchmarks and open-source LLMs. The study finds that defenses rarely improve downstream capability: rule-based defenses best preserve task performance, conservative self-reflective defenses increase over-refusal, and multi-round defenses incur the highest runtime overhead, offering practical guidance for deployment-constrained defense selection.",
+      "ai_summary_cn": "该论文针对LLM越狱防御可能损害模型可用性这一问题，系统评测了不同防御策略在任务性能、过度拒绝和推理成本三方面的权衡。其核心洞见是应按操作策略区分防御方法，而非笼统看待防御效果。实验表明，防御通常难以提升下游能力，其中规则型防御最能保持性能，自反思型防御更易过度拒绝，多轮防御运行时开销最大，为实际部署中的防御选择提供了基准与指导。"
     },
     {
       "title": "DynaCalKV: Key-Value Cache Compression via Head Grouping and Adaptive Rank Allocation",
@@ -11829,7 +11883,9 @@
         "cs.LG"
       ],
       "url": "http://arxiv.org/abs/2607.24331v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24331v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.24331v1.pdf",
+      "ai_summary_en": "DynaCalKV addresses the KV-cache memory bottleneck in long-context LLM inference, where existing low-rank compression methods often ignore Key/Value asymmetry and rely on fixed attention-head grouping. It dynamically groups Key heads using Centered Kernel Alignment similarity and adaptively allocates rank under a parameter budget, while applying offline-calibrated low-rank decomposition to the Value cache. Experiments on three instruction-tuned LLMs show reduced Key-cache parameters with competitive accuracy, with particular benefits for MHA models and more conservative applicability to GQA in long-context settings.",
+      "ai_summary_cn": "该论文针对长上下文 LLM 推理中 KV cache 内存瓶颈，重点解决现有低秩压缩方法未充分区分 Key/Value 且注意力头分组固定的问题。方法上，对 Key cache 基于 CKA 相似度动态分组注意力头并在参数预算下自适应分配秩，对 Value cache 则沿用 ReCalKV 的离线校准低秩分解以提升重建质量。实验表明，该方法可在降低 Key cache 参数量的同时保持有竞争力的精度，尤其适用于 MHA 模型，而在 GQA 模型特别是长上下文场景中需更谨慎使用。"
     },
     {
       "title": "CONSISTRE: A Unified Consistency-Aware Framework for Document-Level Relation Extraction with Large Language Models",
@@ -11851,7 +11907,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.24312v1",
       "pdf_url": "https://arxiv.org/pdf/2607.24312v1.pdf",
-      "comment": "13 pages, 2 figures. Submitted to IEEE/ACM Transactions on Audio, Speech, and Language Processing"
+      "comment": "13 pages, 2 figures. Submitted to IEEE/ACM Transactions on Audio, Speech, and Language Processing",
+      "ai_summary_en": "CONSISTRE addresses document-level relation extraction with LLMs, where independently generated triples often violate relational constraints such as transitivity, symmetry, and functional uniqueness. The framework enforces consistency through two tracks: an inference-time pipeline of constraint-aware prompting, verification, and iterative self-reflection for black-box LLMs, and a training-time pipeline that distills teacher reasoning into smaller open-source models and aligns them with GRPO using rewards for both extraction accuracy and relational consistency. Experiments on DocRED show improved F1 over baselines, competitive black-box performance without fine-tuning, and a reduced gap between 7–8B models and proprietary LLMs while lowering inference cost.",
+      "ai_summary_cn": "该论文针对文档级关系抽取中 LLM 逐三元组独立预测易违反传递性、对称性等关系约束的问题，提出一致性感知框架 CONSISTRE。其核心方法是双轨设计：黑盒 LLM 通过约束提示、验证与迭代自反思进行推理时修正，小模型则通过教师推理蒸馏和 GRPO 复合奖励强化学习注入一致性知识。实验表明，该方法在 DocRED 上同时提升两类模型性能，并显著降低关系矛盾、缩小小模型与顶级专有模型差距。"
     },
     {
       "title": "LLM-based Source Code Compression via Thresholded Symbol Ranking",
@@ -11874,7 +11932,9 @@
         "cs.LG"
       ],
       "url": "http://arxiv.org/abs/2607.24192v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24192v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.24192v1.pdf",
+      "ai_summary_en": "The paper addresses lossless compression of large-scale source code archives, where general-purpose compressors underutilize code-specific regularities and prior LLM symbol-ranking compressors suffer low throughput due to unbounded rank encoding. It proposes thresholded symbol-ranking LLM compressors that restrict predictions to the top-$T$ ranks ($T=1$ or $63$), storing out-of-threshold symbols as exceptions and jointly compressing exceptions and rank streams with standard compressors. Across 30 LLMs, the approach improves compression ratio by up to 37% and throughput by 40% over prior LLM-based methods, and achieves up to 82% relative gain over zstd/bzip2 at lower speed, revealing a new compression–speed tradeoff.",
+      "ai_summary_cn": "该论文面向大规模软件仓库的源代码无损压缩问题，针对现有基于LLM的符号排序压缩器因需编码任意排名而导致吞吐下降的瓶颈，提出将预测限制在 top‑T（T=1 或 63）排名内、超阈值符号作为异常并与排名流交由通用压缩器联合压缩的新方案。通过对30个通用、代码专用和量化LLM的大规模评估，该方法相较先前LLM压缩器最高可带来37%的相对压缩率提升和40%的吞吐提升。相比 zstd、bzip2 等通用压缩器，它最高可实现82%的相对压缩增益，但速度较低，并表明源代码中存在可被LLM捕获而通用压缩器难以利用的结构规律。"
     },
     {
       "title": "ACRL: Adaptive Control of Training-Inference Discrepancy for Stable Reinforcement Learning",
@@ -11897,7 +11957,9 @@
         "cs.CL"
       ],
       "url": "http://arxiv.org/abs/2607.24062v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.24062v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.24062v1.pdf",
+      "ai_summary_en": "The paper tackles instability in LLM reinforcement learning caused by training–inference discrepancy arising from separate training/serving engines and low-precision inference quantization. ACRL adaptively controls this discrepancy to keep it bounded during RL, stabilizing optimization while implicitly increasing policy entropy for improved exploration. Experiments with FP8 inference show stable training, accuracy matching BF16 baselines, and better performance than importance-sampling corrections.",
+      "ai_summary_cn": "该论文针对大模型强化学习训练中因训练/推理引擎分离以及推理端低精度量化导致的训练-推理偏差与训练不稳定问题。提出 ACRL，通过自适应地将训练与推理间的差异控制在合理范围内来稳定 RL 训练，并因提升策略熵而增强探索。实验表明，在 FP8 推理量化下该方法可稳定训练，准确率匹配 BF16 基线并优于重要性采样修正。"
     },
     {
       "title": "Kalypso: Relational LLM Serving",
@@ -11921,7 +11983,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.23815v1",
       "pdf_url": "https://arxiv.org/pdf/2607.23815v1.pdf",
-      "comment": "14 pages, 12 figures"
+      "comment": "14 pages, 12 figures",
+      "ai_summary_en": "Kalypso addresses the inefficiency of semantic query processing systems that invoke LLMs as isolated, request-centric services, leaving query-plan structure and intermediate computation unused. It introduces relational LLM serving, exposing semantic query plans to the serving engine and using an adaptive, memory-aware scheduler to pipeline operators, reuse KV-cache state across operators, and manage GPU memory pressure. Evaluations show up to 4.57× query completion-time speedups over request-centric LLM serving baselines across diverse workloads.",
+      "ai_summary_cn": "该论文针对现有 LLM 服务系统以单请求为中心、不感知语义查询计划，导致多算子查询中 KV-cache 难以复用的问题。  \n其核心方法是提出关系型 LLM 服务抽象及 Kalypso 系统，通过接收语义查询计划并采用自适应、内存感知的在线调度，在 GPU 内存压力下尽可能复用管道算子间的 KV-cache。  \n实验显示，Kalypso 相比请求式 LLM 服务基线可将查询完成时间最高加速 4.57 倍，证明查询感知的 LLM 服务能显著提升语义查询执行效率。"
     },
     {
       "title": "A Frozen 12B Beats Frontier Models on Verified Work: 100% Accuracy, 0 Tokens, Bit-Exact, Forever",
@@ -11947,7 +12011,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.23806v1",
       "pdf_url": "https://arxiv.org/pdf/2607.23806v1.pdf",
-      "comment": "Industry experience report. 14 pages, 8 figures. Public testbench: https://corbenic-galahad-bench.hf.space; companion repository with SHA-256 provenance manifest: https://github.com/corbenicai/galahad-bench"
+      "comment": "Industry experience report. 14 pages, 8 figures. Public testbench: https://corbenic-galahad-bench.hf.space; companion repository with SHA-256 provenance manifest: https://github.com/corbenicai/galahad-bench",
+      "ai_summary_en": "The paper tackles the cost, nondeterminism, and repeated computation of LLM serving by freezing the model and maintaining a persistent store of independently verified solutions, so solved problem instances are reused instead of regenerated. Its key method is a verify-before-store memory system with exact addressing, enabling zero-token, bit-exact, deterministic answers and a very large movable context window on a single GPU. Experiments show 180/180 accuracy across nine problem families and four architectures with 0 generation tokens, a negative control confirming the memory is responsible, and microsecond-scale retrieval with millisecond reuse, demonstrating execution-bound capability decoupled from parameter scaling for verified tasks.",
+      "ai_summary_cn": "该工作针对大模型服务中每次查询都需重新生成、依赖重训练且输出非确定的问题，提出冻结模型并外挂一个仅存储“通过独立验证”的解答记忆。其核心洞见是：一旦某类问题被验证解决，后续同类实例可通过精确寻址直接复用，实现零生成 token、位精确和确定性输出。实验在 4 个模型、9 类共 180 个新实例上均取得 180/180 且零 token，并展示微秒级检索、低延迟低能耗重用与超长上下文能力，说明在已验证任务上，记忆复用可将执行能力与参数规模解耦。"
     },
     {
       "title": "Zing: Social Mind for LLMs",
@@ -11968,7 +12034,9 @@
         "cs.CL"
       ],
       "url": "http://arxiv.org/abs/2607.23740v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.23740v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.23740v1.pdf",
+      "ai_summary_en": "The paper tackles the lack of systematic social intelligence in LLMs deployed for long-term human-facing service, including mental-state inference, social-relation tracking, norm reasoning, and contextual behavioral adaptation. It introduces SoMBench for diagnosis, a training recipe called Zing that combines supervised fine-tuning, on-policy distillation, and rubric-based reinforcement learning, and Actio, a deployment-time harness that injects procedural, mental-state, experiential, and retrieval-based supports into inference. Experiments show large remaining headroom on SoMBench—best model 72.08% overall—while Zing improves over base models across five benchmarks and the Actio harness improves 14 of 15 model-benchmark pairs, indicating that social intelligence requires coordinated evaluation, internalization, and runtime grounding.",
+      "ai_summary_cn": "论文针对LLM在长期人类服务中缺乏社会智能的问题，提出Zhijing框架，并以心理学基准SoMBench评测揭示主流模型最高仅72.08%、细分社会认知能力仍未达到近上限水平。其核心方法是“训练内化+推理接地”协同：Zing通过SFT、在线策略蒸馏和基于量规的强化学习提升社会认知，Actio在部署时路由程序指导、心理状态表征、经验复用与门控RAG等类型化支持。实验显示Zing稳定优于基座模型，Actio在15个模型-基准组合中的14个带来提升，表明社会智能LLM需要评测、参数内化与服务时接地共同推进。"
     },
     {
       "title": "The Illusion of Secure LLM Code: Closing the Security Gap via Iterative Reprompting",
@@ -11993,7 +12061,9 @@
         "cs.MA"
       ],
       "url": "http://arxiv.org/abs/2607.23710v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.23710v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.23710v1.pdf",
+      "ai_summary_en": "The paper addresses the security gap in LLM-generated authentication code, showing that AI coding assistants do not produce secure-by-default implementations, especially for brute-force resistance, session management, and password handling. Using a bimodal static and dynamic evaluation mapped to NIST SP 800-63B across five assistants and four prompting strategies, it finds that single-shot NIST-aware prompts improve compliance but remain insufficient, while iterative reprompting with contextual self-auditing is required for defense-in-depth security. The findings imply that enterprise LLM coding deployments should move from one-shot prompt engineering to continuous, standards-driven verification and remediation pipelines.",
+      "ai_summary_cn": "该论文针对LLM编码助手能否自动生成安全认证代码的问题，结合静态分析、动态渗透测试并对照NIST SP 800-63B，评估多种提示策略下的安全表现。研究发现，单次明确NIST提示虽能提升合规性，但仍不足以形成完整防护，只有通过迭代式重提示构建上下文自审计闭环，才能显著补齐防暴力破解、会话管理和密码处理等关键能力。结果表明当前AI编码助手并非“默认安全”，企业部署需从单次提示工程转向持续、标准驱动的安全验证流水线。"
     },
     {
       "title": "HiTMS: A High-Throughput Multi-Stream Linguistic Steganography Framework",
@@ -12015,7 +12085,9 @@
         "cs.CL"
       ],
       "url": "http://arxiv.org/abs/2607.23597v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.23597v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.23597v1.pdf",
+      "ai_summary_en": "HiTMS addresses the throughput and privacy limitations of single-stream generative linguistic steganography, which cannot efficiently support batched multi-stream LLM inference and may leak slot occupancy or payload completion. The framework distributes a secret across multiple responses over successive interaction rounds, embedding and extracting several streams in one batched model call using self-describing frames, a key-derived stream-to-slot schedule, and decoy slots to hide active-stream counts while ensuring exact recovery. Across eight dataset–model–coder settings, eight-stream HiTMS achieves up to 4.3× faster embedding/extraction than single-stream baselines and reduces average steganalyzer AUROC from 0.681 to 0.601, with continued gains from 4 to 64 streams.",
+      "ai_summary_cn": "该论文针对生成式语言隐写中单流单响应方案无法支持批量多流推理、且会暴露槽位占用与载荷完成状态的问题展开研究。HiTMS 将秘密分散到多轮交互的多个响应中，在单次批处理调用中并行嵌入/提取多路隐写流，并通过自描述帧和密钥派生的槽位调度与诱饵填充机制保证精确恢复和隐藏活跃流数。实验显示，八流设置下嵌入与提取速度最高提升 4.3 倍，同时隐写分析器 AUROC 平均从 0.681 降至 0.601，在更高并发下仍能持续提升吞吐。"
     },
     {
       "title": "OmniQEC: discovering practical quantum error-correcting codes by an AI scientist",
@@ -12039,7 +12111,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.25865v1",
       "pdf_url": "https://arxiv.org/pdf/2607.25865v1.pdf",
-      "comment": "Comments are welcome"
+      "comment": "Comments are welcome",
+      "ai_summary_en": "OmniQEC addresses the practical discovery of quantum error-correcting codes under coupled constraints from code structure, syndrome extraction, hardware implementation, and decoding. It introduces an LLM-orchestrated AI scientist that uses a self-evolving slow–fast workflow: inexpensive code-level screening rapidly explores candidates, while circuit-level physical evaluation provides feedback to guide code–circuit–decoder co-design. The discovered hardware-friendly qLDPC codes show improving logical-error suppression with larger qubit budgets and outperform BB codes at \\([\\![72,12,6]\\!]\\) and \\([\\![144,12,12]\\!]\\) under 98 and 240 physical-qubit implementation budgets.",
+      "ai_summary_cn": "该工作针对实用量子纠错码发现中码结构、硬件、伴随式提取与解码器难以协同优化的问题，提出由大模型编排的AI科学家OmniQEC，将QEC设计为迭代搜索过程，并结合快速码级代理筛选与慢速电路级物理评估反馈。实验在多个qLDPC码族和LLM后端上发现硬件友好的纠错码，在98和240物理比特预算下逻辑错误抑制优于相应BB码，展示了LLM驱动的代码—电路—解码器协同设计在实用QEC中的潜力。"
     },
     {
       "title": "AngelSpec: Towards Real-World High Performance Inference with Speculative Decoding",
@@ -12060,7 +12134,9 @@
         "cs.CL"
       ],
       "url": "http://arxiv.org/abs/2607.25852v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.25852v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.25852v1.pdf",
+      "ai_summary_en": "AngelSpec addresses the workload heterogeneity problem in speculative LLM decoding, where lightweight autoregressive multi-token prediction and block-parallel diffusion drafters excel on different output distributions while verification costs vary with request, load, and hardware. It proposes a unified framework that co-specializes drafter structure and data—MTP for high-entropy chat and block diffusion for code/math—and introduces DFly, a block-diffusion drafter with a hybrid target-conditioning backbone, predecessor-conditioned autoregressive head, and adaptive batch-level verification guided by expected utility and profiled cost. On Hy3-A21B, DFly raises average accepted length by ~30% and achieves the best throughput at concurrency 4–64, delivering 1.98–2.40× speedup over autoregressive decoding and 10.5–11.8% higher throughput than DFlash.",
+      "ai_summary_cn": "该论文针对真实推理负载下投机解码缺乏单一最优草稿结构的问题，提出统一训练框架 AngelSpec，使 MTP 草稿器 specialize 于高熵对话、块并行扩散草稿器 specialize 于代码/数学等长可预测序列。其核心方法是结构-数据协同特化，并提出 DFly 架构与批级自适应验证调度，以更好利用目标特征、建模块内依赖和动态分配验证成本。实验显示，在 Hy3-A21B 上平均接受长度提升约 30%，在 4–64 并发下均取得最高吞吐，较自回归解码加速 1.98–2.40 倍，较 DFlash 吞吐提升 10.5–11.8%。"
     },
     {
       "title": "Food Image Segmentation with LLM-Derived Ingredient Labels and Multimodal Fusion",
@@ -12081,7 +12157,9 @@
         "cs.CV"
       ],
       "url": "http://arxiv.org/abs/2607.25820v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.25820v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.25820v1.pdf",
+      "ai_summary_en": "The paper tackles fine-grained food image segmentation, particularly for visually similar ingredients and rare food categories where purely visual models often underperform. It proposes two plug-and-play multimodal modules, LIM-F and LIM-Q, that inject LLM-derived ingredient-label semantics into image encoder features or Mask2Former decoder queries without requiring pre-aligned image–text data. On FoodSeg103, the method achieves state-of-the-art results, with Swin-L + Mask2Former reaching 55.0 mIoU using LIM-Q and 54.4 mIoU using LIM-F, while adding at most 3.8 GB of training GPU memory overhead.",
+      "ai_summary_cn": "该论文针对食物图像分割中视觉相似食材和稀有类别易混淆、性能不足的问题，利用大语言模型从图像推断食材标签，并设计即插即用的语言注入模块将语义信息融入视觉特征或分割查询。其核心洞见是无需显式图文预对齐，即可通过多模态融合增强细粒度食材判别，分别适配多层图像编码器特征和 Mask2Former 式解码器查询。实验在 FoodSeg103 上取得 SOTA，最佳 mIoU 达 55.0，且仅增加至多 3.8GB 训练显存，兼具泛化性与实用可扩展性。"
     },
     {
       "title": "Speculate While You Reason: Teaching Agents to Predict Their Next Tool Call via Joint Agent-Speculator RL",
@@ -12102,7 +12180,9 @@
         "cs.AI"
       ],
       "url": "http://arxiv.org/abs/2607.25816v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.25816v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.25816v1.pdf",
+      "ai_summary_en": "The paper addresses agent latency caused by waiting for tool-call results and the poor alignment of separate speculators with the deployed agent’s behavior. It proposes a self-speculating agent trained via joint agent–speculator RL, where the same model alternates between task execution and next-tool-call prediction using targets from its own rollouts while reusing prefix KV cache. Experiments on agentic search QA and conversational tool use substantially improve next-call Hit@1 (e.g., Qwen3-4B: 44.1→61.2) without degrading task success.",
+      "ai_summary_cn": "该论文针对 LLM Agent 在等待工具返回结果时产生的高墙钟延迟问题，指出现有独立投机器与目标 Agent 行为不一致，导致工具调用预测效果受限。其核心洞见是 Agent 本身即可作为强下一工具调用投机器，因此提出自投机 Agent：同一模型在 Agent 模式执行任务、在投机器模式预测下一次工具调用，并通过联合 Agent-Speculator 强化学习从自身 rollout 中学习，充分复用前缀 KV cache。实验显示，该方法在搜索问答和对话式工具使用任务上将下一工具调用 Hit@1 显著提升（如 Qwen3-4B 从 44.1 提升至 61.2），同时保持任务成功率不下降。"
     },
     {
       "title": "At-the-Roofline Sparse Tensor Contractions on Vector Processors for Transformer Inference",
@@ -12125,7 +12205,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.25504v1",
       "pdf_url": "https://arxiv.org/pdf/2607.25504v1.pdf",
-      "comment": "5 pages, 4 figures, 34th IFIP/IEEE International Conference on Very Large Scale Integration SoC (VLSI-SoC 2026)"
+      "comment": "5 pages, 4 figures, 34th IFIP/IEEE International Conference on Very Large Scale Integration SoC (VLSI-SoC 2026)",
+      "ai_summary_en": "The paper addresses inefficient moderate-sparsity tensor contractions in Transformer inference on RISC-V Vector processors, where missing native indexed accumulation forces software metadata decoding and memory operations that remain far below roofline performance. It proposes Ventaglio, a runtime-configurable sparse execution unit with RVV ISA extensions that add indexed gather-accumulate-scatter support to execute metadata-driven Gustavson sparse contractions near roofline in an open-source vector cluster. Implemented in 12nm with only 3.1% area overhead, Ventaglio accelerates sparse kernels by 6.9–7.4× over optimized RVV baselines and achieves 2.40–5.25× prefill and 2.06–3.16× decoding speedups for a 40–60% dual-sparse LLaMA-3-8B over dense execution.",
+      "ai_summary_cn": "该论文针对 Transformer 推理中权重剪枝与激活稀疏化在 RISC-V 向量处理器上难以高效执行的问题，指出现有 RVV 缺乏原生索引累加支持，导致稀疏张量收缩远低于 roofline 性能上限。其核心方法是提出 Ventaglio：一种运行时可配置的稀疏执行单元及 RVV ISA 扩展，通过硬件化的索引 gather-accumulate-scatter 支持元数据驱动的 Gustavson 数据流。实验显示，稀疏核相比优化 RVV 基线加速 6.9–7.4×且面积开销仅 3.1%，在 LLaMA-3-8B 的 40–60% 双稀疏下，prefill 与解码分别相对稠密基线加速 2.40–5.25× 和 2.06–3.16×。"
     },
     {
       "title": "Beyond Prefill-Decode Disaggregation: Dissecting LLM Inference for Heterogeneous Platforms via Dynamic Operator Scheduling",
@@ -12147,7 +12229,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.25498v1",
       "pdf_url": "https://arxiv.org/pdf/2607.25498v1.pdf",
-      "comment": "To appear in MICRO 2026"
+      "comment": "To appear in MICRO 2026",
+      "ai_summary_en": "The paper addresses the limitations of static prefill-decode disaggregation and roofline-based operator placement for LLM inference on heterogeneous platforms, where end-to-end latency is also shaped by workload geometry, runtime device contention, and weight memory layout. It proposes DOPS, a closed-loop hardware-aware framework that constructs a stage-aware DAG and jointly optimizes dynamic operator-to-device scheduling via Bifocal and blockwise weight-layout selection via a Weight Layout Arbiter under memory constraints. On NPU+PIM systems, DOPS achieves 1.20–2.23× geometric-mean speedups over prefill-decode baselines, with the layout arbiter adding a further 1.28–1.33×, while enabling systematic workload sensitivity and scalability analysis.",
+      "ai_summary_cn": "该论文针对异构平台上LLM推理中仅靠prefill-decode分离和roofline算子放置难以优化端到端延迟的问题，考虑工作负载形状、设备竞争和权重布局等实际因素。作者提出DOPS框架，通过阶段感知DAG联合优化算子动态调度与分块权重布局，包含Bifocal调度器和Weight Layout Arbiter两个核心组件。实验显示，在NPU+PIM异构系统上相较PD基线取得1.20×–2.23×加速，权重布局优化再带来1.28×–1.33×提升，并支持负载敏感性与硬件扩展性分析。"
     },
     {
       "title": "UniMem: Complementary Episodic-to-Parametric Memory for Boundary-Agnostic Task Streams",
@@ -12168,7 +12252,9 @@
         "cs.CL"
       ],
       "url": "http://arxiv.org/abs/2607.26017v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.26017v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.26017v1.pdf",
+      "ai_summary_en": "UniMem addresses the stability–plasticity problem for LLM agents serving boundary-agnostic task streams, where retrieval-based episodic memory adapts quickly but adds inference overhead, while parametric memory is efficient but typically requires explicit task boundaries and fixed budgets. It introduces a self-routing framework with learnable routing tokens that direct tasks either to an episodic retrieval buffer or to expandable parametric memory blocks, allowing recurring patterns to be consolidated on demand without task labels or uncontrolled parameter growth. Experiments on long-horizon streaming task sequences show consistent gains over baselines, with an average improvement of 4.0 EM points across three backbone models while preserving execution fidelity.",
+      "ai_summary_cn": "该论文针对LLM智能体在无边界、持续演化的任务流中面临的“稳定性—可塑性”矛盾，解决外部检索记忆推理开销大、参数记忆依赖任务边界且扩展受限的问题。核心方法是提出UniMem自路由框架，用可学习路由token作为记忆控制器，将新/稀疏任务保留在情景缓冲中检索执行，并把重复可靠模式逐步固化到可按需扩展的参数化记忆块中。实验表明，在长期流式任务序列上，UniMem在保持执行保真的同时持续优于基线，跨三个骨干模型平均提升4.0个EM点。"
     },
     {
       "title": "MemLens: A Value-Aware Memory Management System with Interactive Analytics for LLM-based Agents",
@@ -12190,7 +12276,9 @@
         "cs.AI"
       ],
       "url": "http://arxiv.org/abs/2607.25992v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.25992v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.25992v1.pdf",
+      "ai_summary_en": "MemLens addresses the problem that LLM-agent memory systems often store heterogeneous interaction records uniformly, causing redundant, low-value memories that hurt long-horizon reasoning and efficiency. It treats memory entries as first-class objects and couples Shapley-style value estimation with value-aware storage and memory-assisted response generation, exposing the full lifecycle through an interactive analytics dashboard. In a study-copilot application, the system enables interpretable, personalized memory management and supports comparison of policies by response quality, retrieval latency, and token consumption.",
+      "ai_summary_cn": "该论文针对 LLM 智能体长期记忆管理中“粗粒度、效用无关”的问题，指出统一保存异构交互记录会导致冗余和低价值记忆持续占用资源。  \nMemLens 将记忆记录视为一等数据对象，提出价值感知的记忆管理系统，通过 Shapley 式记忆评估、价值感知存储和记忆辅助响应，并提供可交互分析仪表盘以可视化记忆全生命周期。  \n该系统在学习副驾驶场景中支持用户检查记忆价值、比较不同策略在响应质量、检索延迟和 token 消耗上的表现，从而实现更高效、可解释和个性化的长期记忆管理。"
     },
     {
       "title": "A Cost-Effective Multimodal LLM Reasoning Framework for Question Answering over Irregular Clinical Time Series",
@@ -12212,7 +12300,9 @@
         "cs.CL"
       ],
       "url": "http://arxiv.org/abs/2607.25947v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.25947v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.25947v1.pdf",
+      "ai_summary_en": "The paper addresses question answering over irregular clinical time series, where sparsity, asynchrony, and uneven sampling limit existing multimodal time-series LLMs. ClinPRISM introduces an irregularity-aware multi-scale encoder, a temporal evidence distiller that compresses multi-scale clinical signals into a small set of LLM-compatible tokens, and progressive alignment into the LLM’s textual embedding space. Using a 4B-parameter LLM and only 16 time-series tokens, it achieves state-of-the-art performance on a held-out clinical benchmark with an average inference latency of 0.15 seconds per question.",
+      "ai_summary_cn": "该论文针对不规则临床时间序列问答中现有模型难以处理稀疏、异步和非均匀采样的问题，提出了低成本多模态推理框架 ClinPRISM。其核心是通过不规则感知多尺度编码器提取临床证据，并用时间证据蒸馏器压缩为少量 LLM 可理解 token，再以渐进对齐策略融入文本嵌入空间。实验表明，在 4B 参数 LLM 上仅用 16 个时间序列 token 即可达到 SOTA 性能，平均推理延迟仅 0.15 秒/问题，兼顾效果与服务效率。"
     },
     {
       "title": "RecoReward: Recommender-Guided Multimodal Description Generation for Recommendation",
@@ -12234,7 +12324,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.25901v1",
       "pdf_url": "https://arxiv.org/pdf/2607.25901v1.pdf",
-      "comment": "16 pages, 4 figures"
+      "comment": "16 pages, 4 figures",
+      "ai_summary_en": "RecoReward addresses the mismatch between multimodal item description generation and downstream recommendation objectives, where content-only MLLM outputs ignore user behavior signals while user-conditioned methods require user information at inference. It introduces a training-time reinforcement learning framework that uses behavior-derived rewards via a Recommender Affinity Score, contrasting historically engaged users with non-target users to estimate broadly shared user affinity and guide generation of a single shared item description. Experiments in live-stream recommendation show that RecoReward-9B outperforms its Qwen3.5-9B baseline and other evaluated models on seven offline recall metrics and yields online A/B gains, while preserving content-only serving.",
+      "ai_summary_cn": "该论文针对多模态大模型生成推荐物品描述时难以利用下游用户行为信号、而用户条件生成又会在推理阶段依赖用户信息的问题，提出 RecoReward。其核心洞见是在训练阶段引入行为奖励：用历史互动用户代理目标用户，并通过非目标用户估计广泛亲和度，构建 Recommender Affinity Score 作为强化学习反馈，使模型学会生成无需用户输入、单一对所有用户共享的推荐友好描述。离线在七项召回指标上优于 Qwen3.5-9B 基线及其他模型，在线 A/B 测试也取得提升，证明其能在保持内容仅推理/低服务成本的同时增强下游推荐效果。"
     },
     {
       "title": "Stemma: Induced Decision Regions Reveal LLM Provenance",
@@ -12258,7 +12350,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.25880v1",
       "pdf_url": "https://arxiv.org/pdf/2607.25880v1.pdf",
-      "comment": "25 pages, 4 figures"
+      "comment": "25 pages, 4 figures",
+      "ai_summary_en": "This paper tackles black-box LLM provenance testing, where response-level cues can shift under fine-tuning or deployment even when underlying model behavior remains related. It introduces induced decision regions by mapping open-ended outputs into a finite decision space and proposes Stemma, a fingerprinting method that selects probes via stability, robustness, and specificity to measure inheritance of these regions. Across 770 source–suspect pairs and 1,260 deployment pairs, Stemma achieves 0.967 and 0.995 AUC with high TPR at 1% FPR, substantially outperforming baselines and showing robustness to weight transformations and inference-time settings.",
+      "ai_summary_cn": "该论文针对黑盒LLM溯源中响应表层特征易因微调或部署而变化的问题，提出将开放生成输出映射到有限“诱导决策区域”，把溯源转化为度量模型间决策区域的继承性。核心方法是 Stemma：通过稳定性、鲁棒性和特异性的探针选择原则，可靠估计嫌疑模型是否保留源模型的决策区域指纹。实验在权重变换和多种部署设置下取得高准确率（最高 AUC 0.995、TPR@1%FPR 93.5%），表明该方法对模型适配与推理部署具有较强鲁棒性。"
     },
     {
       "title": "C-RE-ACT: Causal RE-ACTing Agent for O-RAN Forensic Triage",
@@ -12279,7 +12373,9 @@
         "cs.NI"
       ],
       "url": "http://arxiv.org/abs/2607.25828v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.25828v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.25828v1.pdf",
+      "ai_summary_en": "C-RE-ACT addresses the O-RAN security-triage bottleneck of distinguishing performance-degradation attacks from benign operational anomalies such as congestion, misconfiguration, or software regressions. The method learns a causal Weighted DAG over O-RAN metrics using SAM, encodes it with a Graph Isomorphism Network into an LLM-aligned soft prompt, and drives a ReAct agent to produce forensic incident reports. On a physical O-RAN testbed with 140 experiments, it ranks the true root cause in the top three 89% of the time, improves causal-topology query accuracy from 0.22 to 0.72 via graph soft-prompting, and achieves 83%/84% classification accuracy for delay/packet-loss anomalies.",
+      "ai_summary_cn": "该论文针对O-RAN中性能退化攻击与配置错误、拥塞等运维异常难以区分、依赖人工分诊的瓶颈，提出自动化取证分诊框架C-RE-ACT。其核心方法是先用SAM构建O-RAN指标的加权有向无环因果图，再通过GIN将图结构编码为与LLM语言空间对齐的软提示，驱动ReAct智能体进行因果推理并生成可执行事件报告。实验在物理O-RAN测试床上显示，Top-3根因定位准确率达89%，图软提示将LLM因果查询准确率从0.22提升至0.72，延迟和丢包异常分类准确率分别达到83%和84%。"
     },
     {
       "title": "SepPrune:A Separator-based Pruning Framework for Efficient Multimodal Large Language Models",
@@ -12300,7 +12396,9 @@
         "cs.CV"
       ],
       "url": "http://arxiv.org/abs/2607.25818v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.25818v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.25818v1.pdf",
+      "ai_summary_en": "SepPrune addresses the high computational cost of multimodal LLM serving caused by excessive vision tokens in high-resolution inputs, where existing pruning methods are limited by cross-modal attention dependence or expensive diversity estimation. Its key insight is that attention scores from both vision and text tokens peak at modality separator tokens, so SepPrune uses a separator token as a unified query with reused LLM projection weights to rank and select informative vision tokens in a training-free, plug-and-play way. On Qwen2.5-VL-7B, it removes 80.2% of vision tokens while retaining 96.3% of original accuracy, achieving state-of-the-art efficiency without architectural changes.",
+      "ai_summary_cn": "该论文针对多模态大模型在高分辨率输入下视觉 token 过多、推理开销大的问题，指出现有剪枝方法受限于跨模态注意力或高开销的多样性估计。其核心洞见是视觉和文本 token 的注意力在模态分隔符 token 上达到峰值，因此提出 SepPrune，以分隔符 token 作为统一查询来排序并筛选关键视觉 token，实现训练免费、即插即用且无需架构修改的剪枝。在 Qwen2.5-VL-7B 上，该方法可移除 80.2% 的视觉 token，同时保持 96.3% 的原始精度，达到领先水平。"
     },
     {
       "title": "MDTransformer: A Hardware-Software Co-Design of Mode-Division Photonic Transformer Accelerator with Inverse-Designed Coherent Crossbar",
@@ -12324,7 +12422,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.26016v1",
       "pdf_url": "https://arxiv.org/pdf/2607.26016v1.pdf",
-      "comment": "10 pages, 10 figures, 1 table"
+      "comment": "10 pages, 10 figures, 1 table",
+      "ai_summary_en": "MDTransformer addresses the impracticality of prior photonic transformer accelerators that rely on costly multi-wavelength sources and bulky active phase-shifter dot-product units. It proposes a hardware–software co-designed mode-division photonic tensor core that performs complex-valued matrix multiplication via spatial-mode interference, using inverse-designed multi-mode couplers/crossings and Mach–Zehnder IQ modulators, with TE0–TE3 modes as parallel computational lanes and coherent amplitude/phase encoding under single-laser operation. Experiments on DeiT and BERT show 40.4% area reduction, 63.6% power savings, and 40.6% energy savings versus state-of-the-art PTAs at comparable latency, with sub-4-bit effective precision and below −30 dB inter-modal crosstalk.",
+      "ai_summary_cn": "该论文针对现有光子Transformer加速器依赖多波长光源和大规模相移点积单元、能效与实用性不足的问题，提出MDTransformer这一软硬协同设计。其核心是利用逆设计的模式分光器件构建紧凑光子张量核，以TE0–TE3四个空间模式作为并行计算通道，并通过相干检测与IQ调制实现复值矩阵乘法。实验显示，在DeiT和BERT等负载上相较最先进PTA可降低40.4%面积、63.6%功耗和40.6%能耗，同时保持相当延迟。"
     },
     {
       "title": "CoSA: Accelerating Long-Context Inference via Proxy-Kernel Co-Designed Sparse Attention",
@@ -12345,7 +12445,9 @@
         "cs.CL"
       ],
       "url": "http://arxiv.org/abs/2607.25291v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.25291v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.25291v1.pdf",
+      "ai_summary_en": "CoSA addresses the accuracy collapse of proxy-based block-sparse attention in long-context LLM inference under tight sparsity budgets, where proxies miss salient KV blocks and kernels cannot compensate. It proposes a training-free proxy–kernel co-design: a Kernel-Aware Proxy builds an ordered block mask under a moderate budget, and an Ordered-Skipping Kernel dynamically skips additional KV pages during the inner loop using online-softmax statistics. Across mainstream models and long-context benchmarks, CoSA improves accuracy at lower budgets and achieves 4.93× attention speedup and 2.53× TTFT reduction at 128K context with negligible performance loss.",
+      "ai_summary_cn": "该论文针对长上下文 LLM 推理中自注意力二次开销过高的问题，指出现有基于代理的块稀疏注意力在预算收紧时会遗漏关键 KV 块，且内核只能机械执行掩码导致精度下降。  \n\nCoSA 提出免训练的代理-内核协同设计：由内核感知代理生成带访问顺序的稀疏掩码，再由有序跳过内核结合 online-softmax 统计在线进一步跳过次要块。  \n\n在主流长上下文基准上，CoSA 在更低计算预算下保持更高精度，并可在 128K 上下文下实现 4.93× 注意力加速和 2.53× 端到端 TTFT 降低。"
     },
     {
       "title": "PILA: Plug-and-Play Insertion for LLM-native Advertising",
@@ -12366,7 +12468,9 @@
         "cs.CL"
       ],
       "url": "http://arxiv.org/abs/2607.25590v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.25590v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.25590v1.pdf",
+      "ai_summary_en": "PILA addresses LLM-native advertising by enabling sponsored content insertion without entangling ads with base-model generation, which preserves compatibility with API-only and workflow-based LLM services. It formulates ad insertion as conditional response rewriting implemented as a lightweight, model-agnostic sidecar module, exposing a controllable trade-off between response naturalness and ad exposure. Experiments across diverse upstream models show that PILA improves ad effectiveness while maintaining original response quality, making it a practical decoupled monetization mechanism for LLM serving.",
+      "ai_summary_cn": "该论文针对LLM原生广告中现有方案将广告生成与内容生成耦合、易破坏回答质量且不兼容API/工作流的问题展开研究。  \nPILA将广告插入重构为条件式响应重写任务，以模型无关的轻量sidecar模块即插即用地接入现有LLM服务，并提供自然度与广告曝光之间的可控权衡。  \n实验表明，它能在多种上游模型上提升广告效果，同时较好保持原始响应质量，为LLM广告部署提供了实用路径。"
     },
     {
       "title": "Every Time I Hire a Linguist, Inference Costs Go Down: On Linguistic Rules as Effective Prompt Compressors",
@@ -12389,7 +12493,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.25335v1",
       "pdf_url": "https://arxiv.org/pdf/2607.25335v1.pdf",
-      "comment": "37 pages, 6 figures, EMNLP2026"
+      "comment": "37 pages, 6 figures, EMNLP2026",
+      "ai_summary_en": "The paper tackles the inference-cost problem in LLM serving by asking whether prompt compression can be done with deterministic linguistic rules instead of expensive LM-based token scoring. It uses offline evolutionary search to combine lexical, syntactic, semantic, and discourse-level rules into a CPU-only compressor, evaluated via both direct compressed-input performance and reconstruction fidelity. The evolved compressors match recent advanced prompt-compression methods at light-to-moderate compression ratios across short passages, multi-document reasoning, and dialogue-memory QA, with analysis showing that effective compression fuses multi-level linguistic signals and shifts from token pruning to sentence extraction as compression intensifies.",
+      "ai_summary_cn": "该论文针对提示压缩通常依赖LLM前向传播进行token打分、带来额外开销的问题，研究能否仅用确定性语言学规则实现高效提示压缩。作者通过离线进化搜索组合词汇、句法、语义和篇章层面的规则，形成部署时无需模型推理、仅靠CPU执行的压缩器。实验表明，该方法在轻中度压缩下可媲美先进提示压缩策略，但高压缩率时性能下降，且有效规则会从token级删减转向句子级抽取。"
     },
     {
       "title": "ContractHIL-HLS: Contract-Aligned Multi-Agent Workflow with Hardware-in-the-Loop Feedback for HLS Design",
@@ -12412,7 +12518,9 @@
         "cs.CR"
       ],
       "url": "http://arxiv.org/abs/2607.25283v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.25283v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.25283v1.pdf",
+      "ai_summary_en": "ContractHIL-HLS addresses the gap between LLM-generated HLS kernels and deployable FPGA system closure by enforcing explicit semantic alignment and hardware-in-the-loop validation. Its key method is a structured contract-driven multi-agent workflow—Contract, HTML, and Hardware-in-the-Loop agents—that translates requirements into interfaces/constraints/checks and iteratively revises designs using HLS, Vivado, PYNQ runtime, power, and failure feedback. The approach improves HLS-Eval pass@1 from an estimated 64.0% baseline to 70.4% (76.6% pass@5) and, on a board-level PQC accelerator, reduces six-message runtime from 207.3 ms to 52.4 ms while maintaining positive routed WNS and correct decryption verification.",
+      "ai_summary_cn": "该论文针对 LLM 辅助高层综合（HLS）中自然语言需求与硬件约束、板级验证脱节的问题，提出 ContractHIL-HLS，一个面向实际 HLS 工程的契约对齐多智能体工作流。其核心方法是将需求显式化为包含接口、约束、验证和回滚规则的结构化“合同”，并按语义降级与执行任务划分代理，同时把 HLS、Vivado、PYNQ 运行时、功耗和失败证据纳入硬件在环反馈闭环。实验显示，该方法在 HLS-Eval 上达到 70.4% pass@1 和 76.6% pass@5，并在板级 PQC 加速器任务中将平均文本处理时延从 207.3 ms 降至 52.4 ms，同时保持正 WNS 与功能验证。"
     },
     {
       "title": "How Affect Propagates among LLM Agents: Emergent Emotional Contagion in Crowd Simulation",
@@ -12437,7 +12545,9 @@
       ],
       "url": "http://arxiv.org/abs/2607.25140v1",
       "pdf_url": "https://arxiv.org/pdf/2607.25140v1.pdf",
-      "comment": "31 pages, 14 figures"
+      "comment": "31 pages, 14 figures",
+      "ai_summary_en": "This paper investigates how affect spreads among LLM-driven agents in multi-agent crowd simulations, focusing on emergent emotional contagion without any explicit mechanism for transferring affective state. It couples a conventional crowd simulator with an LLM-based perception–appraisal–expression loop, where agents update internal states and outward expressions using Big Five personality profiles and Russell’s circumplex model of affect. Experiments show that alarm can propagate as a traveling front with personality- and backend-dependent dynamics, indicating that LLM cognitive layers can produce structured emotional contagion in small crowds.",
+      "ai_summary_cn": "该工作研究多智能体人群模拟中，LLM 代理如何在没有显式情绪传递机制的情况下产生情绪传染。其核心方法是让每个代理通过视觉、听觉、触觉感知邻居，并由 LLM 结合大五人格、记忆、当前情绪和情境完成“感知—评估—表达”循环，同时用传统人群模拟器处理低层导航以降低延迟。实验表明，系统能涌现出具有时空结构和人格依赖性的情绪传播动态，且结果受提示、采样温度和模型后端显著影响。"
     },
     {
       "title": "Conformal Cascade: Distribution-Free Accuracy Guarantees for Multi-Tier LLM Inference",
@@ -12458,7 +12568,9 @@
         "cs.LG"
       ],
       "url": "http://arxiv.org/abs/2607.25018v1",
-      "pdf_url": "https://arxiv.org/pdf/2607.25018v1.pdf"
+      "pdf_url": "https://arxiv.org/pdf/2607.25018v1.pdf",
+      "ai_summary_en": "The paper tackles the problem that confidence-threshold LLM cascades are miscalibrated, require per-pair/domain tuning, and provide no formal accuracy guarantees. It introduces Conformal Cascade, a black-box, training-free multi-tier routing method that defers queries unless the conformal prediction set collapses to a singleton, yielding distribution-free finite-sample coverage bounds—$1-K\\alpha$ by union bound and $1-\\alpha$ under a selection-preservation condition—plus an explicit expected-cost model. Across 18 multiple-choice benchmarks and four open-weight model families, it generally outperforms calibrated heuristic cascades, especially on reasoning-heavy tasks, while committing easy queries to smaller models without accuracy loss.",
+      "ai_summary_cn": "该工作针对多层 LLM 级联中置信阈值不可靠、需逐模型/领域调优且缺乏正式准确率保证的问题，提出 Conformal Cascade，以保形预测集是否收缩为单一答案作为接受或升级到更大模型的规则。该方法无需训练、仅需黑盒接口，即可提供无分布假设的有限样本准确率保证，并将期望推理成本显式刻画为用户指定风险 α 与校准集接受率的函数。实验显示，在 18 个多选基准和四个模型族的两层级联中，它多数优于最强启发式校准级联，在推理密集型任务上提升显著，同时在简单任务上可让小模型处理大多数请求且不损失准确率。"
     }
   ],
   "topics": [
