@@ -1,6 +1,6 @@
 # LLM Serving Papers Index
 
-_Generated: 2026-07-30 06:18_
+_Generated: 2026-07-31 06:17_
 
 
 ## 2026
@@ -351,6 +351,10 @@ _Generated: 2026-07-30 06:18_
   [arXiv](https://arxiv.org/abs/2604.21579v1)
   > LLM-based automated program repair (APR) techniques have shown promising results in reducing debugging costs. However, prior results can be affected by data leakage: large language models (LLMs) may m...
 
+- **A Photonic-CXL Memory Appliance for Scalable KV Cache Management in LLM Inference** — Jing Ding, Yash Nishant, Chandrish Ambati, Jyothsna Kamati, Trung Diep
+  [arXiv](https://arxiv.org/abs/2607.27187v1)
+  > LLM inference at scale faces a memory wall. The KV cache demands tens of terabytes at hundreds of gigabytes per second, yet no current memory tier delivers both at once. Characterization across multi-...
+
 - **A Roadmap to Impactful Pluralistic Alignment Research** — Elinor Poole-Dayan, Jillian Fisher, Atoosa Kasirzadeh, Jacob Andreas, Mitchell Gordon, Michiel A. Bakker
   [arXiv](https://arxiv.org/abs/2607.22305v1)
   > Pluralistic value alignment---the goal of building AI systems that represent and serve diverse human values and perspectives---has emerged as an active research agenda. Yet, there's no public evidence...
@@ -445,6 +449,10 @@ _Generated: 2026-07-30 06:18_
   [arXiv](https://arxiv.org/abs/2604.16469)
   > LLM agents execute in an interleaved reasoning-and-action loop, where future tool calls cannot be launched until the current reasoning step completes. This serial dependency inflates end-to-end latenc...
 
+- **Before Agents Speak: Pre-hoc Failure Risk Inference in Multi-Agent Systems** — Shi Lin, Chenpei Wang, Peng Qian, Dezhang Kong, Minghao Li, Yufeng Li, Xun Wang
+  [arXiv](https://arxiv.org/abs/2607.26836v1)
+  > LLM-based multi-agent systems (MAS) have exhibited remarkable capabilities in collaborative reasoning and decision-making, yet their interconnected communications introduce new systemic risk: localize...
+
 - **Benchmarking Compound AI Applications for Hardware-Software Co-Design** — Paramuth Samuthrsindh, Angel Cervantes, Varun Gohil, Gohar Irfan Chaudhry, Christina Delimitrou, Adam Belay
   [arXiv](https://arxiv.org/abs/2604.09593)
   > Compound AI applications, composed from interactions between Large Language Models (LLMs), Machine Learning (ML) models, external tools and data sources are quickly becoming an integral workload in da...
@@ -456,6 +464,10 @@ _Generated: 2026-07-30 06:18_
 - **Break the Optimization Barrier of LLM-Enhanced Recommenders: A Theoretical Analysis and Practical Framework** — Zhangchi Zhu, Wei Zhang
   [arXiv](https://arxiv.org/abs/2604.20490v1) | [GitHub](https://github.com/kvcache-ai/Mooncake)
   > Large language model (LLM)-enhanced recommendation models inject LLM representations into backbone recommenders to exploit rich item text without inference-time LLM cost. However, we find that existin...
+
+- **Budget-Aware LLM Discovery via Cost-Calibrated Frontier Utility** — Yansen Zhang, Yilu Liu, Tianyu Liu, Jiamin Chen, Xiaokun Zhang, Kai Xie, Xue Liu, Chen Ma, Yiyan Qi
+  [arXiv](https://arxiv.org/abs/2607.26828v1)
+  > Large language models increasingly support scientific and algorithmic discovery through inference-time search over evaluated candidates. Existing adaptive discovery controllers assign credit based onl...
 
 - **C$^2$KV: Compressed and Composable KV Cache Reuse for Efficient LLM Inference** — Chuheng Du, Junyi Chen, Hanlin Tang, Kan Liu, Tao Lan, Lin Qu, Chaoyue Niu, Shengzhong Liu, Guihai Chen, Fan Wu
   [arXiv](https://arxiv.org/abs/2607.17715v1)
@@ -561,6 +573,10 @@ _Generated: 2026-07-30 06:18_
   [GitHub](https://github.com/ShaoqiangLu/DFVG)
   > Speculative decoding is a promising paradigm that accelerates LLM inference by generating drafts and performing verification. However, such systems still face three major challenges: (1) The imbalance...
 
+- **DIRECT: Direct Decoding for Efficient and Aligned Sequence Labeling with Large Language Models** — Yilei Wang, Jiaxin Gan, Kexuan Zhang, Ling Li, Wentao Zhang, Peichao Lai
+  [arXiv](https://arxiv.org/abs/2607.26891v1)
+  > Sequence labeling is a fine-grained information extraction task, yet existing large language model-based approaches suffer from insufficient domain alignment and low inference efficiency. To address t...
+
 - **DUET: Disaggregated Hybrid Mamba-Transformer LLMs with Prefill and Decode-Specific Packages** — Alish Kanani, Sangwan Lee, Han Lyu, Jiahao Lin, Jaehyun Park, Umit Y. Ogras
   [arXiv](https://arxiv.org/abs/2603.15530)
   > DUET introduces a disaggregated accelerator that assigns prefill and decode phases to specialized packages. The Prefill package utilizes systolic array chiplets with off-package memory. The Decode pac...
@@ -580,6 +596,10 @@ _Generated: 2026-07-30 06:18_
 - **Do LLM Decoders Listen Fairly? Benchmarking How Language Model Priors Shape Bias in Speech Recognition** — Srishti Ginjala, Eric Fosler-Lussier, Christopher W. Myers, Srinivasan Parthasarathy
   [arXiv](https://arxiv.org/abs/2604.21276v1)
   > As pretrained large language models replace task-specific decoders in speech recognition, a critical question arises: do their text-derived priors make recognition fairer or more biased across demogra...
+
+- **DualDecoder: Accelerate Long Context LLM Inference by Predictive Prefetch** — Zuning Liang, Zhiyi Yao, Qi Chen, Yuedong Xu, Hao Dai, Zhiqiang Ding, Tongkai Yang, Jinlong Hou, Yuan Cheng
+  [arXiv](https://arxiv.org/abs/2607.26475v1)
+  > Long-context inference is becoming a fundamental capability for modern LLM serving, especially driven by emerging agentic applications. Yet it faces a severe memory wall that the KV cache scales propo...
 
 - **DualDiffusion: A Speculative Decoding Strategy for Masked Diffusion Models** — N/A
   [arXiv](https://arxiv.org/abs/2604.05250)
@@ -627,6 +647,10 @@ _Generated: 2026-07-30 06:18_
 - **Efficiently Aligning Draft Models via Parameter- and Data-Efficient Adaptation** — Luxi Lin, Zhihang Lin, Zhanpeng Zeng, Yuhao Chen, Qingyu Zhang, Jixiang Luo, Xuelong Li, Rongrong Ji
   [arXiv](https://arxiv.org/abs/2603.09527) | [GitHub](https://github.com/https://github.com/Lyn-Lucy/Efficient-Draft-Adaptation)
   > Speculative decoding accelerates LLM inference but suffers from performance degradation when target models are fine-tuned for specific domains. We introduce EDA (Efficient Draft Adaptation), a paramet...
+
+- **Emission-Forecasting-Based Spatial-Temporal Carbon Response: A Multi-Agent Attention-Enhanced Deep Learning Framework** — Feiyu Cai, Jing Qiu, Yi Yang, Chenxi Zhang, Xinlei Wang, Baichuan Liu, Junhua Zhao
+  [arXiv](https://arxiv.org/abs/2607.26560v1)
+  > As a major contributor to carbon emissions, the decarbonization of power systems has garnered significant societal attention. Nodal carbon intensity (NCI), a critical factor in carbon-oriented demand ...
 
 - **Enhancing Rubric-based RL via Self-Distillation** — Mingxuan Xia, Yuhang Yang, Chao Ye, Shuai Zhu, Shenzhi Yang, Guangcheng Zhu, Yuhang Zhang, Cheng Peng, Haobo Wang, Siqing Wang
   [arXiv](https://arxiv.org/abs/2607.18082v1)
@@ -732,6 +756,10 @@ _Generated: 2026-07-30 06:18_
   [arXiv](https://arxiv.org/abs/2603.18383)
   > Datacenter operators and electrical utilities rely on power traces at different spatiotemporal scales. Operators use fine-grained traces for provisioning, facility management, and scheduling, while ut...
 
+- **From Tokens to Watt-hours: Analytical Energy Estimation for LLM Inference on Modern GPUs** — Tina Vartziotis, Rodopi Kosteli, Elli Vartziotis, George Dasoulas, Michael Keckeisen, Konstantinos Skianis, Sotirios Kotsopoulos, Francesca Dominici
+  [arXiv](https://arxiv.org/abs/2607.26571v1)
+  > The operational energy consumption of large language model (LLM) inference is becoming an increasingly important component of the environmental footprint of deployed AI systems. However, direct measur...
+
 - **Fully Homomorphic Encryption on Llama 3 model for privacy preserving LLM inference** — N/A
   [arXiv](https://arxiv.org/abs/2604.12168)
   > The applications of Generative Artificial Intelligence (GenAI) and their intersections with data-driven fields, such as healthcare, finance, transportation, and information security, have led to signi...
@@ -770,6 +798,10 @@ _Generated: 2026-07-30 06:18_
 - **HarnessLLM: Rust Verification Harness Generation with Large Language Models** — Minghua Wang, Yuwei Liu, Lin Huang
   [arXiv](https://arxiv.org/abs/2607.22161v1)
   > Rust's ownership model and type system offer strong memory safety guarantees, but unsafe code and runtime panics still present significant risks. Formal verification is essential to ensure memory safe...
+
+- **Harnessing Large Language Models for Intelligent Resource Allocation in the Internet of Everything** — Haijun Zhang, Zhuojun Duan, Zijun Wu, Xu Ma, Yuzheng Ren
+  [arXiv](https://arxiv.org/abs/2607.26602v1)
+  > The rapid development of the Internet of Everything (IoE) is accelerating the adoption of intelligent applications. However, the massive number of connected devices generates diverse and heterogeneous...
 
 - **HiKV: Hierarchical Importance-Aware KV Cache with Hardware Acceleration for LLM Decoding** — Chao Fang, Jun Yin, Man Shi, Marian Verhelst
   [arXiv](https://arxiv.org/abs/2607.22389v1)
@@ -810,6 +842,14 @@ _Generated: 2026-07-30 06:18_
 - **IceCache: Memory-efficient KV-cache Management for Long-Sequence LLMs** — Yuzhen Mao et al.
   [arXiv](https://arxiv.org/abs/2604.10539)
   > Key-Value (KV) cache plays a crucial role in accelerating inference in large language models (LLMs) by storing intermediate attention states and avoiding redundant computation during autoregressive ge...
+
+- **Improving Item Discoverability in e-Commerce Search via Related Intent Generation** — Ji Xin, Xiao Xiao, Ishan Bhatt, Vinesh Gudla, Trace Levinson, Raochuan Fan, Shishir Kumar Prasad, Prakash Putta, Tejaswi Tenneti
+  [arXiv](https://arxiv.org/abs/2607.27172v1)
+  > Traditional search systems are optimized to retrieve items that strictly match a query, often prioritizing precision over recall. In e-commerce marketplaces and particularly grocery, this paradigm is ...
+
+- **InferScale: GPU-Native KV Injection for Personalized LLM Serving** — Peter Li, Prashant Pandey
+  [arXiv](https://arxiv.org/abs/2607.27090v1)
+  > Large language models are increasingly deployed with persistent personalized context, such as accumulated memory profiles or long conversation histories, that is shared across a user's many requests. ...
 
 - **InnerQ: Hardware-aware Tuning-free Quantization of KV Cache for Large Language Models** — Sayed Mohammadreza Tayaranian Hosseini, Amir Ardakani, W. Gross
   [arXiv](https://arxiv.org/abs/2602.23200)
@@ -866,6 +906,10 @@ _Generated: 2026-07-30 06:18_
 - **LLM-based Source Code Compression via Thresholded Symbol Ranking** — Angelo Nardone, Paolo Ferragina
   [arXiv](https://arxiv.org/abs/2607.24192v1)
   > We study the problem of lossless compression of source code, motivated by the storage demands of large-scale software archives, such as Software Heritage (https://www.softwareheritage.org/). General-p...
+
+- **LLMET: Enabling Cross-Layer Evaluation of Emerging M3D Memories for Energy-Efficient LLM Serving** — Ming-Yen Lee, Hanchen Yang, Faaiq Waqar, Harsono Simka, Tushar Krishna, Muhammed Ahosan Ul Karim, Shimeng Yu
+  [arXiv](https://arxiv.org/abs/2607.26491v1)
+  > The energy consumption of Large Language Model (LLM) serving is becoming a major system challenge as deployment scales, driven by hardware power and thermal constraints and rising electricity costs. A...
 
 - **LLMServingSim 2.0: A Unified Simulator for Heterogeneous and Disaggregated LLM Serving Infrastructure** — Jaehong Cho, Hyunmin Choi, Guseul Heo, Jongse Park
   [arXiv](https://arxiv.org/abs/2602.23036)
@@ -931,6 +975,10 @@ _Generated: 2026-07-30 06:18_
   [arXiv](https://arxiv.org/abs/2607.26016v1)
   > Recently, photonic transformer accelerators (PTAs) have successfully achieved significant speedup and energy efficiency improvements over electronic accelerators for expediting Transformer inference. ...
 
+- **MRCoder: An Efficient Context Selecting Approach for Repository-Level Code Generation** — Peiding Wang, Li Zhang, Fang Liu
+  [arXiv](https://arxiv.org/abs/2607.26805v1)
+  > Large language models (LLMs) have demonstrated strong capabilities in code generation. However, repository-level code generation remains challenging, as it requires effectively identifying and utilizi...
+
 - **MSAO: Adaptive Modality Sparsity-Aware Offloading with Edge-Cloud Collaboration for Efficient Multimodal LLM Inference** — Zheming Yang et al.
   [arXiv](https://arxiv.org/abs/2604.02945)
   > Multimodal large language models (MLLMs) enable powerful cross-modal reasoning capabilities but impose substantial computational and latency burdens, posing critical challenges for deployment on resou...
@@ -971,6 +1019,10 @@ _Generated: 2026-07-30 06:18_
   [arXiv](https://arxiv.org/abs/2603.13606)
   > NCCL EP provides unified ncclEpDispatch and ncclEpCombine primitives, supporting Low-Latency (LL) mode for inference decoding and High-Throughput (HT) mode for training and inference prefill. LL targe...
 
+- **NELSSA: A GPU-PNM Heterogeneous System for Mixed-Length LLM Serving via Length-based Request Placement** — Sookyung Choi, Seungyong Lee, Kangkyu Park, Yunseo Chun, Junseok Lee, Hyeongseok Gwak, Myunghyun Rhee, Euiseok Kim, Donguk Moon, Kwangsik Shin, Guseul Heo, Youngpyo Joo, Hoshik Kim, Jongse Park
+  [arXiv](https://arxiv.org/abs/2607.26633v1)
+  > Modern LLMs and their agentic applications are broadening the range of serving workloads, spanning context lengths from a few hundred tokens to hundreds of thousands. As these requests frequently inte...
+
 - **Native LLM and MLLM Inference at Scale on Apple Silicon** — Wayner Barrios
   [arXiv](https://arxiv.org/abs/2601.19139) | [GitHub](https://github.com/https://github.com/wbarrios/vllm-mlx)
   > The growing adoption of Apple Silicon for machine learning development has created demand for efficient inference solutions that leverage its unique unified memory architecture. However, existing tool...
@@ -978,6 +1030,10 @@ _Generated: 2026-07-30 06:18_
 - **OServe: Accelerating LLM Serving via Spatial-Temporal Workload Orchestration** — Youhe Jiang, Fangcheng Fu, Taiyi Wang, Guoliang He, Eiko Yoneki
   [arXiv](https://arxiv.org/abs/2602.12151)
   > Serving Large Language Models (LLMs) can benefit immensely from parallelizing both the model and input requests across multiple devices, but incoming workloads exhibit substantial spatial and temporal...
+
+- **OmegaUse-OfficeVal: Benchmarking LLM Agents on Long-Horizon Office-Suite Tasks with Economic Grounding** — Jingbo Zhou, Yusai Zhao, Qi Bao, Jingjia Cao, Zhenghai Chen, Chang Gao, Kaiqi Guo, Muxin Guo, Mingxuan Li, Xinjiang Lu, Yanru Ma, Yixiong Xiao, Zenghui Zhang, Le Zhang, Hua Wu
+  [arXiv](https://arxiv.org/abs/2607.27155v1)
+  > Large language model (LLM) agents are increasingly expected to assist users in completing tasks. However, existing benchmarks provide limited support for evaluating whether agents can carry out office...
 
 - **OmniQEC: discovering practical quantum error-correcting codes by an AI scientist** — Ge Yan, Shanchuan Li, Pengyue Ma, Qixin Zhang, Pingchuan Ma, Jianping Wang, Min-Hsiu Hsieh, Yuxuan Du
   [arXiv](https://arxiv.org/abs/2607.25865v1)
@@ -1079,6 +1135,14 @@ _Generated: 2026-07-30 06:18_
   [arXiv](https://arxiv.org/abs/2607.15810v1)
   > Rollout generation is a major bottleneck in Reinforcement Learning (RL) for Mixture-of-Experts (MoE) Large Language Models, motivating low-precision rollout acceleration such as FP8. As an emerging lo...
 
+- **RAG-HAR+: Towards Cost-Efficient LLM-Based Human Activity Recognition for Edge Deployment** — Hansi Karunarathna, Nirhoshan Sivaroopan, Chamara Madarasingha, Anura Jayasumana, Kanchana Thilakarathna
+  [arXiv](https://arxiv.org/abs/2607.26631v1)
+  > Human Activity Recognition (HAR) from wearable sensors supports applications in healthcare, rehabilitation, fitness tracking, and smart environments. Yet, existing deep learning approaches require dat...
+
+- **RAGuard: A Layered Defense Framework for Retrieval-Augmented Generation Systems Against Data Poisoning** — Pushkal Kumar, Tucker Nielson, Tanish Kolhe, Shubham Zala, Vincent Li
+  [arXiv](https://arxiv.org/abs/2607.26339v1)
+  > Retrieval-Augmented Generation (RAG) systems ground large language models (LLMs) in external corpora, but this reliance exposes them to corpus poisoning: maliciously injected passages that manipulate ...
+
 - **RAP: KV-Cache Compression via RoPE-Aligned Pruning** — Jihao Xin, Tian Lyu, David E. Keyes, H. Ltaief, Marco Canini
   [arXiv](https://arxiv.org/abs/2602.02599)
   > Long-context inference in large language models is increasingly bottlenecked by the memory and compute cost of the KV-Cache. Low-rank factorization compresses KV projections by writing $W \approx A * ...
@@ -1134,6 +1198,10 @@ _Generated: 2026-07-30 06:18_
   [arXiv](https://arxiv.org/abs/2602.07878)
   > Large Language Models face an emerging and critical threat known as latency attacks. Because LLM inference is inherently expensive, even modest slowdowns can translate into substantial operating costs...
 
+- **Revisiting Lossy Verification in Speculative Decoding: Mechanisms, Trade-offs, and Failure Modes** — Tianyu Wang, Yuxuan Zhou, Wenbin Wang, Heng Li, Zikai Xiao, Junyuan Shang
+  [arXiv](https://arxiv.org/abs/2607.26627v1)
+  > Speculative Decoding (SD) accelerates large language model inference by allowing a lightweight draft model to propose tokens that are subsequently verified in parallel by a larger target model. Recent...
+
 - **ReviveMoE: Fast Recovery for Hardware Failures in Large-Scale MoE LLM Inference Deployments** — Haley Li, Xinglu Wang, Cong Feng, Chunxu Zuo, Yanan Wang, Hei Lo, Yufei Cui, Bingji Wang, Duo Cui, Shuming Jing, Yizhou Shan, Ying Xiong, Jiannan Wang, Yong Zhang, Zhenan Fan
   [arXiv](https://arxiv.org/abs/2602.21140)
   > As LLM deployments scale over more hardware, the probability of a single failure increases significantly. A common recovery approach is to restart the LLM serving instance; however, this is costly in ...
@@ -1149,6 +1217,10 @@ _Generated: 2026-07-30 06:18_
 - **Rocks, Pebbles and Sand: Modality-aware Scheduling for Multimodal Large Language Model Inference** — Konstantinos Papaioannou, Thaleia Dimitra Doudali, et al.
   [arXiv](https://arxiv.org/abs/2603.26498)
   > Multimodal Large Language Models (MLLMs) power platforms like ChatGPT, Gemini, and Copilot, enabling richer interactions with text, images, and videos. These heterogeneous workloads introduce addition...
+
+- **Route-Block Membership Selects Packed-AWQ Arithmetic: A Controlled Single-Fixture Mechanism Study** — Lukas Stepanek
+  [arXiv](https://arxiv.org/abs/2607.26316v1)
+  > Mixture-of-experts (MoE) inference first aligns routed tokens into padded expert blocks, then executes packed quantized matrix multiplication over those blocks. This preprocessing is often treated as ...
 
 - **RouterWise: Joint Resource Allocation and Routing for Latency-Aware Multi-Model LLM Serving** — Hossein Hosseini Kasnavieh, Christopher Leckie, Adel N. Toosi
   [arXiv](https://arxiv.org/abs/2604.10907)
@@ -1285,6 +1357,10 @@ _Generated: 2026-07-30 06:18_
   [arXiv](https://arxiv.org/abs/2604.21700v1)
   > The growing application of large language models (LLMs) in safety-critical domains has raised urgent concerns about their security. Many recent studies have demonstrated the feasibility of backdoor at...
 
+- **Steering Instruction Hierarchies at Inference Time** — Siqi Zeng, Sewoong Lee, Han Zhao, Julia Hockenmaier
+  [arXiv](https://arxiv.org/abs/2607.26228v1)
+  > Instruction hierarchies are a core safety assumption of language model deployment: higher priority inputs, such as system prompts, should override conflicting lower priority inputs from users or tools...
+
 - **Stemma: Induced Decision Regions Reveal LLM Provenance** — Keyu Zhang, Vadim Safronov, Andrew Martin
   [arXiv](https://arxiv.org/abs/2607.25880v1)
   > LLM provenance testing asks whether a suspect LLM belongs to the same lineage as a source. Existing black-box methods largely infer this relationship from response-level characteristics, but these cha...
@@ -1292,6 +1368,10 @@ _Generated: 2026-07-30 06:18_
 - **StepCache: Step-Level Reuse with Lightweight Verification and Selective Patching for LLM Serving** — Azam Nouri
   [arXiv](https://arxiv.org/abs/2603.28795)
   > StepCache addresses LLM serving workloads where repeated requests share common solution structure but differ in localized constraints. Prior caching approaches reuse either full responses (semantic ca...
+
+- **StrataCL: Fabric-Native Communication Library for Production Supernodes** — Tiancheng Hu, Jin Qin, Yuzheng Wang, Ke Liu, TangShengsheng Li, Sheng Wang, Zhongzhe Hu, Tianlun Hu, Wei Wang, Lijun Li, Jingbin Zhou, Xiaoming Bao, Hongwei Sun, Jieru Zhao, Huimin Cui, Tao Xie, Chenxi Wang
+  [arXiv](https://arxiv.org/abs/2607.26444v1)
+  > Modern distributed AI workloads run across hundreds of accelerators, making communication a major bottleneck. Existing communication libraries remain largely buffer-centric because user and communicat...
 
 - **StreamServe: Adaptive Speculative Flows for Low-Latency Disaggregated LLM Serving** — Satyam Kumar, Arpit Singh Gautam, Kailash Talreja, Saurabh Jha
   [arXiv](https://arxiv.org/abs/2604.09562)
@@ -1332,9 +1412,17 @@ _Generated: 2026-07-30 06:18_
 - **TeLLMe: An Efficient End-to-End Ternary LLM Prefill and Decode Accelerator with Table-Lookup Matmul on Edge FPGAs** — Ye Qiao, Zhiheng Chen, Yifan Zhang, Yian Wang, Sitao Huang
   > With the emergence of wearable devices and other embedded systems, deploying large language models (LLMs) on edge platforms becomes an urgent need. However, it is challenging because of their high com...
 
+- **The Confounder Trap: Treatment-Encoding Representations in Causal Inference with Text** — Marie Neubrander, Graham Tierney, Alexander Volfovsky
+  [arXiv](https://arxiv.org/abs/2607.26309v1)
+  > Estimating causal effects of linguistic properties from observational text is difficult because the same document can contain both the treatment of interest and the non-treatment textual attributes ne...
+
 - **The Diminishing Returns of Early-Exit Decoding in Modern LLMs** — Rui Wei, Rui Du, Hanfei Yu, Devesh Tiwari, Jian Li, Zhaozhuo Xu, Hao Wang
   [arXiv](https://arxiv.org/abs/2603.23701)
   > In LLM inference, early-exit stops computation at an intermediate layer once prediction is sufficiently confident. Recent LLMs adopt improved pretraining recipes and architectures that reduce layer re...
+
+- **The Fabric Is the Cluster Driver: Cross-Layer eBPF Policies for GPU-CXL Fabrics** — Yiwei Yang, Andi Quinn
+  [arXiv](https://arxiv.org/abs/2607.26335v1)
+  > We present fabric_ext, an eBPF middleware compiler and runtime for extensible OS policies over GPU--CXL fabrics. fabric_ext lets one policy program execute across GPU hooks, driver/runtime hooks, DPU/...
 
 - **The Illusion of Equivalence: Systematic FP16 Divergence in KV-Cached Autoregressive Inference** — N/A
   [arXiv](https://arxiv.org/abs/2604.15409)
@@ -1347,6 +1435,10 @@ _Generated: 2026-07-30 06:18_
 - **The xPU-athalon: Quantifying the Competition of AI Acceleration** — ['Alicia Golden', 'Carole-Jean Wu', 'Gu-Yeon Wei', 'David Brooks']
   [arXiv](https://arxiv.org/abs/2604.10852)
   > The push for greater efficiency in AI computation has given rise to an array of accelerator architectures that increasingly challenge the GPU's long-standing dominance. In this work, we provide a quan...
+
+- **Thinking Under Uncertainty: Evidence Use and Information-Seeking in Language Models** — Hua-Dong Xiong, Xinyuan Yan, Ji-An Li, Jingming Xue, Marcelo G. Mattar, Robert C. Wilson
+  [arXiv](https://arxiv.org/abs/2607.26845v1)
+  > Inference-time thinking improves the performance of large language models, but aggregate outcomes do not reveal whether models use available evidence more effectively or seek information that could im...
 
 - **TileSight: A First-Principles Tile-Centric Analytical GPU Performance Model from Cores to Clusters** — Zhiwen Mo, Yu Cheng, Lei Wang, Zhengju Tang, Lei Xu, Guoyu Li, Yuqi Dong, Lingxiao Ma, Yuqing Xia, Jilong Xue, Fan Yang, Luo Mai, Zhi Yang, Wayne Luk, Hongxiang Fan
   [arXiv](https://arxiv.org/abs/2607.22432v1)
@@ -1366,6 +1458,14 @@ _Generated: 2026-07-30 06:18_
 - **Transition-Aware Backend Dispatch for Edge LLM Inference** — Alaaddin Goktug Ayar, Martin Margala
   [arXiv](https://arxiv.org/abs/2607.17415v1)
   > Efficient large language model (LLM) inference on edge platforms is limited not only by model size, but also by shape-dependent performance differences across execution backends. Static backend assign...
+
+- **TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM** — Hengyi Xie, Chenfei Yao, Xianjin Wu, Xuanyang Xi, Yiping Tang, Di Xu, Yingying Zhu, Dingkang Liang, Xiang Bai, Han Ding
+  [arXiv](https://arxiv.org/abs/2607.27205v1)
+  > Vision-language-action (VLA) models commonly adopt an LLM-centric $V \to L \to A$ pathway, where visual observations are projected into the representation space of a large language model before being ...
+
+- **Two Calls Beat Five Agents: Evaluating Multi-Agent Pipelines Against Self-Refinement for Local Language Models** — Ashish Prajapati, Om Mohite
+  [arXiv](https://arxiv.org/abs/2607.26922v1)
+  > Multi-agent LLM pipeline systems break down the task among multiple roles for better reasoning, but are benchmarked mainly with large-scale commercial models. In this study, we investigate Parishad, a...
 
 - **Understand and Accelerate Memory Processing Pipeline for Disaggregated LLM Inference** — ['Zifan He', 'Rui Ma', 'Yizhou Sun', 'Jason Cong']
   [arXiv](https://arxiv.org/abs/2603.29002)
@@ -1434,6 +1534,10 @@ _Generated: 2026-07-30 06:18_
 - **Where FactsGo Missing: A LayerwiseTaxonomy and Per-Layer Attribution of Information Omissionin Air-Gapped LLM Agent Pipelines** — Santhiya Rajan
   [arXiv](https://arxiv.org/abs/2607.22448v1)
   > Air-gapped and on-premises deployments in regulated settings (clinical FHIR services, legal review, sovereign infrastructure) cannot call frontier APIs; they run quantized 4-8B models via llama.cpp or...
+
+- **Which RAG Paradigm Wins at Scale? A Scaling Study of Retrieval-Augmented Generation Paradigms** — Pengyu Wang, Benfeng Xu, Shaohan Wang, Xin Zeng, Huarui Wu, Lei Zhang, Licheng Zhang
+  [arXiv](https://arxiv.org/abs/2607.26497v1)
+  > Retrieval-augmented generation (RAG) methods range from lexical and dense retrieval to graph-based indexing and agentic search. They are usually evaluated on different benchmarks at one corpus size, l...
 
 - **Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context** — Alagappan Valliappan
   [arXiv](https://arxiv.org/abs/2607.21535v1)
