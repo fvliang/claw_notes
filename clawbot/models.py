@@ -33,6 +33,8 @@ class Paper:
     url: str = ""
     pdf_url: str = ""
     comment: str = ""
+    ai_summary_en: str = ""
+    ai_summary_cn: str = ""
 
     # Legacy field mappings for backward compatibility
     @classmethod
