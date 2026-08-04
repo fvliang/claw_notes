@@ -25,7 +25,7 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 </head>
 <body>
 <h1>📚 LLM Serving Papers</h1>
-<div class="stats">642 papers | Updated 2026-08-04</div>
+<div class="stats">660 papers | Updated 2026-08-05</div>
 <div class="filter">
 <select id="topicFilter" onchange="filterPapers()">
 <option value="">All Topics</option><option value="Distributed Inference">Distributed Inference</option>
@@ -3901,6 +3901,114 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 <div class="abstract">Large language models often improve task performance by generating long reasoning traces, but the resulting computation is frequently wasted on redundant verification and revision. Existing probe-based early-exit approaches mainly inspect explicit self-doubt expressions, leaving ...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2607.28966v1">arXiv</a> <a href="https://arxiv.org/pdf/2607.28966v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Efficiency and Cost Alignment in Batched LLM Serving via Resource-Fair Scheduling</h3>
+<div class="meta">Dayi Yao, Zijie Zhou | arXiv 2026</div>
+<div class="abstract">This paper studies a resource-allocation inefficiency in batched large language model (LLM) serving: heterogeneous requests that share a decode batch impose max-driven computational costs on one another. Because the wall-clock cost of a batch step is largely governed by the large...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.02244v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.02244v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>From Chains to Trees: Parent-Conditioned Drafting for Semi-Autoregressive Speculative Decoding</h3>
+<div class="meta">Zixian Li, Tong Li, Chi Xie, Xiaohui Song, Haonan Lu | arXiv 2026</div>
+<div class="abstract">Speculative decoding accelerates LLM inference only when drafted continuations survive target-model verification. Semi-autoregressive drafters such as DSpark predict an entire token block with one backbone forward and refine it with a lightweight Markov head. However, DSpark deco...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.02123v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.02123v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>ET-Prune: Evidence-Aware Dynamic Budgeting for Visual Token Pruning in Text-Rich MLLMs</h3>
+<div class="meta">Zizhong Ding, Junxian Li, Kai Liu, Shaoqiu Zhang, Xiao Xiao, Linghe Kong, Yulun Zhang | arXiv 2026</div>
+<div class="abstract">Visual token pruning reduces the inference cost of multimodal large language models, but a fixed token ratio is poorly matched to text-rich inputs. In OCR-centric tasks, decisive evidence can be a small number, label, or field whose relevance is specified by the question; indiscr...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.01979v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.01979v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>LaCache: Robust Semantic Caching for LLM Serving</h3>
+<div class="meta">Jiacheng Liang, Yuhui Wang, Tanqiu Jiang, Ting Wang | arXiv 2026</div>
+<div class="abstract">Semantic caching, which reuses responses to semantically similar requests via their embeddings, has seen growing adoption in LLM serving, offering faster responses and reduced costs. Yet existing schemes are fundamentally vulnerable to cache-collision attacks, wherein an adversar...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.01718v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.01718v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Bole: Efficient Tree Speculation for Hybrid-Attention Language Models</h3>
+<div class="meta">Li Wang, Yi Su, Xiabao Wu, Chiran You, Yongchao Liu, Zhan Qiu, Juelu Zhang, Jiajun Zheng, Fangxin Liu, Jie Zhang, Chen Tian, Chengying Huan | arXiv 2026</div>
+<div class="abstract">Hybrid-attention large language models combine full attention with recurrent linear attention to reduce long-context inference costs, yet their autoregressive decoding remains memory-bound. Tree speculative decoding offers an attractive acceleration path, but existing tree-specul...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.01651v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.01651v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Structured Memory for Edge Language Models: Persistent Context and Corpus Retrieval via O(1) SSM State Injection</h3>
+<div class="meta">Anusha Madan Gopal, Aras Pirbadian, Kristofor D. Carlson, M Anthony Lewis, Jonathan Tapson | arXiv 2026</div>
+<div class="abstract">Retrieval-augmented generation (RAG) imposes a prefill cost proportional to retrieved context length, and -- with Transformer backbones -- a KV-cache that grows with each generated token. State-Space Models (SSMs) avoid the second cost by construction; we eliminate the first, col...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.02560v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.02560v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>LiveMem: Maintaining Memory State Continuity in Long-Running LLM Inference</h3>
+<div class="meta">Zhichen Liu, Ruihan Sun, Hengjie Yang, Zipeng Wu, Zhaohan Chen, Xiaofan Zhang, Yang Xu | arXiv 2026</div>
+<div class="abstract">Long-running assistants and agents consume interaction streams that eventually outgrow the context. Existing context retention, summarization, and retrieval preserve access to selected history, but do not provide a persistent state over the full lifecycle when working context cha...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.02515v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.02515v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>CTRAG: An In-Context Retrieval-based Framework for Automated Compliance Checking using LLMs</h3>
+<div class="meta">Muhammad Roman, Karen Rafferty, Barry Devereux | arXiv 2026</div>
+<div class="abstract">Trust is fundamental in modern regulatory ecosystems, and compliance checking plays a critical role in fostering that trust. Regulatory compliance verification is essential for businesses operating in highly controlled environments, as it ensures alignment with sector-specific gu...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.02472v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.02472v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Real-Time Detection and Repair of LLM Agent Failures</h3>
+<div class="meta">Sunny Dubey | arXiv 2026</div>
+<div class="abstract">LLM agents fail mid-episode -- they loop, cascade tool errors, drift off goal, fabricate results, or silently absorb corrupted content -- and the standard remedy, judging every step with a second LLM, costs more than the agent itself. We ask how much detection is achievable from ...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.02464v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.02464v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Broadcast Rate Limits in Wi-Fi: A Forgotten Bottleneck for Collaborative Edge LLM Inference</h3>
+<div class="meta">Liujianfu Wang, Yuyang Du, Shiqi Xu, Soung Chang Liew | arXiv 2026</div>
+<div class="abstract">LLM deployment is migrating from data centers to edge devices, where Mixture-of-Experts (MoE) models offer a promising path: sparse expert activation allows the model to be spread across multiple low-cost edge nodes. Distributed MoE inference repeatedly dispatches embeddings from...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.02341v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.02341v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Energy-Efficient LLM Serving via Disaggregated Attention--FFN and Flexible Frequency Scaling</h3>
+<div class="meta">Cunchen Hu, Liangliang Xu, Tian Liu, Min Lyu, Yongkun Li, Sa Wang, Shuo Quan, Yanan Yang, Wenda Tang, Yiduo Wang, Fu Yu, Jie Wu | arXiv 2026</div>
+<div class="abstract">Large language model (LLM) serving spans diverse applications with stringent service-level objectives (SLOs), often requiring GPUs to run at maximum frequencies and increasing energy consumption. Existing energy-management approaches adapt GPU frequencies only at the request or i...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.01891v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.01891v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>DiffPrune: differentiable information throttling for token pruning in vision-language models</h3>
+<div class="meta">Landi He, Mingde Yao, Shawn Young, Lijian Xu | arXiv 2026</div>
+<div class="abstract">Visual token pruning reduces the computational cost of Vision-Language Models (VLMs) by removing redundant visual tokens. The key is to learn a score that measures whether a token is useful. Existing methods typically rely on Gumbel-Softmax to approximate discrete selection durin...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.01985v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.01985v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Learning-Based Collaborative MEC for LLM Inference with Soft-Deadline Awareness via Transformer-Enhanced PPO</h3>
+<div class="meta">Ngoc Hung Nguyen, Bjorn Landfeldt | arXiv 2026</div>
+<div class="abstract">This paper investigates collaborative mobile edge computing (MEC) servers for large language model (LLM) inference under soft deadline constraints. In this system, to improve the quality of service, computations are expected to be completed within their deadlines. However, due to...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.02031v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.02031v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>TELLER: Non-intrusive Cross-Layer Root-Cause Analysis for LLM Inference</h3>
+<div class="meta">Ruilin Xu, Junyi Li, Pengfei Chen, Zongxuan Xie | arXiv 2026</div>
+<div class="abstract">Large language model (LLM) inference has evolved from an offline workload into a continuously operated software service, yet root-cause analysis remains difficult because a single request spans the inference engine, Python/C++ backend, host CUDA APIs, GPU kernels, and distributed...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.01975v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.01975v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>LEAP: Lean Environment-Feedback via Adaptive Pruning for Code RL in GPU Kernel Generation</h3>
+<div class="meta">Tankun Li, Zhi Chen, Yaohua Tang | arXiv 2026</div>
+<div class="abstract">Post-training large language models (LLMs) via reinforcement learning (RL) has significantly advanced code generation capabilities. To bypass the heavy memory footprint of critic networks, current state-of-the-art frameworks leverage critic-free paradigms like Group Relative Poli...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.01804v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.01804v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>HorizonServe: Coordinating Request Scheduling with GPU Sharing for Omni-Model Serving</h3>
+<div class="meta">Yuning Zhang, Dong Yuan | arXiv 2026</div>
+<div class="abstract">Omni models unify text, speech, image, and multimodal reasoning in a single serving backend, but this unified deployment exposes a new scheduling problem. Requests with different output modalities may share an initial multimodal backbone and then diverge into downstream generatio...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.01785v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.01785v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Preserving Admission Responsibility in Multi-Tenant Large Language Model Prefix Caches</h3>
+<div class="meta">Zhiyu Wang, Rajkumar Buyya | arXiv 2026</div>
+<div class="abstract">Shared prefix caching turns Graphics Processing Unit (GPU) memory into persistent state shared across Large Language Model (LLM) tenants. A group that materializes new Key-Value (KV) blocks can force another to lose reusable state, yet request-time schedulers account for transien...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.01657v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.01657v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>PrefixPlace: Provable Prefix Key-Value Placement for Large Language Model Serving under Heterogeneous Compute and Transfer Costs</h3>
+<div class="meta">Zhiyu Wang, Rajkumar Buyya | arXiv 2026</div>
+<div class="abstract">Prefix Key-Value (KV) reuse avoids repeated prefill in Large Language Model (LLM) inference, but local misses require recomputation or replica fetches. Their relative cost varies with hardware, prefix depth, KV goodput, and replica location, making hit-rate-based placement subopt...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.01655v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.01655v1.pdf">PDF</a></div>
 </div></div>
 <div class="empty" id="emptyState" style="display:none">No papers match your filters.</div>
 <script>
