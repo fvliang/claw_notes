@@ -212,6 +212,88 @@ document.getElementById('emptyState').style.display=visible?'none':'block';
 
 
 
+def generate_docs_json(db: PaperDatabase, output_path: str = None):
+    """Generate docs/papers.json for the mobile web UI."""
+    import json as _json
+    output_path = output_path or str(config.REPO_ROOT / "docs" / "papers.json")
+    papers = db.all_papers()
+
+    # Load database.json to get topics and other metadata
+    db_path = config.DATABASE_JSON
+    db_data = {}
+    if db_path.exists():
+        with open(db_path, "r", encoding="utf-8") as f:
+            db_data = _json.load(f)
+
+    topics = db_data.get("topics", sorted(set(p.topic or "Uncategorized" for p in papers)))
+
+    # Extract unique years sorted descending
+    all_years = sorted(set(str(p.year or 2024) for p in papers), reverse=True)
+
+    # Conference categories
+    CONF_CATEGORIES = {
+        'ML': ['NeurIPS', 'ICML', 'ICLR', 'AAAI', 'AISTATS'],
+        'NLP': ['ACL', 'EMNLP', 'NAACL', 'EACL', 'CoNLL', 'TACL', 'Findings'],
+        'Systems': ['OSDI', 'SOSP', 'ASPLOS', 'EuroSys', 'ATC', 'PLDI', 'FAST'],
+        'Arch': ['ISCA', 'MICRO', 'HPCA'],
+        'Database': ['SIGMOD', 'VLDB', 'CIDR', 'ICDE'],
+        'Networks': ['SIGCOMM', 'NSDI', 'CoNEXT'],
+        'Vision': ['CVPR', 'ICCV', 'ECCV'],
+        'Security': ['S&P', 'CCS', 'USENIX Security', 'NDSS'],
+    }
+
+    all_confs = sorted(set(p.conference or 'arXiv' for p in papers))
+    conf_categories = {}
+    for cat, confs in CONF_CATEGORIES.items():
+        matched = [c for c in confs if c in all_confs]
+        if matched:
+            conf_categories[cat] = matched
+
+    classified = set()
+    for confs in conf_categories.values():
+        classified.update(confs)
+    other_confs = sorted([c for c in all_confs if c not in classified])
+    if other_confs:
+        conf_categories['Other'] = other_confs
+
+    # Build paper data in the format expected by the web UI
+    paper_data = []
+    for p in papers:
+        paper_data.append({
+            "id": p.id,
+            "title": p.title or "",
+            "authors": p.authors or "",
+            "topic": p.topic or "",
+            "conference": p.conference or "",
+            "year": p.year or 2024,
+            "added_date": getattr(p, "added_date", None) or getattr(p, "collected_date", None) or "2026-03-15",
+            "abstract_en": p.abstract_en or "",
+            "abstract_cn": getattr(p, "abstract_cn", None) or "",
+            "ai_summary_en": getattr(p, "ai_summary_en", None) or "",
+            "ai_summary_cn": getattr(p, "ai_summary_cn", None) or "",
+            "arxiv_id": getattr(p, "arxiv_id", None) or "",
+            "github_repo": getattr(p, "github_repo", None) or "",
+            "pdf_url": getattr(p, "pdf_url", None) or "",
+            "url": getattr(p, "url", None) or "",
+            "published": getattr(p, "published", None) or "",
+            "source": getattr(p, "source", None) or "arXiv",
+            "tags": getattr(p, "tags", None) or [],
+            "has_content": getattr(p, "has_content", False),
+            "is_github_project": getattr(p, "is_github_project", False),
+            "is_placeholder_arxiv": getattr(p, "is_placeholder_arxiv", False),
+        })
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        _json.dump({
+            'papers': paper_data,
+            'topics': topics,
+            'confCategories': conf_categories,
+            'allYears': all_years,
+        }, f, ensure_ascii=False)
+
+    logger.info("Generated docs/papers.json with %d papers", len(papers))
+
+
 def generate_docs_html(db: PaperDatabase, output_path: str = None):
     """Generate docs/index.html (mobile UI with read/unread/favorites)."""
     import json as _json
@@ -287,6 +369,7 @@ def run_full_pipeline(
     if generate_web:
         generate_web_html(db)
         generate_docs_html(db)
+        generate_docs_json(db)
     if generate_index:
         generate_markdown_index(db)
 
