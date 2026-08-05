@@ -219,7 +219,7 @@ def generate_docs_json(db: PaperDatabase, output_path: str = None):
     papers = db.all_papers()
 
     # Load database.json to get topics and other metadata
-    db_path = config.DATABASE_JSON
+    db_path = config.DB_PATH
     db_data = {}
     if db_path.exists():
         with open(db_path, "r", encoding="utf-8") as f:

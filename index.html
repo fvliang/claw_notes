@@ -25,7 +25,7 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 </head>
 <body>
 <h1>📚 LLM Serving Papers</h1>
-<div class="stats">660 papers | Updated 2026-08-05</div>
+<div class="stats">687 papers | Updated 2026-08-06</div>
 <div class="filter">
 <select id="topicFilter" onchange="filterPapers()">
 <option value="">All Topics</option><option value="Distributed Inference">Distributed Inference</option>
@@ -4009,6 +4009,168 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 <div class="abstract">Prefix Key-Value (KV) reuse avoids repeated prefill in Large Language Model (LLM) inference, but local misses require recomputation or replica fetches. Their relative cost varies with hardware, prefix depth, KV goodput, and replica location, making hit-rate-based placement subopt...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2608.01655v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.01655v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>ParVL: Parallel Scaling and Expandable Compute Allocation for Multimodal LLMs</h3>
+<div class="meta">Yang Yang, Qinyu Zhao, Mouxiang Chen, Xiaohui Li, Lixin Gu, Wenhai Wang, Hongjie Zhang, Wenwei Zhang | arXiv 2026</div>
+<div class="abstract">Existing scaling strategies for Multimodal Large Language Models (MLLMs) typically expand either model parameters or sequential inference computation, incurring substantial memory or latency overhead. More importantly, most existing methods fail to alter the rigid, fixed computat...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.04010v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.04010v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Can Large Language Models Recover Semantic Optimization Opportunities That Compilers Miss?</h3>
+<div class="meta">Hailong Jiang, Feng Yu, Emran Hossain, Jianfeng Zhu, Mengfei Ren, Qiang Guan, Chunwei Xia | arXiv 2026</div>
+<div class="abstract">Optimizing compilers miss profitable transformations when their enabling semantics are absent from the analyzed program representation. We ask whether large language models (LLMs) can recover such semantics from heterogeneous C/C++ context and realize them as validated, contract-...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03983v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03983v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Separating quantum circuits from classical LLMs</h3>
+<div class="meta">Srinivasan Arunachalam, Arkopal Dutt, Hari Krovi, Rik Sengupta | arXiv 2026</div>
+<div class="abstract">Modern large language models - transformers and diffusion language models - are built around two canonical algorithmic tasks: prediction and generation. We prove unconditional separations between low-depth quantum computation and the corresponding bounded-resource classical langu...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03962v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03962v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Heterogeneity-Aware Microscaling for Efficient Low-Bit LLM Inference</h3>
+<div class="meta">Junyi Luo, Xinting Jiang, Tai-Hao Wen, Ruichen Qi, Minxing Chu, Hongyi Wu, Gregory Kielian, Ben Laurie, Qirui Zhang, Quan Cheng, Dennis Sylvester, Mehdi Saligane | arXiv 2026</div>
+<div class="abstract">Microscaling (MX) is now the standard for low-bit large language model (LLM) inference. Its 4-bit form MXFP4 still loses substantial accuracy, because existing MX formats fix either the element format or the precision-recovery scheme across blocks, and thus capture only limited q...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03867v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03867v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>LatentGuard: Efficient and Inspectable Latent Reasoning for LLM Safeguards</h3>
+<div class="meta">Zhinan Liu, Jie Li, Mingyu Kang, Jiayi Ji | arXiv 2026</div>
+<div class="abstract">Reasoning-based guard models improve LLM safeguards, but decoding explicit rationales for every interaction makes them costly to deploy. Although latent-reasoning methods reduce token generation by moving reasoning into continuous states, they remain underexplored for safety mode...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03838v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03838v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>When Does Disaggregation Pay? Simulating Prefill--Decode--Attention--FFN Specialization for Agentic LLM Inference</h3>
+<div class="meta">Przemyslaw Forys, Haoran Wu, Can Xiao, Jiayi Nie, Tony Liu, Rika Antonova, Timothy Jones, Robert Mullins, Wayne Luk, Aaron Zhao, George A. Constantinides | arXiv 2026</div>
+<div class="abstract">Agentic inference now dominates the LLM inference landscape, requiring LLMs to actively engage in multi-turn interactions with tool-calling capabilities. This introduces a more complex workload for the underlying inference system: serving stages such as prefill and decode exhibit...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03741v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03741v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Heterogeneous LLM Serving with General-Purpose Processing-Near-Memory for Retrieval-Based Sparse Attention</h3>
+<div class="meta">Hyungkyu Ham, Junhyeong Bae, Seungheon Lee, Myeongjae Jeon, Gwangsun Kim | arXiv 2026</div>
+<div class="abstract">This paper presents a heterogeneous decode-phase serving system that relocates the KV cache out of GPU memory, motivated by the retrieval-based sparse attention that recent frontier LLMs adopt to serve million-token contexts. It partitions a decode step by operation type: GPU nod...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03555v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03555v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Efficient Grammar-Constrained Decoding via Parser Stack Classification</h3>
+<div class="meta">Yongmin Li, Yihong Dong, Jia Li, Ge Li | arXiv 2026</div>
+<div class="abstract">LLMs are widely used to generate structured output like source code or JSON. Grammar-constrained decoding (GCD) can guarantee the syntactic validity of the generated output, by masking out tokens that violate rules specified by a context-free grammar. However, the online computat...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03065v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03065v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>ATFlash: Per-RoPE-Wavelength Attention Windows for Compute/Memory-Efficient LLM Inference</h3>
+<div class="meta">Shun-ichiro Hayashi, Daichi Mukunoki, Tetsuya Hoshino, Takahiro Katagiri | arXiv 2026</div>
+<div class="abstract">The attention score with rotary position embeddings (RoPE) decomposes exactly into a sum over its 2D-rotation frequency pairs, and each pair's wavelength limits how far it can discriminate position. Aligned with this structure, we propose the per-RoPE-wavelength distance window: ...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.02947v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.02947v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>OPTD: On-Policy Transition Distillation with Consistency-Guided Adaptive Compression for Few-Step Diffusion Language Models</h3>
+<div class="meta">Xiaocheng Lu, Hualei Zhang, Shuhan Guo, Jie Zhang, Xiaoyi Pang, Jian Liu, Haoxi Li, Bohai Gu, Haoxuan Che, Jingcai Guo, Song Guo | arXiv 2026</div>
+<div class="abstract">Diffusion language models (dLLMs) can predict many tokens in parallel, but accurate generation still requires many iterative denoising steps. Few-step distillation accelerates decoding by compressing multiple teacher steps into a single student transition. However, existing metho...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.02942v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.02942v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Test-Time Scaling in Reasoning LLMs: Inference Regimes, Evaluation, and Reproducibility</h3>
+<div class="meta">Mohsen Hariri, Weicong Chen, Nahal Shahini, Vikash Singh, Kai Ye, Amirhossein Samandar, Debargha Ganguly, Sreehari Sankar, Yanyan Zhang, Shouren Wang, Jerry Peng, Biyao Zhang, Michael Hinczewski, Vipin Chaudhary | arXiv 2026</div>
+<div class="abstract">Large language models can solve substantially harder reasoning problems with more inference-time compute. The term "test-time scaling," however, now covers diverse inference algorithms that extend deliberation along a single trajectory, sample completed candidates and aggregate t...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.04001v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.04001v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>HalluTruthQA-4K: A Fine-Grained Corpus and Annotation Process for Arabic Hallucination Detection and Truth Verification</h3>
+<div class="meta">Salah Eddine Bekhouche, Abdessalam Bouchekif, Hichem Telli, Mohammed-En-Nadhir Zighem, Abdenour Hadid | arXiv 2026</div>
+<div class="abstract">Large language models can generate fluent Arabic answers while introducing factual errors that are difficult to identify and verify. Existing Arabic hallucination resources often assign a binary label to an entire response, indicating whether it is hallucinated or non-hallucinate...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03966v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03966v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Cross-Model KV Cache Transfer in LLM Families: A Closed-Form Linear Mapping for Prefill Reuse</h3>
+<div class="meta">Taekyung Heo, Rasoul Shafipour, Ritchie Zhao, Maximilian Golub, Mohammad Mahdi Kamani, Ritika Borkar, Makesh Tarun Chandran, Pantea Zardoshti, Bita Darvish Rouhani | arXiv 2026</div>
+<div class="abstract">Production deployments often swap between different-sized models in a family for cost-quality cascading, mid-conversation switching, and routing, and each swap forces the receiver to repay the prefill from scratch. We propose cross-model KV cache transfer, where the receiver reus...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03893v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03893v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Evaluating MFU as a Proxy for GPU Power for Energy-Aware Simulation of LLM Training</h3>
+<div class="meta">Niklas Enskat, Philipp Wiesner | arXiv 2026</div>
+<div class="abstract">High-fidelity performance simulators are essential for designing and configuring efficient AI systems, yet today's tools lack the ability to predict power consumption. Established GPU power models rely on hardware utilization counters, which do not exist until the workload has ac...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03880v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03880v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>MAFIA: Query-Only Memory Attacks via Probing and Factual Injection against Audited LLM Agents</h3>
+<div class="meta">Jiaming Chen, Yisen Gao, Yanping Li, Zifan Liu, Yumeng Zhang, Jun Zhang | arXiv 2026</div>
+<div class="abstract">Memory-augmented LLM agents rely on rich context for long-horizon reasoning and acting, yet their memory modules expose a persistent attack surface for malicious records, making the study of memory poisoning threats imperative. However, existing query-only attacks often fail to r...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03844v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03844v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>OmniPack: Unified Token Compression for Efficient Omni-modal Large Language Models</h3>
+<div class="meta">Wanshun Su, Yang Shi, Feihu Liu, Ziwen Yu, Yan Min, Zhuoran Zhang, Qixun Wang, Haotian Wang, Shixuan Liu, Yuanxing Zhang, Peng Wu, Chengfu Huo, Liang Ding | arXiv 2026</div>
+<div class="abstract">Omni-modal large language models (Omni-LLMs) have achieved remarkable performance on audio-visual understanding tasks, but processing long and highly redundant visual and audio token sequences incurs substantial computational overhead, demanding aggressive token compression for e...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03812v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03812v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Efficient Knowledge Distillation for LLMs: Offline Top-K Logits and a Fused Chunked KL Loss</h3>
+<div class="meta">Bakbergen Ryskulov, Iker García-Ferrero, David Montero, David Jansen, Ali Hashemi, Jezabel R. Garcia, Antonio Tiene, Román Orús | arXiv 2026</div>
+<div class="abstract">Small language models are often the only option for deployment under tight latency, cost, and on-premises constraints, but they are rarely trained from scratch: a compressed model is usually recovered through knowledge distillation (KD). This recovery step largely decides the fin...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03796v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03796v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>SlimVLM: Sensitivity-aware Dynamic Structured Pruning with Adaptive Visual Token Selection for Efficient Vision-Language Models</h3>
+<div class="meta">Yaozhi Wen, Jialong Guo, Zhenliang Ni, Han Shu, Xinghao Chen | arXiv 2026</div>
+<div class="abstract">While Vision-Language Models (VLMs) have demonstrated remarkable performance in processing and understanding both text and images, their large parameter sizes lead to significant computational overhead, limiting their deployment on resource-constrained devices. While pruning has ...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03580v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03580v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Balancing Efficiency and Efficacy: Training-Free Attention-Guided Switching Between Explicit and Latent Thoughts for MLLMs</h3>
+<div class="meta">Haoqian Kang, Liupeng Li, Kuofeng Gao, Jinpeng Wang, Zhenyu Lu, Bin Chen, Ke Chen, Yaowei Wang | arXiv 2026</div>
+<div class="abstract">Reasoning in Multimodal Large Language Models (MLLMs) requires both fine-grained visual perception and rigorous logical deduction. Explicit text-based Chain-of-Thought (CoT) is computationally expensive and prone to visual hallucinations, while existing latent reasoning methods t...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03450v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03450v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>TaskPress: Query-Agnostic KV Cache Compression via Task-Guided Pruning</h3>
+<div class="meta">Wonpyo Park, Seung-won Hwang | arXiv 2026</div>
+<div class="abstract">Long-context inference with large language models is constrained by the linear growth of the key-value cache to sequence length. While pruning offers mitigation, prevailing methods determine query-specific token importance that cannot be reused across unseen queries. In contrast,...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03276v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03276v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Can LLMs Test Terminal User Interfaces?</h3>
+<div class="meta">Chao Peng, Ruida Hu, Ajitha Rajan, Tegawendé F Bissyandé, Jacques Klein, Cuiyun Gao | arXiv 2026</div>
+<div class="abstract">Terminal User Interfaces (TUIs) combine the stateful, screen-oriented behaviour of GUIs with terminal deployment and are now common in developer tools. Yet they lack a dedicated testing methodology. We survey 197 real-world TUI applications: only 12% of test code exercises the in...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03743v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03743v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Pin Once, Swap Light: Subspace-Aligned Centroid-Residual Training for Efficient Ultra-LoRA Serving</h3>
+<div class="meta">Xiang Li, Pengcheng Wang, Huazheng Wang, Saurabh Bagchi | arXiv 2026</div>
+<div class="abstract">Modern multi-tenant Low-Rank Adapters (LoRAs) serving systems concurrently host tens to hundreds of LoRA adapters. Though powerful, this introduces a critical system dilemma between serving efficiency and task performance: higher-rank adapters generally achieve better downstream ...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03579v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03579v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Enhancing Tabular Learners with Context-Aware Semantic Embeddings</h3>
+<div class="meta">Günther Schindler, Maximilian Schambach, Johannes Höhne | arXiv 2026</div>
+<div class="abstract">While modern tabular learners excel at capturing statistical patterns, they frequently operate in a semantic vacuum, treating textual features as discrete symbols, ignoring the rich semantics inherent in feature names or cell entries. We propose CASE (Context-Aware Semantic Embed...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03565v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03565v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Shorter Reasoning, Earlier Answers? An Evaluation of Reasoning Interfaces</h3>
+<div class="meta">Francesca Carlon, Vincent Ginis, Andres Algaba | arXiv 2026</div>
+<div class="abstract">Large language models often reason at length before answering, increasing cost and latency. Prompts and trained settings can shorten this reasoning, but a shorter trace may only show that the model stopped sooner. Here, we evaluate paired runs of the same question at matched reas...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03401v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03401v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Reachability Is Not Realization: Tracing the Sources of LLM Benchmark Gains</h3>
+<div class="meta">Yanchao Li, Wanhao Liu, Jiaqing Xie, Ben Gao, Yanbo Wang, Tianfan Fu, Yuqiang Li | arXiv 2026</div>
+<div class="abstract">Benchmark gains are often treated as evidence of greater LLM capability. Yet the same gain can reflect different changes in model behavior. A model may reach new answers, or produce answers that were already within reach. Aggregate scores do not distinguish these changes question...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03219v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03219v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>ANCHOR-RE: An Agentic Neuro-Symbolic Framework for Grounded Biomedical Relation Extraction</h3>
+<div class="meta">Shufan Ming, Yikun Han, Gibong Hong, Rui Zhang, Halil Kilicoglu | arXiv 2026</div>
+<div class="abstract">Biomedical relation extraction (BioRE) extracts structured knowledge from biomedical literature for applications such as knowledge base construction and hypothesis generation. Traditional symbolic systems such as SemRep provide high precision but limited recall, while large langu...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03154v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03154v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>PI-Mem: Pushing Long-Context Reasoning to 3.6M Tokens with Parallel-Iterative Memory</h3>
+<div class="meta">Dawei Liu, Haixu Song, Shuang Cheng, Shijie Wang, Haozheng Hou, Kaifeng Liu, Ermo Hua, Zhonghang Yuan, Zhijie Zhong, Yuchen Fan, Biqing Qi, Bowen Zhou | arXiv 2026</div>
+<div class="abstract">Long-context reasoning remains a critical bottleneck for large language models, as recent recurrent-memory approaches face two inherent challenges: sequential chunk-wise updates can overwrite early critical evidence with later irrelevant content, and serial inter-chunk dependenci...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.03048v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03048v1.pdf">PDF</a></div>
 </div></div>
 <div class="empty" id="emptyState" style="display:none">No papers match your filters.</div>
 <script>
