@@ -25,7 +25,7 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 </head>
 <body>
 <h1>📚 LLM Serving Papers</h1>
-<div class="stats">687 papers | Updated 2026-08-06</div>
+<div class="stats">699 papers | Updated 2026-08-07</div>
 <div class="filter">
 <select id="topicFilter" onchange="filterPapers()">
 <option value="">All Topics</option><option value="Distributed Inference">Distributed Inference</option>
@@ -4171,6 +4171,78 @@ h1{color:#64ffda;text-align:center;margin-bottom:10px;font-size:2rem}
 <div class="abstract">Long-context reasoning remains a critical bottleneck for large language models, as recent recurrent-memory approaches face two inherent challenges: sequential chunk-wise updates can overwrite early critical evidence with later irrelevant content, and serial inter-chunk dependenci...</div>
 <div class="tags"><span>LLM Serving</span></div>
 <div class="links"><a href="https://arxiv.org/abs/2608.03048v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.03048v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>RAC: Reference-Aware Activation Compression for Communication-Efficient Split LLM Inference</h3>
+<div class="meta">Guotao Yang, Mingxi Zhao, Haopeng Li, Zhengchao Wang, Sheng Chen, Yitao Hu, Keqiu Li | arXiv 2026</div>
+<div class="abstract">Large language model (LLM) agents repeatedly process long, privacy-sensitive contexts, while cloud-only deployment exposes user data beyond the trusted endpoint and fully local deployment often requires costly hardware. Split inference offers a middle ground by executing the mode...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.04991v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.04991v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>SpecRoll: Fast-Slow Verifier-Feedback Adaptation for Speculative Reinforcement Learning Rollouts</h3>
+<div class="meta">Nhat Minh Pham, Duy Tung Doan, Thi Duyen Ngo, Vinh Van Nguyen, Khac-Hoai Nam Bui | arXiv 2026</div>
+<div class="abstract">Reinforcement learning (RL) post-training improves the reasoning capabilities of large language models, but autoregressive rollout generation remains a major efficiency bottleneck. Speculative decoding can accelerate generation, yet applying it during RL is difficult because the ...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.04962v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.04962v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Strengthening Target-Language Features: SAE-Based Steering for Multilingual Inference</h3>
+<div class="meta">Hongsheng Wang, Phlipp Koehn | arXiv 2026</div>
+<div class="abstract">Multilingual large language models exhibit substantial performance differences across languages, while existing adaptation methods often require parameter updates and considerable multilingual training data. We propose an inference-time multilingual steering method that uses pret...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.04904v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.04904v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>What We Observe as LLM Behavior Can Be a Side-effect of Inference Backend</h3>
+<div class="meta">Shahed Masoudian, Passant Shafaei, Monorama Swain, Markus Schedl | arXiv 2026</div>
+<div class="abstract">Benchmark scores are reported as properties of a model, yet the inference framework used to produce them, such as HuggingFace, vLLM, or Ollama, are considered non-influential and their names and versions are almost never disclosed. In this work we investigate how much this choice...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.04714v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.04714v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>EgoAfford: Task-Oriented Affordance Grounding via Egocentric Referring Segmentation</h3>
+<div class="meta">Xinyuan Guan, Feifan Chen, Xinyu Zhan, Fu-Cheng Zhang, Cewu Lu, Lixin Yang | arXiv 2026</div>
+<div class="abstract">Part-level affordance grounding has advanced the localization of functional object regions associated with elemental actions. Extending this capability to complex tasks calls for connecting the semantic roles of participating objects with task-state-aligned visual observations an...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.04533v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.04533v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>On Design Principles for Efficient Heterogeneous DRAM-PIM-GPU Systems</h3>
+<div class="meta">Corey Lammie, Hadjer Benmeziane, William Andrew Simon, Irem Boybat | arXiv 2026</div>
+<div class="abstract">Heterogeneous DRAM-based processing-in-memory (PIM)-GPU systems promise significant efficiency gains for decode-phase large language model (LLM) inference, particularly in long-output generation, yet current design practices overlook critical factors that determine real-world per...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.04169v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.04169v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Spend Bits Where Queries Look: KV Cache Vector Quantization with Attention-Preserving Transforms</h3>
+<div class="meta">Samuel Fernández-Menduiña, Amir Ziashahabi, Eduardo Pavez, Antonio Ortega, Salman Avestimehr | arXiv 2026</div>
+<div class="abstract">Long-context LLM decoding reads the key-value (KV) cache at every step. Loading it takes longer than computing attention over it, so throughput is bandwidth-bound. Hence, reducing the cache size can raise both decoding speed and serving capacity. The challenge is to reduce cache ...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.04074v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.04074v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>When Does Latent Communication Pay? A Causal Audit of Relayed KV Caches in Multi-Agent LLMs</h3>
+<div class="meta">Jiaming Cheng, Subhransu Das, Rajiv Ramnath | arXiv 2026</div>
+<div class="abstract">Multi-agent LLM systems relay key--value caches instead of text and credit their gains to exchanged ``latent thoughts''. That credit is a claim about \emph{which} example's cache is relayed, not merely that one is. We audit it causally in released systems. The cache is replaced w...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.04893v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.04893v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>ContextMaster: Interactive Multi-Shot Video Creation via Fixed-Budget Sparse Context Routing</h3>
+<div class="meta">Xu Guo, Zhengxuan Wei, Xinghui Li, Hanzhuo Huang, Xinyu Liu, Xiangyang Luo, Min Wei, Yiran Zhu, Qiulin Wang, Yulong Xu, Xintao Wang, Pengfei Wan, Qi Fan, Xiangwang Hou | arXiv 2026</div>
+<div class="abstract">Recent video models increasingly support generation, reference conditioning, and editing within a single model, yet typically expose them as separate operations over fixed inputs. Practical creation unfolds across multiple shots, requiring one model to generate from text, follow ...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.04956v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.04956v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>CARVE: Cross-Slice Anisotropic Reallocation of Visual Evidence for Efficient 3D Medical Volume Understanding</h3>
+<div class="meta">Zhenyu Yi, Qiang Hu, Zhenhao Li, Jiaxuan Zhao, Yusong Sun, Lichi Zhang | arXiv 2026</div>
+<div class="abstract">Slice-based MLLMs leverage mature 2D encoders by representing 3D volumes as sequences of 2D slices. However, this slice-wise formulation produces thousands of visual tokens that burden the LLM backbone, many of which capture overlapping visual evidence across adjacent slices. To ...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.04515v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.04515v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>Architectural Implications of Agentic AI Workflows</h3>
+<div class="meta">Jirong Yang, Peizhe Liu, Chaojie Zhang, Jovan Stojkovic | arXiv 2026</div>
+<div class="abstract">Agentic AI is emerging in datacenters, but its architectural implications remain unexplored. We organize agentic workflows in a taxonomy and present its first architectural characterization with a production study at Microsoft Azure and a controlled study of open-source framework...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.04458v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.04458v1.pdf">PDF</a></div>
+</div><div class="paper" data-topic="LLM Serving">
+<h3>PriDyG: Privacy-preserving Dynamic Graph Inference with LLM-GNN Collaboration</h3>
+<div class="meta">Yuyang Xia, Ruixuan Liu, Li Xiong | arXiv 2026</div>
+<div class="abstract">Graph inference over relational data can expose sensitive edge information, and this risk becomes more severe in dynamic graphs, where repeated model updates cause privacy loss to accumulate. We formulate Edge-level Differentially Private Dynamic Graph Inference (EDG) and propose...</div>
+<div class="tags"><span>LLM Serving</span></div>
+<div class="links"><a href="https://arxiv.org/abs/2608.04255v1">arXiv</a> <a href="https://arxiv.org/pdf/2608.04255v1.pdf">PDF</a></div>
 </div></div>
 <div class="empty" id="emptyState" style="display:none">No papers match your filters.</div>
 <script>
