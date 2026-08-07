@@ -1,6 +1,6 @@
 # LLM Serving Papers Index
 
-_Generated: 2026-08-07 06:18_
+_Generated: 2026-08-08 06:17_
 
 
 ## 2026
@@ -359,6 +359,10 @@ _Generated: 2026-08-07 06:18_
   [arXiv](https://arxiv.org/abs/2607.22305v1)
   > Pluralistic value alignment---the goal of building AI systems that represent and serve diverse human values and perspectives---has emerged as an active research agenda. Yet, there's no public evidence...
 
+- **A Six-Dimensional Taxonomy of Post-Training Adaptation Techniques with Applications in AI Governance** — Fardin Afdideh, Fernando Seoane, Farhad Abtahi
+  [arXiv](https://arxiv.org/abs/2608.06246v1)
+  > Post-training adaptation has become central to modern machine learning practice and includes techniques such as retraining, fine-tuning, parameter-efficient adaptation, alignment, retrieval augmentati...
+
 - **A Sparse Glimpse of the Whole: Train-Free Self-Speculative Decoding** — Yuesong Liu, Yuan Zeng, Min Lyu, Ruilin Liu, Yu Guo, Yinlong Xu
   [arXiv](https://arxiv.org/abs/2607.27735v1)
   > Speculative decoding alleviates the memory-bandwidth bottleneck in large language model inference, but its acceleration is jointly constrained by drafting overhead, token acceptance, and speculation l...
@@ -449,6 +453,10 @@ _Generated: 2026-08-07 06:18_
   [arXiv](https://arxiv.org/abs/2607.15367v1)
   > Desktop voice assistants are still dominated by cloud pipelines that ship raw audio off the machine and expose a fixed set of skills. We describe AnovaX, a small local-first assistant that runs entire...
 
+- **Answer First, Reason Later: Commitment Order in Diffusion LLMs** — Jewon Yeom, Jaewon Sok, Seonghyeon Park, Jeongjae Park, Hwiyeong Lee, Taesup Kim
+  [arXiv](https://arxiv.org/abs/2608.05687v1)
+  > Masked diffusion language models (dLLMs) can commit tokens in any order -- a freedom marketed as their core advantage over autoregressive decoding. We show that on reasoning tasks this freedom is inst...
+
 - **Architectural Implications of Agentic AI Workflows** — Jirong Yang, Peizhe Liu, Chaojie Zhang, Jovan Stojkovic
   [arXiv](https://arxiv.org/abs/2608.04458v1)
   > Agentic AI is emerging in datacenters, but its architectural implications remain unexplored. We organize agentic workflows in a taxonomy and present its first architectural characterization with a pro...
@@ -464,6 +472,10 @@ _Generated: 2026-08-07 06:18_
 - **B-PASTE: Beam-Aware Pattern-Guided Speculative Execution for Resource-Constrained LLM Agents** — Yanfei Song
   [arXiv](https://arxiv.org/abs/2604.16469)
   > LLM agents execute in an interleaved reasoning-and-action loop, where future tool calls cannot be launched until the current reasoning step completes. This serial dependency inflates end-to-end latenc...
+
+- **BALANCE: Hybrid Autoregressive-Speculative LLM Inference in Wireless Edge Networks** — Guanqiao Qu, Shuo Chen, Qian Chen, Kin K. Leung, Xianhao Chen
+  [arXiv](https://arxiv.org/abs/2608.05926v1)
+  > Edge inference is a promising paradigm to provide large language model (LLM) inference services in next-generation mobile networks. LLM inference mainly relies on two approaches: Autoregressive decodi...
 
 - **BLADE: Boundary-Expanded and Layer-Adaptive Dynamic Exit for Efficient LLM Reasoning** — Keshu Fu, Keqin Peng, Jun Bai, Shuhan Qin, Chen Li, Junzhu Liang, Yefei Chen, Jiaqi Li, Yuanxin Ouyang
   [arXiv](https://arxiv.org/abs/2607.28966v1)
@@ -573,6 +585,10 @@ _Generated: 2026-08-07 06:18_
   [arXiv](https://arxiv.org/abs/2603.22206)
   > Multi-agent applications execute complex tasks as multi-stage workflows where each stage is an LLM call. Existing LLM serving systems largely assume homogeneous clusters with identical model replicas,...
 
+- **CircuitSteer: Geometrically Aligned Multi-Layer Steering via Sparse Autoencoder Circuits** — Mehrshad Saadatinia, Parsa Razmara, Ardalan Aryashad, Ali Abbasi, Seyedarmin Azizi
+  [arXiv](https://arxiv.org/abs/2608.05732v1)
+  > Controlling the behavior of large language models (LLMs) remains a critical challenge for AI alignment. Existing steering methods, such as Contrastive Activation Addition (CAA), typically rely on fixe...
+
 - **Cloud-native and Distributed Systems for Efficient and Scalable Large Language Models -- A Research Agenda** — Minxian Xu, Jingfeng Wu, Shengye Song, Satish Narayana Srirama, Bahman Javad, Rajiv Ranjan, Devki Nandan Jha, Sa Wang, Wenhong Tian, Huanle Xu, Li Li, Zizhao Mo, Shuo Ren, Thomas Kunz, Petar Kochovski, Vlado Stankovski, Kejiang Ye, Chengzhong Xu, Rajkumar Buyya
   [arXiv](https://arxiv.org/abs/2604.17227)
   > The rapid rise of Large Language Models (LLMs) has revolutionized various artificial intelligence (AI) applications, from natural language processing to code generation. However, the computational dem...
@@ -637,6 +653,10 @@ _Generated: 2026-08-07 06:18_
   [arXiv](https://arxiv.org/abs/2604.05375)
   > Multimodal large language models (MLLMs) have shown strong capability in semantic understanding and visual reasoning, yet their use on continuous video streams in bandwidth-constrained edge-cloud syst...
 
+- **DBLAST: Dependent Block Drafting for Stochastic Speculative Decoding** — Amirmohammad Karimi, Chao Gao, Negar Hassanpour
+  [arXiv](https://arxiv.org/abs/2608.05448v1)
+  > Speculative decoding accelerates large language models' inference by using a lightweight drafter to propose multiple future tokens and a target model to verify them. While recent block and diffusion-s...
+
 - **DFVG: A Heterogeneous Architecture for Speculative Decoding with Draft-on-FPGA and Verify-on-GPU** — Shaoqiang Lu, Yangbo Wei, Junhong Qian, Dongge Qin, Shiji Gao, Yizhi Ding, Qifan Wang, Chen Wu, Xiao Shi, Lei He
   [GitHub](https://github.com/ShaoqiangLu/DFVG)
   > Speculative decoding is a promising paradigm that accelerates LLM inference by generating drafts and performing verification. However, such systems still face three major challenges: (1) The imbalance...
@@ -672,6 +692,10 @@ _Generated: 2026-08-07 06:18_
 - **Do LLM Decoders Listen Fairly? Benchmarking How Language Model Priors Shape Bias in Speech Recognition** — Srishti Ginjala, Eric Fosler-Lussier, Christopher W. Myers, Srinivasan Parthasarathy
   [arXiv](https://arxiv.org/abs/2604.21276v1)
   > As pretrained large language models replace task-specific decoders in speech recognition, a critical question arises: do their text-derived priors make recognition fairer or more biased across demogra...
+
+- **DreamGuard: Efficient Runtime Guardrail for LLM Agents via Risk-Aware World Model** — Wenhao Lin, Chenyu Yu, Xingwei Lin, Sicong Cao, Xiang Chen, Lei Xue, Le Yu, Letian Sha, Chunming Wu
+  [arXiv](https://arxiv.org/abs/2608.05695v1)
+  > As large language model (LLM) agents increasingly invoke external tools and interact with real-world systems, unsafe actions may cause irreversible consequences on external states, user data, and down...
 
 - **DualAnchor: Preserving Language Priors and Improving Lexical Fidelity in Gloss-Free Sign Language Translation** — Hongbin Zhang, Junhao Liu, Xuefeng Bai, Youcheng Pan, Yang Xiang, Kehai Chen
   [arXiv](https://arxiv.org/abs/2607.27614v1)
@@ -712,9 +736,17 @@ _Generated: 2026-08-07 06:18_
   [arXiv](https://arxiv.org/abs/2603.22910)
   > KV cache memory demand poses a significant bottleneck for LLMs in long-context applications. Existing low-rank compression methods rely on irreversible parameter transformations, sacrificing flexibili...
 
+- **EcoAgent-Bench: Evaluating Economic Decision-Making in Budget-Constrained LLM Agents** — Jie Wu, Ming Gong, Feixiang Cheng, Qinqin Zhao
+  [arXiv](https://arxiv.org/abs/2608.05519v1)
+  > Agent benchmarks usually measure task completion and treat resource use as an auxiliary statistic. In deployment, however, the choice among a local lookup, broad search, composite research tool, stron...
+
 - **EdgeCoInfer: Hierarchical Collaborative Inference for On-Device Multimodal Large Models** — Lin Tan, David K. Y. Yau, Songtao Guo
   [arXiv](https://arxiv.org/abs/2607.17143v1)
   > Modern mobile applications predominantly execute concurrent Multimodal Large Language Models (MLLMs) to provide ubiquitous intelligence. However, satisfying this demand within edge environments faces ...
+
+- **EdgeXpert: An Edge Device for Memory-Efficient LLM Inference with Mixture-of-Experts and Speculative Decoding** — Sangwoo Ha, Hyunwoo Seo, Yurim Jo, Youngjin Moon, Hoi-Jun Yoo
+  [arXiv](https://arxiv.org/abs/2608.05303v1)
+  > On-device deployment of Large Language Models (LLMs) has become essential for personalized edge applications. A primary bottleneck is external memory access (EMA) in feed-forward network (FFN) layers....
 
 - **EduGuard: A Safe RAG-Based LLM Tutor for Programming Education** — S M Asif Hossain, Ruksat Khan Shayoni, M. F. Mridha, Jungpil Shin
   [arXiv](https://arxiv.org/abs/2607.15738v1)
@@ -783,6 +815,10 @@ _Generated: 2026-08-07 06:18_
 - **Every Time I Hire a Linguist, Inference Costs Go Down: On Linguistic Rules as Effective Prompt Compressors** — Jianfei Ma, Zhaoxin Feng, Emmanuele Chersoni, Si Chen
   [arXiv](https://arxiv.org/abs/2607.25335v1)
   > Prompt compression shortens LLM input to reduce inference cost, yet existing methods score token importance through LM forward passes. It remains questionable whether such nuanced, costly token select...
+
+- **Evidence-Driven Dynamic Visual Selector for Efficient Long Video Understanding** — Bo Zhang, Wenxin Wang, Feng Chen, Zhihao Zhang, Zixuan Wang, Changsheng Li, Yinjie Lei
+  [arXiv](https://arxiv.org/abs/2608.05780v1)
+  > Recent advancements in MLLM-based long-form video understanding have mitigated inference-time computational cost and limited context lengths by selecting query-relevant frames. However, existing appro...
 
 - **Exact Action Values Are Not Enough: Rollout-Verified Reinforcement Fine-Tuning of a Reasoning Model for Multi-Zone VAV Control** — Takumi Shioda, Kohei Terashima, Tatsuo Nagai
   [arXiv](https://arxiv.org/abs/2607.27914v1)
@@ -859,6 +895,10 @@ _Generated: 2026-08-07 06:18_
 - **ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache** — Shao Wang, Rui Ren, Lin Gui
   [arXiv](https://arxiv.org/abs/2604.06370)
   > The serving paradigm of LLMs is rapidly shifting towards complex multi-agent workflows. While LoRA enables efficient co-hosting of specialized agents, it introduces a critical memory bottleneck — uniq...
+
+- **FormBharo: Designing and Evaluating a Voice Agent for Conversational Form Filling in Rural India** — Aman Dalmia, Sanskriti Midha, Jigar Doshi
+  [arXiv](https://arxiv.org/abs/2608.06027v1)
+  > In India, almost every social benefit starts with a form, yet the people who need these benefits most are often unable to read or write. Reaching them requires a spoken conversation. Today that work f...
 
 - **From Agent Loops to Structured Graphs: A Scheduler-Theoretic Framework for LLM Agent Execution** — ['(from arXiv)']
   [arXiv](https://arxiv.org/abs/2604.11378)
@@ -1047,6 +1087,10 @@ _Generated: 2026-08-07 06:18_
   [arXiv](https://arxiv.org/abs/2608.01804v1)
   > Post-training large language models (LLMs) via reinforcement learning (RL) has significantly advanced code generation capabilities. To bypass the heavy memory footprint of critic networks, current sta...
 
+- **LLM Inference Under Bursty Workload Distribution: Modifying the WAIT Algorithm** — Anjali Gangadhar Katageria, Shobha Rani, Raghu Nandan Sengupta
+  [arXiv](https://arxiv.org/abs/2608.06135v1)
+  > Large Language Models (LLMs) such as ChatGPT and Claude are widely used for information retrieval and problem-solving. Recent work has focused on improving scheduling algorithms to boost throughput wh...
+
 - **LLM Inference at the Edge: Mobile, NPU, and GPU Performance Efficiency Trade-offs Under Sustained Load** — Pranay Tummalapalli et al.
   [arXiv](https://arxiv.org/abs/2603.23640)
   > Deploying LLMs on-device for always-on personal agents demands sustained inference from hardware tightly constrained in power, thermal envelope, and memory. We benchmark Qwen 2.5 1.5B (4-bit quantised...
@@ -1099,6 +1143,10 @@ _Generated: 2026-08-07 06:18_
   [arXiv](https://arxiv.org/abs/2608.03838v1)
   > Reasoning-based guard models improve LLM safeguards, but decoding explicit rationales for every interaction makes them costly to deploy. Although latent-reasoning methods reduce token generation by mo...
 
+- **Learning Globally Reusable Skills for Coding Agents** — Chen Yang, Jiashuo Tian, Ziqi Wang, Xinyin Liu, Meiru Ye, Junjie Chen
+  [arXiv](https://arxiv.org/abs/2608.06153v1)
+  > Automated skill evolution enables Large Language Model (LLM) agents to continuously improve without expensive retraining. However, existing approaches typically treat skill evolution as a sequence of ...
+
 - **Learning to Communicate: Toward End-to-End Optimization of Multi-Agent Language Systems** — Ye Yu, Heming Liu, Haibo Jin, Xiaopeng Yuan, Peng Kuang
   [arXiv](https://arxiv.org/abs/2604.21794v1) | [GitHub](https://github.com/skyzh/tiny-llm)
   > Multi-agent systems built on large language models have shown strong performance on complex reasoning tasks, yet most work focuses on agent roles and orchestration while treating inter-agent communica...
@@ -1134,6 +1182,10 @@ _Generated: 2026-08-07 06:18_
 - **MAC-Attention: a Match-Amend-Complete Scheme for Fast and Accurate Attention Computation** — Jinghan Yao, Sam Adé Jacobs, Walid Krichene, Masahiro Tanaka, Dhabaleswar K Panda
   [arXiv](https://arxiv.org/abs/2604.00235) | [GitHub](https://github.com/YJHMITWEB/MAC-Attention)
   > Long-context decoding in LLMs is IO-bound: each token re-reads an ever-growing KV cache. Prior accelerations cut bytes via compression (lower fidelity) or selection/eviction (restricting accessibility...
+
+- **MACRO: Markov Chain Routing of Transformer Layers** — Paweł Batorski, Abtin Pourhadi, Akylgali Aitaza, Przemysław Spurek, Paul Swoboda
+  [arXiv](https://arxiv.org/abs/2608.05872v1)
+  > Standard Large Language Models (LLMs) execute layers sequentially. Dynamic layer routing, i.e. search for a different execution path through layers involving layer repetitions, skips and other moves, ...
 
 - **MADA-RL: Multi-Agent Debate-Aware Reinforcement Learning for Parameter-Efficient Reasoning in Compact Models** — Martino M. L. Pulici, Cuong Xuan Chu, Evgeny Kharlamov, Zifeng Ding, Volker Tresp, Yunpu Ma
   [arXiv](https://arxiv.org/abs/2607.18006v1)
@@ -1295,6 +1347,10 @@ _Generated: 2026-08-07 06:18_
   [arXiv](https://arxiv.org/abs/2602.01762)
   > Large Language Models (LLMs), constrained by their auto-regressive nature, suffer from slow decoding. Speculative decoding methods have emerged as a promising solution to accelerate LLM decoding, attr...
 
+- **PaDoc: Layout-Grounded Parallel Decoding for Document Parsing** — Hao Yu, Jiabo Zhan, Kang Liu, Linnan Zhao, Dongxu Yue, Rui Chen, Jinglin Wang, Chong Sun, Chen Li, Jing Lyu, Chun Yuan
+  [arXiv](https://arxiv.org/abs/2608.06146v1)
+  > End-to-end document parsers provide a unified interface, but serialize page layouts and regional contents into one autoregressive sequence. This formulation forces independent regions onto a decoding ...
+
 - **PackInfer: Compute- and I/O-Efficient Attention for Batched LLM Inference** — Authors from arxiv (see full paper)
   [arXiv](https://arxiv.org/abs/2602.06072)
   > Attention efficiency is critical to large language model (LLM) inference. While prior advances optimize attention execution for individual requests (e.g., FlashAttention), production LLM serving relie...
@@ -1362,6 +1418,10 @@ _Generated: 2026-08-07 06:18_
 - **QCFuse: Query-Centric Cache Fusion for Efficient RAG Inference** — ['Jianxin Yan', 'Zeheng Qian', 'Wangze Ni', 'Zhitao Shen', 'Zhiping Wang', 'Haoyang Li']
   [arXiv](https://arxiv.org/abs/2604.08585)
   > Cache fusion accelerates generation process of LLMs equipped with RAG through KV caching and selective token recomputation, thereby reducing computational costs and improving efficiency. However, exis...
+
+- **QEvict: Recoverable Quantized KV Eviction for Attention-Drift-Robust Long-Context Decoding** — Ayushman Garg, Akshita Gupta, Shaswata Bhattacharya, Abhishek Gupta, Sandeep Kumar, Manoj Kumar
+  [arXiv](https://arxiv.org/abs/2608.05326v1)
+  > Autoregressive large language model inference is increasingly constrained by the memory footprint of the Key-Value (KV) cache. A dominant line of work reduces this footprint by evicting tokens that ap...
 
 - **QUADS: Stabilizing NVFP4 Reinforcement Learning for MoE via QUantization-error Alignment across Dual Sides** — Zhengyang Zhuge, Hao Yu, Xin Wang, Zheng Li, Yizhong Cao, Dayiheng Liu, Jianwei Zhang
   [arXiv](https://arxiv.org/abs/2607.15810v1)
@@ -1593,6 +1653,10 @@ _Generated: 2026-08-07 06:18_
   [arXiv](https://arxiv.org/abs/2607.22529v1)
   > LLM training is shifting from manual design and annotation to interaction-driven self-evolution. However, existing self-evolutionary methods face a fundamental dilemma between task diversity and verif...
 
+- **SkillZip: Contract-Preserving Graph Compression for Scalable Agent Skill Libraries** — Xingyu Tan, Xiaoyang Wang, Qing Liu, Xiwei Xu, Xin Yuan, Liming Zhu, Wenjie Zhang
+  [arXiv](https://arxiv.org/abs/2608.05604v1)
+  > Large Language Models (LLMs) increasingly act as agents whose procedural knowledge is stored in reusable skill packages and loaded at inference time. As skill libraries grow, a central challenge is to...
+
 - **SlimVLM: Sensitivity-aware Dynamic Structured Pruning with Adaptive Visual Token Selection for Efficient Vision-Language Models** — Yaozhi Wen, Jialong Guo, Zhenliang Ni, Han Shu, Xinghao Chen
   [arXiv](https://arxiv.org/abs/2608.03580v1)
   > While Vision-Language Models (VLMs) have demonstrated remarkable performance in processing and understanding both text and images, their large parameter sizes lead to significant computational overhea...
@@ -1711,6 +1775,10 @@ _Generated: 2026-08-07 06:18_
 
 - **TeLLMe: An Efficient End-to-End Ternary LLM Prefill and Decode Accelerator with Table-Lookup Matmul on Edge FPGAs** — Ye Qiao, Zhiheng Chen, Yifan Zhang, Yian Wang, Sitao Huang
   > With the emergence of wearable devices and other embedded systems, deploying large language models (LLMs) on edge platforms becomes an urgent need. However, it is challenging because of their high com...
+
+- **TensorCast: The Missing Tensor Management Layer in Large Language Model Infrastructure** — Yuhan Zhou, Yuchu Luo, Hao Nie, Wangrunze Lv, Yu Zhou, Yibo Zhu, Daxin Jiang, Chenren Xu
+  [arXiv](https://arxiv.org/abs/2608.06007v1)
+  > Modern LLM infrastructure increasingly manages tensors not only as computation data, but also as persistent states shared across distributed components. Existing systems optimize individual tensor man...
 
 - **Test-Time Scaling in Reasoning LLMs: Inference Regimes, Evaluation, and Reproducibility** — Mohsen Hariri, Weicong Chen, Nahal Shahini, Vikash Singh, Kai Ye, Amirhossein Samandar, Debargha Ganguly, Sreehari Sankar, Yanyan Zhang, Shouren Wang, Jerry Peng, Biyao Zhang, Michael Hinczewski, Vipin Chaudhary
   [arXiv](https://arxiv.org/abs/2608.04001v1)
