@@ -1,6 +1,6 @@
 # LLM Serving Papers Index
 
-_Generated: 2026-08-08 06:17_
+_Generated: 2026-08-17 06:17_
 
 
 ## 2026
@@ -728,6 +728,10 @@ _Generated: 2026-08-08 06:17_
   [arXiv](https://arxiv.org/abs/2604.03298)
   > ENEC proposes a lossless AI model compression method enabling fast inference on Ascend NPUs, addressing inference acceleration on heterogeneous hardware....
 
+- **ERSkill: Evolving for Skill-Guided Adaptive Memory Retrieval** — Haolong Chen, Liang Zhang, Zhuo Li, Lei Xue, Guanrxu Zhu
+  [arXiv](https://arxiv.org/abs/2608.12720v1)
+  > While Large Language Model (LLM) agents increasingly rely on long-term memory for persistent interactions, the retrieval mechanisms governing this memory are rarely treated as evolvable components. Th...
+
 - **ET-Prune: Evidence-Aware Dynamic Budgeting for Visual Token Pruning in Text-Rich MLLMs** — Zizhong Ding, Junxian Li, Kai Liu, Shaoqiu Zhang, Xiao Xiao, Linghe Kong, Yulun Zhang
   [arXiv](https://arxiv.org/abs/2608.01979v1)
   > Visual token pruning reduces the inference cost of multimodal large language models, but a fixed token ratio is poorly matched to text-rich inputs. In OCR-centric tasks, decisive evidence can be a sma...
@@ -1039,6 +1043,10 @@ _Generated: 2026-08-08 06:17_
   [arXiv](https://arxiv.org/abs/2607.27172v1)
   > Traditional search systems are optimized to retrieve items that strictly match a query, often prioritizing precision over recall. In e-commerce marketplaces and particularly grocery, this paradigm is ...
 
+- **InFactPlanner: Planning Sustainable Geo-Distributed LLM Data Centers** — Nicoletta Tsiopani, Moysis Symeonides, George Pallis, Marios D. Dikaiakos
+  [arXiv](https://arxiv.org/abs/2608.12915v1)
+  > The rapid growth of LLM inference is shifting sustainability concerns from one-time training to continuous serving, where infrastructure decisions shape energy use, carbon emissions, water consumption...
+
 - **InferScale: GPU-Native KV Injection for Personalized LLM Serving** — Peter Li, Prashant Pandey
   [arXiv](https://arxiv.org/abs/2607.27090v1)
   > Large language models are increasingly deployed with persistent personalized context, such as accumulated memory profiles or long conversation histories, that is shared across a user's many requests. ...
@@ -1066,6 +1074,10 @@ _Generated: 2026-08-08 06:17_
 - **Kalypso: Relational LLM Serving** — Hojae Son, Md Ashraful Islam, Huy Gia Cao, Hui Guan, Marco Serafini
   [arXiv](https://arxiv.org/abs/2607.23815v1)
   > Large language models are increasingly used as semantic operators for filtering, extracting, ranking, joining, and transforming unstructured data. Existing semantic query processing systems invoke req...
+
+- **Keep, Customize, or Exit: Default Design and Token Pricing in LLM Reasoning Services** — Ahmet Bugra Gundogan, Yigit Turkmen, Melih Bastopcu
+  [arXiv](https://arxiv.org/abs/2608.13315v1)
+  > We study a large language model (LLM) service in which a provider chooses a per-token price and a default reasoning-token allocation, while a user may accept the default, customize the allocation, or ...
 
 - **Keeping the Cache Warm Pays: Keepalive Economics for Agentic Workloads** — Maxim Khailo
   [arXiv](https://arxiv.org/abs/2607.19214v1)
@@ -1167,6 +1179,10 @@ _Generated: 2026-08-08 06:17_
   [arXiv](https://arxiv.org/abs/2604.12301)
   > We present a systematic measurement study of seven tactics for reducing cloud LLM token usage when a small local model can act as a triage layer in front of a frontier cloud model. Local routing combi...
 
+- **Localize, Then Reason: Visual Latent Structural Reasoning for Molecular Properties and Edits** — Xingqiao Lin, Junmei Wang, Haocheng Tang
+  [arXiv](https://arxiv.org/abs/2608.13244v1)
+  > Local chemical perception and property reasoning are both essential for understanding how molecular structure determines properties. Current LLM-based chemical reasoning methods either receive SMILES/...
+
 - **Look Less, Think Faster: Joint Token-Compute Adaptation for Multimodal LLMs** — Pengcheng Wang, Zhiquan Wang, Jayoung Lee, Zhuoyan Xu, Ran Xu, Saurabh Bagchi, Yin Li, Somali Chaterji
   [arXiv](https://arxiv.org/abs/2607.20357v1)
   > Multimodal Large Language Models (MLLMs) have recently demonstrated strong performance across vision-language tasks. However, their high inference cost, arising from both the large number of input vis...
@@ -1198,6 +1214,10 @@ _Generated: 2026-08-08 06:17_
 - **MANTA: Multi-Agent Network Topology Adaptation for Self-Evolving Multi-Agent Systems** — Mao-xun Huang, Jerry Wang, Yi-Cheng Lai, Zhengxin Zhang, Claire Cardie, Hen-Hsen Huang
   [arXiv](https://arxiv.org/abs/2607.28527v1)
   > Large language model-based multi-agent systems improve complex problem solving through task decomposition, agent specialization, information exchange, and intermediate validation. However, existing sy...
+
+- **MARCH: Scaling Recurrent Memory with Content-Routed State Anchors** — Ming Zhang, Kaisen Yang, Shu Yu, Ermo Hua, Ning Ding, Xia Hu, Bowen Zhou, Chaochao Lu, Youbang Sun
+  [arXiv](https://arxiv.org/abs/2608.12435v1)
+  > Transformers owe much of their strong long-context retrieval capability to a token-level memory that grows with context length. This flexibility, however, incurs a quadratic computation complexity dur...
 
 - **MARS: Unleashing the Power of Speculative Decoding via Margin-Aware Verification** — Jingwei Song, Xinyu Wang, Hanbin Wang, Xiaoxuan Lei, Bill Shi, Shixin Han, Eric Yang, Xiao-Wen Chang, Lynn Ai
   [arXiv](https://arxiv.org/abs/2601.15498) | [GitHub](https://github.com/5SSjw/MARS)
@@ -1295,6 +1315,10 @@ _Generated: 2026-08-08 06:17_
   [arXiv](https://arxiv.org/abs/2608.04169v1)
   > Heterogeneous DRAM-based processing-in-memory (PIM)-GPU systems promise significant efficiency gains for decode-phase large language model (LLM) inference, particularly in long-output generation, yet ...
 
+- **OpScale: Operator-level Provisioning and Autoscaling for LLM Serving** — Xingqi Cui, Chieh-Jan Mike Liang, Ziang Tang, Jiarong Xing, Haoran Qiu
+  [arXiv](https://arxiv.org/abs/2608.13499v1)
+  > Achieving cost efficiency while meeting strict user-facing SLOs (e.g., time-to-first-token) remains a fundamental challenge for cloud GPU clusters serving large language models (LLMs). Autoscaling is ...
+
 - **Open-TQ-Metal: Fused Compressed-Domain Attention for Long-Context LLM Inference on Apple Silicon** — ['(from arXiv)']
   [arXiv](https://arxiv.org/abs/2604.16957)
   > We present Open-TQ-Metal, a fused compressed-domain attention kernel for long-context LLM inference on Apple Silicon Metal GPU, enabling efficient attention computation in the compressed domain....
@@ -1386,6 +1410,10 @@ _Generated: 2026-08-08 06:17_
 - **PolyQ: Codesigning End-to-End Quantization Framework for Scalable Edge CPU LLM Inference** — Hyunwoo Oh, Suyeon Jang, Hanning Chen, KyungIn Nam, Sanggeon Yun, Ryozo Masukawa, Mohsen Imani
   [arXiv](https://arxiv.org/abs/2607.14618v1)
   > CPUs are the most universal target for on-device LLM inference, but existing low-bit quantization methods offer either coarse operating points or fine-grained mixed precision that is difficult to exec...
+
+- **Potential Applications of HBF in LLM Serving Systems** — Yihan Yin, Yinlun Zhao, Zhixin Yun, Guanying Wu, Feng Zhu, Kai Tao, Shu Li, Fei Huang, Zhe Zhang, Shuangchen Li, Hongzhong Zheng
+  [arXiv](https://arxiv.org/abs/2608.13127v1)
+  > LLM serving is increasingly constrained by memory capacity as model weights, KV caches, and the number of served model variants continue to grow. This report examines High-Bandwidth Flash (HBF) as a c...
 
 - **Power Aware Dynamic Reallocation For Inference** — Yiwei Jiang, Sangeeta Chowdhary, Nathaniel Morris, Rutwik Jain, Srilatha Manne, Samuel Bayliss
   [arXiv](https://arxiv.org/abs/2601.12241)
@@ -1576,6 +1604,10 @@ _Generated: 2026-08-08 06:17_
 - **SOLARIS: Speculative Offloading of Latent-bAsed Representation for Inference Scaling** — Zikun Liu, Liang Luo, Qianru Li, Zhengyu Zhang, Wei Ling, Jingyi Shen 等
   [arXiv](https://arxiv.org/abs/2604.12110)
   > Recent advances in recommendation scaling laws have led to foundation models of unprecedented complexity. While these models offer superior performance, their computational demands make real-time serv...
+
+- **SPADE: Speculative Decoding for Precise and Low Cost Distributed Edge Cloud Inference** — Divya Jyoti Bajpai, Kishan Kumar Upadhyay, Manjesh Kumar Hanawal
+  [arXiv](https://arxiv.org/abs/2608.13076v1)
+  > Large Language Models (LLMs) have achieved remarkable success in natural language understanding and generation, but their deployment is constrained by high computational demands. Deploying smaller LLM...
 
 - **SUN: Shared Use of Next-token Prediction for Efficient Multi-LLM Disaggregated Serving** — Sunghyeon Woo, Ahreum Seo, Jaegwang Lee, Jaeeun Kil, Hanbae Seo, Joonghoon Kim 等
   [arXiv](https://arxiv.org/abs/2603.02599)
@@ -1839,6 +1871,10 @@ _Generated: 2026-08-08 06:17_
   [arXiv](https://arxiv.org/abs/2607.17415v1)
   > Efficient large language model (LLM) inference on edge platforms is limited not only by model size, but also by shape-dependent performance differences across execution backends. Static backend assign...
 
+- **Trie Automata for Constrained Decoding over Large Finite Sets** — Xingzi Xu, Karim Bouyarmane
+  [arXiv](https://arxiv.org/abs/2608.12574v1)
+  > Large language models increasingly need to generate structured outputs that conform to predefined schemas, with one common constraint being selection from a finite set of valid strings. Current constr...
+
 - **TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM** — Hengyi Xie, Chenfei Yao, Xianjin Wu, Xuanyang Xi, Yiping Tang, Di Xu, Yingying Zhu, Dingkang Liang, Xiang Bai, Han Ding
   [arXiv](https://arxiv.org/abs/2607.27205v1)
   > Vision-language-action (VLA) models commonly adopt an LLM-centric $V \to L \to A$ pathway, where visual observations are projected into the representation space of a large language model before being ...
@@ -2038,6 +2074,10 @@ _Generated: 2026-08-08 06:17_
 - **[GitHub] transformers: 🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text,** — huggingface
   [GitHub](https://github.com/huggingface/transformers)
   > 🤗 Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training. ...
+
+- **vToken: Token-Level Virtualization for Reclaimable KV Caches** — Yuanhang Gao, Xiangrui Yang, Yuanfeng Chen, Hongjia Chen, Qianru Lv, Wenfei Wu, Dongsheng Li
+  [arXiv](https://arxiv.org/abs/2608.13263v1)
+  > Large language model serving faces a critical memory bottleneck: the KV cache grows with sequence length and batch size. PagedAttention uses fixed-size memory blocks to reduce allocator-level fragment...
 
 
 ### LoRA/Adapter Serving
